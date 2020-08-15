@@ -458,7 +458,84 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>redis与redis部署服务的安装<br>下载文件redis-3.0.0.tar.gz</p>
+<p>一，redis服务的安装<br>1.环境配置<br>Redis是c开发的，因此安装redis需要c语言的编译环境，即需要安装gcc</p>
+<p>查看是否安装gcc</p>
+<p>gcc -v<br>如果没有gcc，则需要在线安装。命令如下</p>
+<p>yum install gcc-c++<br>2.redis安装<br>1）上传redis压缩包到服务器</p>
+<p>本文是通过MobaXterm进行操作的，如图</p>
+<p>1.png 2）解压redis压缩包</p>
+<p>tar zxf redis-3.0.0.tar.gz<br>3）进入redis-3.0.0目录并查看该目录下文件</p>
+<p>2.png</p>
+<p>4）制作编译redis源码</p>
+<p>3.png</p>
+<p>如下则编译成功</p>
+<p>4.png</p>
+<p>5）安装编译后的redis代码到指定目录，一般存放于/ usr / local下的redis目录，指令如下</p>
+<p>make install PREFIX=/usr/local/redis<br>如下图则说明安装成功，此时查看/ user / local目录，可以发现多了一个redis文件夹</p>
+<p>5.png</p>
+<p>6）此时可以启动redis了，交替启动模式为前端启动，指令如下</p>
+<p>./redis-server<br>6.png</p>
+<p>7）前端启动的话，如果客户端关闭，redis服务也会停掉，所以需要改成后台启动redis</p>
+<p>a）将redis解压文件里面的redis.conf文件复制到当前目录</p>
+<p>cp ~/redis-3.0.0/redis.conf .<br>b）修改redis.conf文件，将守护进程否-&gt;将守护进程守护进程，这样便将启动方式修改为后台启动了</p>
+<p>vim redis.conf<br>7.png</p>
+<p>然后保存修改并退出，指令如下（四步操作）</p>
+<p>Esc -&gt; : -&gt; wq -&gt; Enter(回车)<br>3.启动redis（后台启动）<br>./redis-server redis.conf<br>8.png</p>
+<p>4.测试<br>1）查看redis是否在运行</p>
+<p>ps aux|grep redis<br>2）打开redis连接</p>
+<p>./redis-cli   或redis-cli -c -p 6379<br>连接成功，如图所示</p>
+<p>9.png</p>
+<p>二，redis实施服务安装<br>1.创建重新分配目录<br>1）在usr / local目录下新建的redis-cluster目录，用于存放重新分配</p>
+<p>10.png</p>
+<p>2）复制/ usr / local / redis / bin目录下所有文件</p>
+<p>把redis目录下的bin目录下的所有文件复制到/ usr / local / redis-cluster / redis01目录下，不用担心这里没有redis01目录，会自动创建的。</p>
+<p>cp -r redis/bin/ redis-cluster/redis01<br>11.png</p>
+<p>3）删除redis01目录下快照文件dump.rdb。</p>
+<p>rm -rf dump.rdb<br>12.png</p>
+<p>4）修改redis01目录下redis.conf配置文件</p>
+<p>a）修改端口号为6380</p>
+<p>13.png</p>
+<p>b）将启用群集功能是的注释打开（大概632行）</p>
+<p>c）将群集配置文件节点6379.conf的注释打开，并同时将群集配置文件节点6380.conf（大概640行）</p>
+<p>14.png</p>
+<p>d）打开bind注释，并修改为bind 192.168.0.40（这一步很重要，每个例程都要修改为对应的服务器的ip，下面127.0.0.1的地方都要替换192.168.0.40）</p>
+<p>5）创建6个redis实例</p>
+<p>a）将redis-cluster / redis01文件复制5份到redis-cluster目录下（redis02-redis06），创建6个redis实例，模拟Redis替换的6个实例。如下所示：</p>
+<p>15.png</p>
+<p>b）分别修改redis.conf文件端口号为6381-6385</p>
+<p>2.启动所有redis例程<br>1）由于一个启动太麻烦，所以在这里创建一个批量启动redis中断的脚本文件startall.sh，文件内容如下：</p>
+<p>cd redis01<br>./redis-server redis.conf<br>cd ..<br>cd redis02<br>./redis-server redis.conf<br>cd ..<br>cd redis03<br>./redis-server redis.conf<br>cd ..<br>cd redis04<br>./redis-server redis.conf<br>cd ..<br>cd redis05<br>./redis-server redis.conf<br>cd ..<br>cd redis06<br>./redis-server redis.conf<br>cd ..<br>16.png</p>
+<p>2）创建好启动脚本文件之后，需要修改该脚本的权限，使之能够执行，指令如下：</p>
+<p>chmod +x startall.sh<br>3）执行startall.sh脚本，启动6个redis例程</p>
+<p>注意：如果出现报“没有那个文件或目录行”的错误，有可能是因为文件格式错误。输入如下命令将文件dos格式转换成unix再启动</p>
+<p>dos2unix startall.sh<br>17.png</p>
+<p>4）查看redis是否启动</p>
+<p>ps -ef|grep redis<br>18.png</p>
+<p>3.安装Ruby环境<br>注意：redis需要Ruby版本大于2.2.2</p>
+<p>下载文件ruby-2.3.0.tar.gz</p>
+<p>1）若存在Ruby，则清除旧版Ruby</p>
+<p>yum remove ruby<br>2）安装依赖</p>
+<p>yum -y install zlib-devel curl-devel openssl-devel httpd-devel apr-devel apr-util-devel mysql-devel<br>3）上传ruby-2.3.0到服务器，并解压</p>
+<p>tar zxvf ruby-2.3.0.tar.gz<br>19.png</p>
+<p>4）进入ruby-2.3.0目录下，执行以下命令</p>
+<p>./configure –disable-install-rdoc<br>20.png</p>
+<p>5）在ruby-2.3.0目录下，执行以下命令</p>
+<p> make<br> make install<br>6）查看Ruby信息</p>
+<p>ruby -v<br>21.png</p>
+<p>7）要支持redis通信，需要下载redis相关包</p>
+<p>gem install redis<br>22.png</p>
+<p>4.完善实力<br>1）切换到redis解压的原始包src目录下</p>
+<p>cd /root/redis-3.0.0/src/<br>2）执行以下命令</p>
+<p>./redis-trib.rb create –replicas 1 192.168.0.40:6380 192.168.0.40:6381 192.168.0.40:6382 192.168.0.40:6383 192.168.0.40:6384 192.168.0.40:6385<br>–replicas 1 表示每个主数据库拥有从数据库个数为1。master节点不能少于3个，所以我们用了6个redis<br>23.png</p>
+<p>3）遇到以下提示信息，手动输入是</p>
+<p>24.png</p>
+<p>5.测试<br>1）测试连接</p>
+<p>./redis-cli -c -p 6380<br>25.png</p>
+<p>2）查看所需信息</p>
+<p>a.查看当前集群信息<br>cluster info<br>b.查看集群里有多少个节点<br>cluster nodes<br>26.png</p>
+<p>6.至此linux下redis部署安装完毕<br>7.建造多台遇到的问题<br>配置文件<br>redis.conf<br>bind 127.0.0.1 机器ip<br>将绑定方式修改为:<br>bind 机器ip<br>开启集群的配置<br>#cluster-config-file nodes-6496.conf 将注释打开并将端口号修改，区别自动生成的文件<br>b问题<br>Redis集群端口为6491-6496 就需要打开6491-6496的端口号以及16491-16496的端口<br>c重启服务<br>重启服务需要将各个端口生成的rdb、nodes.conf 、aof文件删除<br>d验证<br>#./redis-cli -c -h 10.10.200.199 -p 6491<br>10.10.200.199:6491&gt;cluster nodes<br>10.10.200.199:6491&gt;cluster info<br>e查询键<br>查看key对应的slot<br>cluster keyslot key<br>查看slot和节点的对应关系<br>cluster slots<br>f关闭redis端口<br>./redis-cli -p 6379 shutdown<br>用kill -9 进程号，直接杀进程的方法会造成数据丢失<br>##后续### 1.redis-4.0.11默认会开启绑定127.0.0.1和写保护protected-mode是，配置的时候需要将bind 127.0.0.1注掉，改成protected-mode否</p>
+
             </div>
             <hr/>
 
