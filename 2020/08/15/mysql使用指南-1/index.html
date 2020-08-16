@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mysql使用指南, 麦芽">
+    <meta name="keywords" content="mysql5.7安装使用指南, 麦芽">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mysql使用指南 | 麦芽</title>
+    <title>mysql5.7安装使用指南 | 麦芽</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mysql使用指南</h1>
+                    <h1 class="description center-align post-title">mysql5.7安装使用指南</h1>
                 </div>
             </div>
         </div>
@@ -428,9 +428,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+                                <span class="chip bg-color">我的技术博客</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -458,7 +462,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini"><a href="#1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini" class="headerlink" title="1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini"></a>1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini</h2><p>内容：</p>
+<p>[client]</p>
+<h1 id="设置mysql客户端默认字符集"><a href="#设置mysql客户端默认字符集" class="headerlink" title="设置mysql客户端默认字符集"></a>设置mysql客户端默认字符集</h1><p>default-character-set=utf8</p>
+<p>[mysqld]</p>
+<h1 id="设置3306端口"><a href="#设置3306端口" class="headerlink" title="设置3306端口"></a>设置3306端口</h1><p>port = 3306<br>character-set-server=utf8</p>
+<h1 id="设置mysql的安装目录"><a href="#设置mysql的安装目录" class="headerlink" title="设置mysql的安装目录"></a>设置mysql的安装目录</h1><p>basedir=D:\mysql5.7.28</p>
+<h1 id="设置-mysql数据库的数据的存放目录，MySQL-8-不需要以下配置，系统自己生成即可，否则有可能报错"><a href="#设置-mysql数据库的数据的存放目录，MySQL-8-不需要以下配置，系统自己生成即可，否则有可能报错" class="headerlink" title="设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错"></a>设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错</h1><p>#datadir=D:\mysql5.7.28\data</p>
+<h1 id="允许最大连接数"><a href="#允许最大连接数" class="headerlink" title="允许最大连接数"></a>允许最大连接数</h1><p>max_connections=200</p>
+<h1 id="服务端使用的字符集默认为8比特编码的latin1字符集"><a href="#服务端使用的字符集默认为8比特编码的latin1字符集" class="headerlink" title="服务端使用的字符集默认为8比特编码的latin1字符集"></a>服务端使用的字符集默认为8比特编码的latin1字符集</h1><p>character-set-server=utf8</p>
+<h1 id="创建新表时将使用的默认存储引擎"><a href="#创建新表时将使用的默认存储引擎" class="headerlink" title="创建新表时将使用的默认存储引擎"></a>创建新表时将使用的默认存储引擎</h1><p>default-storage-engine=INNODB<br>sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</p>
+<h2 id="2、以管理员身份安装并且启动-cmd"><a href="#2、以管理员身份安装并且启动-cmd" class="headerlink" title="2、以管理员身份安装并且启动 cmd"></a>2、以管理员身份安装并且启动 cmd</h2><p>mysqld  –initialize    – 此步骤会自动生成data文件包</p>
+<p>初始化成功后会在my.ini配置文件的datadir的目录下生成一些文件，其中xxx.err(xxx是你电脑用户的名称)文件里说明了root账户的临时密码。例子：&lt;r8j<em>Qrh)jdp就是root账户的临时密码<br> A temporary password is generated for root@localhost: &lt;r8j</em>Qrh)jdp  eqncDQIUl8/P</p>
+<h2 id="3、注册mysql服务"><a href="#3、注册mysql服务" class="headerlink" title="3、注册mysql服务"></a>3、注册mysql服务</h2><p>mysqld -install MySQL </p>
+<h2 id="4、启动mysql服务"><a href="#4、启动mysql服务" class="headerlink" title="4、启动mysql服务"></a>4、启动mysql服务</h2><p>net start MySQL  </p>
+<p>使用root账号登录</p>
+<p>mysql -u root -p eqncDQIUl8/P</p>
+<p>修改root密码</p>
+<p>ALTER USER ‘root’@’localhost’ IDENTIFIED BY ‘root’;  </p>
+<p>完整操作步骤<br>以非管理员身份安装数据库提示拒绝安装<br>以管理员身份安装并且启动<br>配置环境变量，便于以后不需进入安装路径才能调用sql.exe</p>
+<p>· 添加一个名叫 MYSQL_HOME 的变量</p>
+<p>· 修改Path变量，在末尾添加 %MYSQL_HOME%\bin</p>
+
             </div>
             <hr/>
 
@@ -520,7 +545,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+                                    <span class="chip bg-color">我的技术博客</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
