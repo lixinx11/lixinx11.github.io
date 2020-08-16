@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="高并发设计, 麦芽">
+    <meta name="keywords" content="redis使用指南, 麦芽">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>高并发设计 | 麦芽</title>
+    <title>redis使用指南 | 麦芽</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">高并发设计</h1>
+                    <h1 class="description center-align post-title">redis使用指南</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/">
-                                <span class="chip bg-color">java高并发</span>
+                            <a href="/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+                                <span class="chip bg-color">我的技术博客</span>
                             </a>
                         
                     </div>
@@ -446,7 +446,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-15
+                    2018-06-13
                 </div>
                 
 
@@ -462,46 +462,85 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="系统性能两大核心点"><a href="#系统性能两大核心点" class="headerlink" title="系统性能两大核心点"></a>系统性能两大核心点</h2><p>吞吐量（Throughput）<br>响应延迟（Response Delay）<br>优化目标<br>缩短响应时间<br>提供并发数<br>让系统处于合理状态<br>Number of Concurrent Users<br>上图是高并发软件性能模型。图中三条曲线，分别表示：</p>
-<p>资源的利用情况（Utilization，包括硬件资源和软件资源）<br>吞吐量（Throughput，这里是指每秒事务数）<br>响应时间（Response Time）。<br>坐标轴的横轴从左到右表现了并发用户数（Number of Concurrent Users）的不断增长。</p>
-<p>随着并发用户数的增长，资源占用率和吞吐量会相应的增长，但是响应时间的变化不大；不过当并发用户数增长到一定程度后，资源占用达到饱和，吞吐量增长明显放缓甚至停止增长，而响应时间却进一步延长。如果并发用户数继续增长，你会发现软硬件资源占用继续维持在饱和状态，但是吞吐量开始下降，响应时间明显的超出了用户可接受的范围，并且最终导致用户放弃了这次请求甚至离开。</p>
-<p>根据这种性能表现，图中划分了三个区域，分别是</p>
-<p>Light Load（较轻的压力）<br>Heavy Load（较重的压力）<br>Buckle Zone（用户无法忍受并放弃请求）。<br>在Light Load和Heavy Load两个区域交界处的并发用户数，我们称为“最佳并发用户数（The Optimum Number of Concurrent Users）”，而Heavy Load和Buckle Zone两个区域交界处的并发用户数则称为“最大并发用户数（The Maximum Number of Concurrent Users）”。 当系统的负载等于最佳并发用户数时，系统的整体效率最高，没有资源被浪费，用户也不需要等待；当系统负载处于最佳并发用户数和最大并发用户数之间时，系统可以继续工作，但是用户的等待时间延长，满意度开始降低，并且如果负载一直持续，将最终会导致有些用户无法忍受而放弃；而当系统负载大于最大并发用户数时，将注定会导致某些用户无法忍受超长的响应时间而放弃。</p>
-<p>所以我们性能优化的目标就是让系统保持在Heavy Load（较重的压力） 区域。</p>
-<h2 id="优化手段"><a href="#优化手段" class="headerlink" title="优化手段"></a>优化手段</h2><h3 id="1-空间换时间"><a href="#1-空间换时间" class="headerlink" title="1. 空间换时间"></a>1. 空间换时间</h3><p>系统时间是瓶颈。</p>
-<p>这种情况是CPU处理时间很当，但是空间费用我们能接受，所以我们解决的问题的方法就是用空间来换时间。</p>
-<p>例如：缓存复用计算结果，降低时间开销，因为CPU时间较内存容量更昂贵</p>
-<h3 id="2-时间换空间"><a href="#2-时间换空间" class="headerlink" title="2. 时间换空间"></a>2. 时间换空间</h3><p>数据大小是瓶颈。</p>
-<p>这种情况是空间占用很大，处理时间能接受，所以我们解决问题的方法就是用时间换空间。</p>
-<p>例如1：网络传输是瓶颈，使用系统时间换取传输的空间，使用HTTP的gzip压缩算法。解压缩的时候会消耗CPU处理时间。<br>例如2：APP的请求分类接口，使用版本号判断哪些数据更新，只下载更新的数据。比如一些商品分类类目、城市列表等，一般很少会更新，可以缓存到本地，不能每次登录的时候都去拉取，所以针对这些数据我们可以做一个版本号，如果发现更新了就去拉取数据更新。再比如一些IM社交软件的用户列表，每次登录的时候都去拉一次，其实大家想想每次录的时候都是拉一次挺消耗网络流量的。而这个时候往往你的QQ好友列表变化并不是特别频繁，这个时候怎么办呢？我们会在这个QQ好友的列表有一个时间戳作为版本号，这个版本号在server端存一份，client端存一份，在每次登录的时候会先去判断一下这个版本号是否一致，如果不一致再做更新。</p>
-<h3 id="3-找到系统瓶颈"><a href="#3-找到系统瓶颈" class="headerlink" title="3. 找到系统瓶颈"></a>3. 找到系统瓶颈</h3><p>分析系统业务流程，找到关键路径并分解优化。</p>
-<p>一个服务集群4W的QPS，调用量前5的接口贡献了3.5W的QPS<br>对关键路径的代码优化收益最大，当然系统剩下的部分收益也不能忽视，比如剩下5k QPS接口若性能有问题也可能把整体服务性能拖垮。<br>所以我们需要抓主要矛盾。大概解决思路总结如下：</p>
-<p>整个请求服务调了多少RPC接口；<br>载入多少数据；<br>使用什么算法；<br>非核心流程能否异步化；<br>没有数据依赖的逻辑能否并行执行<br>优化层次<br>从整体到细节，从全局角度到局部视角</p>
-<h4 id="1-架构设计层次"><a href="#1-架构设计层次" class="headerlink" title="1. 架构设计层次"></a>1. 架构设计层次</h4><p>关注系统控制、数据流程<br>如何拆分系统，如何使各部分系统整体负载更加均衡，充分发挥硬件设施性能优势，减少系统内部开销等。<br>架构设计层次实现手段：</p>
-<p>分布式系统微服务化<br>分库分表，读写分离，数据分片<br>无状态化设计，动态水平弹性扩展<br>调用连路梳理，热点数据尽量靠近用户<br>分布式Cache、多级多类型缓存<br>容量规划<br>提前拒绝，保证柔性可用</p>
-<h4 id="2-算法逻辑层次"><a href="#2-算法逻辑层次" class="headerlink" title="2. 算法逻辑层次"></a>2. 算法逻辑层次</h4><p>算法选择是否高效，是否使时间优先级的还是空间优先级，算法逻辑优化，空间时间优化任务并行处理，使用无锁数据结构等。<br>空间换时间<br>ThreadLocal<br>时间换空间<br>采用压缩算法压缩数据，更复杂的逻辑减少数据传输</p>
-<h2 id="2-1-算法逻辑优化层次实现细节"><a href="#2-1-算法逻辑优化层次实现细节" class="headerlink" title="2.1 算法逻辑优化层次实现细节"></a>2.1 算法逻辑优化层次实现细节</h2><p>用更高效的算法替换现有算法，而不改变其接口</p>
-<p>增量式算法、复用之前的计算结果，比如一个报表服务，要从全量数据中生成报表数据量很大，但是每次增量的数据较少，则可以考虑只计算增量数据和之前计算结果合并。这样处理的数据量就小很多。</p>
-<p>并发和锁的优化，读多写少的业务场景下，基于CAS的LockFree比Mutex性能更好</p>
-<p>当系统时间是瓶颈，采取空间换时间逻辑算法，分配更多空间节省系统时间</p>
-<p>缓存复用计算结果，降低时间开销，CPU时间较内存容量更加昂贵</p>
-<p>当系统空间容量是瓶颈的时候，采用时间换空间算法策略</p>
-<p>网络传输是瓶颈，使用系统时间换取空间的压缩，HTTP的gzip的压缩算法</p>
-<p>APP的请求分类接口，使用版本号判断那些数据更新，只下载更新的数据，使用更多的代码逻辑处理更细颗粒度的数据</p>
-<p>并行执行，比如一段逻辑调用了多个RPC接口，而这些接口之间并没有数据依赖，则可以考虑并行调用，降低响应时间。</p>
-<p>异步执行，分析业务流程中的主次流程，把次要流程拆分出来异步执行，更进一步可以拆分到单独的模块去执行，比如使用消息队列，彻底和核心流程解耦，提高核心流程的稳定性以及降低响应是时间。</p>
-<ol start="3">
-<li>代码优化层次<br>关注代码细节优化，代码实现是否合理，是否创建了过多的对象，循环遍历是否高效，cache使用的是否合理，是否重用计算结果等。<h2 id="3-1-代码优化层次实现细节"><a href="#3-1-代码优化层次实现细节" class="headerlink" title="3.1 代码优化层次实现细节"></a>3.1 代码优化层次实现细节</h2>循环遍历是否合理高效，不要在循环里调用RPC接口、查询分布式缓存、执行SQL等<br>先调批量接口组装好数据、再循环处理<br>代码逻辑避免生成过多对象和无效对象<br>输出log时候的log级别判断，避免new无效对象<br>ArrayList、HashMap初始容量设置是否合理<br>扩容代价<br>对数据对象是否合理重用，比如通过RPC查到的数据能复用则必须复用<br>根据数据访问特性选择合适数据结构，比如读多写少，考虑CopyOnWriteArrayList(写时Copy副本)<br>拼接字符串的时候是使用String相加还是使用StringBuilder进行append(在StringBuilder的容量预分配的情况下StringBuilder的性能比String相加性能高15倍左右)<br>是否正确初始化数据。有些全局共享的数据，饿汉式模式，在用户访问之前先初始化好<h2 id="3-2-数据库代码优化层次实现细节"><a href="#3-2-数据库代码优化层次实现细节" class="headerlink" title="3.2 数据库代码优化层次实现细节"></a>3.2 数据库代码优化层次实现细节</h2>数据库建表语句使用尽量小的数据结构<br>表示状态的字段，如果状态值在255以内使用unsigned tinyint，IP使用int而非varchar<br>使用enum的场景使用tinyint替代，enum扩展需要该表<br>避免使用select * 查询语句，只查询需要的字段，避免浪费数据IO、内存、CPU、网络传输<br>分析查询场景经理合适的索引，分析字段的可选择性，索引长度，对长的varchar使用前缀索引<br>字段尽量为Not NULL类型，MySQL手册说吗允许NULL的字段需要额外的存储空间去处理NULL ，并且很难查询优化<br>以上优化的目的为了降低服务器CPU使用率、IO流量、内存占用、网络消耗、降低响应时间</li>
-</ol>
-<p>在做查询时，可以通过代码逻辑，加一下查询条件，利用索引来提升查询速度。</p>
-<h2 id="3-3-局部优化层次实现细节"><a href="#3-3-局部优化层次实现细节" class="headerlink" title="3.3 局部优化层次实现细节"></a>3.3 局部优化层次实现细节</h2><p>以下两段代码哪个执行速度快？</p>
-<p>long[][] a = new long[10000][10000];<br>    for(int i=0;i&lt;a.length;i++){<br>        for(int j =0;j&lt;a[i].length;j++){<br>            a[i][j]=j;<br>        }<br>    }<br>复制代码<br>long[][] a = new long[10000][10000];<br>    for(int i=0;i&lt;a.length;i++){<br>        for(int j =0;j&lt;a[i].length;j++){<br>            a[j][j]=j;<br>        }<br>    }<br>复制代码<br>这两段代码，唯一的区别在于填充方式，第一种方式是按行填充，第二种方式是按列进行填充。显然是第一种方式更快一些。 虽然是二维数组，但是在内存堆列中还一维数组进行存储的。大家可以在试一下，第一种运行速度比第二种方式快20倍。</p>
-<p>那深层次原因是什么呢？</p>
-<p>我们知道在计算机体系中，除了有内存来做缓存，在CPU层面也有cache结构。而越靠近CPU读取速度越快。如下图：</p>
-<p>缓存的结构大概时这样的，从1级到3级速度越来越慢，最后通过总线与内存连接。 本质上内存是一个大的一维数组，二维数组在内存中按行排列，现存放a[0]行，再存放a[1]行，第一种遍历方式，是行遍历，先遍历完一行再遍历第二行，符合局部性原理，Cache Hit(缓存命中率高)，第二行遍历方式，是列遍历，遍历完第一列遍历第二列，由于下一列和上一列的数组元素在内存中并不是连续的，很可能导致Cache Miss（缓存未命中），CPU需要去内存载入数据，速度较CPU L1 Cache的速度降低了很多（主存100ns,L1cache 0.5ns）</p>
-<p>扩大到一般场景，业务系统使用缓存降低响应时间提高性能，必须提高缓存命中率。很聚焦的高频访问，时效性要求不高很适合缓存提升性能，很聚焦的高频访问业务如banner，广告位，时效性要求不是特别高，比如更新了可以不用实时体现，很适合使用缓存提升性能。</p>
-<p>如果对数据实时性要求很高，比如严格的时效性，需要慎重考虑更新缓存带来一致性问题。</p>
-<p>时效性和缓存的冲突，比如商品服务对商品进行了缓存，由于更新缓存和更新商品不是同一个事务，则对数据时效性要求高的如交易，就只能直接从数据库查商品信息。</p>
+                <p>redis与redis部署服务的安装<br>下载文件redis-3.0.0.tar.gz</p>
+<h2 id="一，redis服务的安装"><a href="#一，redis服务的安装" class="headerlink" title="一，redis服务的安装"></a>一，redis服务的安装</h2><h3 id="1-环境配置"><a href="#1-环境配置" class="headerlink" title="1.环境配置"></a>1.环境配置</h3><p>Redis是c开发的，因此安装redis需要c语言的编译环境，即需要安装gcc</p>
+<p>查看是否安装gcc</p>
+<p>gcc -v<br>如果没有gcc，则需要在线安装。命令如下</p>
+<p>yum install gcc-c++</p>
+<h3 id="2-redis安装"><a href="#2-redis安装" class="headerlink" title="2.redis安装"></a>2.redis安装</h3><p>1）上传redis压缩包到服务器</p>
+<p>本文是通过MobaXterm进行操作的，如图</p>
+<p>1.png 2）解压redis压缩包</p>
+<p>tar zxf redis-3.0.0.tar.gz<br>3）进入redis-3.0.0目录并查看该目录下文件</p>
+<p>2.png</p>
+<p>4）制作编译redis源码</p>
+<p>3.png</p>
+<p>如下则编译成功</p>
+<p>4.png</p>
+<p>5）安装编译后的redis代码到指定目录，一般存放于/ usr / local下的redis目录，指令如下</p>
+<p>make install PREFIX=/usr/local/redis<br>如下图则说明安装成功，此时查看/ user / local目录，可以发现多了一个redis文件夹</p>
+<p>5.png</p>
+<p>6）此时可以启动redis了，交替启动模式为前端启动，指令如下</p>
+<p>./redis-server<br>6.png</p>
+<p>7）前端启动的话，如果客户端关闭，redis服务也会停掉，所以需要改成后台启动redis</p>
+<p>a）将redis解压文件里面的redis.conf文件复制到当前目录</p>
+<p>cp ~/redis-3.0.0/redis.conf .<br>b）修改redis.conf文件，将守护进程否-&gt;将守护进程守护进程，这样便将启动方式修改为后台启动了</p>
+<p>vim redis.conf<br>7.png</p>
+<p>然后保存修改并退出，指令如下（四步操作）</p>
+<p>Esc -&gt; : -&gt; wq -&gt; Enter(回车)</p>
+<h3 id="3-启动redis（后台启动）"><a href="#3-启动redis（后台启动）" class="headerlink" title="3.启动redis（后台启动）"></a>3.启动redis（后台启动）</h3><p>./redis-server redis.conf<br>8.png</p>
+<p>4.测试<br>1）查看redis是否在运行</p>
+<p>ps aux|grep redis<br>2）打开redis连接</p>
+<p>./redis-cli   或redis-cli -c -p 6379<br>连接成功，如图所示</p>
+<p>9.png</p>
+<h2 id="二，redis实施服务安装"><a href="#二，redis实施服务安装" class="headerlink" title="二，redis实施服务安装"></a>二，redis实施服务安装</h2><h3 id="1-创建重新分配目录"><a href="#1-创建重新分配目录" class="headerlink" title="1.创建重新分配目录"></a>1.创建重新分配目录</h3><p>1）在usr / local目录下新建的redis-cluster目录，用于存放重新分配</p>
+<p>10.png</p>
+<p>2）复制/ usr / local / redis / bin目录下所有文件</p>
+<p>把redis目录下的bin目录下的所有文件复制到/ usr / local / redis-cluster / redis01目录下，不用担心这里没有redis01目录，会自动创建的。</p>
+<p>cp -r redis/bin/ redis-cluster/redis01<br>11.png</p>
+<p>3）删除redis01目录下快照文件dump.rdb。</p>
+<p>rm -rf dump.rdb<br>12.png</p>
+<p>4）修改redis01目录下redis.conf配置文件</p>
+<p>a）修改端口号为6380</p>
+<p>13.png</p>
+<p>b）将启用群集功能是的注释打开（大概632行）</p>
+<p>c）将群集配置文件节点6379.conf的注释打开，并同时将群集配置文件节点6380.conf（大概640行）</p>
+<p>14.png</p>
+<p>d）打开bind注释，并修改为bind 192.168.0.40（这一步很重要，每个例程都要修改为对应的服务器的ip，下面127.0.0.1的地方都要替换192.168.0.40）</p>
+<p>5）创建6个redis实例</p>
+<p>a）将redis-cluster / redis01文件复制5份到redis-cluster目录下（redis02-redis06），创建6个redis实例，模拟Redis替换的6个实例。如下所示：</p>
+<p>15.png</p>
+<p>b）分别修改redis.conf文件端口号为6381-6385</p>
+<h3 id="2-启动所有redis例程"><a href="#2-启动所有redis例程" class="headerlink" title="2.启动所有redis例程"></a>2.启动所有redis例程</h3><p>1）由于一个启动太麻烦，所以在这里创建一个批量启动redis中断的脚本文件startall.sh，文件内容如下：</p>
+<p>cd redis01<br>./redis-server redis.conf<br>cd ..<br>cd redis02<br>./redis-server redis.conf<br>cd ..<br>cd redis03<br>./redis-server redis.conf<br>cd ..<br>cd redis04<br>./redis-server redis.conf<br>cd ..<br>cd redis05<br>./redis-server redis.conf<br>cd ..<br>cd redis06<br>./redis-server redis.conf<br>cd ..<br>16.png</p>
+<p>2）创建好启动脚本文件之后，需要修改该脚本的权限，使之能够执行，指令如下：</p>
+<p>chmod +x startall.sh<br>3）执行startall.sh脚本，启动6个redis例程</p>
+<p>注意：如果出现报“没有那个文件或目录行”的错误，有可能是因为文件格式错误。输入如下命令将文件dos格式转换成unix再启动</p>
+<p>dos2unix startall.sh<br>17.png</p>
+<p>4）查看redis是否启动</p>
+<p>ps -ef|grep redis<br>18.png</p>
+<h3 id="3-安装Ruby环境"><a href="#3-安装Ruby环境" class="headerlink" title="3.安装Ruby环境"></a>3.安装Ruby环境</h3><p>注意：redis需要Ruby版本大于2.2.2</p>
+<p>下载文件ruby-2.3.0.tar.gz</p>
+<p>1）若存在Ruby，则清除旧版Ruby</p>
+<p>yum remove ruby<br>2）安装依赖</p>
+<p>yum -y install zlib-devel curl-devel openssl-devel httpd-devel apr-devel apr-util-devel mysql-devel<br>3）上传ruby-2.3.0到服务器，并解压</p>
+<p>tar zxvf ruby-2.3.0.tar.gz<br>19.png</p>
+<p>4）进入ruby-2.3.0目录下，执行以下命令</p>
+<p>./configure –disable-install-rdoc<br>20.png</p>
+<p>5）在ruby-2.3.0目录下，执行以下命令</p>
+<p> make<br> make install<br>6）查看Ruby信息</p>
+<p>ruby -v<br>21.png</p>
+<p>7）要支持redis通信，需要下载redis相关包</p>
+<p>gem install redis<br>22.png</p>
+<h3 id="4-完善实力"><a href="#4-完善实力" class="headerlink" title="4.完善实力"></a>4.完善实力</h3><p>1）切换到redis解压的原始包src目录下</p>
+<p>cd /root/redis-3.0.0/src/<br>2）执行以下命令</p>
+<p>./redis-trib.rb create –replicas 1 192.168.0.40:6380 192.168.0.40:6381 192.168.0.40:6382 192.168.0.40:6383 192.168.0.40:6384 192.168.0.40:6385<br>–replicas 1 表示每个主数据库拥有从数据库个数为1。master节点不能少于3个，所以我们用了6个redis<br>23.png</p>
+<p>3）遇到以下提示信息，手动输入是</p>
+<p>24.png</p>
+<h3 id="5-测试"><a href="#5-测试" class="headerlink" title="5.测试"></a>5.测试</h3><p>1）测试连接</p>
+<p>./redis-cli -c -p 6380<br>25.png</p>
+<p>2）查看所需信息</p>
+<p>a.查看当前集群信息<br>cluster info<br>b.查看集群里有多少个节点<br>cluster nodes<br>26.png</p>
+<h3 id="6-至此linux下redis部署安装完毕"><a href="#6-至此linux下redis部署安装完毕" class="headerlink" title="6.至此linux下redis部署安装完毕"></a>6.至此linux下redis部署安装完毕</h3><h3 id="7-建造多台遇到的问题"><a href="#7-建造多台遇到的问题" class="headerlink" title="7.建造多台遇到的问题"></a>7.建造多台遇到的问题</h3><p>配置文件<br>redis.conf<br>bind 127.0.0.1 机器ip<br>将绑定方式修改为:<br>bind 机器ip<br>开启集群的配置<br>#cluster-config-file nodes-6496.conf 将注释打开并将端口号修改，区别自动生成的文件<br>b问题<br>Redis集群端口为6491-6496 就需要打开6491-6496的端口号以及16491-16496的端口<br>c重启服务<br>重启服务需要将各个端口生成的rdb、nodes.conf 、aof文件删除<br>d验证<br>#./redis-cli -c -h 10.10.200.199 -p 6491<br>10.10.200.199:6491&gt;cluster nodes<br>10.10.200.199:6491&gt;cluster info<br>e查询键<br>查看key对应的slot<br>cluster keyslot key<br>查看slot和节点的对应关系<br>cluster slots<br>f关闭redis端口<br>./redis-cli -p 6379 shutdown<br>用kill -9 进程号，直接杀进程的方法会造成数据丢失<br>##后续### 1.redis-4.0.11默认会开启绑定127.0.0.1和写保护protected-mode是，配置的时候需要将bind 127.0.0.1注掉，改成protected-mode否</p>
 
             </div>
             <hr/>
@@ -527,7 +566,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/15/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/">http://yoursite.com/2020/08/15/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/</a>
+                    <a href="http://yoursite.com/2018/06/13/redis%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">http://yoursite.com/2018/06/13/redis%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -565,8 +604,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/">
-                                    <span class="chip bg-color">java高并发</span>
+                                <a href="/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+                                    <span class="chip bg-color">我的技术博客</span>
                                 </a>
                             
                         </div>
@@ -734,12 +773,57 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="大数据技术栈">
+                        
+                        <span class="card-title">大数据技术栈</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">我的技术博客</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/15/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/">
+                <a href="/2017/03/12/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/">
                     <div class="card-image">
                         
                         
@@ -757,7 +841,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2017-03-12
                             </span>
                         <span class="publish-author">
                             
@@ -767,57 +851,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/">
                         <span class="chip bg-color">java高并发</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/08/15/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="java多线程">
-                        
-                        <span class="card-title">java多线程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1.创建线程在Java中创建线程有两种方法：使用Thread类和使用Runnable接口。在使用Runnable接口时需要建立一个Thread实例。因此，无论是通过Thread类还是Runnable接口建立线程，都必须建立Thread类或它
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                        <span class="chip bg-color">java多线程</span>
                     </a>
                     
                 </div>
