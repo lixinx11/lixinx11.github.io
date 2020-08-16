@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2010/04/12/hello-world/</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2020-08-16</lastmod>
@@ -85,13 +92,6 @@
     
   </url>
   
-  <url>
-    <loc>http://yoursite.com/2020/08/15/hello-world/</loc>
-    
-    <lastmod>2020-08-15</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>http://yoursite.com/</loc>
@@ -100,6 +100,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>http://yoursite.com/tags/Hello-world/</loc>
+    <lastmod>2020-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>http://yoursite.com/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</loc>
