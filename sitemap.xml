@@ -139,14 +139,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <loc>http://yoursite.com/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
