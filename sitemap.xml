@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/08/17/%E7%AE%97%E6%B3%95/</loc>
+    
+    <lastmod>2020-08-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/03/12/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/</loc>
     
     <lastmod>2020-08-16</lastmod>
@@ -95,7 +102,7 @@
 
   <url>
     <loc>http://yoursite.com/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -103,28 +110,35 @@
   
   <url>
     <loc>http://yoursite.com/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/Hello-world/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -133,35 +147,42 @@
   
   <url>
     <loc>http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
