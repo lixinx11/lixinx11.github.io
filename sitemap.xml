@@ -123,14 +123,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
+    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://yoursite.com/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -153,13 +153,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -167,7 +160,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
+    <loc>http://yoursite.com/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -175,6 +168,13 @@
   
   <url>
     <loc>http://yoursite.com/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
