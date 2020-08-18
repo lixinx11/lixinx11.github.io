@@ -22,18 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>markdown</title>
-    <url>/2020/08/18/markdown/</url>
-    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
-<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysql5.7安装使用指南</title>
     <url>/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</url>
     <content><![CDATA[<h2 id="1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini"><a href="#1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini" class="headerlink" title="1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini"></a>1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini</h2><p>内容：</p>
@@ -66,6 +54,18 @@
       </tags>
   </entry>
   <entry>
+    <title>markdown</title>
+    <url>/2020/08/18/markdown/</url>
+    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
+<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的第一篇博客</title>
     <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>   第一章</p>
@@ -77,6 +77,42 @@
 <p>   参考文献</p>
 <p><a href="http://www.baidu.com/">www.baidu.com</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>oracle迁移到mysql</title>
+    <url>/2019/06/18/oracle%E8%BF%81%E7%A7%BB%E5%88%B0mysql/</url>
+    <content><![CDATA[<h2 id="oracle迁移到mysql"><a href="#oracle迁移到mysql" class="headerlink" title="oracle迁移到mysql"></a>oracle迁移到mysql</h2><p>  相比较 navicat更为精确<br>  备注：免费版只能导出25条数据转换、建议转换表结构后数据，通过同步抽取处理。<br>  官网地址：<a href="https://intelligent-converters.com/oracle-to-mysql.htm">https://intelligent-converters.com/oracle-to-mysql.htm</a></p>
+]]></content>
+      <categories>
+        <category>数据迁移</category>
+      </categories>
+      <tags>
+        <tag>数据迁移</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大数据框架设计</title>
+    <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>大数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大数据技术栈</title>
+    <url>/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
+    <content><![CDATA[<p><img src="https://lixinx11.github.io/medias/bigdata/1.png" alt="大数据架构"></p>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>我的技术博客</tag>
+      </tags>
   </entry>
   <entry>
     <title>redis使用指南</title>
@@ -169,51 +205,19 @@
       </tags>
   </entry>
   <entry>
-    <title>大数据技术栈</title>
-    <url>/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
-    <content><![CDATA[<p><img src="https://lixinx11.github.io/medias/bigdata/1.png" alt="大数据架构"></p>
+    <title>算法</title>
+    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
+<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
+<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
+<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
+<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
 ]]></content>
       <categories>
-        <category>大数据</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>我的技术博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大数据框架设计</title>
-    <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
-]]></content>
-      <categories>
-        <category>大数据</category>
-      </categories>
-      <tags>
-        <tag>大数据</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>oracle迁移到mysql</title>
-    <url>/2020/08/18/oracle%E8%BF%81%E7%A7%BB%E5%88%B0mysql/</url>
-    <content><![CDATA[<h2 id="oracle迁移到mysql"><a href="#oracle迁移到mysql" class="headerlink" title="oracle迁移到mysql"></a>oracle迁移到mysql</h2><p>  相比较 navicat更为精确<br>  备注：免费版只能导出25条数据转换、建议转换表结构后数据，通过同步抽取处理。<br>  官网地址：<a href="https://intelligent-converters.com/oracle-to-mysql.htm">https://intelligent-converters.com/oracle-to-mysql.htm</a></p>
-]]></content>
-      <categories>
-        <category>数据迁移</category>
-      </categories>
-      <tags>
-        <tag>数据迁移</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习+深度学习+人工智能之间的关系</title>
-    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -268,19 +272,15 @@
       </tags>
   </entry>
   <entry>
-    <title>算法</title>
-    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
-<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
-<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
-<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
-<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
+    <title>机器学习+深度学习+人工智能之间的关系</title>
+    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
 ]]></content>
       <categories>
-        <category>算法</category>
+        <category>AI</category>
       </categories>
       <tags>
-        <tag>算法</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
