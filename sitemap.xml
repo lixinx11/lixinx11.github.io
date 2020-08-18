@@ -2,98 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</loc>
+    <loc>https://lixinx11.github.io/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</loc>
     
     <lastmod>2020-08-18</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/08/17/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://lixinx11.github.io/2020/08/17/%E7%AE%97%E6%B3%95/</loc>
     
     <lastmod>2020-08-17</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/03/12/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/</loc>
+    <loc>https://lixinx11.github.io/2017/03/12/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/06/13/redis%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://lixinx11.github.io/2018/06/13/redis%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</loc>
+    <loc>https://lixinx11.github.io/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/04/12/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://lixinx11.github.io/2015/04/12/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
+    <loc>https://lixinx11.github.io/categories/index.html</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2010/04/12/hello-world/</loc>
+    <loc>https://lixinx11.github.io/2010/04/12/hello-world/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://lixinx11.github.io/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</loc>
+    <loc>https://lixinx11.github.io/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>https://lixinx11.github.io/tags/index.html</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>https://lixinx11.github.io/about/index.html</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/contact/index.html</loc>
+    <loc>https://lixinx11.github.io/contact/index.html</loc>
     
     <lastmod>2020-08-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/friends/index.html</loc>
+    <loc>https://lixinx11.github.io/friends/index.html</loc>
     
     <lastmod>2020-08-16</lastmod>
     
@@ -101,7 +101,7 @@
   
 
   <url>
-    <loc>http://yoursite.com/</loc>
+    <loc>https://lixinx11.github.io/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -109,35 +109,35 @@
 
   
   <url>
-    <loc>http://yoursite.com/tags/Hello-world/</loc>
+    <loc>https://lixinx11.github.io/tags/Hello-world/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://lixinx11.github.io/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://lixinx11.github.io/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/java%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
+    <loc>https://lixinx11.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://lixinx11.github.io/tags/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -146,42 +146,42 @@
 
   
   <url>
-    <loc>http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://lixinx11.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://lixinx11.github.io/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <loc>https://lixinx11.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://lixinx11.github.io/categories/%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E9%AB%98%E5%B9%B6%E5%8F%91/</loc>
+    <loc>https://lixinx11.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://lixinx11.github.io/categories/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
