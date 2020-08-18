@@ -22,18 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>markdown</title>
-    <url>/2020/08/18/markdown/</url>
-    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
-<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysql5.7安装使用指南</title>
     <url>/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</url>
     <content><![CDATA[<h2 id="1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini"><a href="#1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini" class="headerlink" title="1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini"></a>1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini</h2><p>内容：</p>
@@ -66,15 +54,15 @@
       </tags>
   </entry>
   <entry>
-    <title>oracle迁移到mysql</title>
-    <url>/2019/06/18/oracle%E8%BF%81%E7%A7%BB%E5%88%B0mysql/</url>
-    <content><![CDATA[<h2 id="oracle迁移到mysql"><a href="#oracle迁移到mysql" class="headerlink" title="oracle迁移到mysql"></a>oracle迁移到mysql</h2><p>  相比较 navicat更为精确<br>  备注：免费版只能导出25条数据转换、建议转换表结构后数据，通过同步抽取处理。<br>  官网地址：<a href="https://intelligent-converters.com/oracle-to-mysql.htm">https://intelligent-converters.com/oracle-to-mysql.htm</a></p>
-]]></content>
+    <title>markdown</title>
+    <url>/2020/08/18/markdown/</url>
+    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
+<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
       <categories>
-        <category>数据迁移</category>
+        <category>markdown</category>
       </categories>
       <tags>
-        <tag>数据迁移</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -89,6 +77,18 @@
 <p>   参考文献</p>
 <p><a href="http://www.baidu.com/">www.baidu.com</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>oracle迁移到mysql</title>
+    <url>/2019/06/18/oracle%E8%BF%81%E7%A7%BB%E5%88%B0mysql/</url>
+    <content><![CDATA[<h2 id="oracle迁移到mysql"><a href="#oracle迁移到mysql" class="headerlink" title="oracle迁移到mysql"></a>oracle迁移到mysql</h2><p>  相比较 navicat更为精确<br>  备注：免费版只能导出25条数据转换、建议转换表结构后数据，通过同步抽取处理。<br>  官网地址：<a href="https://intelligent-converters.com/oracle-to-mysql.htm">https://intelligent-converters.com/oracle-to-mysql.htm</a></p>
+]]></content>
+      <categories>
+        <category>数据迁移</category>
+      </categories>
+      <tags>
+        <tag>数据迁移</tag>
+      </tags>
   </entry>
   <entry>
     <title>redis使用指南</title>
@@ -193,11 +193,6 @@
       </tags>
   </entry>
   <entry>
-    <title>微服务架构</title>
-    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>大数据框架设计</title>
     <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
@@ -208,6 +203,55 @@
       <tags>
         <tag>大数据</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>整合测试</title>
+    <url>/2019/04/16/%E6%95%B4%E5%90%88%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="整合测试"><a href="#整合测试" class="headerlink" title="整合测试"></a>整合测试</h2><h3 id="如何在微服务架构中编写集成测试？"><a href="#如何在微服务架构中编写集成测试？" class="headerlink" title="如何在微服务架构中编写集成测试？"></a>如何在微服务架构中编写集成测试？</h3><p>编写集成测试需要大量的精力。与编写单元测试相比，它花费更多，并且要打开的锁数量要多得多。虽然我们仅通过单元测试保证服务的功能，但我们需要集成测试来保证与其他服务的通信。</p>
+<p>当涉及集成时，难度级别会进一步增加，并且还涉及微服务架构。如果您之前编写过Moliolith应用程序的集成测试，则可以更清楚地看到它们之间的区别。</p>
+<p>在本节中，我们将研究基于Microservis体系结构和消费者驱动的合同测试方法的系统中集成测试的重要性，这通过为主题带来不同的视角，使我们免于编写集成测试的成本。  </p>
+<h3 id="为什么我们需要集成测试？"><a href="#为什么我们需要集成测试？" class="headerlink" title="为什么我们需要集成测试？"></a>为什么我们需要集成测试？</h3><p>随着微服务架构中服务数量的增加，服务之间的通信和集成数量将成正比例增加。包含10个服务的系统和100个或更多服务相互交谈的系统的复杂性和维护成本无疑将是相同的。</p>
+<p>让我们考虑一个由数十个微服务组成的大型企业应用程序。我们有一个名为CustomerService的服务。该服务提供了与我们客户有关的其他服务可能需要的所有服务。因此，应使用该服务将对此服务进行的更改通知其他服务。否则，如果幸运的话，相关服务或不知道此更改的服务将在测试环境中失败。在最坏的情况下，如果正在进行的测试过程未涵盖该服务，则当您在实时环境中失败时，系统会通知您，这是我们想要的最后一件事。</p>
+<p>同样，如果为CustomerService还需要其他服务的数据，该服务所做的更改应该也可以用已知的CustomerService。 </p>
+<p>那么我们如何管理这些变更通知？我们可以用人工手动处理吗？此外，我们是否知道哪些服务会影响我们更改的服务？我们是否需要最新的文档？</p>
+<p>如果我们的应用程序包含少量微服务，则该团队中的团队可能很小，您也许可以以某种方式手动进行升级。在这里，我们所说的手动是指将对团队内服务所做的更改直接通知给受更改影响的服务的负责任服务。但是，不幸的是，如果我们谈论的是数十种甚至数百种服务，则无法手动管理它。</p>
+<p>补救措施：消费者驱动的合同测试（CDC测试）<br>我们有一个问题要知道您对微服务所做的最细微的更改如何影响使用该服务的消费者，而CDC测试可能是解决此问题的好方法。</p>
+<p>我们可以将CDC方法定义为最简单的形式，因为这两个服务就它们彼此发送的数据格式达成一致。此方法基于即时共享服务提供商或服务使用者所做的每个更改的原理。</p>
+<p>实施CDC时最重要的问题之一是管理消费者和提供者服务的团队之间的沟通。通信越断开线，实施CDC就会越困难。因此，最佳方案是所有服务均由同一团队负责。</p>
+<p>我们聊了很多，好吧，好吧，猜想您开始考虑如何实现此CDC，我想向您介绍Pact框架。由于Pact的详细实施时间可能会长一些，因此我认为在此处提供有关哪种伤口是软膏，其基本结构和用法的入门级信息是合适的。 </p>
+<h3 id="契约CDC测试框架"><a href="#契约CDC测试框架" class="headerlink" title="契约CDC测试框架"></a>契约CDC测试框架</h3><p>让我们先看一下Pact的官方资料。</p>
+<p>Pact是一个由消费者驱动的合同测试框架。Pact诞生于微服务的繁荣时期，旨在解决大型分布式系统的集成测试问题。</p>
+<p>Pact 是由Pact Foundation使用Ruby语言开发的开源CDC测试框架。它支持多种语言，例如Php，Go，C＃以及Ruby。如果查看Pact Fodundation的github页面，您会看到它在每种语言的单独存储库中进行。 </p>
+<p>现在，让我们看一下如何逐步实现而又不涉及太多技术细节和代码部分。 </p>
+<p>情境<br>我们有一个名为CustomerService的服务，以及另一个使用此服务的ProductService的服务。在这里，他们扮演CustomerService Provider和ProductService作为Consumer的角色。换句话说，CustomerService的更改是否影响ProductService至关重要。</p>
+<h4 id="1-在消费者服务端创建合同"><a href="#1-在消费者服务端创建合同" class="headerlink" title="1-在消费者服务端创建合同"></a>1-在消费者服务端创建合同</h4><p>如果我们正在创建测试项目，则无法担任服务的productervi角色的使用者。通过确定我们要编写测试场景，我们写我们的单元测试按照格式被确定PactNet和我们提供的服务模拟。在这里，单元测试语句应该引起您的注意。我们从一开始就说集成测试，您可能想知道，它来自哪里？ </p>
+<p>使用CDC，我们脱离了经典的Integration Test编写格式。如您所知，通常Integration Test方法实际上执行与Unit Tests不同的Web服务或数据库访问。因此，不涉及任何嘲笑。CDC yi Pact由作者在单元测试，提供程序服务中实施，而我们却无法接受，因为我们不再与重要的合同是我们之间的提供程序协议。</p>
+<p>消费者，提供者 ‘将被X请求相应的Y接受使用FLUENT提供的方法在Pact所指类型的测试类单元中的响应。</p>
+<h4 id="2-创建协议合同（合同）并与提供者共享"><a href="#2-创建协议合同（合同）并与提供者共享" class="headerlink" title="2-创建协议合同（合同）并与提供者共享"></a>2-创建协议合同（合同）并与提供者共享</h4><p>消费者测试在文章侧的所有测试方法之后运行。运行测试后，需要创建json格式的Contract。该json文件将在配置Pact时指定的目录中创建。该json文件将随着测试方法中的每一次更改而自动更新，并且始终会在指定目录中进行更新。换句话说，Pact处理合同的不断更新，这是一个非常重要的问题。</p>
+<p>生成的文件为json格式且可读性很强的事实使我们甚至可以将CDC应用于结构非常不同的服务。随着供应商编写的围棋语言，一个PHP的消费者可以动摇对他们的契约合同手中。 </p>
+<p>以下是合同契约示例。在“ 交互”列表下具有两个交互意味着要编写两种测试方法。请求部分消费者然后要求而作出响应。如果对请求消费者的供应商 “，是指从响应的期望。如您所见，它实际上是一种清晰的格式，不需要解释。资料来源：https : //github.com/tdshipley/pact-workshop-dotnet-core-v1</p>
+<p>{<br>  “消费者”：{<br>    “名称”：“消费者”<br>  }，<br>  “提供者”：{<br>    “名称”：“提供者”<br>  }，<br>  “互动”：[<br>    {<br>      “ description”：“具有无效日期参数的日期验证的无效GET请求”，<br>      “ providerState”：“有数据”，<br>      “请求”：{<br>        “ method”：“ get”，<br>        “ path”：“ / api / provider”，<br>        “ query”：“ validDateTime =哈哈兹”<br>      }，<br>      “响应”：{<br>        “状态”：400，<br>        “标题”：{<br>          “ Content-Type”：“应用程序/ json; charset = utf-8”<br>        }，<br>        “身体”： {<br>          “ message”：“ validDateTime不是日期或时间”<br>        }<br>      }<br>    }，<br>    {<br>      “ description”：“用于日期验证的有效GET请求”，<br>      “ providerState”：“没有数据”，<br>      “请求”：{<br>        “ method”：“ get”，<br>        “ path”：“ / api / provider”，<br>        “ query”：“ validDateTime = 04/04/2018”<br>      }，<br>      “响应”：{<br>        “状态”：404，<br>        “标题”：{<br>        }<br>      }<br>    }<br>  ]<br>  “元数据”：{<br>    “ pactSpecification”：{<br>      “ version”：“ 2.0.0”<br>    }<br>  }<br>}</p>
+<h4 id="3-通知提供商合同"><a href="#3-通知提供商合同" class="headerlink" title="3-通知提供商合同"></a>3-通知提供商合同</h4><p>在最后阶段，我们需要告知我们的提供商希望与他签订合同的消费者，并提供有关协议保留位置的信息，以便我们的提供商知道哪个消费者在他进行的任何更改中都会受到影响。</p>
+<p>我们可以使用Pact提供的流利方法轻松地做到这一点。我们可以为提供者定义任意数量的消费者和契约网址。在讨论代码细节之前，让我们在总结主题之前最后讨论一下Pact Broker概念。 </p>
+<h3 id="什么是契约经纪人？"><a href="#什么是契约经纪人？" class="headerlink" title="什么是契约经纪人？"></a>什么是契约经纪人？</h3><p>我们将在与提供者共享的部分中配置 “ 契约 ”时确定的目录中创建 json格式的合同。’我们说。在使用者和提供者处于同一环境中的情况下，将合同存储在目录中将很有用，但是在现实生活中，您将必须在Internet上即服务器上共享此文件。公约为我们提供了两种可能性。我们要做的就是指定json文件的位置，而不是目录，写上Pact Broker的地址，以及凭据信息（如果有）。对使用者和提供者执行相同的过程。现在，我们的服务将能够与在互联网上公开或私有的合同握手。</p>
+<p>如果您希望将Pact Broker服务作为SaaS获得，则还可以提供官方服务。您可以通过访问<a href="https://pactflow.io/%E6%9F%A5%E7%9C%8B%E5%AE%83%E3%80%82%E5%A6%82%E6%9E%9C%E6%82%A8%E6%89%93%E7%AE%97%E8%AE%A4%E7%9C%9F%E4%BD%BF%E7%94%A8Pact%EF%BC%8C%E5%BB%BA%E8%AE%AE%E6%82%A8%E4%BD%BF%E7%94%A8Pact">https://pactflow.io/查看它。如果您打算认真使用Pact，建议您使用Pact</a> Broker。</p>
+<p>此外，Pact Broker的界面非常不错，可以查看合同和数据的最新状态，例如哪种服务取决于哪种服务。作为示例，我总结了我从Pact Broker的github页面获取的两个屏幕截图。</p>
+<p><img src="https://lixinx11.github.io/medias/bigdata/4.png" alt="Pact Broker"></p>
+<p>图片来自<a href="https://github.com/pact-foundation/pact_broker">https://github.com/pact-foundation/pact_broker</a><br>虽然您可以在上图中看到我们定义的服务之间的关系，但在下面我们可以看到合同的最新状态。合同验证的日期位于提供商的“ 上次验证”列的右边。红色表示交易失败。</p>
+<p>在本节中，我们研究了消费者驱动的冲突方法，该方法为集成测试（微服务体系结构中最具挑战性的问题之一）以及用于实现此方法的Pact框架带来了不同的观点。</p>
+<p>如果您要使用微服务体系结构开发产品，建议您将Pact或其他框架作为软件开发生命周期中必不可少的一部分。</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微服务架构</title>
+    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>最好用的自动化测试工具</title>
@@ -249,18 +293,6 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习+深度学习+人工智能之间的关系</title>
-    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>算法</title>
     <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
@@ -274,6 +306,18 @@
       </categories>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习+深度学习+人工智能之间的关系</title>
+    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
