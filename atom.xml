@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-08-18T08:08:38.955Z</updated>
+  <updated>2020-08-18T07:41:07.658Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>机器学习+深度学习+人工智能之间的关系</title>
-    <link href="https://lixinx11.github.io/2020/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
-    <id>https://lixinx11.github.io/2020/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
-    <published>2020-08-18T08:03:20.000Z</published>
-    <updated>2020-08-18T08:08:38.955Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="AI" scheme="https://lixinx11.github.io/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://lixinx11.github.io/tags/AI/"/>
-    
-  </entry>
   
   <entry>
     <title>markdown</title>
@@ -138,6 +113,31 @@
     
     
     <category term="我的技术博客" scheme="https://lixinx11.github.io/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习+深度学习+人工智能之间的关系</title>
+    <link href="https://lixinx11.github.io/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <id>https://lixinx11.github.io/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
+    <published>2018-08-18T08:03:20.000Z</published>
+    <updated>2020-08-18T08:12:19.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://lixinx11.github.io/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://lixinx11.github.io/tags/AI/"/>
     
   </entry>
   
