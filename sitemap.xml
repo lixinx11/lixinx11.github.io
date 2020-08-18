@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lixinx11.github.io/2020/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</loc>
+    
+    <lastmod>2020-08-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lixinx11.github.io/2020/08/18/markdown/</loc>
     
     <lastmod>2020-08-18</lastmod>
@@ -137,6 +144,13 @@
   </url>
   
   <url>
+    <loc>https://lixinx11.github.io/tags/AI/</loc>
+    <lastmod>2020-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lixinx11.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -174,6 +188,13 @@
   </url>
   
   <url>
+    <loc>https://lixinx11.github.io/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2020-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lixinx11.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -181,7 +202,7 @@
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://lixinx11.github.io/categories/AI/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
