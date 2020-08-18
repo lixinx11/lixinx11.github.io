@@ -130,14 +130,14 @@
 
   
   <url>
-    <loc>https://lixinx11.github.io/tags/Hello-world/</loc>
+    <loc>https://lixinx11.github.io/tags/markdown/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/tags/markdown/</loc>
+    <loc>https://lixinx11.github.io/tags/Hello-world/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -151,7 +151,7 @@
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <loc>https://lixinx11.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -165,7 +165,7 @@
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://lixinx11.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -195,14 +195,14 @@
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://lixinx11.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://lixinx11.github.io/categories/NOSQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -216,14 +216,14 @@
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/categories/AI/</loc>
+    <loc>https://lixinx11.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lixinx11.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://lixinx11.github.io/categories/AI/</loc>
     <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
