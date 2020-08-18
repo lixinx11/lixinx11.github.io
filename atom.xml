@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-08-17T11:29:13.451Z</updated>
+  <updated>2020-08-18T07:41:07.658Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>markdown</title>
+    <link href="https://lixinx11.github.io/2020/08/18/markdown/"/>
+    <id>https://lixinx11.github.io/2020/08/18/markdown/</id>
+    <published>2020-08-18T07:39:26.000Z</published>
+    <updated>2020-08-18T07:41:07.658Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="markdown" scheme="https://lixinx11.github.io/categories/markdown/"/>
+    
+    
+    <category term="markdown" scheme="https://lixinx11.github.io/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>算法</title>

@@ -22,6 +22,18 @@
       </tags>
   </entry>
   <entry>
+    <title>markdown</title>
+    <url>/2020/08/18/markdown/</url>
+    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
+<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>mysql5.7安装使用指南</title>
     <url>/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</url>
     <content><![CDATA[<h2 id="1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini"><a href="#1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini" class="headerlink" title="1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini"></a>1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini</h2><p>内容：</p>
@@ -65,6 +77,18 @@
 <p>   参考文献</p>
 <p><a href="http://www.baidu.com/">www.baidu.com</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>大数据技术栈</title>
+    <url>/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
+    <content><![CDATA[<p><img src="https://lixinx11.github.io/medias/bigdata/1.png" alt="大数据架构"></p>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>我的技术博客</tag>
+      </tags>
   </entry>
   <entry>
     <title>redis使用指南</title>
@@ -157,15 +181,24 @@
       </tags>
   </entry>
   <entry>
-    <title>大数据技术栈</title>
-    <url>/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
-    <content><![CDATA[<p><img src="https://lixinx11.github.io/medias/bigdata/1.png" alt="大数据架构"></p>
+    <title>微服务架构</title>
+    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>算法</title>
+    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
+<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
+<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
+<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
+<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
 ]]></content>
       <categories>
-        <category>大数据</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>我的技术博客</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -217,27 +250,6 @@
       </categories>
       <tags>
         <tag>java高并发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微服务架构</title>
-    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>算法</title>
-    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
-<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
-<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
-<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
-<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
