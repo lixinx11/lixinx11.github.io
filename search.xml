@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>markdown</title>
+    <url>/2020/08/18/markdown/</url>
+    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
+<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello world</title>
     <url>/2010/04/12/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -19,18 +31,6 @@
 ]]></content>
       <tags>
         <tag>Hello world</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>markdown</title>
-    <url>/2020/08/18/markdown/</url>
-    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
-<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -181,23 +181,6 @@
       </tags>
   </entry>
   <entry>
-    <title>大数据框架设计</title>
-    <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
-]]></content>
-      <categories>
-        <category>大数据</category>
-      </categories>
-      <tags>
-        <tag>大数据</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微服务架构</title>
-    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>大数据技术栈</title>
     <url>/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
     <content><![CDATA[<p><img src="https://lixinx11.github.io/medias/bigdata/1.png" alt="大数据架构"></p>
@@ -207,6 +190,18 @@
       </categories>
       <tags>
         <tag>我的技术博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大数据框架设计</title>
+    <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -265,43 +260,9 @@
       </tags>
   </entry>
   <entry>
-    <title>最好用的自动化测试工具</title>
-    <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
-<p>Selenium是网页应用中最流行的开源自动化测试框架。起源于2000年，10多年来不断地完善，Selenium成为许多Web自动化测试人员的选择，尤其是那些有高级编程和脚本技能的人。Selenium也成为了其他开源自动化测试工具比如Katalon Studio，Watir，Protractor和Robot Framework的核心框架。</p>
-<p>Selenium 支持多系统环境（Windows，Mac，Linux）以及多种浏览器（Chrome，FireFox，IE以及无头浏览器（没有界面））。它的脚本可以由各种各样的编程语言编写，比如 Java，Groovy，Python，C#，PHP，Ruby 以及 Perl。</p>
-<p>因为Selenium的灵活性，测试人员可以写各种复杂的、高级的测试脚本来应对各种复杂的问题，它需要高级的编程技能和付出来构建满足自己需求的自动化测试框架和库。</p>
-<h2 id="Appium"><a href="#Appium" class="headerlink" title="Appium"></a>Appium</h2><p>AppUI自动化测试</p>
-<p>Appium是一个移动端自动化测试开源工具，支持iOS和Android平台，支持Python、Java等语言，即同一套Java或Python脚本可以同时运行在iOS和Android平台，Appium 是一个C/S架构，核心是一个Web服务器，它提供了一套REST的接口。当收到客户端的连接后，就会监听到命令，然后在移动设备上执行这些命令，最后将执行结果放在HTTP响应中返还给客户端。</p>
-<h2 id="Jmeter"><a href="#Jmeter" class="headerlink" title="Jmeter"></a>Jmeter</h2><p>接口测试，性能测试</p>
-<p>Apache JMeter是一个开源的Java桌面应用程序，主要用于web应用程序的负载测试。它还支持单元测试和有限的功能测试。</p>
-<p>它有很多好的特性，比如动态报告、可移植性、强大的测试IDE等，并且支持不同类型的应用程序、协议、shell脚本、Java对象和数据库。</p>
-<h2 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h2><p>接口测试</p>
-<p>Postman 提供功能强大的Web API和HTTP请求的调试，它能够发送任何类型的HTTP请求 (GET, POST, PUT, DELETE…)，并且能附带任何数量的参数和Headers。不仅如此，它还提供测试数据和环境配置数据的导入导出，付费的Post Cloud用户还能够创建自己的 Team Library用来团队协作式的测试，并能够将自己的测试收藏夹和用例数据分享给团队。</p>
-<h2 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h2><p>接口测试</p>
-<p>SoapUI是一个非常流行的用于SOAP和REST的开源API测试自动化框架。它还支持功能测试、性能测试、数据驱动测试和测试报告。</p>
-<h2 id="Monkey"><a href="#Monkey" class="headerlink" title="Monkey"></a>Monkey</h2><p>稳定性测试</p>
-<p>软件附带在sdk中，适用于android和ios，通过adb shell，生成用户或系统的伪随机事件。</p>
-<p>压力测试结果：崩溃crash，无响应anr，</p>
-<p>基本命令：adb shell monkey 1000。</p>
-<h2 id="Robot-Framework"><a href="#Robot-Framework" class="headerlink" title="Robot Framework"></a>Robot Framework</h2><p>WebUI自动化测试，接口测试</p>
-<p>Robot Framework是一个开源自动化框架，它实现了用于验收测试和验收测试驱动开发（ATDD）的关键字驱动方法。Robot Framework为不同的测试自动化需求提供框架。但是，通过使用Python和Java实现其他测试库，可以进一步扩展其测试功能。Selenium WebDriver是Robot Framework中常用的外部库。</p>
-<p>测试工程师可以利用Robot Framework作为自动化框架，不仅可以进行Web测试，还可以用于Android和iOS测试自动化。对于熟悉关键字驱动测试的测试人员，可以轻松学习Robot Framework。</p>
-<h2 id="QTP"><a href="#QTP" class="headerlink" title="QTP"></a>QTP</h2><p>WebUI自动化测试</p>
-<p>QTP是一种自动测试工具。使用 QTP 的目的是想用它来执行重复的手动测试，主要是用于回归测试和测试同一软件的新版本。因此你在测试前要考虑好如何对应用程序进行测试，例如要测试那些功能、操作步骤、输入数据和期望的输出数据等。</p>
-<p>QTP针对的是GUI应用程序，包括传统的Windows应用程序，以及现在越来越流行的Web应用。它可以覆盖绝大多数的软件开发技术，简单高效，并具备测试用例可重用的特点。其中包括：创建测试、插入检查点、检验数据、增强测试、运行测试、分析结果和维护测试等方面。</p>
-<h2 id="LoadRunner"><a href="#LoadRunner" class="headerlink" title="LoadRunner"></a>LoadRunner</h2><p>性能测试</p>
-<p>LoadRunner，是一种预测系统行为和性能的负载测试工具。通过以模拟上千万用户实施并发负载及实时性能监测的方式来确认和查找问题，LoadRunner能够对整个企业架构进行测试。</p>
-<p>企业使用LoadRunner能最大限度地缩短测试时间，优化性能和加速应用系统的发布周期。LoadRunner可适用于各种体系架构的自动负载测试，能预测系统行为并评估系统性能。</p>
-<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>持续集成</p>
-<p>自动化构建编译，部署，任务执行，测试报告，邮件通知等。</p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-      </tags>
+    <title>微服务架构</title>
+    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>整合测试</title>
@@ -345,6 +306,45 @@
       </categories>
       <tags>
         <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最好用的自动化测试工具</title>
+    <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
+<p>Selenium是网页应用中最流行的开源自动化测试框架。起源于2000年，10多年来不断地完善，Selenium成为许多Web自动化测试人员的选择，尤其是那些有高级编程和脚本技能的人。Selenium也成为了其他开源自动化测试工具比如Katalon Studio，Watir，Protractor和Robot Framework的核心框架。</p>
+<p>Selenium 支持多系统环境（Windows，Mac，Linux）以及多种浏览器（Chrome，FireFox，IE以及无头浏览器（没有界面））。它的脚本可以由各种各样的编程语言编写，比如 Java，Groovy，Python，C#，PHP，Ruby 以及 Perl。</p>
+<p>因为Selenium的灵活性，测试人员可以写各种复杂的、高级的测试脚本来应对各种复杂的问题，它需要高级的编程技能和付出来构建满足自己需求的自动化测试框架和库。</p>
+<h2 id="Appium"><a href="#Appium" class="headerlink" title="Appium"></a>Appium</h2><p>AppUI自动化测试</p>
+<p>Appium是一个移动端自动化测试开源工具，支持iOS和Android平台，支持Python、Java等语言，即同一套Java或Python脚本可以同时运行在iOS和Android平台，Appium 是一个C/S架构，核心是一个Web服务器，它提供了一套REST的接口。当收到客户端的连接后，就会监听到命令，然后在移动设备上执行这些命令，最后将执行结果放在HTTP响应中返还给客户端。</p>
+<h2 id="Jmeter"><a href="#Jmeter" class="headerlink" title="Jmeter"></a>Jmeter</h2><p>接口测试，性能测试</p>
+<p>Apache JMeter是一个开源的Java桌面应用程序，主要用于web应用程序的负载测试。它还支持单元测试和有限的功能测试。</p>
+<p>它有很多好的特性，比如动态报告、可移植性、强大的测试IDE等，并且支持不同类型的应用程序、协议、shell脚本、Java对象和数据库。</p>
+<h2 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h2><p>接口测试</p>
+<p>Postman 提供功能强大的Web API和HTTP请求的调试，它能够发送任何类型的HTTP请求 (GET, POST, PUT, DELETE…)，并且能附带任何数量的参数和Headers。不仅如此，它还提供测试数据和环境配置数据的导入导出，付费的Post Cloud用户还能够创建自己的 Team Library用来团队协作式的测试，并能够将自己的测试收藏夹和用例数据分享给团队。</p>
+<h2 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h2><p>接口测试</p>
+<p>SoapUI是一个非常流行的用于SOAP和REST的开源API测试自动化框架。它还支持功能测试、性能测试、数据驱动测试和测试报告。</p>
+<h2 id="Monkey"><a href="#Monkey" class="headerlink" title="Monkey"></a>Monkey</h2><p>稳定性测试</p>
+<p>软件附带在sdk中，适用于android和ios，通过adb shell，生成用户或系统的伪随机事件。</p>
+<p>压力测试结果：崩溃crash，无响应anr，</p>
+<p>基本命令：adb shell monkey 1000。</p>
+<h2 id="Robot-Framework"><a href="#Robot-Framework" class="headerlink" title="Robot Framework"></a>Robot Framework</h2><p>WebUI自动化测试，接口测试</p>
+<p>Robot Framework是一个开源自动化框架，它实现了用于验收测试和验收测试驱动开发（ATDD）的关键字驱动方法。Robot Framework为不同的测试自动化需求提供框架。但是，通过使用Python和Java实现其他测试库，可以进一步扩展其测试功能。Selenium WebDriver是Robot Framework中常用的外部库。</p>
+<p>测试工程师可以利用Robot Framework作为自动化框架，不仅可以进行Web测试，还可以用于Android和iOS测试自动化。对于熟悉关键字驱动测试的测试人员，可以轻松学习Robot Framework。</p>
+<h2 id="QTP"><a href="#QTP" class="headerlink" title="QTP"></a>QTP</h2><p>WebUI自动化测试</p>
+<p>QTP是一种自动测试工具。使用 QTP 的目的是想用它来执行重复的手动测试，主要是用于回归测试和测试同一软件的新版本。因此你在测试前要考虑好如何对应用程序进行测试，例如要测试那些功能、操作步骤、输入数据和期望的输出数据等。</p>
+<p>QTP针对的是GUI应用程序，包括传统的Windows应用程序，以及现在越来越流行的Web应用。它可以覆盖绝大多数的软件开发技术，简单高效，并具备测试用例可重用的特点。其中包括：创建测试、插入检查点、检验数据、增强测试、运行测试、分析结果和维护测试等方面。</p>
+<h2 id="LoadRunner"><a href="#LoadRunner" class="headerlink" title="LoadRunner"></a>LoadRunner</h2><p>性能测试</p>
+<p>LoadRunner，是一种预测系统行为和性能的负载测试工具。通过以模拟上千万用户实施并发负载及实时性能监测的方式来确认和查找问题，LoadRunner能够对整个企业架构进行测试。</p>
+<p>企业使用LoadRunner能最大限度地缩短测试时间，优化性能和加速应用系统的发布周期。LoadRunner可适用于各种体系架构的自动负载测试，能预测系统行为并评估系统性能。</p>
+<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>持续集成</p>
+<p>自动化构建编译，部署，任务执行，测试报告，邮件通知等。</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
       </tags>
   </entry>
   <entry>
