@@ -22,18 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>markdown</title>
-    <url>/2020/08/18/markdown/</url>
-    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
-<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysql5.7安装使用指南</title>
     <url>/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</url>
     <content><![CDATA[<h2 id="1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini"><a href="#1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini" class="headerlink" title="1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini"></a>1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini</h2><p>内容：</p>
@@ -77,6 +65,18 @@
 <p>   参考文献</p>
 <p><a href="http://www.baidu.com/">www.baidu.com</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>markdown</title>
+    <url>/2020/08/18/markdown/</url>
+    <content><![CDATA[<h2 id="pandoc的安装"><a href="#pandoc的安装" class="headerlink" title="pandoc的安装"></a>pandoc的安装</h2><p>pandoc的作用主要是将我们的markdown文件转换成html，<br>这样就可以在浏览器中实时预览我们的文件渲染效果。<br>当然，pandoc还有许多其他的功能，比如它也支持将markdown文件输出成pdf等，给出他的下载链接</p>
+<h3 id="网址：http-pandoc-org-installing-html"><a href="#网址：http-pandoc-org-installing-html" class="headerlink" title="网址：http://pandoc.org/installing.html"></a>网址：<a href="http://pandoc.org/installing.html">http://pandoc.org/installing.html</a></h3>]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title>oracle迁移到mysql</title>
@@ -181,6 +181,22 @@
       </tags>
   </entry>
   <entry>
+    <title>分析</title>
+    <url>/2020/08/20/%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<pre><code> ## 多路复用技术 epoll 分析  </code></pre>
+<p> epoll并没有使用共享内存 文中大部分人认为，epoll并没有使用mmap或共享内存</p>
+<h2 id="Linux下的I-O复用与epoll详解"><a href="#Linux下的I-O复用与epoll详解" class="headerlink" title="Linux下的I/O复用与epoll详解"></a>Linux下的I/O复用与epoll详解</h2><p>epoll原理详解及epoll反应堆模型<br>epoll的操作<br>int epoll_create(int size);<br>int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);<br>int epoll_wait(int epfd, struct epoll_event *events,int maxevents, int timeout);<br>epoll_create: 建立一个epoll对象(在epoll文件系统中给这个句柄分配资源).<br>调用epoll_ctl向epoll对象中添加socket. 包含该socket的节点会被加入到一个红黑树上.<br>调用epoll_wait收集发生事件的连接. 触发了事件的链接会被放入一个双向链表.<br>epoll的结构与工作原理<br>红黑树. 用红黑树存储需要监听事件的socket.<br>epoll_ctl在向epoll对象中添加、修改、删除事件时，从rbr红黑树中查找事件也非常快<br>双向链表. 触发了监听事件的socket会被拷贝至此，等待用户处理。<br> 所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，也就是说相应事件的发生时会调用这里的回调方法。这个回调方法在内核中叫做ep_poll_callback，它会把这样的事件放到上面的rdllist双向链表中。</p>
+<h2 id="epoll的两种触发模式"><a href="#epoll的两种触发模式" class="headerlink" title="epoll的两种触发模式"></a>epoll的两种触发模式</h2><p>epoll有EPOLLLT和EPOLLET两种触发模式，水平触发和边缘触发. 此处略</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java nio是利用Selector多路复用来实现的.<br>linux2.x版本后，Selector是用epoll实现的.<br>通过建立一个Selector, 可以在其上监听socket. 通过建立一个epoll对象，可以在其上为socket注册监听事件.<br>linux epoll的常用函数是epoll_ctl, epoll_wait. 利用epoll_ctl可以为socket注册监听事件，并调用epoll_wait返回触发事件的socket.<br>epoll_ctl监听socket时，会将该socket放入红黑树<br>epoll_wait返回一个双向链表，其中包含了触发事件的socket.<br>所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，相应事件的发生时会调用回调方法ep_poll_callback.把socket放到rdllist双向链表中.<br>epoll与select poll的比较<br>select poll是采用轮询方式, epoll采用回调的方式<br>select poll每次等待socket事件，都需要把所有socket从用户态拷贝至内核态，epoll则只需将socket添加一次到红黑树上即可.<br>select用数组来存放socket, 因此受到数量限制. poll用链表存放, epoll用红黑树存放, 因此不受数量限制.<br>select、poll、epoll虽然都会返回就绪的文件描述符数量。但是select和poll并不会明确指出是哪些文件描述符就绪，而epoll会。造成的区别就是，系统调用返回后，调用select和poll的程序需要遍历监听的整个文件描述符找到是谁处于就绪，而epoll则直接处理即可。</p>
+]]></content>
+      <categories>
+        <category>epoll</category>
+      </categories>
+      <tags>
+        <tag>epoll</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大数据技术栈</title>
     <url>/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
     <content><![CDATA[<p><img src="https://lixinx11.github.io/medias/bigdata/1.png" alt="大数据架构"></p>
@@ -260,11 +276,6 @@
       </tags>
   </entry>
   <entry>
-    <title>微服务架构</title>
-    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>整合测试</title>
     <url>/2019/04/16/%E6%95%B4%E5%90%88%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<h2 id="整合测试"><a href="#整合测试" class="headerlink" title="整合测试"></a>整合测试</h2><h3 id="如何在微服务架构中编写集成测试？"><a href="#如何在微服务架构中编写集成测试？" class="headerlink" title="如何在微服务架构中编写集成测试？"></a>如何在微服务架构中编写集成测试？</h3><p>编写集成测试需要大量的精力。与编写单元测试相比，它花费更多，并且要打开的锁数量要多得多。虽然我们仅通过单元测试保证服务的功能，但我们需要集成测试来保证与其他服务的通信。</p>
@@ -307,6 +318,11 @@
       <tags>
         <tag>测试</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>微服务架构</title>
+    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>最好用的自动化测试工具</title>
@@ -360,22 +376,6 @@
       </tags>
   </entry>
   <entry>
-    <title>算法</title>
-    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
-<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
-<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
-<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
-<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高并发设计</title>
     <url>/2017/03/12/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<h2 id="系统性能两大核心点"><a href="#系统性能两大核心点" class="headerlink" title="系统性能两大核心点"></a>系统性能两大核心点</h2><p>吞吐量（Throughput）<br>响应延迟（Response Delay）<br>优化目标<br>缩短响应时间<br>提供并发数<br>让系统处于合理状态<br>Number of Concurrent Users<br>上图是高并发软件性能模型。图中三条曲线，分别表示：</p>
@@ -424,6 +424,22 @@
       </categories>
       <tags>
         <tag>java高并发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法</title>
+    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
+<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
+<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
+<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
+<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
