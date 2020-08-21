@@ -667,4 +667,18 @@ public void run()&#123;
         <tag>领域驱动设计：软件核心复杂性应对之道</tag>
       </tags>
   </entry>
+  <entry>
+    <title>常见开源产品epoll网络事件模型汇总</title>
+    <url>/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="常用模型总结："><a href="#常用模型总结：" class="headerlink" title="常用模型总结："></a>常用模型总结：</h2><p>1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis<br>2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知 + n线程(处理) 模型…………代表产品thrift-nonblocking-server<br>2）epoll 1线程(listen+accept+epoll_wait) + n队列通知 + n线程(处理) 模型…………代表产品memcached<br>4）epoll 1进程(listen) + n进程(accept+epoll_wait+处理) 模型………………………….代表产品nginx<br>5）epoll 1线程(listen) + n线程(accept+epoll_wait+处理) 模型<br>6)  epoll 1线程(listen+accept) + n线程(epoll_wait+处理) 模型</p>
+<h2 id="常用模型汇总："><a href="#常用模型汇总：" class="headerlink" title="常用模型汇总："></a>常用模型汇总：</h2><p><img src="https://lixinx11.github.io/medias/bigdata/10.png" alt="常用模型汇总"></p>
+<h2 id="常用模型对比："><a href="#常用模型对比：" class="headerlink" title="常用模型对比："></a>常用模型对比：</h2><p>  <img src="https://lixinx11.github.io/medias/bigdata/11.png" alt="常用模型对比"></p>
+]]></content>
+      <categories>
+        <category>epoll</category>
+      </categories>
+      <tags>
+        <tag>epoll网络事件模型分析</tag>
+      </tags>
+  </entry>
 </search>
