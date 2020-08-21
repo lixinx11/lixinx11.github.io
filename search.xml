@@ -647,4 +647,24 @@ public void run()&#123;
         <tag>java多线程</tag>
       </tags>
   </entry>
+  <entry>
+    <title>领域驱动设计</title>
+    <url>/2019/11/21/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第一步，统一语言：</p>
+<p>开发人员应该使用基于模型的语言来描述系统中的工件、任务和功能。</p>
+<p>领域专家应该抵制不合适或无法充分表达领域理解的术语或结构，开发人员应该密切关注那些将会妨碍设计的有歧义和不一致的地方。</p>
+<p>有些人天生是视觉动物，图可以帮助人们掌握某些类型的信息。</p>
+<h2 id="分层模式：-Layered-Architecture"><a href="#分层模式：-Layered-Architecture" class="headerlink" title="分层模式： Layered Architecture"></a>分层模式： Layered Architecture</h2><p> <img src="https://lixinx11.github.io/medias/bigdata/6.png" alt="图1"><br> <img src="https://lixinx11.github.io/medias/bigdata/7.png" alt="图2"><br>分层模式</p>
+<p>分层模式例子</p>
+<p>如果一个经验并不丰富的项目团队要完成一个简单的项目，却决定使用MODELDRIVENDESIGN以及LAYEREDARCHITECTURE，那么这个项目组将会经历一个艰难的学习过程。团队成员不得不去掌握复杂的新技术，艰难地学习对象建模。</p>
+<p>entity模式</p>
+<p>领域对象生命周期<br> <img src="https://lixinx11.github.io/medias/bigdata/8.png" alt="图3"><br> <img src="https://lixinx11.github.io/medias/bigdata/9.png" alt="图4"></p>
+]]></content>
+      <categories>
+        <category>领域驱动设计</category>
+      </categories>
+      <tags>
+        <tag>领域驱动设计：软件核心复杂性应对之道</tag>
+      </tags>
+  </entry>
 </search>
