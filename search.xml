@@ -683,7 +683,7 @@ public void run()&#123;
   </entry>
   <entry>
     <title>Dockerfile 定制镜像</title>
-    <url>/2020/08/21/dockerfile/</url>
+    <url>/2018/08/21/dockerfile/</url>
     <content><![CDATA[<p>从前面一节的docker commit的学习中，我们可以了解到，镜像的定制实际上就是定制每一层所添加的配置、文件等信息，但是命令毕竟只是命令，每次定制都得去重复执行这个命令，而且还不够直观，如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，那么这些问题不就都可以解决了吗？对的，这个脚本就是我们说的Dockerfile。</p>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Dockerfile 是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p>
 <p>还以之前定制 nginx 镜像为例，这次我们使用 Dockerfile 来定制。在一个空白目录中，建立一个文本文件，并命名为 Dockerfile：</p>
