@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="多路复用技术 epoll 分析, 麦芽">
+    <meta name="keywords" content="ThreadLocal, 麦芽">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>多路复用技术 epoll 分析 | 麦芽</title>
+    <title>ThreadLocal | 麦芽</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">多路复用技术 epoll 分析</h1>
+                    <h1 class="description center-align post-title">ThreadLocal</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/epoll/">
-                                <span class="chip bg-color">epoll</span>
+                            <a href="/tags/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3ThreadLocal/">
+                                <span class="chip bg-color">彻底理解ThreadLocal</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/epoll/" class="post-category">
-                                epoll
+                            <a href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-category">
+                                多线程
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-20
+                    2020-08-21
                 </div>
                 
 
@@ -472,12 +472,84 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code> ## 多路复用技术 epoll 分析  </code></pre>
-<p> epoll并没有使用共享内存 文中大部分人认为，epoll并没有使用mmap或共享内存</p>
-<h2 id="Linux下的I-O复用与epoll详解"><a href="#Linux下的I-O复用与epoll详解" class="headerlink" title="Linux下的I/O复用与epoll详解"></a>Linux下的I/O复用与epoll详解</h2><p>epoll原理详解及epoll反应堆模型<br>epoll的操作<br>int epoll_create(int size);<br>int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);<br>int epoll_wait(int epfd, struct epoll_event *events,int maxevents, int timeout);<br>epoll_create: 建立一个epoll对象(在epoll文件系统中给这个句柄分配资源).<br>调用epoll_ctl向epoll对象中添加socket. 包含该socket的节点会被加入到一个红黑树上.<br>调用epoll_wait收集发生事件的连接. 触发了事件的链接会被放入一个双向链表.<br>epoll的结构与工作原理<br>红黑树. 用红黑树存储需要监听事件的socket.<br>epoll_ctl在向epoll对象中添加、修改、删除事件时，从rbr红黑树中查找事件也非常快<br>双向链表. 触发了监听事件的socket会被拷贝至此，等待用户处理。<br> 所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，也就是说相应事件的发生时会调用这里的回调方法。这个回调方法在内核中叫做ep_poll_callback，它会把这样的事件放到上面的rdllist双向链表中。</p>
-<p> <img src="https://lixinx11.github.io/medias/bigdata/5.png" alt=" epoll 分析"></p>
-<h2 id="epoll的两种触发模式"><a href="#epoll的两种触发模式" class="headerlink" title="epoll的两种触发模式"></a>epoll的两种触发模式</h2><p>epoll有EPOLLLT和EPOLLET两种触发模式，水平触发和边缘触发. 此处略</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java nio是利用Selector多路复用来实现的.<br>linux2.x版本后，Selector是用epoll实现的.<br>通过建立一个Selector, 可以在其上监听socket. 通过建立一个epoll对象，可以在其上为socket注册监听事件.<br>linux epoll的常用函数是epoll_ctl, epoll_wait. 利用epoll_ctl可以为socket注册监听事件，并调用epoll_wait返回触发事件的socket.<br>epoll_ctl监听socket时，会将该socket放入红黑树<br>epoll_wait返回一个双向链表，其中包含了触发事件的socket.<br>所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，相应事件的发生时会调用回调方法ep_poll_callback.把socket放到rdllist双向链表中.<br>epoll与select poll的比较<br>select poll是采用轮询方式, epoll采用回调的方式<br>select poll每次等待socket事件，都需要把所有socket从用户态拷贝至内核态，epoll则只需将socket添加一次到红黑树上即可.<br>select用数组来存放socket, 因此受到数量限制. poll用链表存放, epoll用红黑树存放, 因此不受数量限制.<br>select、poll、epoll虽然都会返回就绪的文件描述符数量。但是select和poll并不会明确指出是哪些文件描述符就绪，而epoll会。造成的区别就是，系统调用返回后，调用select和poll的程序需要遍历监听的整个文件描述符找到是谁处于就绪，而epoll则直接处理即可。</p>
+                <h2 id="彻底理解ThreadLocal"><a href="#彻底理解ThreadLocal" class="headerlink" title="彻底理解ThreadLocal"></a>彻底理解ThreadLocal</h2><p>深挖过threadLocal之后，一句话概括：Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。所以ThreadLocal的应用场合，最适合的是按线程多实例（每个线程对应一个实例）的对象的访问，并且这个对象很多地方都要用到。</p>
+<p>数据隔离的秘诀其实是这样的，Thread有个TheadLocalMap类型的属性，叫做threadLocals，该属性用来保存该线程本地变量。这样每个线程都有自己的数据，就做到了不同线程间数据的隔离，保证了数据安全。</p>
+<p>接下来采用jdk1.8源码进行深挖一下TheadLocal和TheadLocalMap。</p>
+<h2 id="ThreadLocal是什么"><a href="#ThreadLocal是什么" class="headerlink" title="ThreadLocal是什么"></a>ThreadLocal是什么</h2><p>早在JDK 1.2的版本中就提供java.lang.ThreadLocal，ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。使用这个工具类可以很简洁地编写出优美的多线程程序。</p>
+<p>当使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
+<p>从线程的角度看，目标变量就象是线程的本地变量，这也是类名中“Local”所要表达的意思。</p>
+<p>所以，在Java中编写线程局部变量的代码相对来说要笨拙一些，因此造成线程局部变量没有在Java开发者中得到很好的普及。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>ThreadLocal，连接ThreadLocalMap和Thread。来处理Thread的TheadLocalMap属性，包括init初始化属性赋值、get对应的变量，set设置变量等。通过当前线程，获取线程上的ThreadLocalMap属性，对数据进行get、set等操作。</p>
+<p>ThreadLocalMap，用来存储数据，采用类似hashmap机制，存储了以threadLocal为key，需要隔离的数据为value的Entry键值对数组结构。</p>
+<p>ThreadLocal，有个ThreadLocalMap类型的属性，存储的数据就放在这儿。</p>
+<h2 id="ThreadLocal、ThreadLocal、Thread之间的关系"><a href="#ThreadLocal、ThreadLocal、Thread之间的关系" class="headerlink" title="ThreadLocal、ThreadLocal、Thread之间的关系"></a>ThreadLocal、ThreadLocal、Thread之间的关系</h2><p>ThreadLocalMap是ThreadLocal内部类，由ThreadLocal创建，Thread有ThreadLocal.ThreadLocalMap类型的属性</p>
+<h2 id="ThreadLocalMap简介"><a href="#ThreadLocalMap简介" class="headerlink" title="ThreadLocalMap简介"></a>ThreadLocalMap简介</h2><p>看名字就知道是个map，没错，这就是个hashMap机制实现的map，用Entry数组来存储键值对，key是ThreadLocal对象，value则是具体的值。值得一提的是，为了方便GC，Entry继承了WeakReference，也就是弱引用。里面有一些具体关于如何清理过期的数据、扩容等机制，思路基本和hashmap差不多，有兴趣的可以自行阅读了解，这边只需知道大概的数据存储结构即可。</p>
+<h2 id="Thread同步机制的比较"><a href="#Thread同步机制的比较" class="headerlink" title="Thread同步机制的比较"></a>Thread同步机制的比较</h2><p>ThreadLocal和线程同步机制相比有什么优势呢？</p>
+<p>Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。</p>
+<p>在同步机制中，通过对象的锁机制保证同一时间只有一个线程访问变量。这时该变量是多个线程共享的，使用同步机制要求程序慎密地分析什么时候对变量进行读写，什么时候需要锁定某个对象，什么时候释放对象锁等繁杂的问题，程序设计和编写难度相对较大。</p>
+<p>而ThreadLocal则从另一个角度来解决多线程的并发访问。ThreadLocal会为每一个线程提供一个独立的变量副本，从而隔离了多个线程对数据的访问冲突。因为每一个线程都拥有自己的变量副本，从而也就没有必要对该变量进行同步了。ThreadLocal提供了线程安全的共享对象，在编写多线程代码时，可以把不安全的变量封装进ThreadLocal。</p>
+<p>概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。</p>
+<p>Spring使用ThreadLocal解决线程安全问题我们知道在一般情况下，只有无状态的Bean才可以在多线程环境下共享，在Spring中，绝大部分Bean都可以声明为singleton作用域。就是因为Spring对一些Bean（如RequestContextHolder、TransactionSynchronizationManager、LocaleContextHolder等）中非线程安全状态采用ThreadLocal进行处理，让它们也成为线程安全的状态，因为有状态的Bean就可以在多线程中共享了。</p>
+<p>一般的Web应用划分为展现层、服务层和持久层三个层次，在不同的层中编写对应的逻辑，下层通过接口向上层开放功能调用。在一般情况下，从接收请求到返回响应所经过的所有程序调用都同属于一个线程。</p>
+<p>同一线程贯通三层这样你就可以根据需要，将一些非线程安全的变量以ThreadLocal存放，在同一次请求响应的调用线程中，所有关联的对象引用到的都是同一个变量。</p>
+<p>下面的实例能够体现Spring对有状态Bean的改造思路：</p>
+<p>TestDao：非线程安全</p>
+<p>public class TestDao {<br>    private Connection conn;// ①一个非线程安全的变量</p>
+<pre><code>public void addTopic() throws SQLException &#123;
+    Statement stat = conn.createStatement();// ②引用非线程安全变量
+    // …
+&#125;</code></pre>
+<p>由于conn是成员变量，因为addTopic()方法是非线程安全的，必须在使用时创建一个新TopicDao实例（非singleton）。下面使用ThreadLocal对conn这个非线程安全的“状态”进行改造：</p>
+<p>TestDao：线程安全</p>
+<p>public class TestDaoNew {// ①使用ThreadLocal保存Connection变量<br>  private static ThreadLocal<Connection> connThreadLocal = ThreadLocal.withInitial(Test::createConnection);</p>
+<p>  // 具体创建数据库连接的方法<br>  private static Connection createConnection() {<br>    Connection result = null;<br>    /**<br>     * create a real connection…<br>     * such as :<br>     * result = DriverManager.getConnection(dbUrl, dbUser, dbPwd);<br>     */<br>    return result;<br>  }</p>
+<p>  // ③直接返回线程本地变量<br>  public static Connection getConnection() {<br>    return connThreadLocal.get();<br>  }</p>
+<p>  // 具体操作<br>  public void addTopic() throws SQLException {<br>    // ④从ThreadLocal中获取线程对应的Connection<br>    Statement stat = getConnection().createStatement();<br>    //….any other operation<br>  }<br>}</p>
+<p>不同的线程在使用TopicDao时，根据之前的深挖get具体操作，判断connThreadLocal.get()会去判断是有map，没有则根据initivalValue创建一个Connection对象并添加到本地线程变量中，initivalValue对应的值也就是上述的lamba表达式对应的创建connection的方法返回的结果，下次get则由于已经有了，则会直接获取已经创建好的Connection，这样，就保证了不同的线程使用线程相关的Connection，而不会使用其它线程的Connection。因此，这个TopicDao就可以做到singleton共享了。</p>
+<p>当然，这个例子本身很粗糙，将Connection的ThreadLocal直接放在DAO只能做到本DAO的多个方法共享Connection时不发生线程安全问题，但无法和其它DAO共用同一个Connection，要做到同一事务多DAO共享同一Connection，必须在一个共同的外部类使用ThreadLocal保存Connection。</p>
+<p>ConnectionManager.java</p>
+<p>public class ConnectionManager {</p>
+<pre><code>private static ThreadLocal&lt;Connection&gt; connectionHolder = ThreadLocal.withInitial(() -&gt; &#123;
+    Connection conn = null;
+    try &#123;
+        conn = DriverManager.getConnection(
+                &quot;jdbc:mysql://localhost:3306/test&quot;, &quot;username&quot;,
+                &quot;password&quot;);
+    &#125; catch (SQLException e) &#123;
+        e.printStackTrace();
+    &#125;
+    return conn;
+&#125;);
+
+public static Connection getConnection() &#123;
+    return connectionHolder.get();
+&#125;</code></pre>
+<p>}</p>
+<h2 id="线程隔离的秘密"><a href="#线程隔离的秘密" class="headerlink" title="线程隔离的秘密"></a>线程隔离的秘密</h2><p>秘密就就在于上述叙述的ThreadLocalMap这个类。ThreadLocalMap是ThreadLocal类的一个静态内部类，它实现了键值对的设置和获取（对比Map对象来理解），每个线程中都有一个独立的ThreadLocalMap副本，它所存储的值，只能被当前线程读取和修改。ThreadLocal类通过操作每一个线程特有的ThreadLocalMap副本，从而实现了变量访问在不同线程中的隔离。因为每个线程的变量都是自己特有的，完全不会有并发错误。还有一点就是，ThreadLocalMap存储的键值对中的键是this对象指向的ThreadLocal对象，而值就是你所设置的对象了。</p>
+<p>为了加深理解，我们接着看上面代码中出现的getMap和createMap方法的实现：</p>
+<pre><code>/**
+ * Get the map associated with a ThreadLocal. Overridden in
+ * InheritableThreadLocal.
+ *
+ * @param  t the current thread
+ * @return the map
+ */
+ThreadLocalMap getMap(Thread t) &#123;
+    return t.threadLocals;
+&#125;
+
+/**
+ * Create the map associated with a ThreadLocal. Overridden in
+ * InheritableThreadLocal.
+ *
+ * @param t the current thread
+ * @param firstValue value for the initial entry of the map
+ * @param map the map to store.
+ */
+void createMap(Thread t, T firstValue) &#123;
+    t.threadLocals = new ThreadLocalMap(this, firstValue);
+&#125;</code></pre>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>ThreadLocal是解决线程安全问题一个很好的思路，它通过为每个线程提供一个独立的变量副本解决了变量并发访问的冲突问题。在很多情况下，ThreadLocal比直接使用synchronized同步机制解决线程安全问题更简单，更方便，且结果程序拥有更高的并发性。</p>
 
             </div>
             <hr/>
@@ -503,7 +575,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lixinx11.github.io/2020/08/20/%E5%88%86%E6%9E%90/">https://lixinx11.github.io/2020/08/20/%E5%88%86%E6%9E%90/</a>
+                    <a href="https://lixinx11.github.io/2020/08/21/ThreadLocal/">https://lixinx11.github.io/2020/08/21/ThreadLocal/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,8 +613,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/epoll/">
-                                    <span class="chip bg-color">epoll</span>
+                                <a href="/tags/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3ThreadLocal/">
+                                    <span class="chip bg-color">彻底理解ThreadLocal</span>
                                 </a>
                             
                         </div>
@@ -713,7 +785,7 @@
         repo: 'lixinx11.github.io',
         owner: 'lixinx11',
         admin: "lixinx11",
-        id: '2020-08-20T17-15-05',
+        id: '2020-08-21T09-24-06',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -737,9 +809,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/21/ThreadLocal/">
                     <div class="card-image">
@@ -757,9 +830,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -772,6 +845,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -790,32 +864,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/">
+                <a href="/2020/08/20/%E5%88%86%E6%9E%90/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="大数据框架设计">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="多路复用技术 epoll 分析">
                         
-                        <span class="card-title">大数据框架设计</span>
+                        <span class="card-title">多路复用技术 epoll 分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            大数据技术栈
-
+                             ## 多路复用技术 epoll 分析  
+ epoll并没有使用共享内存 文中大部分人认为，epoll并没有使用mmap或共享内存
+Linux下的I/O复用与epoll详解epoll原理详解及epoll反应堆模型epoll的操作int e
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
-                                    大数据
+                            <a href="/categories/epoll/" class="post-category">
+                                    epoll
                                 </a>
                             
                             
@@ -825,8 +900,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">
-                        <span class="chip bg-color">大数据</span>
+                    <a href="/tags/epoll/">
+                        <span class="chip bg-color">epoll</span>
                     </a>
                     
                 </div>
