@@ -732,4 +732,25 @@ public void run()&#123;
         <tag>Dockerfile</tag>
       </tags>
   </entry>
+  <entry>
+    <title>java探针</title>
+    <url>/2020/08/22/java%E6%8E%A2%E9%92%88/</url>
+    <content><![CDATA[<h2 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h2><p>Tomcat：<br>（1）模块启动时间<br>（2）模块交互耗时</p>
+<h2 id="二、现状"><a href="#二、现状" class="headerlink" title="二、现状"></a>二、现状</h2><p>现代APM体系，基本都是参考Google的Dapper（大规模分布式系统的跟踪系统）的体系来做的。通过跟踪请求的处理过程，来对应用系统在前后端处理、服务端调用的性能消耗进行跟踪，关于Dapper的介绍可以看这个链接：<a href="http://bigbully.github.io/Dapper-translation/">http://bigbully.github.io/Dapper-translation/</a><br>下面重点选5个比较有名的server端探针进行简单介绍：</p>
+<h3 id="2-1-Pinpoint（开源）"><a href="#2-1-Pinpoint（开源）" class="headerlink" title="2.1 Pinpoint（开源）"></a>2.1 Pinpoint（开源）</h3><p>github地址：<a href="https://github.com/naver/pinpoint">https://github.com/naver/pinpoint</a><br>java领域的性能分析的开源项目，这个是一个韩国团队开源出来的，通过JavaAgent的机制来做字节码代码植入，实现加入traceid和抓取性能数据的目的。<br>NewRelic、Oneapm之类的工具在java平台上的性能分析也是类似的机制。</p>
+<h3 id="2-2-Zipkin（开源）"><a href="#2-2-Zipkin（开源）" class="headerlink" title="2.2 Zipkin（开源）"></a>2.2 Zipkin（开源）</h3><p>官网：OpenZipkin · <a href="http://zipkin.io/">http://zipkin.io/</a><br>github地址：<a href="https://github.com/openzipkin/zipkin">https://github.com/openzipkin/zipkin</a><br>这个是twitter开源出来的，也是参考Dapper的体系来做的。<br>Zipkin的java应用端是通过一个叫Brave的组件来实现对应用内部的性能分析数据采集。<br>Brave的github地址：<a href="https://github.com/openzipkin/brave">https://github.com/openzipkin/brave</a><br>这个组件通过实现一系列的java拦截器，来做到对http/servlet请求、数据库访问的调用过程跟踪。<br>然后通过在spring之类的配置文件里加入这些拦截器，完成对java应用的性能数据采集。</p>
+<h3 id="2-3-CAT（开源）"><a href="#2-3-CAT（开源）" class="headerlink" title="2.3 CAT（开源）"></a>2.3 CAT（开源）</h3><p>github地址：<a href="https://github.com/dianping/cat">https://github.com/dianping/cat</a><br>这个是大众点评开源出来的，实现的功能也还是蛮丰富的，国内也有一些公司在用了。<br>不过他实现跟踪的手段，是要在代码里硬编码写一些“埋点”，也就是侵入式的。<br>这样做有利有弊，好处是可以在自己需要的地方加埋点，比较有针对性；坏处是必须改动现有系统，很多开发团队不愿意。</p>
+<h3 id="2-4-NewRelic（闭源，代码不混淆）"><a href="#2-4-NewRelic（闭源，代码不混淆）" class="headerlink" title="2.4 NewRelic（闭源，代码不混淆）"></a>2.4 NewRelic（闭源，代码不混淆）</h3><p><a href="https://newrelic.com/java">https://newrelic.com/java</a></p>
+<h3 id="2-5-听云（闭源，代码混淆）"><a href="#2-5-听云（闭源，代码混淆）" class="headerlink" title="2.5 听云（闭源，代码混淆）"></a>2.5 听云（闭源，代码混淆）</h3><p><a href="http://www.tingyun.com/tingyun_server.html">http://www.tingyun.com/tingyun_server.html</a><br>探针能力介绍：<a href="http://doc.tingyun.com/server/html/phpzhichiliebiao.html">http://doc.tingyun.com/server/html/phpzhichiliebiao.html</a></p>
+<h2 id="三、探针能力汇总"><a href="#三、探针能力汇总" class="headerlink" title="三、探针能力汇总"></a>三、探针能力汇总</h2><h3 id="3-1-支持"><a href="#3-1-支持" class="headerlink" title="3.1 支持"></a>3.1 支持</h3><p>（1）应用运行环境：PHP, Java, .NET，Node.js, Python，Ruby等<br>（2）云：阿里云、腾讯云、AWS、金山云、青云、华为云等<br>（3）Database：MySQL, Oracle, MS SQL Server, PostgreSQL等<br>（4）Framework：Spring， Yii，Django，Tomcat，JBoss，WebLogic等<br>（5）NoSQL：Memcached，MongoDB，Redis等非关系型数据库服务<br>（6）API：监控HTTP、Dubbo、Thrift协议下当前应用调用的外部服务，如微博、微信第三方API接口等，并支持跨应用分析</p>
+<h3 id="3-2-核心功能"><a href="#3-2-核心功能" class="headerlink" title="3.2 核心功能"></a>3.2 核心功能</h3><p>（1）web应用过程：分析url调用过程中性能消耗原因,抓取超过阈值url的详细数据<br>（2）数据库性能：支持多种数据库类型的监测，定位并追踪慢SQL语句问题<br>（3）错误分析：记录错误发生时的详细信息，统计应用错误率，定位问题具体至代码行<br>（4）外部API调用：可以监测所有服务端应用外部调用API的耗时，并进行汇总统计<br>（5）线程剖析：可以实现生产环境下实时在线的线程剖析,可在运行时了解代码性能<br>（6）NoSQL分析：实时监控Memcache, MongoDB，Redis等NoSQL数据库的性能问题<br>（7）JVM性能：实时监控 JVM 运行状态，通过图表展示 JVM 内存分配情况、内存使用情况、垃圾收集信息、类加载数量、JVM 线程信息以及会话信息。<br>（8）HTTP 会话：分析每个应用程序的 HTTP 会话数，包括：活跃、过期、拒绝的会话。</p>
+<h3 id="3-3-基于javaAgent和Java字节码注入技术的java探针"><a href="#3-3-基于javaAgent和Java字节码注入技术的java探针" class="headerlink" title="3.3 基于javaAgent和Java字节码注入技术的java探针"></a>3.3 基于javaAgent和Java字节码注入技术的java探针</h3><p>（1）springCloud自带了这些功能<br>（2）asm、javassist之类的<br>（3）springboot的Actuator扩展下也可以</p>
+]]></content>
+      <categories>
+        <category>java探针</category>
+      </categories>
+      <tags>
+        <tag>java探针</tag>
+      </tags>
+  </entry>
 </search>
