@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java探针, 麦芽">
+    <meta name="keywords" content="RPA, 麦芽">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java探针 | 麦芽</title>
+    <title>RPA | 麦芽</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java探针</h1>
+                    <h1 class="description center-align post-title">RPA</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java%E6%8E%A2%E9%92%88/">
-                                <span class="chip bg-color">java探针</span>
+                            <a href="/tags/RPA/">
+                                <span class="chip bg-color">RPA</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java%E6%8E%A2%E9%92%88/" class="post-category">
-                                java探针
+                            <a href="/categories/AI/" class="post-category">
+                                AI
                             </a>
                         
                     </div>
@@ -472,16 +472,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h2><p>Tomcat：<br>（1）模块启动时间<br>（2）模块交互耗时</p>
-<h2 id="二、现状"><a href="#二、现状" class="headerlink" title="二、现状"></a>二、现状</h2><p>现代APM体系，基本都是参考Google的Dapper（大规模分布式系统的跟踪系统）的体系来做的。通过跟踪请求的处理过程，来对应用系统在前后端处理、服务端调用的性能消耗进行跟踪，关于Dapper的介绍可以看这个链接：<a target="_blank" rel="noopener" href="http://bigbully.github.io/Dapper-translation/">http://bigbully.github.io/Dapper-translation/</a><br>下面重点选5个比较有名的server端探针进行简单介绍：</p>
-<h3 id="2-1-Pinpoint（开源）"><a href="#2-1-Pinpoint（开源）" class="headerlink" title="2.1 Pinpoint（开源）"></a>2.1 Pinpoint（开源）</h3><p>github地址：<a target="_blank" rel="noopener" href="https://github.com/naver/pinpoint">https://github.com/naver/pinpoint</a><br>java领域的性能分析的开源项目，这个是一个韩国团队开源出来的，通过JavaAgent的机制来做字节码代码植入，实现加入traceid和抓取性能数据的目的。<br>NewRelic、Oneapm之类的工具在java平台上的性能分析也是类似的机制。</p>
-<h3 id="2-2-Zipkin（开源）"><a href="#2-2-Zipkin（开源）" class="headerlink" title="2.2 Zipkin（开源）"></a>2.2 Zipkin（开源）</h3><p>官网：OpenZipkin · <a target="_blank" rel="noopener" href="http://zipkin.io/">http://zipkin.io/</a><br>github地址：<a target="_blank" rel="noopener" href="https://github.com/openzipkin/zipkin">https://github.com/openzipkin/zipkin</a><br>这个是twitter开源出来的，也是参考Dapper的体系来做的。<br>Zipkin的java应用端是通过一个叫Brave的组件来实现对应用内部的性能分析数据采集。<br>Brave的github地址：<a target="_blank" rel="noopener" href="https://github.com/openzipkin/brave">https://github.com/openzipkin/brave</a><br>这个组件通过实现一系列的java拦截器，来做到对http/servlet请求、数据库访问的调用过程跟踪。<br>然后通过在spring之类的配置文件里加入这些拦截器，完成对java应用的性能数据采集。</p>
-<h3 id="2-3-CAT（开源）"><a href="#2-3-CAT（开源）" class="headerlink" title="2.3 CAT（开源）"></a>2.3 CAT（开源）</h3><p>github地址：<a target="_blank" rel="noopener" href="https://github.com/dianping/cat">https://github.com/dianping/cat</a><br>这个是大众点评开源出来的，实现的功能也还是蛮丰富的，国内也有一些公司在用了。<br>不过他实现跟踪的手段，是要在代码里硬编码写一些“埋点”，也就是侵入式的。<br>这样做有利有弊，好处是可以在自己需要的地方加埋点，比较有针对性；坏处是必须改动现有系统，很多开发团队不愿意。</p>
-<h3 id="2-4-NewRelic（闭源，代码不混淆）"><a href="#2-4-NewRelic（闭源，代码不混淆）" class="headerlink" title="2.4 NewRelic（闭源，代码不混淆）"></a>2.4 NewRelic（闭源，代码不混淆）</h3><p><a target="_blank" rel="noopener" href="https://newrelic.com/java">https://newrelic.com/java</a></p>
-<h3 id="2-5-听云（闭源，代码混淆）"><a href="#2-5-听云（闭源，代码混淆）" class="headerlink" title="2.5 听云（闭源，代码混淆）"></a>2.5 听云（闭源，代码混淆）</h3><p><a target="_blank" rel="noopener" href="http://www.tingyun.com/tingyun_server.html">http://www.tingyun.com/tingyun_server.html</a><br>探针能力介绍：<a target="_blank" rel="noopener" href="http://doc.tingyun.com/server/html/phpzhichiliebiao.html">http://doc.tingyun.com/server/html/phpzhichiliebiao.html</a></p>
-<h2 id="三、探针能力汇总"><a href="#三、探针能力汇总" class="headerlink" title="三、探针能力汇总"></a>三、探针能力汇总</h2><h3 id="3-1-支持"><a href="#3-1-支持" class="headerlink" title="3.1 支持"></a>3.1 支持</h3><p>（1）应用运行环境：PHP, Java, .NET，Node.js, Python，Ruby等<br>（2）云：阿里云、腾讯云、AWS、金山云、青云、华为云等<br>（3）Database：MySQL, Oracle, MS SQL Server, PostgreSQL等<br>（4）Framework：Spring， Yii，Django，Tomcat，JBoss，WebLogic等<br>（5）NoSQL：Memcached，MongoDB，Redis等非关系型数据库服务<br>（6）API：监控HTTP、Dubbo、Thrift协议下当前应用调用的外部服务，如微博、微信第三方API接口等，并支持跨应用分析</p>
-<h3 id="3-2-核心功能"><a href="#3-2-核心功能" class="headerlink" title="3.2 核心功能"></a>3.2 核心功能</h3><p>（1）web应用过程：分析url调用过程中性能消耗原因,抓取超过阈值url的详细数据<br>（2）数据库性能：支持多种数据库类型的监测，定位并追踪慢SQL语句问题<br>（3）错误分析：记录错误发生时的详细信息，统计应用错误率，定位问题具体至代码行<br>（4）外部API调用：可以监测所有服务端应用外部调用API的耗时，并进行汇总统计<br>（5）线程剖析：可以实现生产环境下实时在线的线程剖析,可在运行时了解代码性能<br>（6）NoSQL分析：实时监控Memcache, MongoDB，Redis等NoSQL数据库的性能问题<br>（7）JVM性能：实时监控 JVM 运行状态，通过图表展示 JVM 内存分配情况、内存使用情况、垃圾收集信息、类加载数量、JVM 线程信息以及会话信息。<br>（8）HTTP 会话：分析每个应用程序的 HTTP 会话数，包括：活跃、过期、拒绝的会话。</p>
-<h3 id="3-3-基于javaAgent和Java字节码注入技术的java探针"><a href="#3-3-基于javaAgent和Java字节码注入技术的java探针" class="headerlink" title="3.3 基于javaAgent和Java字节码注入技术的java探针"></a>3.3 基于javaAgent和Java字节码注入技术的java探针</h3><p>（1）springCloud自带了这些功能<br>（2）asm、javassist之类的<br>（3）springboot的Actuator扩展下也可以</p>
+                <h2 id="什麼是-RPA？"><a href="#什麼是-RPA？" class="headerlink" title="什麼是 RPA？"></a>什麼是 RPA？</h2><pre><code>2019年至今（2020年初），国产RPA企业已经陆续拿到融资，其中有三起集中发生在6月份，其中一起追加融资发生在8月份，保守估计，
+5个国产RPA企业融资总金额在8亿人民币上下，但市场估值已高达54.2亿人民币，资本如此青睐的RPA是何方神圣呢？它是什么样的一个技术呢？
+
+
+RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動化讓您能夠使用工具建置自己專屬的軟體機器人，以便將任何業務流程</code></pre>
+<p>   自動化。您的「機器人」是可設定的軟體，用於執行您所指派和控制的任務。<br>   RPA 機器人具備學習能力，也可以被複製。了解機器人如何運作，並且依照您的需求進行調整及擴展。不需要使用程式碼、不會中斷作業、非侵入式，而且使用簡易。</p>
+<h2 id="揭開流程機器人-RPA-的神秘面紗"><a href="#揭開流程機器人-RPA-的神秘面紗" class="headerlink" title="揭開流程機器人(RPA)的神秘面紗"></a>揭開流程機器人(RPA)的神秘面紗</h2><p>在企業日常營運中，有許多流程往往是仰賴所多的人工在電腦桌面與資訊系統之間的重複作業。流程機器人(RPA)是一種新興的程式軟體工具，它會模擬使用者坐在辦公桌時經常做的事情，將這些重複且枯燥的電腦桌面作業程序自動化，不需經由特殊的硬體設備，能在任何資訊系統(IT)環境中發揮良好的表現，甚至能在電腦後台背景虛擬化的執行工作，這就是流程機器人(RPA)可以做的工作-將重複性高但有邏輯性的作業，以流程機器人(RPA)取代人力的投入。</p>
+<p>流程機器人就像是在工廠內的巨型黃色機械手臂，透過它將勞力密集且重複性高的的作業流程自動化，進而改變企業決策的速度。</p>
+<p>流程機器人帶給企業的效益</p>
+<p>企業內部一般事務性的工作，根據調查，一個“滿載”的流程機器人僅約耗費一般員工三分之一的成本。在財務會計的作業流程自動化應用方面，從日記帳分錄記錄到調整總帳科目，以及轉為各項報表等這些流程都適用流程自動化，目前已經出現非常多的實際應用，流程機器人效率是間接作業人員的15倍，同時趨近於零失誤率的作業執行品質，提供15％至90％的降低成本的機會。</p>
+<p>流程機器人不僅可以減少間接人員的人力需求，還提供了其他優勢；因其24X7全天候運行，流程機器人能製作對時間敏感度高的報告，以趕上截止日期。透過流程機器人的執行結果將會更準確，避免數據重複輸入和輸入錯誤所衍生一連串的彌補措施。</p>
+<p>讓流程機器人自動化成真</p>
+<h3 id="基本上導入流程機器人時，企業通常分成處於兩種狀態："><a href="#基本上導入流程機器人時，企業通常分成處於兩種狀態：" class="headerlink" title="基本上導入流程機器人時，企業通常分成處於兩種狀態："></a>基本上導入流程機器人時，企業通常分成處於兩種狀態：</h3><p>第一種是已經進行過前期試作的企業，正在試圖擴大這項技術；第二種則是正在探索流程機器人可能性的初步評估階段。如果您的組織屬於後者，我們建議的方式就是從一個前期試行專案(Pilot/Prototype)著手，讓企業先熟悉流程機器人的能力。</p>
+<p>為了避免資源過度的投入，建議前期試行專案可從選擇三到五個流程開始，藉由試行專案所投入的時間與資源，進而評估效益以及侷限性，確保流程機器人適合業務端的程度。</p>
+<p> <img src="https://lixinx11.github.io/medias/bigdata/12.png" alt="流程自动化"></p>
 
             </div>
             <hr/>
@@ -507,7 +512,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lixinx11.github.io/2020/08/22/java%E6%8E%A2%E9%92%88/">https://lixinx11.github.io/2020/08/22/java%E6%8E%A2%E9%92%88/</a>
+                    <a href="https://lixinx11.github.io/2020/08/22/NLP/">https://lixinx11.github.io/2020/08/22/NLP/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -545,8 +550,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java%E6%8E%A2%E9%92%88/">
-                                    <span class="chip bg-color">java探针</span>
+                                <a href="/tags/RPA/">
+                                    <span class="chip bg-color">RPA</span>
                                 </a>
                             
                         </div>
@@ -717,7 +722,7 @@
         repo: 'lixinx11.github.io',
         owner: 'lixinx11',
         admin: "lixinx11",
-        id: '2020-08-22T13-26-59',
+        id: '2020-08-22T17-20-38',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -741,9 +746,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/22/NLP/">
                     <div class="card-image">
@@ -762,9 +768,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -777,6 +783,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -795,31 +802,32 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/">
+                <a href="/2020/08/22/java%E6%8E%A2%E9%92%88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="常见开源产品epoll网络事件模型汇总">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="java探针">
                         
-                        <span class="card-title">常见开源产品epoll网络事件模型汇总</span>
+                        <span class="card-title">java探针</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用模型总结：1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知
+                            一、需求Tomcat：（1）模块启动时间（2）模块交互耗时
+二、现状现代APM体系，基本都是参考Google的Dapper（大规模分布式系统的跟踪系统）的体系来做的。通过跟踪请求的处理过程，来对应用系统在前后端处理、服务端调用的性能消耗进行
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/epoll/" class="post-category">
-                                    epoll
+                            <a href="/categories/java%E6%8E%A2%E9%92%88/" class="post-category">
+                                    java探针
                                 </a>
                             
                             
@@ -829,8 +837,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/">
-                        <span class="chip bg-color">epoll网络事件模型分析</span>
+                    <a href="/tags/java%E6%8E%A2%E9%92%88/">
+                        <span class="chip bg-color">java探针</span>
                     </a>
                     
                 </div>

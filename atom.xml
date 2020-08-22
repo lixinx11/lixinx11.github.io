@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-08-22T05:29:29.544Z</updated>
+  <updated>2020-08-22T09:45:02.835Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RPA</title>
+    <link href="https://lixinx11.github.io/2020/08/22/NLP/"/>
+    <id>https://lixinx11.github.io/2020/08/22/NLP/</id>
+    <published>2020-08-22T09:20:38.000Z</published>
+    <updated>2020-08-22T09:45:02.835Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://lixinx11.github.io/categories/AI/"/>
+    
+    
+    <category term="RPA" scheme="https://lixinx11.github.io/tags/RPA/"/>
+    
+  </entry>
   
   <entry>
     <title>java探针</title>
@@ -488,19 +513,6 @@
     
     
     <category term="java多线程" scheme="https://lixinx11.github.io/tags/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微服务架构</title>
-    <link href="https://lixinx11.github.io/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
-    <id>https://lixinx11.github.io/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</id>
-    <published>2014-02-10T15:22:11.000Z</published>
-    <updated>2020-08-16T04:09:22.623Z</updated>
-    
-    
-    
-    
     
   </entry>
   

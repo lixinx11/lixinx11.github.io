@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lixinx11.github.io/2020/08/22/NLP/</loc>
+    
+    <lastmod>2020-08-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lixinx11.github.io/2020/08/22/java%E6%8E%A2%E9%92%88/</loc>
     
     <lastmod>2020-08-22</lastmod>
@@ -320,6 +327,13 @@
   
   <url>
     <loc>https://lixinx11.github.io/tags/java%E6%8E%A2%E9%92%88/</loc>
+    <lastmod>2020-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lixinx11.github.io/tags/RPA/</loc>
     <lastmod>2020-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
