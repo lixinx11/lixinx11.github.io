@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lixinx11.github.io/2019/11/22/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/</loc>
+    
+    <lastmod>2020-08-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lixinx11.github.io/2020/08/22/NLP/</loc>
     
     <lastmod>2020-08-22</lastmod>
@@ -339,6 +346,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://lixinx11.github.io/tags/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/</loc>
+    <lastmod>2020-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -448,6 +462,13 @@
   
   <url>
     <loc>https://lixinx11.github.io/categories/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2020-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lixinx11.github.io/categories/%E4%BA%A7%E5%93%81/</loc>
     <lastmod>2020-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
