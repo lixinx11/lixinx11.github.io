@@ -429,12 +429,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Tensorflow/">
+                                <span class="chip bg-color">Tensorflow</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Tensorflow/" class="post-category">
+                                Tensorflow
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -459,7 +472,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p> Tensorflow 技术官网  <a target="_blank" rel="noopener" href="https://www.tensorflow.org/">https://www.tensorflow.org/</a></p>
+<pre><code>TensorFlow是一個強大的機器學習框架、AlphaGo和Google Cloud Vision更建立在TensorFlow之上
+
+深度学习框架TensorFlow入门，带你了解tensorflow实现</code></pre>
+<p>tensorflow</p>
+<h2 id="先来认识一下TF的价值："><a href="#先来认识一下TF的价值：" class="headerlink" title="先来认识一下TF的价值："></a>先来认识一下TF的价值：</h2><p>TensorFlow，是Google在15年年底发布的机器学习平台，发布以后由于其速度快，扩展性好，推广速度也很快。<br>Google的大战略：Android占领了移动端；TF占领神经网络提供AI服务。未来的趋势恰好是语音图像以及AI的时代。<br>TF的特点之一就是可以支持很多种设备，大到GPU、CPU，小到手机平板，五花八门的设备都可以跑起来TF。不得不说这一点很有前瞻性，可以预见的是，mobile-end的用户将会享受到越来越多的AI服务。<br>系统概述<br>tensorflow技术架构<br> <img src="https://lixinx11.github.io/medias/bigdata/13.png" alt="tensorflow 系统概述"></p>
+<h2 id="整个系统从底层到上层可分为七层："><a href="#整个系统从底层到上层可分为七层：" class="headerlink" title="整个系统从底层到上层可分为七层："></a>整个系统从底层到上层可分为七层：</h2><p>最底层是硬件计算资源，支持CPU、GPU；<br>支持两种通信协议；<br>数值计算层提供最基础的计算，有线性计算、卷积计算；<br>数据的计算都是以数组的形式参与计算；<br>计算图层用来设计神经网络的结构；<br>工作流层提供轻量级的框架调用<br>最后构造的深度学习网络可以通过TensorBoard服务端可视化</p>
+<h2 id="技术架构"><a href="#技术架构" class="headerlink" title="技术架构"></a>技术架构</h2><p> tensorflow 系统概述<br> <img src="https://lixinx11.github.io/medias/bigdata/14.png" alt="tensorflow 技术架构"></p>
+<h2 id="整体技术栈分为两部分："><a href="#整体技术栈分为两部分：" class="headerlink" title="整体技术栈分为两部分："></a>整体技术栈分为两部分：</h2><p>前端系统：提供编程模型，负责构造计算图；<br>后端系统：提供运行时环境，负责执行计算图。</p>
+<h2 id="组件交互"><a href="#组件交互" class="headerlink" title="组件交互"></a>组件交互</h2><p>tensorflow组件交互<br> <img src="https://lixinx11.github.io/medias/bigdata/15.png" alt="tensorflow 组件交互"></p>
+<h2 id="master节点给两种类型的节点分发任务："><a href="#master节点给两种类型的节点分发任务：" class="headerlink" title="master节点给两种类型的节点分发任务："></a>master节点给两种类型的节点分发任务：</h2><p>/job:ps/task:0: 负责模型参数的存储和更新<br>/job:worker/task:0: 负责模型的训练或推理</p>
+<h2 id="会话-Session"><a href="#会话-Session" class="headerlink" title="会话(Session)"></a>会话(Session)</h2><p>tensorflow 会话<br> <img src="https://lixinx11.github.io/medias/bigdata/16.png" alt="tensorflow 会话"><br>客户端使用会话来和TF系统交互，一般的模式是，建立会话，此时会生成一张空图；在会话中添加节点和边，形成一张图，然后执行。</p>
+<h2 id="实现（Implementation）"><a href="#实现（Implementation）" class="headerlink" title="实现（Implementation）"></a>实现（Implementation）</h2><p>tensorflow 分布式<br> <img src="https://lixinx11.github.io/medias/bigdata/17.png" alt="tensorflow 实现"><br>TF中最重要的Tensor被支持的非常全面，8bit到64bit， signed和unsigned，IEEE float/double，complex number等等。使用引用计数来保存tensor，当计数到0时，tensor被回收。<br>客户端，用户会使用；与master和一些worker process交流<br>master，用来与客户端交互，同时调度任务；<br>worker process，工作节点，每个worker process可以访问一到多个device。<br>device，TF的计算核心，通过将device的类型、job名称、在worker process中的索引将device命名。可以通过注册机制来添加新的device实现，每个device实现需要负责内存分配和管理调度TF系统所下达的核运算需求。<br>跨设备通信</p>
+<p>当两个需要通信的op在不同的机器上时，就需要跨设备通信，当它们需要通信时，TF会在它们之间的联系中添加Send和Recv节点，通过Send和Recv之间进行通信来达到op之间通信的效果。如上所示。<br>梯度计算（ Gradient Computation ）</p>
+<h2 id="tensorflow-梯度计算"><a href="#tensorflow-梯度计算" class="headerlink" title="tensorflow 梯度计算"></a>tensorflow 梯度计算</h2><p>连接式的机器学习算法往往需要使用梯度下降法来求取参数，TF通过扩展图的方式实现了自动求导，TF做法如下：<br>对于每张计算图，得到从输入I到输出C的路径，并从C到I回溯，回溯过程中对于路径上的每个节点A，添加另一个节点来计算A’来计算偏导，在计算偏导的过程中，A’不仅仅将上一层传下来的反向导数作为输入，还可能将A的输入和输出也作为其输入。<br>数据并行计算（ Data Parallel Training）<br> <img src="https://lixinx11.github.io/medias/bigdata/18.png" alt="tensorflow 梯度计算"></p>
+<h2 id="tensorflow-数据并行计算"><a href="#tensorflow-数据并行计算" class="headerlink" title="tensorflow 数据并行计算"></a>tensorflow 数据并行计算</h2><p>通过数据并行的方式来提升模型的效率，比如，假如每次模型的mini-batch是1000个样本，那么，切成10份，每份100个，然后将模型复制10份，每份都将梯度传到参数服务器上。<br>数据切分也分为同步和异步两种方式，同步的切分是等待每个独立的model传上来的梯度都到齐后再进行更新，这样和一个大的batch没有区别。异步的切分则是不用等待，每个独立的模型的参数更新直接更新。<br>模型并行训练（ Model Parallel Training）<br> <img src="https://lixinx11.github.io/medias/bigdata/19.png" alt="tensorflow 数据并行计算"></p>
+<h2 id="tensorflow-模型并行训练"><a href="#tensorflow-模型并行训练" class="headerlink" title="tensorflow 模型并行训练"></a>tensorflow 模型并行训练</h2><p> <img src="https://lixinx11.github.io/medias/bigdata/20.png" alt="tensorflow 模型并行训练"><br>还可以对模型进行切分，让模型的不同部分执行在不同的设备上，这样可以一个迭代的样本可以在不同的设备上同时执行。如上图所示的LSTM模型</p>
+
             </div>
             <hr/>
 
@@ -521,7 +551,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Tensorflow/">
+                                    <span class="chip bg-color">Tensorflow</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -731,7 +765,10 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                             Tensorflow 技术官网  https://www.tensorflow.org/
+TensorFlow是一個強大的機器學習框架、AlphaGo和Google Cloud Vision更建立在TensorFlow之上
+
+深度学习框架
                         
                     </div>
                     <div class="publish-info">
@@ -740,13 +777,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Jone
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Tensorflow/" class="post-category">
+                                    Tensorflow
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Tensorflow/">
+                        <span class="chip bg-color">Tensorflow</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
