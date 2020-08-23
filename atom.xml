@@ -30,19 +30,6 @@
   </entry>
   
   <entry>
-    <title>DNN</title>
-    <link href="https://lixinx11.github.io/2020/08/23/DNN/"/>
-    <id>https://lixinx11.github.io/2020/08/23/DNN/</id>
-    <published>2020-08-23T03:29:05.000Z</published>
-    <updated>2020-08-23T03:29:05.743Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>LSTM</title>
     <link href="https://lixinx11.github.io/2020/08/23/LSTM/"/>
     <id>https://lixinx11.github.io/2020/08/23/LSTM/</id>
@@ -65,31 +52,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>卷积神经网络(CNN)反向传播算法</title>
-    <link href="https://lixinx11.github.io/2020/08/23/CNN/"/>
-    <id>https://lixinx11.github.io/2020/08/23/CNN/</id>
-    <published>2020-08-23T03:28:23.000Z</published>
-    <updated>2020-08-23T03:37:26.508Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Deep Learning" scheme="https://lixinx11.github.io/categories/Deep-Learning/"/>
-    
-    
-    <category term="卷积神经网络(CNN)反向传播算法" scheme="https://lixinx11.github.io/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-CNN-%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -419,6 +381,31 @@
   </entry>
   
   <entry>
+    <title>DNN的反向传播算法</title>
+    <link href="https://lixinx11.github.io/2019/07/21/DNN/"/>
+    <id>https://lixinx11.github.io/2019/07/21/DNN/</id>
+    <published>2019-07-21T03:29:05.000Z</published>
+    <updated>2020-08-23T03:47:31.320Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Deep Learning" scheme="https://lixinx11.github.io/categories/Deep-Learning/"/>
+    
+    
+    <category term="DNN的反向传播算法" scheme="https://lixinx11.github.io/tags/DNN%E7%9A%84%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>oracle迁移到mysql</title>
     <link href="https://lixinx11.github.io/2019/06/18/oracle%E8%BF%81%E7%A7%BB%E5%88%B0mysql/"/>
     <id>https://lixinx11.github.io/2019/06/18/oracle%E8%BF%81%E7%A7%BB%E5%88%B0mysql/</id>
@@ -440,6 +427,31 @@
     
     
     <category term="数据迁移" scheme="https://lixinx11.github.io/tags/%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>卷积神经网络(CNN)反向传播算法</title>
+    <link href="https://lixinx11.github.io/2019/05/23/CNN/"/>
+    <id>https://lixinx11.github.io/2019/05/23/CNN/</id>
+    <published>2019-05-23T03:28:23.000Z</published>
+    <updated>2020-08-23T03:44:02.237Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Deep Learning" scheme="https://lixinx11.github.io/categories/Deep-Learning/"/>
+    
+    
+    <category term="卷积神经网络(CNN)反向传播算法" scheme="https://lixinx11.github.io/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-CNN-%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>卷积神经网络(CNN)反向传播算法</title>
-    <url>/2020/08/23/CNN/</url>
+    <url>/2019/05/23/CNN/</url>
     <content><![CDATA[<pre><code>   ##  卷积神经网络(CNN)反向传播算法</code></pre>
 <p>在卷积神经网络(CNN)前向传播算法中，我们对CNN的前向传播算法做了总结，基于CNN前向传播算法的基础，我们下面就对CNN的反向传播算法做一个总结。在阅读本文前，建议先研究DNN的反向传播算法：深度神经网络（DNN）反向传播算法(BP)</p>
 <h3 id="1-回顾DNN的反向传播算法"><a href="#1-回顾DNN的反向传播算法" class="headerlink" title="1. 回顾DNN的反向传播算法"></a>1. 回顾DNN的反向传播算法</h3><p>我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的\deltaL:\deltaL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>\deltaL:\deltaL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>利用数学归纳法，用δl+1<br>δl+1<br>的值一步步的向前求出第l层的\deltal<br>\deltal<br>，表达式为：δl=δl+1∂zl+1∂zl=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=δl+1∂zl+1∂zl=(Wl+1)Tδl+1⊙σ′(zl)<br>有了δl<br>δl<br>的表达式，从而求出W,b的梯度表达式：</p>
@@ -58,9 +58,17 @@
       </tags>
   </entry>
   <entry>
-    <title>DNN</title>
-    <url>/2020/08/23/DNN/</url>
-    <content><![CDATA[]]></content>
+    <title>DNN的反向传播算法</title>
+    <url>/2019/07/21/DNN/</url>
+    <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
+<p>　　　　现在我们想把同样的思想用到CNN中，很明显，CNN有些不同的地方，不能直接去套用DNN的反向传播算法的公式。</p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>DNN的反向传播算法</tag>
+      </tags>
   </entry>
   <entry>
     <title>LSTM</title>
