@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>DNN的反向传播算法</title>
+    <url>/2019/07/21/DNN/</url>
+    <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
+<p>　　　　现在我们想把同样的思想用到CNN中，很明显，CNN有些不同的地方，不能直接去套用DNN的反向传播算法的公式。</p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>DNN的反向传播算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LSTM</title>
+    <url>/2020/08/23/LSTM/</url>
+    <content><![CDATA[<p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。简单来说，就是相比普通的RNN，LSTM能够在更长的序列中有更好的表现。</p>
+<p> <img src="https://lixinx11.github.io/medias/bigdata/21.png" alt="LSTM"></p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>LSTM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>卷积神经网络(CNN)反向传播算法</title>
     <url>/2019/05/23/CNN/</url>
     <content><![CDATA[<pre><code>   ##  卷积神经网络(CNN)反向传播算法</code></pre>
@@ -55,32 +81,6 @@
       </categories>
       <tags>
         <tag>卷积神经网络(CNN)反向传播算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DNN的反向传播算法</title>
-    <url>/2019/07/21/DNN/</url>
-    <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
-<p>　　　　现在我们想把同样的思想用到CNN中，很明显，CNN有些不同的地方，不能直接去套用DNN的反向传播算法的公式。</p>
-]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>DNN的反向传播算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LSTM</title>
-    <url>/2020/08/23/LSTM/</url>
-    <content><![CDATA[<p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。简单来说，就是相比普通的RNN，LSTM能够在更长的序列中有更好的表现。</p>
-<p> <img src="https://lixinx11.github.io/medias/bigdata/21.png" alt="LSTM"></p>
-]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>LSTM</tag>
       </tags>
   </entry>
   <entry>
@@ -345,6 +345,19 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>我的第一篇博客</title>
+    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>   第一章</p>
+<p>内容</p>
+<hr>
+<p> 第二章</p>
+<p>内容</p>
+<hr>
+<p>   参考文献</p>
+<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>mysql5.7安装使用指南</title>
     <url>/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</url>
     <content><![CDATA[<h2 id="1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini"><a href="#1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini" class="headerlink" title="1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini"></a>1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini</h2><p>内容：</p>
@@ -375,19 +388,6 @@ void createMap(Thread t, T firstValue) &#123;
       <tags>
         <tag>我的技术博客</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p>   第一章</p>
-<p>内容</p>
-<hr>
-<p> 第二章</p>
-<p>内容</p>
-<hr>
-<p>   参考文献</p>
-<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
-]]></content>
   </entry>
   <entry>
     <title>oracle迁移到mysql</title>
@@ -533,20 +533,6 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
-    <title>常见开源产品epoll网络事件模型汇总</title>
-    <url>/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="常用模型总结："><a href="#常用模型总结：" class="headerlink" title="常用模型总结："></a>常用模型总结：</h2><p>1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis<br>2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知 + n线程(处理) 模型…………代表产品thrift-nonblocking-server<br>2）epoll 1线程(listen+accept+epoll_wait) + n队列通知 + n线程(处理) 模型…………代表产品memcached<br>4）epoll 1进程(listen) + n进程(accept+epoll_wait+处理) 模型………………………….代表产品nginx<br>5）epoll 1线程(listen) + n线程(accept+epoll_wait+处理) 模型<br>6)  epoll 1线程(listen+accept) + n线程(epoll_wait+处理) 模型</p>
-<h2 id="常用模型汇总："><a href="#常用模型汇总：" class="headerlink" title="常用模型汇总："></a>常用模型汇总：</h2><p><img src="https://lixinx11.github.io/medias/bigdata/10.png" alt="常用模型汇总"></p>
-<h2 id="常用模型对比："><a href="#常用模型对比：" class="headerlink" title="常用模型对比："></a>常用模型对比：</h2><p>  <img src="https://lixinx11.github.io/medias/bigdata/11.png" alt="常用模型对比"></p>
-]]></content>
-      <categories>
-        <category>epoll</category>
-      </categories>
-      <tags>
-        <tag>epoll网络事件模型分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微服务-不是免费的午餐！</title>
     <url>/2019/03/18/%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E4%B8%8D%E6%98%AF%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%88%E9%A4%90%EF%BC%81/</url>
     <content><![CDATA[<pre><code> ## 微服务-不是免费的午餐</code></pre>
@@ -602,6 +588,20 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>常见开源产品epoll网络事件模型汇总</title>
+    <url>/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="常用模型总结："><a href="#常用模型总结：" class="headerlink" title="常用模型总结："></a>常用模型总结：</h2><p>1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis<br>2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知 + n线程(处理) 模型…………代表产品thrift-nonblocking-server<br>2）epoll 1线程(listen+accept+epoll_wait) + n队列通知 + n线程(处理) 模型…………代表产品memcached<br>4）epoll 1进程(listen) + n进程(accept+epoll_wait+处理) 模型………………………….代表产品nginx<br>5）epoll 1线程(listen) + n线程(accept+epoll_wait+处理) 模型<br>6)  epoll 1线程(listen+accept) + n线程(epoll_wait+处理) 模型</p>
+<h2 id="常用模型汇总："><a href="#常用模型汇总：" class="headerlink" title="常用模型汇总："></a>常用模型汇总：</h2><p><img src="https://lixinx11.github.io/medias/bigdata/10.png" alt="常用模型汇总"></p>
+<h2 id="常用模型对比："><a href="#常用模型对比：" class="headerlink" title="常用模型对比："></a>常用模型对比：</h2><p>  <img src="https://lixinx11.github.io/medias/bigdata/11.png" alt="常用模型对比"></p>
+]]></content>
+      <categories>
+        <category>epoll</category>
+      </categories>
+      <tags>
+        <tag>epoll网络事件模型分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微服务架构</title>
     <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
     <content><![CDATA[]]></content>
@@ -625,6 +625,45 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>拼多多的晋升之道</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最好用的自动化测试工具</title>
+    <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
+<p>Selenium是网页应用中最流行的开源自动化测试框架。起源于2000年，10多年来不断地完善，Selenium成为许多Web自动化测试人员的选择，尤其是那些有高级编程和脚本技能的人。Selenium也成为了其他开源自动化测试工具比如Katalon Studio，Watir，Protractor和Robot Framework的核心框架。</p>
+<p>Selenium 支持多系统环境（Windows，Mac，Linux）以及多种浏览器（Chrome，FireFox，IE以及无头浏览器（没有界面））。它的脚本可以由各种各样的编程语言编写，比如 Java，Groovy，Python，C#，PHP，Ruby 以及 Perl。</p>
+<p>因为Selenium的灵活性，测试人员可以写各种复杂的、高级的测试脚本来应对各种复杂的问题，它需要高级的编程技能和付出来构建满足自己需求的自动化测试框架和库。</p>
+<h2 id="Appium"><a href="#Appium" class="headerlink" title="Appium"></a>Appium</h2><p>AppUI自动化测试</p>
+<p>Appium是一个移动端自动化测试开源工具，支持iOS和Android平台，支持Python、Java等语言，即同一套Java或Python脚本可以同时运行在iOS和Android平台，Appium 是一个C/S架构，核心是一个Web服务器，它提供了一套REST的接口。当收到客户端的连接后，就会监听到命令，然后在移动设备上执行这些命令，最后将执行结果放在HTTP响应中返还给客户端。</p>
+<h2 id="Jmeter"><a href="#Jmeter" class="headerlink" title="Jmeter"></a>Jmeter</h2><p>接口测试，性能测试</p>
+<p>Apache JMeter是一个开源的Java桌面应用程序，主要用于web应用程序的负载测试。它还支持单元测试和有限的功能测试。</p>
+<p>它有很多好的特性，比如动态报告、可移植性、强大的测试IDE等，并且支持不同类型的应用程序、协议、shell脚本、Java对象和数据库。</p>
+<h2 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h2><p>接口测试</p>
+<p>Postman 提供功能强大的Web API和HTTP请求的调试，它能够发送任何类型的HTTP请求 (GET, POST, PUT, DELETE…)，并且能附带任何数量的参数和Headers。不仅如此，它还提供测试数据和环境配置数据的导入导出，付费的Post Cloud用户还能够创建自己的 Team Library用来团队协作式的测试，并能够将自己的测试收藏夹和用例数据分享给团队。</p>
+<h2 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h2><p>接口测试</p>
+<p>SoapUI是一个非常流行的用于SOAP和REST的开源API测试自动化框架。它还支持功能测试、性能测试、数据驱动测试和测试报告。</p>
+<h2 id="Monkey"><a href="#Monkey" class="headerlink" title="Monkey"></a>Monkey</h2><p>稳定性测试</p>
+<p>软件附带在sdk中，适用于android和ios，通过adb shell，生成用户或系统的伪随机事件。</p>
+<p>压力测试结果：崩溃crash，无响应anr，</p>
+<p>基本命令：adb shell monkey 1000。</p>
+<h2 id="Robot-Framework"><a href="#Robot-Framework" class="headerlink" title="Robot Framework"></a>Robot Framework</h2><p>WebUI自动化测试，接口测试</p>
+<p>Robot Framework是一个开源自动化框架，它实现了用于验收测试和验收测试驱动开发（ATDD）的关键字驱动方法。Robot Framework为不同的测试自动化需求提供框架。但是，通过使用Python和Java实现其他测试库，可以进一步扩展其测试功能。Selenium WebDriver是Robot Framework中常用的外部库。</p>
+<p>测试工程师可以利用Robot Framework作为自动化框架，不仅可以进行Web测试，还可以用于Android和iOS测试自动化。对于熟悉关键字驱动测试的测试人员，可以轻松学习Robot Framework。</p>
+<h2 id="QTP"><a href="#QTP" class="headerlink" title="QTP"></a>QTP</h2><p>WebUI自动化测试</p>
+<p>QTP是一种自动测试工具。使用 QTP 的目的是想用它来执行重复的手动测试，主要是用于回归测试和测试同一软件的新版本。因此你在测试前要考虑好如何对应用程序进行测试，例如要测试那些功能、操作步骤、输入数据和期望的输出数据等。</p>
+<p>QTP针对的是GUI应用程序，包括传统的Windows应用程序，以及现在越来越流行的Web应用。它可以覆盖绝大多数的软件开发技术，简单高效，并具备测试用例可重用的特点。其中包括：创建测试、插入检查点、检验数据、增强测试、运行测试、分析结果和维护测试等方面。</p>
+<h2 id="LoadRunner"><a href="#LoadRunner" class="headerlink" title="LoadRunner"></a>LoadRunner</h2><p>性能测试</p>
+<p>LoadRunner，是一种预测系统行为和性能的负载测试工具。通过以模拟上千万用户实施并发负载及实时性能监测的方式来确认和查找问题，LoadRunner能够对整个企业架构进行测试。</p>
+<p>企业使用LoadRunner能最大限度地缩短测试时间，优化性能和加速应用系统的发布周期。LoadRunner可适用于各种体系架构的自动负载测试，能预测系统行为并评估系统性能。</p>
+<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>持续集成</p>
+<p>自动化构建编译，部署，任务执行，测试报告，邮件通知等。</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
       </tags>
   </entry>
   <entry>
@@ -669,45 +708,6 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>最好用的自动化测试工具</title>
-    <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
-<p>Selenium是网页应用中最流行的开源自动化测试框架。起源于2000年，10多年来不断地完善，Selenium成为许多Web自动化测试人员的选择，尤其是那些有高级编程和脚本技能的人。Selenium也成为了其他开源自动化测试工具比如Katalon Studio，Watir，Protractor和Robot Framework的核心框架。</p>
-<p>Selenium 支持多系统环境（Windows，Mac，Linux）以及多种浏览器（Chrome，FireFox，IE以及无头浏览器（没有界面））。它的脚本可以由各种各样的编程语言编写，比如 Java，Groovy，Python，C#，PHP，Ruby 以及 Perl。</p>
-<p>因为Selenium的灵活性，测试人员可以写各种复杂的、高级的测试脚本来应对各种复杂的问题，它需要高级的编程技能和付出来构建满足自己需求的自动化测试框架和库。</p>
-<h2 id="Appium"><a href="#Appium" class="headerlink" title="Appium"></a>Appium</h2><p>AppUI自动化测试</p>
-<p>Appium是一个移动端自动化测试开源工具，支持iOS和Android平台，支持Python、Java等语言，即同一套Java或Python脚本可以同时运行在iOS和Android平台，Appium 是一个C/S架构，核心是一个Web服务器，它提供了一套REST的接口。当收到客户端的连接后，就会监听到命令，然后在移动设备上执行这些命令，最后将执行结果放在HTTP响应中返还给客户端。</p>
-<h2 id="Jmeter"><a href="#Jmeter" class="headerlink" title="Jmeter"></a>Jmeter</h2><p>接口测试，性能测试</p>
-<p>Apache JMeter是一个开源的Java桌面应用程序，主要用于web应用程序的负载测试。它还支持单元测试和有限的功能测试。</p>
-<p>它有很多好的特性，比如动态报告、可移植性、强大的测试IDE等，并且支持不同类型的应用程序、协议、shell脚本、Java对象和数据库。</p>
-<h2 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h2><p>接口测试</p>
-<p>Postman 提供功能强大的Web API和HTTP请求的调试，它能够发送任何类型的HTTP请求 (GET, POST, PUT, DELETE…)，并且能附带任何数量的参数和Headers。不仅如此，它还提供测试数据和环境配置数据的导入导出，付费的Post Cloud用户还能够创建自己的 Team Library用来团队协作式的测试，并能够将自己的测试收藏夹和用例数据分享给团队。</p>
-<h2 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h2><p>接口测试</p>
-<p>SoapUI是一个非常流行的用于SOAP和REST的开源API测试自动化框架。它还支持功能测试、性能测试、数据驱动测试和测试报告。</p>
-<h2 id="Monkey"><a href="#Monkey" class="headerlink" title="Monkey"></a>Monkey</h2><p>稳定性测试</p>
-<p>软件附带在sdk中，适用于android和ios，通过adb shell，生成用户或系统的伪随机事件。</p>
-<p>压力测试结果：崩溃crash，无响应anr，</p>
-<p>基本命令：adb shell monkey 1000。</p>
-<h2 id="Robot-Framework"><a href="#Robot-Framework" class="headerlink" title="Robot Framework"></a>Robot Framework</h2><p>WebUI自动化测试，接口测试</p>
-<p>Robot Framework是一个开源自动化框架，它实现了用于验收测试和验收测试驱动开发（ATDD）的关键字驱动方法。Robot Framework为不同的测试自动化需求提供框架。但是，通过使用Python和Java实现其他测试库，可以进一步扩展其测试功能。Selenium WebDriver是Robot Framework中常用的外部库。</p>
-<p>测试工程师可以利用Robot Framework作为自动化框架，不仅可以进行Web测试，还可以用于Android和iOS测试自动化。对于熟悉关键字驱动测试的测试人员，可以轻松学习Robot Framework。</p>
-<h2 id="QTP"><a href="#QTP" class="headerlink" title="QTP"></a>QTP</h2><p>WebUI自动化测试</p>
-<p>QTP是一种自动测试工具。使用 QTP 的目的是想用它来执行重复的手动测试，主要是用于回归测试和测试同一软件的新版本。因此你在测试前要考虑好如何对应用程序进行测试，例如要测试那些功能、操作步骤、输入数据和期望的输出数据等。</p>
-<p>QTP针对的是GUI应用程序，包括传统的Windows应用程序，以及现在越来越流行的Web应用。它可以覆盖绝大多数的软件开发技术，简单高效，并具备测试用例可重用的特点。其中包括：创建测试、插入检查点、检验数据、增强测试、运行测试、分析结果和维护测试等方面。</p>
-<h2 id="LoadRunner"><a href="#LoadRunner" class="headerlink" title="LoadRunner"></a>LoadRunner</h2><p>性能测试</p>
-<p>LoadRunner，是一种预测系统行为和性能的负载测试工具。通过以模拟上千万用户实施并发负载及实时性能监测的方式来确认和查找问题，LoadRunner能够对整个企业架构进行测试。</p>
-<p>企业使用LoadRunner能最大限度地缩短测试时间，优化性能和加速应用系统的发布周期。LoadRunner可适用于各种体系架构的自动负载测试，能预测系统行为并评估系统性能。</p>
-<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>持续集成</p>
-<p>自动化构建编译，部署，任务执行，测试报告，邮件通知等。</p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
       </tags>
   </entry>
   <entry>
