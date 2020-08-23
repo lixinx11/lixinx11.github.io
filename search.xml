@@ -112,7 +112,15 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
   <entry>
     <title>RNN</title>
     <url>/2020/08/23/RNN/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>循環神經網絡（Recurrent neural network：RNN）是神經網絡的一種</p>
+<p> <img src="https://lixinx11.github.io/medias/bigdata/22.png" alt="RNN"></p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>RNN</tag>
+      </tags>
   </entry>
   <entry>
     <title>Tensorflow</title>
