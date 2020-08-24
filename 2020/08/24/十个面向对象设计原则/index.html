@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分布式系统, 麦芽maiya">
+    <meta name="keywords" content="十个面向对象设计原则, 麦芽maiya">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分布式系统 | 麦芽maiya</title>
+    <title>十个面向对象设计原则 | 麦芽maiya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">分布式系统</h1>
+                    <h1 class="description center-align post-title">十个面向对象设计原则</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +429,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                                <span class="chip bg-color">面向对象</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="post-category">
+                                面向对象
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -459,7 +472,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="十个面向对象设计原则"><a href="#十个面向对象设计原则" class="headerlink" title="十个面向对象设计原则"></a>十个面向对象设计原则</h2><p>  　 追求高内聚highly cohesive 和松耦合 loosely couple 的解决方案是面向对象设计基本核心原则。这里列出OO设计中十大原则：</p>
+<h3 id="1-DRY-不要重复你自己"><a href="#1-DRY-不要重复你自己" class="headerlink" title="1. DRY (不要重复你自己)"></a>1. DRY (不要重复你自己)</h3><p>这是指不写重复的代码，取而代之是使用抽象共性的东西。如果超过一次使用硬编码，那么就要考虑将其公开为final修饰的不变量；如果你在两个以上地方有相同的代码块，那么就要考虑使其成为一个单独的方法。SOLID设计原理的好处是在维护。值得注意的是重复的不是指代码，而是对于功能而言的。</p>
+<h3 id="2-封装变化"><a href="#2-封装变化" class="headerlink" title="2.封装变化"></a>2.封装变化</h3><p>在软件领域唯一不变的就是“变”，所以封装那些你估计在未来可能被改变的代码。这种设计的好处是容易测试和易于维护。如果你是进行Java编码，那么就要使变量和方法变成私有。有几个Java设计模式采用封装，工厂设计模式封装的是对象创建代码，并提供了在不改变现有的代码情况下推出新产品的灵活性。</p>
+<h3 id="3-开闭原则"><a href="#3-开闭原则" class="headerlink" title="3.开闭原则"></a>3.开闭原则</h3><p>类，方法或函数应该对扩展开放（新功能）和对修改关闭。这又是一个漂亮的面向对象的设计原则，防止对已经测试过的代码尝试修改。</p>
+<h3 id="4-单一职责"><a href="#4-单一职责" class="headerlink" title="4.单一职责"></a>4.单一职责</h3><p>不应该有超过一个理由去修改类，因为一个类只能有一个职责功能，如果你将多于一个功能增加到一个类中，相当于在两个功能之间引入了紧耦合。</p>
+<h3 id="5-依赖注入或反转控制"><a href="#5-依赖注入或反转控制" class="headerlink" title="5.依赖注入或反转控制"></a>5.依赖注入或反转控制</h3><p>不要主动要求依赖，因为它已经由框架提供给你。比如Spring框架等，这样的设计原则妙处在于，它是由DI注入框架的注入匹配需要的类，这样更容易进行测试维护，因为创建对象的代码都集中在框架，而客户端代码是不参与的。</p>
+<h3 id="6-组合胜过于继承"><a href="#6-组合胜过于继承" class="headerlink" title="6. 组合胜过于继承"></a>6. 组合胜过于继承</h3><p>如果可能的话组合composition总是胜过继承。组合比继承拥有更多的灵活性。组合允许在运行时设置属性，并通过使用接口来实现，我们可以使用多态在类运行时改变类的行为，从而提供更好的接口实现。</p>
+<h3 id="7-LSP原则"><a href="#7-LSP原则" class="headerlink" title="7. LSP原则"></a>7. LSP原则</h3><p>根据里氏替换原则，子类型必须是可替代超类型，即方法或函数，它使用超类的类型必须能够与子类的对象时一样没有任何问题，如果一个类比子类有更多的功能，而子类可能不支持某些功能，这没有违反LSP。为了遵循LSP的设计原理，派生类或子类必须是增强功能不是减少它。</p>
+<h3 id="8-接口分离原则ISP"><a href="#8-接口分离原则ISP" class="headerlink" title="8.接口分离原则ISP"></a>8.接口分离原则ISP</h3><p>接口隔离原则要求：客户端不应该实现它不使用的接口，。当一个接口包含一个以上的功能而客户端只需要一个功能时容易出现这种情况，因为一旦你释放你的接口，你就不能改变它。</p>
+<h3 id="9-面向接口而不是实现编程"><a href="#9-面向接口而不是实现编程" class="headerlink" title="9. 面向接口而不是实现编程"></a>9. 面向接口而不是实现编程</h3><p>面向接口编程而不是面向实现子类，这有灵活性的好处，特别是同样接口有不同实现子类时。</p>
+<h3 id="10-委托原则"><a href="#10-委托原则" class="headerlink" title="10.委托原则"></a>10.委托原则</h3><p>不要自己做所有的事情，可以委托给相应的类去完成。</p>
+
             </div>
             <hr/>
 
@@ -484,7 +508,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lixinx11.github.io/2020/08/24/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/">https://lixinx11.github.io/2020/08/24/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</a>
+                    <a href="https://lixinx11.github.io/2020/08/24/%E5%8D%81%E4%B8%AA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">https://lixinx11.github.io/2020/08/24/%E5%8D%81%E4%B8%AA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -521,7 +545,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                                    <span class="chip bg-color">面向对象</span>
+                                </a>
+                            
                         </div>
                     
                 </div>

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>DNN的反向传播算法</title>
-    <url>/2019/07/21/DNN/</url>
-    <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
-<p>　　　　现在我们想把同样的思想用到CNN中，很明显，CNN有些不同的地方，不能直接去套用DNN的反向传播算法的公式。</p>
+    <title>RPA</title>
+    <url>/2020/08/22/NLP/</url>
+    <content><![CDATA[<h2 id="什麼是-RPA？"><a href="#什麼是-RPA？" class="headerlink" title="什麼是 RPA？"></a>什麼是 RPA？</h2><pre><code>2019年至今（2020年初），国产RPA企业已经陆续拿到融资，其中有三起集中发生在6月份，其中一起追加融资发生在8月份，保守估计，
+5个国产RPA企业融资总金额在8亿人民币上下，但市场估值已高达54.2亿人民币，资本如此青睐的RPA是何方神圣呢？它是什么样的一个技术呢？
+
+
+RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動化讓您能夠使用工具建置自己專屬的軟體機器人，以便將任何業務流程</code></pre>
+<p>   自動化。您的「機器人」是可設定的軟體，用於執行您所指派和控制的任務。<br>   RPA 機器人具備學習能力，也可以被複製。了解機器人如何運作，並且依照您的需求進行調整及擴展。不需要使用程式碼、不會中斷作業、非侵入式，而且使用簡易。</p>
+<h2 id="揭開流程機器人-RPA-的神秘面紗"><a href="#揭開流程機器人-RPA-的神秘面紗" class="headerlink" title="揭開流程機器人(RPA)的神秘面紗"></a>揭開流程機器人(RPA)的神秘面紗</h2><p>在企業日常營運中，有許多流程往往是仰賴所多的人工在電腦桌面與資訊系統之間的重複作業。流程機器人(RPA)是一種新興的程式軟體工具，它會模擬使用者坐在辦公桌時經常做的事情，將這些重複且枯燥的電腦桌面作業程序自動化，不需經由特殊的硬體設備，能在任何資訊系統(IT)環境中發揮良好的表現，甚至能在電腦後台背景虛擬化的執行工作，這就是流程機器人(RPA)可以做的工作-將重複性高但有邏輯性的作業，以流程機器人(RPA)取代人力的投入。</p>
+<p>流程機器人就像是在工廠內的巨型黃色機械手臂，透過它將勞力密集且重複性高的的作業流程自動化，進而改變企業決策的速度。</p>
+<p>流程機器人帶給企業的效益</p>
+<p>企業內部一般事務性的工作，根據調查，一個“滿載”的流程機器人僅約耗費一般員工三分之一的成本。在財務會計的作業流程自動化應用方面，從日記帳分錄記錄到調整總帳科目，以及轉為各項報表等這些流程都適用流程自動化，目前已經出現非常多的實際應用，流程機器人效率是間接作業人員的15倍，同時趨近於零失誤率的作業執行品質，提供15％至90％的降低成本的機會。</p>
+<p>流程機器人不僅可以減少間接人員的人力需求，還提供了其他優勢；因其24X7全天候運行，流程機器人能製作對時間敏感度高的報告，以趕上截止日期。透過流程機器人的執行結果將會更準確，避免數據重複輸入和輸入錯誤所衍生一連串的彌補措施。</p>
+<p>讓流程機器人自動化成真</p>
+<h3 id="基本上導入流程機器人時，企業通常分成處於兩種狀態："><a href="#基本上導入流程機器人時，企業通常分成處於兩種狀態：" class="headerlink" title="基本上導入流程機器人時，企業通常分成處於兩種狀態："></a>基本上導入流程機器人時，企業通常分成處於兩種狀態：</h3><p>第一種是已經進行過前期試作的企業，正在試圖擴大這項技術；第二種則是正在探索流程機器人可能性的初步評估階段。如果您的組織屬於後者，我們建議的方式就是從一個前期試行專案(Pilot/Prototype)著手，讓企業先熟悉流程機器人的能力。</p>
+<p>為了避免資源過度的投入，建議前期試行專案可從選擇三到五個流程開始，藉由試行專案所投入的時間與資源，進而評估效益以及侷限性，確保流程機器人適合業務端的程度。</p>
+<p>   <img src="https://lixinx11.github.io/medias/bigdata/12.png" alt="流程自动化"></p>
 ]]></content>
       <categories>
-        <category>Deep Learning</category>
+        <category>AI</category>
       </categories>
       <tags>
-        <tag>DNN的反向传播算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LSTM</title>
-    <url>/2020/08/23/LSTM/</url>
-    <content><![CDATA[<p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。简单来说，就是相比普通的RNN，LSTM能够在更长的序列中有更好的表现。</p>
-<p> <img src="https://lixinx11.github.io/medias/bigdata/21.png" alt="LSTM"></p>
-]]></content>
-      <categories>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>LSTM</tag>
+        <tag>RPA</tag>
       </tags>
   </entry>
   <entry>
@@ -84,29 +84,29 @@
       </tags>
   </entry>
   <entry>
-    <title>RPA</title>
-    <url>/2020/08/22/NLP/</url>
-    <content><![CDATA[<h2 id="什麼是-RPA？"><a href="#什麼是-RPA？" class="headerlink" title="什麼是 RPA？"></a>什麼是 RPA？</h2><pre><code>2019年至今（2020年初），国产RPA企业已经陆续拿到融资，其中有三起集中发生在6月份，其中一起追加融资发生在8月份，保守估计，
-5个国产RPA企业融资总金额在8亿人民币上下，但市场估值已高达54.2亿人民币，资本如此青睐的RPA是何方神圣呢？它是什么样的一个技术呢？
-
-
-RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動化讓您能夠使用工具建置自己專屬的軟體機器人，以便將任何業務流程</code></pre>
-<p>   自動化。您的「機器人」是可設定的軟體，用於執行您所指派和控制的任務。<br>   RPA 機器人具備學習能力，也可以被複製。了解機器人如何運作，並且依照您的需求進行調整及擴展。不需要使用程式碼、不會中斷作業、非侵入式，而且使用簡易。</p>
-<h2 id="揭開流程機器人-RPA-的神秘面紗"><a href="#揭開流程機器人-RPA-的神秘面紗" class="headerlink" title="揭開流程機器人(RPA)的神秘面紗"></a>揭開流程機器人(RPA)的神秘面紗</h2><p>在企業日常營運中，有許多流程往往是仰賴所多的人工在電腦桌面與資訊系統之間的重複作業。流程機器人(RPA)是一種新興的程式軟體工具，它會模擬使用者坐在辦公桌時經常做的事情，將這些重複且枯燥的電腦桌面作業程序自動化，不需經由特殊的硬體設備，能在任何資訊系統(IT)環境中發揮良好的表現，甚至能在電腦後台背景虛擬化的執行工作，這就是流程機器人(RPA)可以做的工作-將重複性高但有邏輯性的作業，以流程機器人(RPA)取代人力的投入。</p>
-<p>流程機器人就像是在工廠內的巨型黃色機械手臂，透過它將勞力密集且重複性高的的作業流程自動化，進而改變企業決策的速度。</p>
-<p>流程機器人帶給企業的效益</p>
-<p>企業內部一般事務性的工作，根據調查，一個“滿載”的流程機器人僅約耗費一般員工三分之一的成本。在財務會計的作業流程自動化應用方面，從日記帳分錄記錄到調整總帳科目，以及轉為各項報表等這些流程都適用流程自動化，目前已經出現非常多的實際應用，流程機器人效率是間接作業人員的15倍，同時趨近於零失誤率的作業執行品質，提供15％至90％的降低成本的機會。</p>
-<p>流程機器人不僅可以減少間接人員的人力需求，還提供了其他優勢；因其24X7全天候運行，流程機器人能製作對時間敏感度高的報告，以趕上截止日期。透過流程機器人的執行結果將會更準確，避免數據重複輸入和輸入錯誤所衍生一連串的彌補措施。</p>
-<p>讓流程機器人自動化成真</p>
-<h3 id="基本上導入流程機器人時，企業通常分成處於兩種狀態："><a href="#基本上導入流程機器人時，企業通常分成處於兩種狀態：" class="headerlink" title="基本上導入流程機器人時，企業通常分成處於兩種狀態："></a>基本上導入流程機器人時，企業通常分成處於兩種狀態：</h3><p>第一種是已經進行過前期試作的企業，正在試圖擴大這項技術；第二種則是正在探索流程機器人可能性的初步評估階段。如果您的組織屬於後者，我們建議的方式就是從一個前期試行專案(Pilot/Prototype)著手，讓企業先熟悉流程機器人的能力。</p>
-<p>為了避免資源過度的投入，建議前期試行專案可從選擇三到五個流程開始，藉由試行專案所投入的時間與資源，進而評估效益以及侷限性，確保流程機器人適合業務端的程度。</p>
-<p>   <img src="https://lixinx11.github.io/medias/bigdata/12.png" alt="流程自动化"></p>
+    <title>LSTM</title>
+    <url>/2020/08/23/LSTM/</url>
+    <content><![CDATA[<p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。简单来说，就是相比普通的RNN，LSTM能够在更长的序列中有更好的表现。</p>
+<p> <img src="https://lixinx11.github.io/medias/bigdata/21.png" alt="LSTM"></p>
 ]]></content>
       <categories>
-        <category>AI</category>
+        <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>RPA</tag>
+        <tag>LSTM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DNN的反向传播算法</title>
+    <url>/2019/07/21/DNN/</url>
+    <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
+<p>　　　　现在我们想把同样的思想用到CNN中，很明显，CNN有些不同的地方，不能直接去套用DNN的反向传播算法的公式。</p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>DNN的反向传播算法</tag>
       </tags>
   </entry>
   <entry>
@@ -148,6 +148,27 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </categories>
       <tags>
         <tag>Tensorflow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello world</title>
+    <url>/2010/04/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -291,27 +312,6 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
-    <title>Hello world</title>
-    <url>/2010/04/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>Hello world</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>java探针</title>
     <url>/2020/08/22/java%E6%8E%A2%E9%92%88/</url>
     <content><![CDATA[<h2 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h2><p>Tomcat：<br>（1）模块启动时间<br>（2）模块交互耗时</p>
@@ -343,19 +343,6 @@ void createMap(Thread t, T firstValue) &#123;
       <tags>
         <tag>markdown</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p>   第一章</p>
-<p>内容</p>
-<hr>
-<p> 第二章</p>
-<p>内容</p>
-<hr>
-<p>   参考文献</p>
-<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
-]]></content>
   </entry>
   <entry>
     <title>mysql5.7安装使用指南</title>
@@ -400,6 +387,19 @@ void createMap(Thread t, T firstValue) &#123;
       <tags>
         <tag>数据迁移</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>   第一章</p>
+<p>内容</p>
+<hr>
+<p> 第二章</p>
+<p>内容</p>
+<hr>
+<p>   参考文献</p>
+<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
+]]></content>
   </entry>
   <entry>
     <title>redis使用指南</title>
@@ -492,6 +492,28 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>十个面向对象设计原则</title>
+    <url>/2020/08/24/%E5%8D%81%E4%B8%AA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</url>
+    <content><![CDATA[<h2 id="十个面向对象设计原则"><a href="#十个面向对象设计原则" class="headerlink" title="十个面向对象设计原则"></a>十个面向对象设计原则</h2><p>  　 追求高内聚highly cohesive 和松耦合 loosely couple 的解决方案是面向对象设计基本核心原则。这里列出OO设计中十大原则：</p>
+<h3 id="1-DRY-不要重复你自己"><a href="#1-DRY-不要重复你自己" class="headerlink" title="1. DRY (不要重复你自己)"></a>1. DRY (不要重复你自己)</h3><p>这是指不写重复的代码，取而代之是使用抽象共性的东西。如果超过一次使用硬编码，那么就要考虑将其公开为final修饰的不变量；如果你在两个以上地方有相同的代码块，那么就要考虑使其成为一个单独的方法。SOLID设计原理的好处是在维护。值得注意的是重复的不是指代码，而是对于功能而言的。</p>
+<h3 id="2-封装变化"><a href="#2-封装变化" class="headerlink" title="2.封装变化"></a>2.封装变化</h3><p>在软件领域唯一不变的就是“变”，所以封装那些你估计在未来可能被改变的代码。这种设计的好处是容易测试和易于维护。如果你是进行Java编码，那么就要使变量和方法变成私有。有几个Java设计模式采用封装，工厂设计模式封装的是对象创建代码，并提供了在不改变现有的代码情况下推出新产品的灵活性。</p>
+<h3 id="3-开闭原则"><a href="#3-开闭原则" class="headerlink" title="3.开闭原则"></a>3.开闭原则</h3><p>类，方法或函数应该对扩展开放（新功能）和对修改关闭。这又是一个漂亮的面向对象的设计原则，防止对已经测试过的代码尝试修改。</p>
+<h3 id="4-单一职责"><a href="#4-单一职责" class="headerlink" title="4.单一职责"></a>4.单一职责</h3><p>不应该有超过一个理由去修改类，因为一个类只能有一个职责功能，如果你将多于一个功能增加到一个类中，相当于在两个功能之间引入了紧耦合。</p>
+<h3 id="5-依赖注入或反转控制"><a href="#5-依赖注入或反转控制" class="headerlink" title="5.依赖注入或反转控制"></a>5.依赖注入或反转控制</h3><p>不要主动要求依赖，因为它已经由框架提供给你。比如Spring框架等，这样的设计原则妙处在于，它是由DI注入框架的注入匹配需要的类，这样更容易进行测试维护，因为创建对象的代码都集中在框架，而客户端代码是不参与的。</p>
+<h3 id="6-组合胜过于继承"><a href="#6-组合胜过于继承" class="headerlink" title="6. 组合胜过于继承"></a>6. 组合胜过于继承</h3><p>如果可能的话组合composition总是胜过继承。组合比继承拥有更多的灵活性。组合允许在运行时设置属性，并通过使用接口来实现，我们可以使用多态在类运行时改变类的行为，从而提供更好的接口实现。</p>
+<h3 id="7-LSP原则"><a href="#7-LSP原则" class="headerlink" title="7. LSP原则"></a>7. LSP原则</h3><p>根据里氏替换原则，子类型必须是可替代超类型，即方法或函数，它使用超类的类型必须能够与子类的对象时一样没有任何问题，如果一个类比子类有更多的功能，而子类可能不支持某些功能，这没有违反LSP。为了遵循LSP的设计原理，派生类或子类必须是增强功能不是减少它。</p>
+<h3 id="8-接口分离原则ISP"><a href="#8-接口分离原则ISP" class="headerlink" title="8.接口分离原则ISP"></a>8.接口分离原则ISP</h3><p>接口隔离原则要求：客户端不应该实现它不使用的接口，。当一个接口包含一个以上的功能而客户端只需要一个功能时容易出现这种情况，因为一旦你释放你的接口，你就不能改变它。</p>
+<h3 id="9-面向接口而不是实现编程"><a href="#9-面向接口而不是实现编程" class="headerlink" title="9. 面向接口而不是实现编程"></a>9. 面向接口而不是实现编程</h3><p>面向接口编程而不是面向实现子类，这有灵活性的好处，特别是同样接口有不同实现子类时。</p>
+<h3 id="10-委托原则"><a href="#10-委托原则" class="headerlink" title="10.委托原则"></a>10.委托原则</h3><p>不要自己做所有的事情，可以委托给相应的类去完成。</p>
+]]></content>
+      <categories>
+        <category>面向对象</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多路复用技术 epoll 分析</title>
     <url>/2020/08/20/%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<pre><code> ## 多路复用技术 epoll 分析  </code></pre>
@@ -530,6 +552,20 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>大数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常见开源产品epoll网络事件模型汇总</title>
+    <url>/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="常用模型总结："><a href="#常用模型总结：" class="headerlink" title="常用模型总结："></a>常用模型总结：</h2><p>1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis<br>2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知 + n线程(处理) 模型…………代表产品thrift-nonblocking-server<br>2）epoll 1线程(listen+accept+epoll_wait) + n队列通知 + n线程(处理) 模型…………代表产品memcached<br>4）epoll 1进程(listen) + n进程(accept+epoll_wait+处理) 模型………………………….代表产品nginx<br>5）epoll 1线程(listen) + n线程(accept+epoll_wait+处理) 模型<br>6)  epoll 1线程(listen+accept) + n线程(epoll_wait+处理) 模型</p>
+<h2 id="常用模型汇总："><a href="#常用模型汇总：" class="headerlink" title="常用模型汇总："></a>常用模型汇总：</h2><p><img src="https://lixinx11.github.io/medias/bigdata/10.png" alt="常用模型汇总"></p>
+<h2 id="常用模型对比："><a href="#常用模型对比：" class="headerlink" title="常用模型对比："></a>常用模型对比：</h2><p>  <img src="https://lixinx11.github.io/medias/bigdata/11.png" alt="常用模型对比"></p>
+]]></content>
+      <categories>
+        <category>epoll</category>
+      </categories>
+      <tags>
+        <tag>epoll网络事件模型分析</tag>
       </tags>
   </entry>
   <entry>
@@ -588,20 +624,6 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
-    <title>常见开源产品epoll网络事件模型汇总</title>
-    <url>/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="常用模型总结："><a href="#常用模型总结：" class="headerlink" title="常用模型总结："></a>常用模型总结：</h2><p>1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis<br>2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知 + n线程(处理) 模型…………代表产品thrift-nonblocking-server<br>2）epoll 1线程(listen+accept+epoll_wait) + n队列通知 + n线程(处理) 模型…………代表产品memcached<br>4）epoll 1进程(listen) + n进程(accept+epoll_wait+处理) 模型………………………….代表产品nginx<br>5）epoll 1线程(listen) + n线程(accept+epoll_wait+处理) 模型<br>6)  epoll 1线程(listen+accept) + n线程(epoll_wait+处理) 模型</p>
-<h2 id="常用模型汇总："><a href="#常用模型汇总：" class="headerlink" title="常用模型汇总："></a>常用模型汇总：</h2><p><img src="https://lixinx11.github.io/medias/bigdata/10.png" alt="常用模型汇总"></p>
-<h2 id="常用模型对比："><a href="#常用模型对比：" class="headerlink" title="常用模型对比："></a>常用模型对比：</h2><p>  <img src="https://lixinx11.github.io/medias/bigdata/11.png" alt="常用模型对比"></p>
-]]></content>
-      <categories>
-        <category>epoll</category>
-      </categories>
-      <tags>
-        <tag>epoll网络事件模型分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微服务架构</title>
     <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
     <content><![CDATA[]]></content>
@@ -625,45 +647,6 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>拼多多的晋升之道</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>最好用的自动化测试工具</title>
-    <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
-<p>Selenium是网页应用中最流行的开源自动化测试框架。起源于2000年，10多年来不断地完善，Selenium成为许多Web自动化测试人员的选择，尤其是那些有高级编程和脚本技能的人。Selenium也成为了其他开源自动化测试工具比如Katalon Studio，Watir，Protractor和Robot Framework的核心框架。</p>
-<p>Selenium 支持多系统环境（Windows，Mac，Linux）以及多种浏览器（Chrome，FireFox，IE以及无头浏览器（没有界面））。它的脚本可以由各种各样的编程语言编写，比如 Java，Groovy，Python，C#，PHP，Ruby 以及 Perl。</p>
-<p>因为Selenium的灵活性，测试人员可以写各种复杂的、高级的测试脚本来应对各种复杂的问题，它需要高级的编程技能和付出来构建满足自己需求的自动化测试框架和库。</p>
-<h2 id="Appium"><a href="#Appium" class="headerlink" title="Appium"></a>Appium</h2><p>AppUI自动化测试</p>
-<p>Appium是一个移动端自动化测试开源工具，支持iOS和Android平台，支持Python、Java等语言，即同一套Java或Python脚本可以同时运行在iOS和Android平台，Appium 是一个C/S架构，核心是一个Web服务器，它提供了一套REST的接口。当收到客户端的连接后，就会监听到命令，然后在移动设备上执行这些命令，最后将执行结果放在HTTP响应中返还给客户端。</p>
-<h2 id="Jmeter"><a href="#Jmeter" class="headerlink" title="Jmeter"></a>Jmeter</h2><p>接口测试，性能测试</p>
-<p>Apache JMeter是一个开源的Java桌面应用程序，主要用于web应用程序的负载测试。它还支持单元测试和有限的功能测试。</p>
-<p>它有很多好的特性，比如动态报告、可移植性、强大的测试IDE等，并且支持不同类型的应用程序、协议、shell脚本、Java对象和数据库。</p>
-<h2 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h2><p>接口测试</p>
-<p>Postman 提供功能强大的Web API和HTTP请求的调试，它能够发送任何类型的HTTP请求 (GET, POST, PUT, DELETE…)，并且能附带任何数量的参数和Headers。不仅如此，它还提供测试数据和环境配置数据的导入导出，付费的Post Cloud用户还能够创建自己的 Team Library用来团队协作式的测试，并能够将自己的测试收藏夹和用例数据分享给团队。</p>
-<h2 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h2><p>接口测试</p>
-<p>SoapUI是一个非常流行的用于SOAP和REST的开源API测试自动化框架。它还支持功能测试、性能测试、数据驱动测试和测试报告。</p>
-<h2 id="Monkey"><a href="#Monkey" class="headerlink" title="Monkey"></a>Monkey</h2><p>稳定性测试</p>
-<p>软件附带在sdk中，适用于android和ios，通过adb shell，生成用户或系统的伪随机事件。</p>
-<p>压力测试结果：崩溃crash，无响应anr，</p>
-<p>基本命令：adb shell monkey 1000。</p>
-<h2 id="Robot-Framework"><a href="#Robot-Framework" class="headerlink" title="Robot Framework"></a>Robot Framework</h2><p>WebUI自动化测试，接口测试</p>
-<p>Robot Framework是一个开源自动化框架，它实现了用于验收测试和验收测试驱动开发（ATDD）的关键字驱动方法。Robot Framework为不同的测试自动化需求提供框架。但是，通过使用Python和Java实现其他测试库，可以进一步扩展其测试功能。Selenium WebDriver是Robot Framework中常用的外部库。</p>
-<p>测试工程师可以利用Robot Framework作为自动化框架，不仅可以进行Web测试，还可以用于Android和iOS测试自动化。对于熟悉关键字驱动测试的测试人员，可以轻松学习Robot Framework。</p>
-<h2 id="QTP"><a href="#QTP" class="headerlink" title="QTP"></a>QTP</h2><p>WebUI自动化测试</p>
-<p>QTP是一种自动测试工具。使用 QTP 的目的是想用它来执行重复的手动测试，主要是用于回归测试和测试同一软件的新版本。因此你在测试前要考虑好如何对应用程序进行测试，例如要测试那些功能、操作步骤、输入数据和期望的输出数据等。</p>
-<p>QTP针对的是GUI应用程序，包括传统的Windows应用程序，以及现在越来越流行的Web应用。它可以覆盖绝大多数的软件开发技术，简单高效，并具备测试用例可重用的特点。其中包括：创建测试、插入检查点、检验数据、增强测试、运行测试、分析结果和维护测试等方面。</p>
-<h2 id="LoadRunner"><a href="#LoadRunner" class="headerlink" title="LoadRunner"></a>LoadRunner</h2><p>性能测试</p>
-<p>LoadRunner，是一种预测系统行为和性能的负载测试工具。通过以模拟上千万用户实施并发负载及实时性能监测的方式来确认和查找问题，LoadRunner能够对整个企业架构进行测试。</p>
-<p>企业使用LoadRunner能最大限度地缩短测试时间，优化性能和加速应用系统的发布周期。LoadRunner可适用于各种体系架构的自动负载测试，能预测系统行为并评估系统性能。</p>
-<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>持续集成</p>
-<p>自动化构建编译，部署，任务执行，测试报告，邮件通知等。</p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
       </tags>
   </entry>
   <entry>
@@ -711,6 +694,45 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>最好用的自动化测试工具</title>
+    <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
+<p>Selenium是网页应用中最流行的开源自动化测试框架。起源于2000年，10多年来不断地完善，Selenium成为许多Web自动化测试人员的选择，尤其是那些有高级编程和脚本技能的人。Selenium也成为了其他开源自动化测试工具比如Katalon Studio，Watir，Protractor和Robot Framework的核心框架。</p>
+<p>Selenium 支持多系统环境（Windows，Mac，Linux）以及多种浏览器（Chrome，FireFox，IE以及无头浏览器（没有界面））。它的脚本可以由各种各样的编程语言编写，比如 Java，Groovy，Python，C#，PHP，Ruby 以及 Perl。</p>
+<p>因为Selenium的灵活性，测试人员可以写各种复杂的、高级的测试脚本来应对各种复杂的问题，它需要高级的编程技能和付出来构建满足自己需求的自动化测试框架和库。</p>
+<h2 id="Appium"><a href="#Appium" class="headerlink" title="Appium"></a>Appium</h2><p>AppUI自动化测试</p>
+<p>Appium是一个移动端自动化测试开源工具，支持iOS和Android平台，支持Python、Java等语言，即同一套Java或Python脚本可以同时运行在iOS和Android平台，Appium 是一个C/S架构，核心是一个Web服务器，它提供了一套REST的接口。当收到客户端的连接后，就会监听到命令，然后在移动设备上执行这些命令，最后将执行结果放在HTTP响应中返还给客户端。</p>
+<h2 id="Jmeter"><a href="#Jmeter" class="headerlink" title="Jmeter"></a>Jmeter</h2><p>接口测试，性能测试</p>
+<p>Apache JMeter是一个开源的Java桌面应用程序，主要用于web应用程序的负载测试。它还支持单元测试和有限的功能测试。</p>
+<p>它有很多好的特性，比如动态报告、可移植性、强大的测试IDE等，并且支持不同类型的应用程序、协议、shell脚本、Java对象和数据库。</p>
+<h2 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h2><p>接口测试</p>
+<p>Postman 提供功能强大的Web API和HTTP请求的调试，它能够发送任何类型的HTTP请求 (GET, POST, PUT, DELETE…)，并且能附带任何数量的参数和Headers。不仅如此，它还提供测试数据和环境配置数据的导入导出，付费的Post Cloud用户还能够创建自己的 Team Library用来团队协作式的测试，并能够将自己的测试收藏夹和用例数据分享给团队。</p>
+<h2 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h2><p>接口测试</p>
+<p>SoapUI是一个非常流行的用于SOAP和REST的开源API测试自动化框架。它还支持功能测试、性能测试、数据驱动测试和测试报告。</p>
+<h2 id="Monkey"><a href="#Monkey" class="headerlink" title="Monkey"></a>Monkey</h2><p>稳定性测试</p>
+<p>软件附带在sdk中，适用于android和ios，通过adb shell，生成用户或系统的伪随机事件。</p>
+<p>压力测试结果：崩溃crash，无响应anr，</p>
+<p>基本命令：adb shell monkey 1000。</p>
+<h2 id="Robot-Framework"><a href="#Robot-Framework" class="headerlink" title="Robot Framework"></a>Robot Framework</h2><p>WebUI自动化测试，接口测试</p>
+<p>Robot Framework是一个开源自动化框架，它实现了用于验收测试和验收测试驱动开发（ATDD）的关键字驱动方法。Robot Framework为不同的测试自动化需求提供框架。但是，通过使用Python和Java实现其他测试库，可以进一步扩展其测试功能。Selenium WebDriver是Robot Framework中常用的外部库。</p>
+<p>测试工程师可以利用Robot Framework作为自动化框架，不仅可以进行Web测试，还可以用于Android和iOS测试自动化。对于熟悉关键字驱动测试的测试人员，可以轻松学习Robot Framework。</p>
+<h2 id="QTP"><a href="#QTP" class="headerlink" title="QTP"></a>QTP</h2><p>WebUI自动化测试</p>
+<p>QTP是一种自动测试工具。使用 QTP 的目的是想用它来执行重复的手动测试，主要是用于回归测试和测试同一软件的新版本。因此你在测试前要考虑好如何对应用程序进行测试，例如要测试那些功能、操作步骤、输入数据和期望的输出数据等。</p>
+<p>QTP针对的是GUI应用程序，包括传统的Windows应用程序，以及现在越来越流行的Web应用。它可以覆盖绝大多数的软件开发技术，简单高效，并具备测试用例可重用的特点。其中包括：创建测试、插入检查点、检验数据、增强测试、运行测试、分析结果和维护测试等方面。</p>
+<h2 id="LoadRunner"><a href="#LoadRunner" class="headerlink" title="LoadRunner"></a>LoadRunner</h2><p>性能测试</p>
+<p>LoadRunner，是一种预测系统行为和性能的负载测试工具。通过以模拟上千万用户实施并发负载及实时性能监测的方式来确认和查找问题，LoadRunner能够对整个企业架构进行测试。</p>
+<p>企业使用LoadRunner能最大限度地缩短测试时间，优化性能和加速应用系统的发布周期。LoadRunner可适用于各种体系架构的自动负载测试，能预测系统行为并评估系统性能。</p>
+<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>持续集成</p>
+<p>自动化构建编译，部署，任务执行，测试报告，邮件通知等。</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习+深度学习+人工智能之间的关系</title>
     <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
     <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
@@ -736,6 +758,46 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何设计一个分布式系统</title>
+    <url>/2020/08/24/%E8%AE%BE%E8%AE%A1%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<pre><code> ##  分布式系统
+ 　分布式系统从当初的CORBA 到EJB，Web和SOA，从集群到现在的NoSQL 云计算和大数据Hadoop等分布式系统，横向水平扩展Scala out/in是分布式系统设计的一个特点，可靠性 容错性是两个质量指标。</code></pre>
+<h3 id="什么是分布式系统？"><a href="#什么是分布式系统？" class="headerlink" title="　　    什么是分布式系统？"></a>　　    什么是分布式系统？</h3><p>　　一大批服务器组成一个集合，对于用户来说仍然是一个整体连贯系统。</p>
+<p>　　A. Tanenbaum定义：分布式网络的计算机中的组件之间协调动作是通过消息进行通讯。</p>
+<p>　　G. Coulouris定义：当你知道有一台电脑崩溃，但是你的软件运行从来不会停止。</p>
+<p>　　Leslie Lamport定义：分布式系统是这样系统：旨在支持应用程序和服务的开发，可以利用物理架构 由多个自治的处理元素，不共享主内存，但通过网络发送异步消息合作。</p>
+<p>　　与分层应用区别：分层的应用程序（例如，3层）是 划分应用程序逻辑，是一种逻辑分层，而不是物理，而分布式系统DS是物理分层，和实际部署有关。</p>
+<h3 id="与传统集中式系统相比："><a href="#与传统集中式系统相比：" class="headerlink" title="与传统集中式系统相比："></a>与传统集中式系统相比：</h3><p>　　集中式系统是一种Scale out/in，纵向扩展，要么向上升级服务器到中大型机，要么升级多核，增加CPU核数，集中式纵向扩展适合计算聚合度比较高的数据，而分布式适合计算松散数据，非结构化或半结构化数据。无论采取哪种扩展伸缩方案，需要根据业务数据特点而定。</p>
+<p>　　任何分布式系统总是需要完成两个任务：计算和存储。计算和存储分离是分布式系统的重要特征。而通常在集中式或单机系统中，这两者是可能结合在一起，比如通过一个SQL语句实现查询后排序，查询是从存储中获得数据，排序是属于计算，因此这个SQL语句实际是将计算和存储耦合在一起。在应对大数据或大并发的情况下，这种方便的捆绑带来性能问题，而分布式计算和分布式存储虽然带来复杂性，但是也为系统的处理能力打开了上升拓展的空间。<br>###　分布式系统特点：<br>并发性：共享资源，采取ACID或Base原则，见：CAP定理。<br>分布式系统设计遵循CAP定理， CAP是：Consistency(一致性), Availability(可用性), 和 Partition tolerance(分区容错性) 可靠性 简称，CAP定理认为，CAP三种之中，只能同时满足其中两种。</p>
+<p>可扩展性Scalable是重要特点，通过扩展能够获得高性能 高吞吐量 低延迟Latency。</p>
+<p>可靠性/可用性:故障发现和处理以及恢复 容错处理。在一个正常运作系统中存在一个时间比例的条件。 如果一个用户不能访问系统比例增大，它被认为是不可用。可用性公式：<br>Availability = uptime / (uptime + downtime)<br>容错failover是指一个系统在错误发生的情况下，仍然一切运行正常。表示这个系统是宽容错误的。</p>
+<p>消息处理: 具体产品有：RabbitMQ ZeroMQ Netty等等。</p>
+<p>异构性： 不同操作系统 硬件 程序语言 开发者，中间件是一种解决方案。</p>
+<p>.安全性：授权认证 SSO单点登录 Oauth等等。</p>
+<p>定位命令：<br>标识资源 URLs<br>命名服务Naming services<br>定位寻找Lookup<br>主要见SOA中的服务查找。如Zookeeper实现服务查找。</p>
+<p>.透明性：<br>访问透明度： 使用相同的操作本地和远程资源<br>位置透明：访问资源无需知道其物理或网络位置<br>并发透明度：多个流程可以同时运行访问使用共享资源，当不能干扰堵塞 它们的处理流程<br>复制透明性： 资源的多个实例可以被用来复制以提高可靠性和性能，但无需由用户编制专门的应用程序来实现。<br>故障透明度：出现软件硬件故障时，使用户和应用方案能继续完成他们的任务不受影响。<br>移动透明度：允许在 系统存在移动的资源和客户。<br>性能透明度：允许系统重新配置以 提高性能负荷变化<br>缩放透明度：在应用程序结构没有变化的情况下能够在规模上扩展或伸缩系统，以提高吞吐量处理能力。　　</p>
+<h3 id="分布式系统的挑战"><a href="#分布式系统的挑战" class="headerlink" title="分布式系统的挑战"></a>分布式系统的挑战</h3><p>　　分布式系统是难于理解、设计、构建 和管理的，他们将比单个机器成倍还要多的变量引入到设计中，使应用程序的根源问题更难发现。SLA(服务水平协议)是衡量停机和/或性能下降的标准，大多数现代应用程序有一个期望的弹性SLA水平，通常按”9”的数量增加(如,每月99.9或99.99%可用性)。每个额外的9变得越来越难实现。</p>
+<p>　　让事情更加复杂的是，我们越来越常见地看到：分布式系统的故障表现为间歇性错误或性能下降(俗称的限电)。这些失败模式耗费更多时间来诊断。例如，Joyent经营一些分布式系统作为其云计算基础设施的一部分。在这样一个系统中，包括高可用性、分布式的键/值存储，Joyent最近经历了瞬态应用程序超时。对于大多数用户系统运行正常，其反应延迟也是在SLA范围内。然而，有百分之5 - 10的请求超出了一个预定义的程序超时。这样的失败问题并没有重现在开发或测试环境中，他们经常会”消失”几分钟到几小时。排除这个故障的根本是需要大量数据存储的系统分析。</p>
+<p>　　这些系统包括：数据存储API(node . js)，RDBMS(关系数据库管理系统)和由系统内部使用(PostgreSQL)以及操作系统和终端用户应用程序依赖于的键/值系统。最终，导致过度的根本问题是在应用程序语义锁定，但确定之前需要相当大的数据收集和相关性工作，包括工程师耗费大量工作时间以及学习不同领域的专业知识。</p>
+<p>　　分布式系统由两个物理因素的限制：</p>
+<p>节点的数量（能够增加所需的存储和计算能力）<br>节点之间的距离（信息的传送距离，最好以光速）<br>　　这两个约束导致下面值得挑战的情况发生：</p>
+<p>独立节点随着数目的增加发生故障的概率增加（减少可用的和管理成本增加）<br>独立节点随着数目增加可能会增加节点之间的通信的消耗（随着规模的增大性能降低）<br>地理距离的增加提高遥远的节点之间的通信延迟（减少某些操作的性能）</p>
+<h3 id="如何架构分布式系统"><a href="#如何架构分布式系统" class="headerlink" title="如何架构分布式系统"></a>如何架构分布式系统</h3><p>　　适用于分布式系统架构的最常见的一个术语是SOA(面向服务架构)。SOA可以避免不愉快的CORBA(公共对象请求代理体系结构)，通过WS - *标准，一套松散耦合的Web服务完成独立的小功能，并且彼此独立，他们是一个有弹性的分布式系统的基础。对比上一代，服务是新流程，他们是正确的抽象层次系统中的离散功能。</p>
+<p>　　构建面向服务架构的第一步是确定每个函数功能如何构成整体业务目标，将这些业务映射到离散的服务，且具有独立的断层边界、扩展性和数据负载量。确定为每个服务时，您必须考虑下列事项：</p>
+<p>地理. 系统是全球还是地区单独运行？<br>数据隔离. 这个系统提供一个单个或多租户模型？<br>SLAs. 可用性 延迟 吞吐量 一致性和冗余性都必须定义。<br>安全. IAAA (身份identity, 验证authentication, 授权authorization, 和 审核audit), 数据的保密性和隐私性都必须考虑<br>可用性跟踪. 了解系统的使用是每天系统的日常运作，如容量规划。也可能用于执行计费系统的使用和/或治理(配额/速度限制)。<br>部署和配置管理. 系统是如何部署更新?</p>
+<p>分布式系统的模型抽象<br>系统模型（异步/同步）<br>失效模型（崩溃故障，分区）<br>一致性模型（强，最终）<br>　　通常，我们最熟悉的模式（例如，一个分布式系统上实现共享内存抽象）是太昂贵了。一个分布式系统越弱势越能保证其中元素有更大的行动自由，从而焕发潜在的更大的性能- 但它也可能导致很难管理。这就需要我们有极大智慧，不能以牺牲性能换来管理的方便性。因此，试图将分布式系统看成一个统一的单一系统的思维会阻碍分布式系统的扩展。</p>
+<p>　　分布式系统遵循CAP定律，在高一致性 高可用性和分区容错性之间三选二<br>CA (consistency高一致性 + availability高可用性). 使用2pc 两阶段事务提交来保证。其缺点无法实现分区容错性，一旦某个操作失败，整个系统就出错，无法容忍(水至清则无鱼)。<br>CP (consistency高一致性 + partition tolerance分区容错性). 使用Paxos来保证，可用性降低。<br>AP (availability高可用性 + partition tolerance分区容错性). 使用Gossip等实现最终一致性，如Dynamo.<br>　###  如何正确理解CAP理论？</p>
+<h3 id="分布式系统的设计技巧：分区和复制"><a href="#分布式系统的设计技巧：分区和复制" class="headerlink" title="分布式系统的设计技巧：分区和复制"></a>分布式系统的设计技巧：分区和复制</h3><p>　　对于一个数据集有两种设计方式：</p>
+<p>分区：它可以被分割在多个节点，以允许更多的并行处理。有更好的性能，但是容错能力低。<br>复制：它也可以被复制或缓存在不同的节点上，以减少在客户端和服务器之间的距离，更强的容错能力，但是复制消耗性能。关键是复制数据之间的一致性。弱一致性提供更低的延迟和更高的可用性。<br>分布式系统的设计技巧：时钟和顺序<br>　　分布式系统针对计算和存储的策略是不同的，对于数据的存储主要是分区和复制，而对于计算主要是保证事件的顺序，因为分布式计算任务是由事件驱动的，比如Storm等等。那么事件的顺序代表了业务逻辑的顺序，事件有时是树形嵌套事件，可靠性就是必须保证一个树形集合所有事件都得到网站执行是一个事务原子的。参考流式大数据处理模式。</p>
+]]></content>
+      <categories>
+        <category>分布式系统</category>
+      </categories>
+      <tags>
+        <tag>分布式系统</tag>
       </tags>
   </entry>
   <entry>
@@ -922,51 +984,6 @@ public void run()&#123;
       </categories>
       <tags>
         <tag>java多线程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分布式系统</title>
-    <url>/2020/08/24/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>如何设计一个分布式系统</title>
-    <url>/2020/08/24/%E8%AE%BE%E8%AE%A1%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<pre><code> ##  分布式系统
- 　分布式系统从当初的CORBA 到EJB，Web和SOA，从集群到现在的NoSQL 云计算和大数据Hadoop等分布式系统，横向水平扩展Scala out/in是分布式系统设计的一个特点，可靠性 容错性是两个质量指标。</code></pre>
-<h3 id="什么是分布式系统？"><a href="#什么是分布式系统？" class="headerlink" title="　　    什么是分布式系统？"></a>　　    什么是分布式系统？</h3><p>　　一大批服务器组成一个集合，对于用户来说仍然是一个整体连贯系统。</p>
-<p>　　A. Tanenbaum定义：分布式网络的计算机中的组件之间协调动作是通过消息进行通讯。</p>
-<p>　　G. Coulouris定义：当你知道有一台电脑崩溃，但是你的软件运行从来不会停止。</p>
-<p>　　Leslie Lamport定义：分布式系统是这样系统：旨在支持应用程序和服务的开发，可以利用物理架构 由多个自治的处理元素，不共享主内存，但通过网络发送异步消息合作。</p>
-<p>　　与分层应用区别：分层的应用程序（例如，3层）是 划分应用程序逻辑，是一种逻辑分层，而不是物理，而分布式系统DS是物理分层，和实际部署有关。</p>
-<h3 id="与传统集中式系统相比："><a href="#与传统集中式系统相比：" class="headerlink" title="与传统集中式系统相比："></a>与传统集中式系统相比：</h3><p>　　集中式系统是一种Scale out/in，纵向扩展，要么向上升级服务器到中大型机，要么升级多核，增加CPU核数，集中式纵向扩展适合计算聚合度比较高的数据，而分布式适合计算松散数据，非结构化或半结构化数据。无论采取哪种扩展伸缩方案，需要根据业务数据特点而定。</p>
-<p>　　任何分布式系统总是需要完成两个任务：计算和存储。计算和存储分离是分布式系统的重要特征。而通常在集中式或单机系统中，这两者是可能结合在一起，比如通过一个SQL语句实现查询后排序，查询是从存储中获得数据，排序是属于计算，因此这个SQL语句实际是将计算和存储耦合在一起。在应对大数据或大并发的情况下，这种方便的捆绑带来性能问题，而分布式计算和分布式存储虽然带来复杂性，但是也为系统的处理能力打开了上升拓展的空间。<br>###　分布式系统特点：<br>并发性：共享资源，采取ACID或Base原则，见：CAP定理。<br>分布式系统设计遵循CAP定理， CAP是：Consistency(一致性), Availability(可用性), 和 Partition tolerance(分区容错性) 可靠性 简称，CAP定理认为，CAP三种之中，只能同时满足其中两种。</p>
-<p>可扩展性Scalable是重要特点，通过扩展能够获得高性能 高吞吐量 低延迟Latency。</p>
-<p>可靠性/可用性:故障发现和处理以及恢复 容错处理。在一个正常运作系统中存在一个时间比例的条件。 如果一个用户不能访问系统比例增大，它被认为是不可用。可用性公式：<br>Availability = uptime / (uptime + downtime)<br>容错failover是指一个系统在错误发生的情况下，仍然一切运行正常。表示这个系统是宽容错误的。</p>
-<p>消息处理: 具体产品有：RabbitMQ ZeroMQ Netty等等。</p>
-<p>异构性： 不同操作系统 硬件 程序语言 开发者，中间件是一种解决方案。</p>
-<p>.安全性：授权认证 SSO单点登录 Oauth等等。</p>
-<p>定位命令：<br>标识资源 URLs<br>命名服务Naming services<br>定位寻找Lookup<br>主要见SOA中的服务查找。如Zookeeper实现服务查找。</p>
-<p>.透明性：<br>访问透明度： 使用相同的操作本地和远程资源<br>位置透明：访问资源无需知道其物理或网络位置<br>并发透明度：多个流程可以同时运行访问使用共享资源，当不能干扰堵塞 它们的处理流程<br>复制透明性： 资源的多个实例可以被用来复制以提高可靠性和性能，但无需由用户编制专门的应用程序来实现。<br>故障透明度：出现软件硬件故障时，使用户和应用方案能继续完成他们的任务不受影响。<br>移动透明度：允许在 系统存在移动的资源和客户。<br>性能透明度：允许系统重新配置以 提高性能负荷变化<br>缩放透明度：在应用程序结构没有变化的情况下能够在规模上扩展或伸缩系统，以提高吞吐量处理能力。　　</p>
-<h3 id="分布式系统的挑战"><a href="#分布式系统的挑战" class="headerlink" title="分布式系统的挑战"></a>分布式系统的挑战</h3><p>　　分布式系统是难于理解、设计、构建 和管理的，他们将比单个机器成倍还要多的变量引入到设计中，使应用程序的根源问题更难发现。SLA(服务水平协议)是衡量停机和/或性能下降的标准，大多数现代应用程序有一个期望的弹性SLA水平，通常按”9”的数量增加(如,每月99.9或99.99%可用性)。每个额外的9变得越来越难实现。</p>
-<p>　　让事情更加复杂的是，我们越来越常见地看到：分布式系统的故障表现为间歇性错误或性能下降(俗称的限电)。这些失败模式耗费更多时间来诊断。例如，Joyent经营一些分布式系统作为其云计算基础设施的一部分。在这样一个系统中，包括高可用性、分布式的键/值存储，Joyent最近经历了瞬态应用程序超时。对于大多数用户系统运行正常，其反应延迟也是在SLA范围内。然而，有百分之5 - 10的请求超出了一个预定义的程序超时。这样的失败问题并没有重现在开发或测试环境中，他们经常会”消失”几分钟到几小时。排除这个故障的根本是需要大量数据存储的系统分析。</p>
-<p>　　这些系统包括：数据存储API(node . js)，RDBMS(关系数据库管理系统)和由系统内部使用(PostgreSQL)以及操作系统和终端用户应用程序依赖于的键/值系统。最终，导致过度的根本问题是在应用程序语义锁定，但确定之前需要相当大的数据收集和相关性工作，包括工程师耗费大量工作时间以及学习不同领域的专业知识。</p>
-<p>　　分布式系统由两个物理因素的限制：</p>
-<p>节点的数量（能够增加所需的存储和计算能力）<br>节点之间的距离（信息的传送距离，最好以光速）<br>　　这两个约束导致下面值得挑战的情况发生：</p>
-<p>独立节点随着数目的增加发生故障的概率增加（减少可用的和管理成本增加）<br>独立节点随着数目增加可能会增加节点之间的通信的消耗（随着规模的增大性能降低）<br>地理距离的增加提高遥远的节点之间的通信延迟（减少某些操作的性能）</p>
-<h3 id="如何架构分布式系统"><a href="#如何架构分布式系统" class="headerlink" title="如何架构分布式系统"></a>如何架构分布式系统</h3><p>　　适用于分布式系统架构的最常见的一个术语是SOA(面向服务架构)。SOA可以避免不愉快的CORBA(公共对象请求代理体系结构)，通过WS - *标准，一套松散耦合的Web服务完成独立的小功能，并且彼此独立，他们是一个有弹性的分布式系统的基础。对比上一代，服务是新流程，他们是正确的抽象层次系统中的离散功能。</p>
-<p>　　构建面向服务架构的第一步是确定每个函数功能如何构成整体业务目标，将这些业务映射到离散的服务，且具有独立的断层边界、扩展性和数据负载量。确定为每个服务时，您必须考虑下列事项：</p>
-<p>地理. 系统是全球还是地区单独运行？<br>数据隔离. 这个系统提供一个单个或多租户模型？<br>SLAs. 可用性 延迟 吞吐量 一致性和冗余性都必须定义。<br>安全. IAAA (身份identity, 验证authentication, 授权authorization, 和 审核audit), 数据的保密性和隐私性都必须考虑<br>可用性跟踪. 了解系统的使用是每天系统的日常运作，如容量规划。也可能用于执行计费系统的使用和/或治理(配额/速度限制)。<br>部署和配置管理. 系统是如何部署更新?</p>
-<p>分布式系统的模型抽象<br>系统模型（异步/同步）<br>失效模型（崩溃故障，分区）<br>一致性模型（强，最终）<br>　　通常，我们最熟悉的模式（例如，一个分布式系统上实现共享内存抽象）是太昂贵了。一个分布式系统越弱势越能保证其中元素有更大的行动自由，从而焕发潜在的更大的性能- 但它也可能导致很难管理。这就需要我们有极大智慧，不能以牺牲性能换来管理的方便性。因此，试图将分布式系统看成一个统一的单一系统的思维会阻碍分布式系统的扩展。</p>
-<p>　　分布式系统遵循CAP定律，在高一致性 高可用性和分区容错性之间三选二<br>CA (consistency高一致性 + availability高可用性). 使用2pc 两阶段事务提交来保证。其缺点无法实现分区容错性，一旦某个操作失败，整个系统就出错，无法容忍(水至清则无鱼)。<br>CP (consistency高一致性 + partition tolerance分区容错性). 使用Paxos来保证，可用性降低。<br>AP (availability高可用性 + partition tolerance分区容错性). 使用Gossip等实现最终一致性，如Dynamo.<br>　###  如何正确理解CAP理论？</p>
-<h3 id="分布式系统的设计技巧：分区和复制"><a href="#分布式系统的设计技巧：分区和复制" class="headerlink" title="分布式系统的设计技巧：分区和复制"></a>分布式系统的设计技巧：分区和复制</h3><p>　　对于一个数据集有两种设计方式：</p>
-<p>分区：它可以被分割在多个节点，以允许更多的并行处理。有更好的性能，但是容错能力低。<br>复制：它也可以被复制或缓存在不同的节点上，以减少在客户端和服务器之间的距离，更强的容错能力，但是复制消耗性能。关键是复制数据之间的一致性。弱一致性提供更低的延迟和更高的可用性。<br>分布式系统的设计技巧：时钟和顺序<br>　　分布式系统针对计算和存储的策略是不同的，对于数据的存储主要是分区和复制，而对于计算主要是保证事件的顺序，因为分布式计算任务是由事件驱动的，比如Storm等等。那么事件的顺序代表了业务逻辑的顺序，事件有时是树形嵌套事件，可靠性就是必须保证一个树形集合所有事件都得到网站执行是一个事务原子的。参考流式大数据处理模式。</p>
-]]></content>
-      <categories>
-        <category>分布式系统</category>
-      </categories>
-      <tags>
-        <tag>分布式系统</tag>
       </tags>
   </entry>
 </search>
