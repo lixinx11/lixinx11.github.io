@@ -986,4 +986,19 @@ public void run()&#123;
         <tag>java多线程</tag>
       </tags>
   </entry>
+  <entry>
+    <title>AI思考</title>
+    <url>/2020/08/25/AI%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<p>AI is a fascinating area and I personally feel it will not do justice to explain it without looking at it from multiple dimensions. I have provided my point of view on AI in the following dimensions,</p>
+<p>Guardrails for AI (starting with, “just because you can doesn’t mean you should”)<br>Core &amp; essential building blocks<br>Types of data AI systems work on<br>Primary characteristics of an AI system<br>Different types of AI (yawn!)<br>Types of approaches to train / teach AI systems<br>Top Algorithms<br>Most common AI workloads/tasks<br>Common examples of AI systems at work<br>Dev Ops for AI — how are AI systems built?<br>Popular Platform, API’s, Libraries &amp; Frameworks<br>Some of the absolute concepts and topics you need to take time in knowing<br>What’s next for AI?</p>
+<p>人工智能是一个引人入胜的领域，我个人认为，如果不从多个角度审视人工智能，就无法公正地对其进行解释。我从以下几个方面对AI提出了自己的看法，</p>
+<p>AI的Guardrails （从这里开始，只是因为您可以做到并不意味着您应该这样做”）<br>核心和必要的构建基块<br>数据AI系统的工作类型<br>人工智能系统的主要特征<br>不同类型的AI（打哈欠！）<br>训练/教导AI系统的方法类型<br>热门算法<br>最常见的AI工作负载/任务<br>工作中的AI系统的常见示例<br>面向AI的Dev Ops-如何构建AI系统？<br>流行平台，API，库和框架<br>您需要花一些时间来了解的一些绝对概念和主题<br>人工智能的下一步是什么？</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
 </search>
