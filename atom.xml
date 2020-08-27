@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-08-25T08:55:22.692Z</updated>
+  <updated>2020-08-27T05:54:03.196Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>maven打包docker</title>
+    <link href="https://lixinx11.github.io/2020/08/27/maven%E6%89%93%E5%8C%85docker/"/>
+    <id>https://lixinx11.github.io/2020/08/27/maven%E6%89%93%E5%8C%85docker/</id>
+    <published>2020-08-27T05:50:52.000Z</published>
+    <updated>2020-08-27T05:54:03.196Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="docker" scheme="https://lixinx11.github.io/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://lixinx11.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>AI思考</title>
@@ -488,31 +513,6 @@
     
     
     <category term="自动化测试" scheme="https://lixinx11.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DNN的反向传播算法</title>
-    <link href="https://lixinx11.github.io/2019/07/21/DNN/"/>
-    <id>https://lixinx11.github.io/2019/07/21/DNN/</id>
-    <published>2019-07-21T03:29:05.000Z</published>
-    <updated>2020-08-23T03:47:31.320Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Deep Learning" scheme="https://lixinx11.github.io/categories/Deep-Learning/"/>
-    
-    
-    <category term="DNN的反向传播算法" scheme="https://lixinx11.github.io/tags/DNN%E7%9A%84%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

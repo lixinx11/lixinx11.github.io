@@ -1004,4 +1004,32 @@ public void run()&#123;
         <tag>AI</tag>
       </tags>
   </entry>
+  <entry>
+    <title>maven打包docker</title>
+    <url>/2020/08/27/maven%E6%89%93%E5%8C%85docker/</url>
+    <content><![CDATA[<pre><code>     ##    maven打包docker  
+ ###   1、使用maven打包。
+ mvn package docker:build
+ 这里你将会生成一个项目名:项目版本号，例如：project:0.0.1;
+ ###  使用docker run运行镜像。
+ ①首先使用docker image ls，查看xxx.tar包的镜像名字</code></pre>
+<p>   ②使用docker run -p 8080:8080 imageName 就运行了。</p>
+<pre><code> ### 如何将docker镜像保存至指定地址，使用docker save命令。
+
+     ####保存到用户目录下
+docker save -o ~/xxx.tar project:0.0.1
+ #### 或者可以使用这条
+docker save project:0.0.1&gt;~/xxx.tar
+ ####  使用docker load加载tar包：
+
+ docker load -i xxx.tar   或者
+ docker load&lt;xxx.tar</code></pre>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
 </search>
