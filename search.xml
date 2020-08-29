@@ -1032,4 +1032,19 @@ docker save project:0.0.1&gt;~/xxx.tar
         <tag>docker</tag>
       </tags>
   </entry>
+  <entry>
+    <title>npm</title>
+    <url>/2020/08/29/npm/</url>
+    <content><![CDATA[<h1 id="install-dependencies"><a href="#install-dependencies" class="headerlink" title="install dependencies"></a>install dependencies</h1><p>npm install</p>
+<h1 id="serve-with-hot-reload-at-localhost-8080"><a href="#serve-with-hot-reload-at-localhost-8080" class="headerlink" title="serve with hot reload at localhost:8080"></a>serve with hot reload at localhost:8080</h1><p>npm run dev</p>
+<h1 id="build-for-production-with-minification"><a href="#build-for-production-with-minification" class="headerlink" title="build for production with minification"></a>build for production with minification</h1><p>npm run build</p>
+<h1 id="build-for-production-and-view-the-bundle-analyzer-report"><a href="#build-for-production-and-view-the-bundle-analyzer-report" class="headerlink" title="build for production and view the bundle analyzer report"></a>build for production and view the bundle analyzer report</h1><p>npm run build –report</p>
+]]></content>
+      <categories>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
 </search>

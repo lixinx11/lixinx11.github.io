@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-08-27T05:54:03.196Z</updated>
+  <updated>2020-08-29T10:25:36.541Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm</title>
+    <link href="https://lixinx11.github.io/2020/08/29/npm/"/>
+    <id>https://lixinx11.github.io/2020/08/29/npm/</id>
+    <published>2020-08-29T10:24:49.000Z</published>
+    <updated>2020-08-29T10:25:36.541Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="npm" scheme="https://lixinx11.github.io/categories/npm/"/>
+    
+    
+    <category term="npm" scheme="https://lixinx11.github.io/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>maven打包docker</title>
@@ -488,31 +513,6 @@
     
     
     <category term="彻底理解ThreadLocal" scheme="https://lixinx11.github.io/tags/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3ThreadLocal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最好用的自动化测试工具</title>
-    <link href="https://lixinx11.github.io/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
-    <id>https://lixinx11.github.io/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</id>
-    <published>2019-07-23T10:20:53.000Z</published>
-    <updated>2020-08-18T13:37:51.207Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="测试" scheme="https://lixinx11.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-    <category term="自动化测试" scheme="https://lixinx11.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
