@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>RPA</title>
-    <url>/2020/08/22/NLP/</url>
-    <content><![CDATA[<h2 id="什麼是-RPA？"><a href="#什麼是-RPA？" class="headerlink" title="什麼是 RPA？"></a>什麼是 RPA？</h2><pre><code>2019年至今（2020年初），国产RPA企业已经陆续拿到融资，其中有三起集中发生在6月份，其中一起追加融资发生在8月份，保守估计，
-5个国产RPA企业融资总金额在8亿人民币上下，但市场估值已高达54.2亿人民币，资本如此青睐的RPA是何方神圣呢？它是什么样的一个技术呢？
-
-
-RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動化讓您能夠使用工具建置自己專屬的軟體機器人，以便將任何業務流程</code></pre>
-<p>   自動化。您的「機器人」是可設定的軟體，用於執行您所指派和控制的任務。<br>   RPA 機器人具備學習能力，也可以被複製。了解機器人如何運作，並且依照您的需求進行調整及擴展。不需要使用程式碼、不會中斷作業、非侵入式，而且使用簡易。</p>
-<h2 id="揭開流程機器人-RPA-的神秘面紗"><a href="#揭開流程機器人-RPA-的神秘面紗" class="headerlink" title="揭開流程機器人(RPA)的神秘面紗"></a>揭開流程機器人(RPA)的神秘面紗</h2><p>在企業日常營運中，有許多流程往往是仰賴所多的人工在電腦桌面與資訊系統之間的重複作業。流程機器人(RPA)是一種新興的程式軟體工具，它會模擬使用者坐在辦公桌時經常做的事情，將這些重複且枯燥的電腦桌面作業程序自動化，不需經由特殊的硬體設備，能在任何資訊系統(IT)環境中發揮良好的表現，甚至能在電腦後台背景虛擬化的執行工作，這就是流程機器人(RPA)可以做的工作-將重複性高但有邏輯性的作業，以流程機器人(RPA)取代人力的投入。</p>
-<p>流程機器人就像是在工廠內的巨型黃色機械手臂，透過它將勞力密集且重複性高的的作業流程自動化，進而改變企業決策的速度。</p>
-<p>流程機器人帶給企業的效益</p>
-<p>企業內部一般事務性的工作，根據調查，一個“滿載”的流程機器人僅約耗費一般員工三分之一的成本。在財務會計的作業流程自動化應用方面，從日記帳分錄記錄到調整總帳科目，以及轉為各項報表等這些流程都適用流程自動化，目前已經出現非常多的實際應用，流程機器人效率是間接作業人員的15倍，同時趨近於零失誤率的作業執行品質，提供15％至90％的降低成本的機會。</p>
-<p>流程機器人不僅可以減少間接人員的人力需求，還提供了其他優勢；因其24X7全天候運行，流程機器人能製作對時間敏感度高的報告，以趕上截止日期。透過流程機器人的執行結果將會更準確，避免數據重複輸入和輸入錯誤所衍生一連串的彌補措施。</p>
-<p>讓流程機器人自動化成真</p>
-<h3 id="基本上導入流程機器人時，企業通常分成處於兩種狀態："><a href="#基本上導入流程機器人時，企業通常分成處於兩種狀態：" class="headerlink" title="基本上導入流程機器人時，企業通常分成處於兩種狀態："></a>基本上導入流程機器人時，企業通常分成處於兩種狀態：</h3><p>第一種是已經進行過前期試作的企業，正在試圖擴大這項技術；第二種則是正在探索流程機器人可能性的初步評估階段。如果您的組織屬於後者，我們建議的方式就是從一個前期試行專案(Pilot/Prototype)著手，讓企業先熟悉流程機器人的能力。</p>
-<p>為了避免資源過度的投入，建議前期試行專案可從選擇三到五個流程開始，藉由試行專案所投入的時間與資源，進而評估效益以及侷限性，確保流程機器人適合業務端的程度。</p>
-<p>   <img src="https://lixinx11.github.io/medias/bigdata/12.png" alt="流程自动化"></p>
+    <title>AI思考</title>
+    <url>/2020/08/25/AI%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<p>图灵测试（The Turing test）由艾伦·麦席森·图灵发明，指测试者与被测试者（一个人和一台机器）隔开的情况下，<br>通过一些装置（如键盘）向被测试者随意提问。<br>进行多次测试后，如果有超过30%的测试者不能确定出被测试者是人还是机器，<br>那么这台机器就通过了测试，并被认为具有人类智能。</p>
+<p>图灵测试一词来源于计算机科学和密码学的先驱阿兰·麦席森·图灵写于1950年的一篇论文《计算机器与智能》，<br>其中30%是图灵对2000年时的机器思考能力的一个预测，目前我们已远远落后于这个预测</p>
+<h2 id="图灵还对人工智能的发展给出了非常有益的建议："><a href="#图灵还对人工智能的发展给出了非常有益的建议：" class="headerlink" title="图灵还对人工智能的发展给出了非常有益的建议："></a>图灵还对人工智能的发展给出了非常有益的建议：</h2><p>与其去研制模拟成人思维的计算机，不如去试着制造更简单，也许只相当于一个小孩智慧的人工智能系统，<br>然后再让这个系统不断去学习——这种思路正是我们今天用机器学习来解决人工智能问题的核心指导思想。</p>
+<p>AI is a fascinating area and I personally feel it will not do justice to explain it without looking at it from multiple dimensions. I have provided my point of view on AI in the following dimensions,</p>
+<p>Guardrails for AI (starting with, “just because you can doesn’t mean you should”)<br>Core &amp; essential building blocks<br>Types of data AI systems work on<br>Primary characteristics of an AI system<br>Different types of AI (yawn!)<br>Types of approaches to train / teach AI systems<br>Top Algorithms<br>Most common AI workloads/tasks<br>Common examples of AI systems at work<br>Dev Ops for AI — how are AI systems built?<br>Popular Platform, API’s, Libraries &amp; Frameworks<br>Some of the absolute concepts and topics you need to take time in knowing<br>What’s next for AI?</p>
+<p>人工智能是一个引人入胜的领域，我个人认为，如果不从多个角度审视人工智能，就无法公正地对其进行解释。我从以下几个方面对AI提出了自己的看法，</p>
+<p>AI的Guardrails （从这里开始，只是因为您可以做到并不意味着您应该这样做”）<br>核心和必要的构建基块<br>数据AI系统的工作类型<br>人工智能系统的主要特征<br>不同类型的AI（打哈欠！）<br>训练/教导AI系统的方法类型<br>热门算法<br>最常见的AI工作负载/任务<br>工作中的AI系统的常见示例<br>面向AI的Dev Ops-如何构建AI系统？<br>流行平台，API，库和框架<br>您需要花一些时间来了解的一些绝对概念和主题<br>人工智能的下一步是什么？</p>
 ]]></content>
       <categories>
         <category>AI</category>
       </categories>
       <tags>
-        <tag>RPA</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FUI</title>
+    <url>/2020/09/03/FUI/</url>
+    <content><![CDATA[<pre><code>   GUI开发,JavaFX/Swing/Qt等任意一种界面框架</code></pre>
+]]></content>
+      <categories>
+        <category>GUI</category>
+      </categories>
+      <tags>
+        <tag>GUI开发</tag>
       </tags>
   </entry>
   <entry>
@@ -84,6 +88,19 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </tags>
   </entry>
   <entry>
+    <title>DNN的反向传播算法</title>
+    <url>/2019/07/21/DNN/</url>
+    <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
+<p>　　　　现在我们想把同样的思想用到CNN中，很明显，CNN有些不同的地方，不能直接去套用DNN的反向传播算法的公式。</p>
+]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>DNN的反向传播算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LSTM</title>
     <url>/2020/08/23/LSTM/</url>
     <content><![CDATA[<p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。简单来说，就是相比普通的RNN，LSTM能够在更长的序列中有更好的表现。</p>
@@ -97,16 +114,29 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </tags>
   </entry>
   <entry>
-    <title>DNN的反向传播算法</title>
-    <url>/2019/07/21/DNN/</url>
-    <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
-<p>　　　　现在我们想把同样的思想用到CNN中，很明显，CNN有些不同的地方，不能直接去套用DNN的反向传播算法的公式。</p>
+    <title>RPA</title>
+    <url>/2020/08/22/NLP/</url>
+    <content><![CDATA[<h2 id="什麼是-RPA？"><a href="#什麼是-RPA？" class="headerlink" title="什麼是 RPA？"></a>什麼是 RPA？</h2><pre><code>2019年至今（2020年初），国产RPA企业已经陆续拿到融资，其中有三起集中发生在6月份，其中一起追加融资发生在8月份，保守估计，
+5个国产RPA企业融资总金额在8亿人民币上下，但市场估值已高达54.2亿人民币，资本如此青睐的RPA是何方神圣呢？它是什么样的一个技术呢？
+
+
+RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動化讓您能夠使用工具建置自己專屬的軟體機器人，以便將任何業務流程</code></pre>
+<p>   自動化。您的「機器人」是可設定的軟體，用於執行您所指派和控制的任務。<br>   RPA 機器人具備學習能力，也可以被複製。了解機器人如何運作，並且依照您的需求進行調整及擴展。不需要使用程式碼、不會中斷作業、非侵入式，而且使用簡易。</p>
+<h2 id="揭開流程機器人-RPA-的神秘面紗"><a href="#揭開流程機器人-RPA-的神秘面紗" class="headerlink" title="揭開流程機器人(RPA)的神秘面紗"></a>揭開流程機器人(RPA)的神秘面紗</h2><p>在企業日常營運中，有許多流程往往是仰賴所多的人工在電腦桌面與資訊系統之間的重複作業。流程機器人(RPA)是一種新興的程式軟體工具，它會模擬使用者坐在辦公桌時經常做的事情，將這些重複且枯燥的電腦桌面作業程序自動化，不需經由特殊的硬體設備，能在任何資訊系統(IT)環境中發揮良好的表現，甚至能在電腦後台背景虛擬化的執行工作，這就是流程機器人(RPA)可以做的工作-將重複性高但有邏輯性的作業，以流程機器人(RPA)取代人力的投入。</p>
+<p>流程機器人就像是在工廠內的巨型黃色機械手臂，透過它將勞力密集且重複性高的的作業流程自動化，進而改變企業決策的速度。</p>
+<p>流程機器人帶給企業的效益</p>
+<p>企業內部一般事務性的工作，根據調查，一個“滿載”的流程機器人僅約耗費一般員工三分之一的成本。在財務會計的作業流程自動化應用方面，從日記帳分錄記錄到調整總帳科目，以及轉為各項報表等這些流程都適用流程自動化，目前已經出現非常多的實際應用，流程機器人效率是間接作業人員的15倍，同時趨近於零失誤率的作業執行品質，提供15％至90％的降低成本的機會。</p>
+<p>流程機器人不僅可以減少間接人員的人力需求，還提供了其他優勢；因其24X7全天候運行，流程機器人能製作對時間敏感度高的報告，以趕上截止日期。透過流程機器人的執行結果將會更準確，避免數據重複輸入和輸入錯誤所衍生一連串的彌補措施。</p>
+<p>讓流程機器人自動化成真</p>
+<h3 id="基本上導入流程機器人時，企業通常分成處於兩種狀態："><a href="#基本上導入流程機器人時，企業通常分成處於兩種狀態：" class="headerlink" title="基本上導入流程機器人時，企業通常分成處於兩種狀態："></a>基本上導入流程機器人時，企業通常分成處於兩種狀態：</h3><p>第一種是已經進行過前期試作的企業，正在試圖擴大這項技術；第二種則是正在探索流程機器人可能性的初步評估階段。如果您的組織屬於後者，我們建議的方式就是從一個前期試行專案(Pilot/Prototype)著手，讓企業先熟悉流程機器人的能力。</p>
+<p>為了避免資源過度的投入，建議前期試行專案可從選擇三到五個流程開始，藉由試行專案所投入的時間與資源，進而評估效益以及侷限性，確保流程機器人適合業務端的程度。</p>
+<p>   <img src="https://lixinx11.github.io/medias/bigdata/12.png" alt="流程自动化"></p>
 ]]></content>
       <categories>
-        <category>Deep Learning</category>
+        <category>AI</category>
       </categories>
       <tags>
-        <tag>DNN的反向传播算法</tag>
+        <tag>RPA</tag>
       </tags>
   </entry>
   <entry>
@@ -148,27 +178,6 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </categories>
       <tags>
         <tag>Tensorflow</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello world</title>
-    <url>/2010/04/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>Hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -312,6 +321,27 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>Hello world</title>
+    <url>/2010/04/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Hello world</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java探针</title>
     <url>/2020/08/22/java%E6%8E%A2%E9%92%88/</url>
     <content><![CDATA[<h2 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h2><p>Tomcat：<br>（1）模块启动时间<br>（2）模块交互耗时</p>
@@ -343,6 +373,47 @@ void createMap(Thread t, T firstValue) &#123;
       <tags>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>maven打包docker</title>
+    <url>/2020/08/27/maven%E6%89%93%E5%8C%85docker/</url>
+    <content><![CDATA[<pre><code>     ##    maven打包docker  
+ ###   1、使用maven打包。
+ mvn package docker:build
+ 这里你将会生成一个项目名:项目版本号，例如：project:0.0.1;
+ ###  使用docker run运行镜像。
+ ①首先使用docker image ls，查看xxx.tar包的镜像名字</code></pre>
+<p>   ②使用docker run -p 8080:8080 imageName 就运行了。</p>
+<pre><code> ### 如何将docker镜像保存至指定地址，使用docker save命令。
+
+     ####保存到用户目录下
+docker save -o ~/xxx.tar project:0.0.1
+ #### 或者可以使用这条
+docker save project:0.0.1&gt;~/xxx.tar
+ ####  使用docker load加载tar包：
+
+ docker load -i xxx.tar   或者
+ docker load&lt;xxx.tar</code></pre>
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>   第一章</p>
+<p>内容</p>
+<hr>
+<p> 第二章</p>
+<p>内容</p>
+<hr>
+<p>   参考文献</p>
+<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
+]]></content>
   </entry>
   <entry>
     <title>mysql5.7安装使用指南</title>
@@ -377,6 +448,21 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>npm</title>
+    <url>/2020/08/29/npm/</url>
+    <content><![CDATA[<h1 id="install-dependencies"><a href="#install-dependencies" class="headerlink" title="install dependencies"></a>install dependencies</h1><p>npm install</p>
+<h1 id="serve-with-hot-reload-at-localhost-8080"><a href="#serve-with-hot-reload-at-localhost-8080" class="headerlink" title="serve with hot reload at localhost:8080"></a>serve with hot reload at localhost:8080</h1><p>npm run dev</p>
+<h1 id="build-for-production-with-minification"><a href="#build-for-production-with-minification" class="headerlink" title="build for production with minification"></a>build for production with minification</h1><p>npm run build</p>
+<h1 id="build-for-production-and-view-the-bundle-analyzer-report"><a href="#build-for-production-and-view-the-bundle-analyzer-report" class="headerlink" title="build for production and view the bundle analyzer report"></a>build for production and view the bundle analyzer report</h1><p>npm run build –report</p>
+]]></content>
+      <categories>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>oracle迁移到mysql</title>
     <url>/2019/06/18/oracle%E8%BF%81%E7%A7%BB%E5%88%B0mysql/</url>
     <content><![CDATA[<h2 id="oracle迁移到mysql"><a href="#oracle迁移到mysql" class="headerlink" title="oracle迁移到mysql"></a>oracle迁移到mysql</h2><p>  相比较 navicat更为精确<br>  备注：免费版只能导出25条数据转换、建议转换表结构后数据，通过同步抽取处理。<br>  官网地址：<a href="https://intelligent-converters.com/oracle-to-mysql.htm">https://intelligent-converters.com/oracle-to-mysql.htm</a></p>
@@ -387,19 +473,6 @@ void createMap(Thread t, T firstValue) &#123;
       <tags>
         <tag>数据迁移</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p>   第一章</p>
-<p>内容</p>
-<hr>
-<p> 第二章</p>
-<p>内容</p>
-<hr>
-<p>   参考文献</p>
-<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
-]]></content>
   </entry>
   <entry>
     <title>redis使用指南</title>
@@ -492,6 +565,23 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>多路复用技术 epoll 分析</title>
+    <url>/2020/08/20/%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<pre><code> ## 多路复用技术 epoll 分析  </code></pre>
+<p> epoll并没有使用共享内存 文中大部分人认为，epoll并没有使用mmap或共享内存</p>
+<h2 id="Linux下的I-O复用与epoll详解"><a href="#Linux下的I-O复用与epoll详解" class="headerlink" title="Linux下的I/O复用与epoll详解"></a>Linux下的I/O复用与epoll详解</h2><p>epoll原理详解及epoll反应堆模型<br>epoll的操作<br>int epoll_create(int size);<br>int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);<br>int epoll_wait(int epfd, struct epoll_event *events,int maxevents, int timeout);<br>epoll_create: 建立一个epoll对象(在epoll文件系统中给这个句柄分配资源).<br>调用epoll_ctl向epoll对象中添加socket. 包含该socket的节点会被加入到一个红黑树上.<br>调用epoll_wait收集发生事件的连接. 触发了事件的链接会被放入一个双向链表.<br>epoll的结构与工作原理<br>红黑树. 用红黑树存储需要监听事件的socket.<br>epoll_ctl在向epoll对象中添加、修改、删除事件时，从rbr红黑树中查找事件也非常快<br>双向链表. 触发了监听事件的socket会被拷贝至此，等待用户处理。<br> 所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，也就是说相应事件的发生时会调用这里的回调方法。这个回调方法在内核中叫做ep_poll_callback，它会把这样的事件放到上面的rdllist双向链表中。</p>
+<p> <img src="https://lixinx11.github.io/medias/bigdata/5.png" alt=" epoll 分析"></p>
+<h2 id="epoll的两种触发模式"><a href="#epoll的两种触发模式" class="headerlink" title="epoll的两种触发模式"></a>epoll的两种触发模式</h2><p>epoll有EPOLLLT和EPOLLET两种触发模式，水平触发和边缘触发. 此处略</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java nio是利用Selector多路复用来实现的.<br>linux2.x版本后，Selector是用epoll实现的.<br>通过建立一个Selector, 可以在其上监听socket. 通过建立一个epoll对象，可以在其上为socket注册监听事件.<br>linux epoll的常用函数是epoll_ctl, epoll_wait. 利用epoll_ctl可以为socket注册监听事件，并调用epoll_wait返回触发事件的socket.<br>epoll_ctl监听socket时，会将该socket放入红黑树<br>epoll_wait返回一个双向链表，其中包含了触发事件的socket.<br>所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，相应事件的发生时会调用回调方法ep_poll_callback.把socket放到rdllist双向链表中.<br>epoll与select poll的比较<br>select poll是采用轮询方式, epoll采用回调的方式<br>select poll每次等待socket事件，都需要把所有socket从用户态拷贝至内核态，epoll则只需将socket添加一次到红黑树上即可.<br>select用数组来存放socket, 因此受到数量限制. poll用链表存放, epoll用红黑树存放, 因此不受数量限制.<br>select、poll、epoll虽然都会返回就绪的文件描述符数量。但是select和poll并不会明确指出是哪些文件描述符就绪，而epoll会。造成的区别就是，系统调用返回后，调用select和poll的程序需要遍历监听的整个文件描述符找到是谁处于就绪，而epoll则直接处理即可。</p>
+]]></content>
+      <categories>
+        <category>epoll</category>
+      </categories>
+      <tags>
+        <tag>epoll</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十个面向对象设计原则</title>
     <url>/2020/08/24/%E5%8D%81%E4%B8%AA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</url>
     <content><![CDATA[<h2 id="十个面向对象设计原则"><a href="#十个面向对象设计原则" class="headerlink" title="十个面向对象设计原则"></a>十个面向对象设计原则</h2><p>  　 追求高内聚highly cohesive 和松耦合 loosely couple 的解决方案是面向对象设计基本核心原则。这里列出OO设计中十大原则：</p>
@@ -514,23 +604,6 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
-    <title>多路复用技术 epoll 分析</title>
-    <url>/2020/08/20/%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<pre><code> ## 多路复用技术 epoll 分析  </code></pre>
-<p> epoll并没有使用共享内存 文中大部分人认为，epoll并没有使用mmap或共享内存</p>
-<h2 id="Linux下的I-O复用与epoll详解"><a href="#Linux下的I-O复用与epoll详解" class="headerlink" title="Linux下的I/O复用与epoll详解"></a>Linux下的I/O复用与epoll详解</h2><p>epoll原理详解及epoll反应堆模型<br>epoll的操作<br>int epoll_create(int size);<br>int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);<br>int epoll_wait(int epfd, struct epoll_event *events,int maxevents, int timeout);<br>epoll_create: 建立一个epoll对象(在epoll文件系统中给这个句柄分配资源).<br>调用epoll_ctl向epoll对象中添加socket. 包含该socket的节点会被加入到一个红黑树上.<br>调用epoll_wait收集发生事件的连接. 触发了事件的链接会被放入一个双向链表.<br>epoll的结构与工作原理<br>红黑树. 用红黑树存储需要监听事件的socket.<br>epoll_ctl在向epoll对象中添加、修改、删除事件时，从rbr红黑树中查找事件也非常快<br>双向链表. 触发了监听事件的socket会被拷贝至此，等待用户处理。<br> 所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，也就是说相应事件的发生时会调用这里的回调方法。这个回调方法在内核中叫做ep_poll_callback，它会把这样的事件放到上面的rdllist双向链表中。</p>
-<p> <img src="https://lixinx11.github.io/medias/bigdata/5.png" alt=" epoll 分析"></p>
-<h2 id="epoll的两种触发模式"><a href="#epoll的两种触发模式" class="headerlink" title="epoll的两种触发模式"></a>epoll的两种触发模式</h2><p>epoll有EPOLLLT和EPOLLET两种触发模式，水平触发和边缘触发. 此处略</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java nio是利用Selector多路复用来实现的.<br>linux2.x版本后，Selector是用epoll实现的.<br>通过建立一个Selector, 可以在其上监听socket. 通过建立一个epoll对象，可以在其上为socket注册监听事件.<br>linux epoll的常用函数是epoll_ctl, epoll_wait. 利用epoll_ctl可以为socket注册监听事件，并调用epoll_wait返回触发事件的socket.<br>epoll_ctl监听socket时，会将该socket放入红黑树<br>epoll_wait返回一个双向链表，其中包含了触发事件的socket.<br>所有添加到epoll中的事件都会与设备(如网卡)驱动程序建立回调关系，相应事件的发生时会调用回调方法ep_poll_callback.把socket放到rdllist双向链表中.<br>epoll与select poll的比较<br>select poll是采用轮询方式, epoll采用回调的方式<br>select poll每次等待socket事件，都需要把所有socket从用户态拷贝至内核态，epoll则只需将socket添加一次到红黑树上即可.<br>select用数组来存放socket, 因此受到数量限制. poll用链表存放, epoll用红黑树存放, 因此不受数量限制.<br>select、poll、epoll虽然都会返回就绪的文件描述符数量。但是select和poll并不会明确指出是哪些文件描述符就绪，而epoll会。造成的区别就是，系统调用返回后，调用select和poll的程序需要遍历监听的整个文件描述符找到是谁处于就绪，而epoll则直接处理即可。</p>
-]]></content>
-      <categories>
-        <category>epoll</category>
-      </categories>
-      <tags>
-        <tag>epoll</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大数据技术栈</title>
     <url>/2020/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E6%A0%88/</url>
     <content><![CDATA[<p><img src="https://lixinx11.github.io/medias/bigdata/1.png" alt="大数据架构"></p>
@@ -540,18 +613,6 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>我的技术博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大数据框架设计</title>
-    <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
-]]></content>
-      <categories>
-        <category>大数据</category>
-      </categories>
-      <tags>
-        <tag>大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -566,6 +627,18 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>epoll网络事件模型分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大数据框架设计</title>
+    <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -621,6 +694,24 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>微服务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>技术选型</title>
+    <url>/2020/09/01/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/</url>
+    <content><![CDATA[<p>categories:  #分类<br>    -  技术选型</p>
+<pre><code>命令行工具：iTerm2
+浏览器：Chrome
+虚拟机：VirtualBox
+MySQL 数据库查询工具：Sequel-Ace
+Redis 管理工具：RDM
+MongoDB 管理工具：MongoDB
+设计工具：Sketch 3
+视频播放：MPlayerX
+@todo zsh 的配置信息统一，Alias 等信息。</code></pre>
+]]></content>
+      <tags>
+        <tag>技术选型</tag>
       </tags>
   </entry>
   <entry>
@@ -694,6 +785,18 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
+    <title>机器学习+深度学习+人工智能之间的关系</title>
+    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>最好用的自动化测试工具</title>
     <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
@@ -730,18 +833,6 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习+深度学习+人工智能之间的关系</title>
-    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -984,97 +1075,6 @@ public void run()&#123;
       </categories>
       <tags>
         <tag>java多线程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AI思考</title>
-    <url>/2020/08/25/AI%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<p>图灵测试（The Turing test）由艾伦·麦席森·图灵发明，指测试者与被测试者（一个人和一台机器）隔开的情况下，<br>通过一些装置（如键盘）向被测试者随意提问。<br>进行多次测试后，如果有超过30%的测试者不能确定出被测试者是人还是机器，<br>那么这台机器就通过了测试，并被认为具有人类智能。</p>
-<p>图灵测试一词来源于计算机科学和密码学的先驱阿兰·麦席森·图灵写于1950年的一篇论文《计算机器与智能》，<br>其中30%是图灵对2000年时的机器思考能力的一个预测，目前我们已远远落后于这个预测</p>
-<h2 id="图灵还对人工智能的发展给出了非常有益的建议："><a href="#图灵还对人工智能的发展给出了非常有益的建议：" class="headerlink" title="图灵还对人工智能的发展给出了非常有益的建议："></a>图灵还对人工智能的发展给出了非常有益的建议：</h2><p>与其去研制模拟成人思维的计算机，不如去试着制造更简单，也许只相当于一个小孩智慧的人工智能系统，<br>然后再让这个系统不断去学习——这种思路正是我们今天用机器学习来解决人工智能问题的核心指导思想。</p>
-<p>AI is a fascinating area and I personally feel it will not do justice to explain it without looking at it from multiple dimensions. I have provided my point of view on AI in the following dimensions,</p>
-<p>Guardrails for AI (starting with, “just because you can doesn’t mean you should”)<br>Core &amp; essential building blocks<br>Types of data AI systems work on<br>Primary characteristics of an AI system<br>Different types of AI (yawn!)<br>Types of approaches to train / teach AI systems<br>Top Algorithms<br>Most common AI workloads/tasks<br>Common examples of AI systems at work<br>Dev Ops for AI — how are AI systems built?<br>Popular Platform, API’s, Libraries &amp; Frameworks<br>Some of the absolute concepts and topics you need to take time in knowing<br>What’s next for AI?</p>
-<p>人工智能是一个引人入胜的领域，我个人认为，如果不从多个角度审视人工智能，就无法公正地对其进行解释。我从以下几个方面对AI提出了自己的看法，</p>
-<p>AI的Guardrails （从这里开始，只是因为您可以做到并不意味着您应该这样做”）<br>核心和必要的构建基块<br>数据AI系统的工作类型<br>人工智能系统的主要特征<br>不同类型的AI（打哈欠！）<br>训练/教导AI系统的方法类型<br>热门算法<br>最常见的AI工作负载/任务<br>工作中的AI系统的常见示例<br>面向AI的Dev Ops-如何构建AI系统？<br>流行平台，API，库和框架<br>您需要花一些时间来了解的一些绝对概念和主题<br>人工智能的下一步是什么？</p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>maven打包docker</title>
-    <url>/2020/08/27/maven%E6%89%93%E5%8C%85docker/</url>
-    <content><![CDATA[<pre><code>     ##    maven打包docker  
- ###   1、使用maven打包。
- mvn package docker:build
- 这里你将会生成一个项目名:项目版本号，例如：project:0.0.1;
- ###  使用docker run运行镜像。
- ①首先使用docker image ls，查看xxx.tar包的镜像名字</code></pre>
-<p>   ②使用docker run -p 8080:8080 imageName 就运行了。</p>
-<pre><code> ### 如何将docker镜像保存至指定地址，使用docker save命令。
-
-     ####保存到用户目录下
-docker save -o ~/xxx.tar project:0.0.1
- #### 或者可以使用这条
-docker save project:0.0.1&gt;~/xxx.tar
- ####  使用docker load加载tar包：
-
- docker load -i xxx.tar   或者
- docker load&lt;xxx.tar</code></pre>
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm</title>
-    <url>/2020/08/29/npm/</url>
-    <content><![CDATA[<h1 id="install-dependencies"><a href="#install-dependencies" class="headerlink" title="install dependencies"></a>install dependencies</h1><p>npm install</p>
-<h1 id="serve-with-hot-reload-at-localhost-8080"><a href="#serve-with-hot-reload-at-localhost-8080" class="headerlink" title="serve with hot reload at localhost:8080"></a>serve with hot reload at localhost:8080</h1><p>npm run dev</p>
-<h1 id="build-for-production-with-minification"><a href="#build-for-production-with-minification" class="headerlink" title="build for production with minification"></a>build for production with minification</h1><p>npm run build</p>
-<h1 id="build-for-production-and-view-the-bundle-analyzer-report"><a href="#build-for-production-and-view-the-bundle-analyzer-report" class="headerlink" title="build for production and view the bundle analyzer report"></a>build for production and view the bundle analyzer report</h1><p>npm run build –report</p>
-]]></content>
-      <categories>
-        <category>npm</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>技术选型</title>
-    <url>/2020/09/01/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/</url>
-    <content><![CDATA[<p>categories:  #分类<br>    -  技术选型</p>
-<pre><code>命令行工具：iTerm2
-浏览器：Chrome
-虚拟机：VirtualBox
-MySQL 数据库查询工具：Sequel-Ace
-Redis 管理工具：RDM
-MongoDB 管理工具：MongoDB
-设计工具：Sketch 3
-视频播放：MPlayerX
-@todo zsh 的配置信息统一，Alias 等信息。</code></pre>
-]]></content>
-      <tags>
-        <tag>技术选型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FUI</title>
-    <url>/2020/09/03/FUI/</url>
-    <content><![CDATA[<pre><code>   GUI开发,JavaFX/Swing/Qt等任意一种界面框架</code></pre>
-]]></content>
-      <categories>
-        <category>GUI</category>
-      </categories>
-      <tags>
-        <tag>GUI开发</tag>
       </tags>
   </entry>
 </search>
