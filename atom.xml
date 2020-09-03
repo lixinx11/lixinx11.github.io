@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-09-01T08:49:09.859Z</updated>
+  <updated>2020-09-03T13:24:29.279Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FUI</title>
+    <link href="https://lixinx11.github.io/2020/09/03/FUI/"/>
+    <id>https://lixinx11.github.io/2020/09/03/FUI/</id>
+    <published>2020-09-03T13:22:49.000Z</published>
+    <updated>2020-09-03T13:24:29.279Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="GUI" scheme="https://lixinx11.github.io/categories/GUI/"/>
+    
+    
+    <category term="GUI开发" scheme="https://lixinx11.github.io/tags/GUI%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>技术选型</title>
@@ -486,31 +511,6 @@
     
     
     <category term="拼多多的晋升之道" scheme="https://lixinx11.github.io/tags/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>领域驱动设计</title>
-    <link href="https://lixinx11.github.io/2019/11/21/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://lixinx11.github.io/2019/11/21/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/</id>
-    <published>2019-11-21T05:19:25.000Z</published>
-    <updated>2020-08-21T05:25:17.424Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="领域驱动设计" scheme="https://lixinx11.github.io/categories/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-    <category term="领域驱动设计：软件核心复杂性应对之道" scheme="https://lixinx11.github.io/tags/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%EF%BC%9A%E8%BD%AF%E4%BB%B6%E6%A0%B8%E5%BF%83%E5%A4%8D%E6%9D%82%E6%80%A7%E5%BA%94%E5%AF%B9%E4%B9%8B%E9%81%93/"/>
     
   </entry>
   
