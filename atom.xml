@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-09-03T13:24:29.279Z</updated>
+  <updated>2020-09-03T14:14:43.282Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>休闲时读的一本书</title>
+    <link href="https://lixinx11.github.io/2020/09/03/book/"/>
+    <id>https://lixinx11.github.io/2020/09/03/book/</id>
+    <published>2020-09-03T14:11:59.000Z</published>
+    <updated>2020-09-03T14:14:43.282Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="book" scheme="https://lixinx11.github.io/categories/book/"/>
+    
+    
+    <category term="休闲时读的一本书" scheme="https://lixinx11.github.io/tags/%E4%BC%91%E9%97%B2%E6%97%B6%E8%AF%BB%E7%9A%84%E4%B8%80%E6%9C%AC%E4%B9%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>FUI</title>
@@ -486,31 +511,6 @@
     
     
     <category term="我的技术博客" scheme="https://lixinx11.github.io/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>拼多多的晋升之道</title>
-    <link href="https://lixinx11.github.io/2019/11/22/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/"/>
-    <id>https://lixinx11.github.io/2019/11/22/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/</id>
-    <published>2019-11-22T13:21:50.000Z</published>
-    <updated>2020-08-22T13:35:43.235Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="产品" scheme="https://lixinx11.github.io/categories/%E4%BA%A7%E5%93%81/"/>
-    
-    
-    <category term="拼多多的晋升之道" scheme="https://lixinx11.github.io/tags/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/"/>
     
   </entry>
   
