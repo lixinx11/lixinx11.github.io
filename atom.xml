@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-09-04T06:37:38.075Z</updated>
+  <updated>2020-09-06T03:45:02.595Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://lixinx11.github.io/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/"/>
+    <id>https://lixinx11.github.io/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</id>
+    <published>2020-09-06T03:47:54.096Z</published>
+    <updated>2020-09-06T03:45:02.595Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>redis</title>
+    <link href="https://lixinx11.github.io/2020/09/05/redis/"/>
+    <id>https://lixinx11.github.io/2020/09/05/redis/</id>
+    <published>2020-09-05T03:50:59.000Z</published>
+    <updated>2020-09-05T03:50:59.975Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>技术趋势</title>
@@ -461,56 +495,6 @@
     
     
     <category term="算法" scheme="https://lixinx11.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mysql5.7安装使用指南</title>
-    <link href="https://lixinx11.github.io/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/"/>
-    <id>https://lixinx11.github.io/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</id>
-    <published>2020-08-15T15:19:26.000Z</published>
-    <updated>2020-08-16T07:18:43.773Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="数据库" scheme="https://lixinx11.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="我的技术博客" scheme="https://lixinx11.github.io/tags/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tensorflow</title>
-    <link href="https://lixinx11.github.io/2020/07/23/Tensorflow/"/>
-    <id>https://lixinx11.github.io/2020/07/23/Tensorflow/</id>
-    <published>2020-07-23T03:29:24.000Z</published>
-    <updated>2020-08-23T04:39:11.590Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Tensorflow" scheme="https://lixinx11.github.io/categories/Tensorflow/"/>
-    
-    
-    <category term="Tensorflow" scheme="https://lixinx11.github.io/tags/Tensorflow/"/>
     
   </entry>
   
