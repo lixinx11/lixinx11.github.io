@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-09-07T05:26:25.907Z</updated>
+  <updated>2020-09-07T09:10:09.795Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习知识点</title>
+    <link href="https://lixinx11.github.io/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>https://lixinx11.github.io/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
+    <published>2020-09-07T09:08:28.000Z</published>
+    <updated>2020-09-07T09:10:09.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://lixinx11.github.io/categories/AI/"/>
+    
+    
+    <category term="机器学习知识点" scheme="https://lixinx11.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>sklearn函数汇总</title>
@@ -474,31 +499,6 @@
     
     
     <category term="markdown" scheme="https://lixinx11.github.io/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法</title>
-    <link href="https://lixinx11.github.io/2020/08/17/%E7%AE%97%E6%B3%95/"/>
-    <id>https://lixinx11.github.io/2020/08/17/%E7%AE%97%E6%B3%95/</id>
-    <published>2020-08-17T11:27:45.000Z</published>
-    <updated>2020-08-17T11:29:13.451Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://lixinx11.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法" scheme="https://lixinx11.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

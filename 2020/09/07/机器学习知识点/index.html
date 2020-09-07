@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="sklearn函数汇总, 麦芽maiya">
+    <meta name="keywords" content="机器学习知识点, 麦芽maiya">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>sklearn函数汇总 | 麦芽maiya</title>
+    <title>机器学习知识点 | 麦芽maiya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">sklearn函数汇总</h1>
+                    <h1 class="description center-align post-title">机器学习知识点</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/">
-                                <span class="chip bg-color">sklearn函数汇总</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                                <span class="chip bg-color">机器学习知识点</span>
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-06
+                    2020-09-07
                 </div>
                 
 
@@ -472,32 +472,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>sklearn函数汇总</strong><br>9/6/2020 11:45:01 AM </p>
-<ol>
-<li>拆分数据集为训练集和测试集：</li>
-</ol>
-<p>from sklearn.model_selection import train_test_split<br>x_train, x_test, y_train, y_test =<br>train_test_split(x, y, test_size = 0.2,random_state=3,shuffle=False)</p>
-<h1 id="test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个"><a href="#test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个" class="headerlink" title="test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个"></a>test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个</h1><p>  random_state代表随即种子编号，默认为None<br>  shuffle代表是否进行有放回抽样</p>
-<h2 id="2-数据预处理"><a href="#2-数据预处理" class="headerlink" title="2. 数据预处理"></a>2. 数据预处理</h2><h3 id="2-1-标准化："><a href="#2-1-标准化：" class="headerlink" title="2.1 标准化："></a>2.1 标准化：</h3><p>from sklearn.preprocessing import StandardScaler<br>scaler = StandardScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-2-区间缩放："><a href="#2-2-区间缩放：" class="headerlink" title="2.2 区间缩放："></a>2.2 区间缩放：</h3><p>from sklearn.preprocessing import MinMaxScaler<br>scaler = MinMaxScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-3-归一化："><a href="#2-3-归一化：" class="headerlink" title="2.3 归一化："></a>2.3 归一化：</h3><p>from sklearn.preprocessing import Normalizer<br>scaler = Normalizer().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"><a href="#2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0" class="headerlink" title="2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"></a>2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0</h3><p>from sklearn.preprocessing import Binarizer<br>scaler = Binarizer(threshold=3).fit(x_train) # threshold为设定的阀值<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-5-哑编码处理："><a href="#2-5-哑编码处理：" class="headerlink" title="2.5 哑编码处理："></a>2.5 哑编码处理：</h3><p>from sklearn.preprocessing import OneHotEncoder<br>scaler = OneHotEncoder().fit(x_train.reshape((-1,1)))<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-6-自定义函数变换"><a href="#2-6-自定义函数变换" class="headerlink" title="2.6 自定义函数变换"></a>2.6 自定义函数变换</h3><p>from numpy import log1p  # 使用对数函数转换<br>from sklearn.preprocessing import FunctionTransformer<br>scaler = FunctionTransformer(log1p).fit(x_train)<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-7-PCA降维："><a href="#2-7-PCA降维：" class="headerlink" title="2.7 PCA降维："></a>2.7 PCA降维：</h3><p>from sklearn.decomposition import PCA<br>pca = PCA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainPca = pca.transform(x_train) # 将规则应用于训练集<br>x_testPca = pca.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-8-LDA降维："><a href="#2-8-LDA降维：" class="headerlink" title="2.8 LDA降维："></a>2.8 LDA降维：</h3><p>from sklearn.lda import LDA<br>lda = LDA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainLda = lda.transform(x_train) # 将规则应用于训练集<br>x_testLda = lda.transform(x_test)  # 将规则应用于测试集</p>
-<h2 id="3-特征筛选"><a href="#3-特征筛选" class="headerlink" title="3. 特征筛选"></a>3. 特征筛选</h2><h3 id="3-1-Filter法："><a href="#3-1-Filter法：" class="headerlink" title="3.1 Filter法："></a>3.1 Filter法：</h3><p>from sklearn.feature_selection import SelectKBest, f_classif<br>selector = SelectKBest(f_classif, k=4) – 用f_classif方法，设定数目为4<br>a=selector.fit(x,y)<br>print(np.array(a.scores_),’\n’,a.get_support())  –  输出得分及选择的结果</p>
-<h3 id="3-2-Wrapper法（递归法）："><a href="#3-2-Wrapper法（递归法）：" class="headerlink" title="3.2 Wrapper法（递归法）："></a>3.2 Wrapper法（递归法）：</h3><p>from sklearn.linear_model import LinearRegression –导入基模型<br>from sklearn.feature_selection import RFE  – 导入RFE模块<br>model1 = LinearRegression()   – 建立一个线性模型<br>rfe = RFE(model1,4)           – 进行多轮训练，设置筛选特征数目为4个<br>rfe = rfe.fit(x,y)            – 模型的拟合训练<br>print(rfe.support_)           – 输出特征的选择结果<br>print(rfe.ranking_)           – 特征的选择排名</p>
-<h2 id="4-构建模型"><a href="#4-构建模型" class="headerlink" title="4.构建模型"></a>4.构建模型</h2><h3 id="4-1决策树模型"><a href="#4-1决策树模型" class="headerlink" title="4.1决策树模型"></a>4.1决策树模型</h3><p>决策树优点：</p>
-<p>便于理解和解释。树的结构可以可视化出来。<br>训练需要的数据少，对异常值和缺失值不敏感。<br>能够处理数值型数据和分类数据。<br>决策树缺点：</p>
-<p>容易产生一个过于复杂的模型，使模型产生过拟合的问题。<br>决策树可能是不稳定的，因为数据中的微小变化可能会导致完全不同的树生成。<br>from sklearn.tree import DecisionTreeClassifier<br>clf = DecisionTreeClassifier(criterion=’gini’, –设置衡量的系数,有entropy和gini，默认gini<br>                               splitter=’best’, –选择分类的策略，best和random，默认best<br>                               max_depth=5, –设置树的最大深度<br>                               min_samples_split=10,– 区分一个内部节点需要的最少的样本数<br>                               min_samples_leaf=5 – 一个叶节点所需要的最小样本数<br>                               max_features=5 –最大特征数<br>                               max_leaf_nodes=3–最大样本节点个数<br>                               min_impurity_split –指定信息增益的阀值<br>                               )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-2-逻辑回归模型"><a href="#4-2-逻辑回归模型" class="headerlink" title="4.2 逻辑回归模型"></a>4.2 逻辑回归模型</h3><p>优点：实现简单，易于理解和实现；计算代价不高，速度很快，存储资源低。</p>
-<p>缺点：容易欠拟合，分类精度可能不高。对异常值和缺失值敏感</p>
-<p>from sklearn.linear_model import LogisticRegression<br>clf = LogisticRegression(penalty=’l2’, –惩罚项（l1与l2），默认l2<br>                         dual=False, –对偶或原始方法，默认False，样本数量&gt;样本特征的时候，dual通常设置为False<br>                         tol=0.0001, –停止求解的标准，float类型，默认为1e-4。就是求解到多少的时候，停止，认为已经求出最优解<br>                         C=1.0, –正则化系数λ的倒数，float类型，默认为1.0，越小的数值表示越强的正则化。<br>                         fit_intercept=True, –是否存在截距或偏差，bool类型，默认为True。<br>                         intercept_scaling=1, –仅在正则化项为”liblinear”，且fit_intercept设置为True时有用。float类型，默认为1<br>                         class_weight=None, –用于标示分类模型中各种类型的权重，默认为不输入，也就是不考虑权重，即为None<br>                         random_state=None, –随机数种子，int类型，可选参数，默认为无<br>                         solver=’liblinear’, –优化算法选择参数，只有五个可选参数，即newton-cg,lbfgs,liblinear,sag,saga。默认为liblinear<br>                         max_iter=10, –算法收敛最大迭代次数，int类型，默认为10。<br>                         multi_class=’ovr’–分类方式选择参数，str类型，可选参数为ovr和multinomial，默认为ovr。<br>                                          如果是二元逻辑回归，ovr和multinomial并没有任何区别，区别主要在多元逻辑回归上。<br>                         verbose=0, –日志冗长度，int类型。默认为0。就是不输出训练过程<br>                         warm_start=False, –热启动参数，bool类型。默认为False。<br>                         n_jobs=1–并行数。int类型，默认为1。1的时候，用CPU的一个内核运行程序，2的时候，用CPU的2个内核运行程序。<br>                        )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-3-线性回归模型"><a href="#4-3-线性回归模型" class="headerlink" title="4.3 线性回归模型"></a>4.3 线性回归模型</h3><p>优点：实现简单，可解释性强。</p>
-<p>缺点：容易出现欠拟合，对异常值和缺失值比较敏感。</p>
-<p>from sklearn.linear_model import LinearRegression()<br>clf = LinearRegression(copy_X=True,<br>                       fit_intercept=True,<br>                       n_jobs=1,<br>                       normalize=False)<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-4-K-means聚类"><a href="#4-4-K-means聚类" class="headerlink" title="4.4 K-means聚类"></a>4.4 K-means聚类</h3><p>from sklearn.cluster import KMeans<br>clf = KMeans(n_clusters=4, –给定的类别数<br>             max_iter=100,–为迭代的次数，这里设置最大迭代次数为300<br>             n_init=10,–设为10意味着进行10次随机初始化，选择效果最好的一种来作为模型<br>             copy_x=True–布尔型，默认值=True,如果把此参数值设为True，则原始数据不会被改变。如果是False，则会直接在原始数据<br>                        上做修改并在函数返回值时将其还原。<br>             )<br>clf= clf.fit(x)  – 拟合训练</p>
+                <h2 id="Python——用于训练机器学习算法的编程语言。"><a href="#Python——用于训练机器学习算法的编程语言。" class="headerlink" title="Python——用于训练机器学习算法的编程语言。"></a>Python——用于训练机器学习算法的编程语言。</h2><p>确保你知道这门语言提供了哪些功能。除了 Python，我还建议你学习另外一门语言。如果要使用嵌入式平台，请选择 C++。如果要在企业环境中使用机器学习模型，请选择 Java。如果你想进行数据分析，请学习 R 语言。最后，如果你喜欢经典的 AI 算法和自然语言处理，请学习 Lisp。</p>
+<h2 id="TensorFlow-Pytorch——深度学习正在蓬勃发展。"><a href="#TensorFlow-Pytorch——深度学习正在蓬勃发展。" class="headerlink" title="TensorFlow/Pytorch——深度学习正在蓬勃发展。"></a>TensorFlow/Pytorch——深度学习正在蓬勃发展。</h2><p>市场上有两个深度学习框架，但哪些项目应该使用哪个框架，它们之前的区别是非常不一样的。首先，需要注意的是，TensorFlow 通常在部署环境中更易于使用，而 Pytorch 在实验环境中更易于使用。最近，TensorFlow 试图让实验变得更容易，而 Pytorch 则致力于实现更容易的部署（即使在嵌入式硬件上）。如果你想要担当更多研究角色，我会推荐 Pytorch。如果你想要在一家主要在生产环境中更新模型的公司工作，我会推荐学习 TensorFlow。总体上讲，全面学习一个框架要比半途学习两个框架要好，尤其要考虑它们演化的速度。</p>
+<h2 id="Scikit-learn——scikit-learn"><a href="#Scikit-learn——scikit-learn" class="headerlink" title="Scikit-learn——scikit-learn"></a>Scikit-learn——scikit-learn</h2><p>包含了大多数经典的机器学习算法。掌握它可以让你快速解决很多小的数据问题。如果你知道这个库的算法原理，那么在技术面试过程中就有领先优势。</p>
+<h2 id="NumPy-和-Pandas"><a href="#NumPy-和-Pandas" class="headerlink" title="NumPy 和 Pandas"></a>NumPy 和 Pandas</h2><p> ——在使用 Python 处理数据时，有效且准确地选择数据是非常重要的。大多数机器学习工程师每天都使用 NumPy 进行基本的数据处理。如果你有更高级的选择标准，可以考虑 Pandas！只需要用几行代码（并且没有那些令人讨厌的 for 慢循环）选择特定的数据样本就可以给未来的同事留下深刻的印象。</p>
+<h2 id="Apache-Spark"><a href="#Apache-Spark" class="headerlink" title="Apache Spark"></a>Apache Spark</h2><p>——拥有大量数据的公司将从机器学习中受益。处理大数据非常重要，Spark 将大大加快你的开发工作。请注意，在处理大数据时，了解 Hadoop 可能也很有帮助。</p>
+<h2 id="OpenCV"><a href="#OpenCV" class="headerlink" title="OpenCV"></a>OpenCV</h2><p>——如果你想要使用计算机视觉学习，掌握 OpenCV 就至关重要。它提供了很多图像处理功能，可用于快速组建原型，或以更好的方式预处理图像。它还提供了很多识别、检测或定位物体的功能。</p>
 
             </div>
             <hr/>
@@ -523,7 +503,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lixinx11.github.io/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/">https://lixinx11.github.io/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</a>
+                    <a href="https://lixinx11.github.io/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/">https://lixinx11.github.io/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -561,8 +541,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/">
-                                    <span class="chip bg-color">sklearn函数汇总</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                                    <span class="chip bg-color">机器学习知识点</span>
                                 </a>
                             
                         </div>
@@ -733,7 +713,7 @@
         repo: 'lixinx11.github.io',
         owner: 'lixinx11',
         admin: "lixinx11",
-        id: '2020-09-06T13-26-59',
+        id: '2020-09-07T17-08-28',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -757,9 +737,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/">
                     <div class="card-image">
@@ -777,9 +758,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -792,6 +773,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -810,32 +792,48 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/05/redis/">
+                <a href="/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="redis">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="sklearn函数汇总">
                         
-                        <span class="card-title">redis</span>
+                        <span class="card-title">sklearn函数汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            sklearn函数汇总9/6/2020 11:45:01 AM 
+
+拆分数据集为训练集和测试集：
+
+from sklearn.model_selection import train_test_splitx_train, x_test, y
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-06
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Jone
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/AI/" class="post-category">
+                                    AI
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/">
+                        <span class="chip bg-color">sklearn函数汇总</span>
+                    </a>
+                    
                 </div>
                 
             </div>

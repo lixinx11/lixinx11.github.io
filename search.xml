@@ -1146,4 +1146,21 @@ public void run()&#123;
         <tag>sklearn函数汇总</tag>
       </tags>
   </entry>
+  <entry>
+    <title>机器学习知识点</title>
+    <url>/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h2 id="Python——用于训练机器学习算法的编程语言。"><a href="#Python——用于训练机器学习算法的编程语言。" class="headerlink" title="Python——用于训练机器学习算法的编程语言。"></a>Python——用于训练机器学习算法的编程语言。</h2><p>确保你知道这门语言提供了哪些功能。除了 Python，我还建议你学习另外一门语言。如果要使用嵌入式平台，请选择 C++。如果要在企业环境中使用机器学习模型，请选择 Java。如果你想进行数据分析，请学习 R 语言。最后，如果你喜欢经典的 AI 算法和自然语言处理，请学习 Lisp。</p>
+<h2 id="TensorFlow-Pytorch——深度学习正在蓬勃发展。"><a href="#TensorFlow-Pytorch——深度学习正在蓬勃发展。" class="headerlink" title="TensorFlow/Pytorch——深度学习正在蓬勃发展。"></a>TensorFlow/Pytorch——深度学习正在蓬勃发展。</h2><p>市场上有两个深度学习框架，但哪些项目应该使用哪个框架，它们之前的区别是非常不一样的。首先，需要注意的是，TensorFlow 通常在部署环境中更易于使用，而 Pytorch 在实验环境中更易于使用。最近，TensorFlow 试图让实验变得更容易，而 Pytorch 则致力于实现更容易的部署（即使在嵌入式硬件上）。如果你想要担当更多研究角色，我会推荐 Pytorch。如果你想要在一家主要在生产环境中更新模型的公司工作，我会推荐学习 TensorFlow。总体上讲，全面学习一个框架要比半途学习两个框架要好，尤其要考虑它们演化的速度。</p>
+<h2 id="Scikit-learn——scikit-learn"><a href="#Scikit-learn——scikit-learn" class="headerlink" title="Scikit-learn——scikit-learn"></a>Scikit-learn——scikit-learn</h2><p>包含了大多数经典的机器学习算法。掌握它可以让你快速解决很多小的数据问题。如果你知道这个库的算法原理，那么在技术面试过程中就有领先优势。</p>
+<h2 id="NumPy-和-Pandas"><a href="#NumPy-和-Pandas" class="headerlink" title="NumPy 和 Pandas"></a>NumPy 和 Pandas</h2><p> ——在使用 Python 处理数据时，有效且准确地选择数据是非常重要的。大多数机器学习工程师每天都使用 NumPy 进行基本的数据处理。如果你有更高级的选择标准，可以考虑 Pandas！只需要用几行代码（并且没有那些令人讨厌的 for 慢循环）选择特定的数据样本就可以给未来的同事留下深刻的印象。</p>
+<h2 id="Apache-Spark"><a href="#Apache-Spark" class="headerlink" title="Apache Spark"></a>Apache Spark</h2><p>——拥有大量数据的公司将从机器学习中受益。处理大数据非常重要，Spark 将大大加快你的开发工作。请注意，在处理大数据时，了解 Hadoop 可能也很有帮助。</p>
+<h2 id="OpenCV"><a href="#OpenCV" class="headerlink" title="OpenCV"></a>OpenCV</h2><p>——如果你想要使用计算机视觉学习，掌握 OpenCV 就至关重要。它提供了很多图像处理功能，可用于快速组建原型，或以更好的方式预处理图像。它还提供了很多识别、检测或定位物体的功能。</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>机器学习知识点</tag>
+      </tags>
+  </entry>
 </search>
