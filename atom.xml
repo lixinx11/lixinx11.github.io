@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-09-06T03:45:02.595Z</updated>
+  <updated>2020-09-05T03:50:59.975Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://lixinx11.github.io/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/"/>
-    <id>https://lixinx11.github.io/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</id>
-    <published>2020-09-06T03:47:54.096Z</published>
-    <updated>2020-09-06T03:45:02.595Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>redis</title>
@@ -370,6 +349,31 @@
     
     
     <category term="java探针" scheme="https://lixinx11.github.io/tags/java%E6%8E%A2%E9%92%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sklearn函数汇总</title>
+    <link href="https://lixinx11.github.io/2020/08/22/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/"/>
+    <id>https://lixinx11.github.io/2020/08/22/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</id>
+    <published>2020-08-22T05:26:59.000Z</published>
+    <updated>2020-09-07T05:22:41.449Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://lixinx11.github.io/categories/AI/"/>
+    
+    
+    <category term="sklearn函数汇总" scheme="https://lixinx11.github.io/tags/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/"/>
     
   </entry>
   
