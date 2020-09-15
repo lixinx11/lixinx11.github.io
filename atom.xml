@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-09-09T09:23:31.540Z</updated>
+  <updated>2020-09-15T09:05:57.661Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>低代码开发</title>
+    <link href="https://lixinx11.github.io/2020/09/15/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/"/>
+    <id>https://lixinx11.github.io/2020/09/15/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</id>
+    <published>2020-09-15T09:01:00.000Z</published>
+    <updated>2020-09-15T09:05:57.661Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://lixinx11.github.io/categories/java/"/>
+    
+    
+    <category term="低代码开发" scheme="https://lixinx11.github.io/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>pandas 函数</title>
@@ -474,31 +499,6 @@
     
     
     <category term="epoll" scheme="https://lixinx11.github.io/tags/epoll/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大数据框架设计</title>
-    <link href="https://lixinx11.github.io/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://lixinx11.github.io/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</id>
-    <published>2020-08-18T08:20:29.000Z</published>
-    <updated>2020-08-18T08:23:27.144Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="大数据" scheme="https://lixinx11.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-    
-    <category term="大数据" scheme="https://lixinx11.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   

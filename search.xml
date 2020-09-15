@@ -1175,4 +1175,20 @@ public void run()&#123;
         <tag>pandas 函数</tag>
       </tags>
   </entry>
+  <entry>
+    <title>低代码开发</title>
+    <url>/2020/09/15/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<pre><code>                                #   低代码开发未来的趋势？</code></pre>
+<p>低代码开发平台是现在很火的话题，市场上的低代码开发平台，主要有两类。</p>
+<h2 id="第一类，"><a href="#第一类，" class="headerlink" title="第一类，"></a>第一类，</h2><p>通过拖拽方式开发App界面，数据来源于现有系统。这个领域有很多新的创业公司，比如被西门子收购的Mendix，获得大笔融资的Outsystems，<br>还有微软开发了很多年的PowerApps。这些可以帮助企业基于现有系统开发新的应用界面，尤其是延伸到手机端。</p>
+<h2 id="第二类，"><a href="#第二类，" class="headerlink" title="第二类，"></a>第二类，</h2><p>从零开始，创建业务系统，或是构建企业数据中台。这个领域需要很多年的技术积累，<br>需要通过成百上千个项目沉淀客户需求，才能做出好的开发工具。如何把基础功能标准化，如何把差异化的部分提炼出来做成可配置，这是一个非常难的课题。<br>在这方面比较领先的有以开发CRM并逐步进化的Salesforce， 开发ERP起家的Odoo 、BPM厂商华炎魔方。</p>
+<h2 id="总之"><a href="#总之" class="headerlink" title="总之"></a>总之</h2><pre><code>随着人工智能的发展，初级的程序员未来竟被机器替代。企业的技能要求向设计，算法等高级技能发展。</code></pre>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>低代码开发</tag>
+      </tags>
+  </entry>
 </search>
