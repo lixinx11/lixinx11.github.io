@@ -1191,4 +1191,18 @@ public void run()&#123;
         <tag>低代码开发</tag>
       </tags>
   </entry>
+  <entry>
+    <title>R语言学习</title>
+    <url>/2020/09/23/R/</url>
+    <content><![CDATA[<hr>
+<pre><code>        ##  R &amp; Python: A Love Story</code></pre>
+<p><a href="https://rstudio.com/products/rstudio/download/#download">https://rstudio.com/products/rstudio/download/#download</a></p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+      </tags>
+  </entry>
 </search>
