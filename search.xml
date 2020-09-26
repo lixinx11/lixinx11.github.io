@@ -1205,4 +1205,18 @@ public void run()&#123;
         <tag>R</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python绘制科赫雪花</title>
+    <url>/2020/09/26/python%E7%BB%98%E5%9B%BE/</url>
+    <content><![CDATA[<pre><code>     ##  python繪製科赫雪花</code></pre>
+<h3 id="脚本如下："><a href="#脚本如下：" class="headerlink" title="脚本如下："></a>脚本如下：</h3><p>import turtle<br>def koch(size,n):<br>  if n==1:<br>    turtle.fd(size)<br>  else:<br>    for i in [0,60,-120,60]:<br>      turtle.left(i)<br>      koch(size/3,n-1)<br>def main():<br>  turtle.setup(600,600)<br>  turtle.penup()<br>  turtle.speed(10)<br>  turtle.hideturtle()<br>  turtle.pensize(2)<br>  turtle.goto(-200,100)<br>  turtle.pendown()<br>  level=4<br>  koch(400,level)<br>  turtle.right(120)<br>  koch(400, level)<br>  turtle.right(120)<br>  koch(400, level)<br>  turtle.penup()<br>  turtle.done()<br>main()</p>
+<h3 id="演示结果如图："><a href="#演示结果如图：" class="headerlink" title="演示结果如图："></a>演示结果如图：</h3><p>  <img src="https://lixinx11.github.io/medias/bigdata/23.png" alt="科赫雪花"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python绘制科赫雪花</tag>
+      </tags>
+  </entry>
 </search>
