@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="spi --探秘, 麦芽maiya">
+    <meta name="keywords" content="10大最高效的Java库盘点, 麦芽maiya">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>spi --探秘 | 麦芽maiya</title>
+    <title>10大最高效的Java库盘点 | 麦芽maiya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">spi --探秘</h1>
+                    <h1 class="description center-align post-title">10大最高效的Java库盘点</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/spi/">
-                                <span class="chip bg-color">spi</span>
+                            <a href="/tags/10%E5%A4%A7%E6%9C%80%E9%AB%98%E6%95%88%E7%9A%84Java%E5%BA%93%E7%9B%98%E7%82%B9/">
+                                <span class="chip bg-color">10大最高效的Java库盘点</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/spi/" class="post-category">
-                                spi
+                            <a href="/categories/java/" class="post-category">
+                                java
                             </a>
                         
                     </div>
@@ -472,75 +472,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文通过探析JDK提供的，在开源项目中比较常用的Java SPI机制，希望给大家在实际开发实践、学习开源项目提供参考。</p>
-<h2 id="1-SPI是什么"><a href="#1-SPI是什么" class="headerlink" title="1 SPI是什么"></a>1 SPI是什么</h2><p>SPI全称Service Provider Interface，是Java提供的一套用来被第三方实现或者扩展的API，它可以用来启用框架扩展和替换组件。</p>
-<p>image.jpg</p>
-<p>Java SPI 实际上是“基于接口的编程＋策略模式＋配置文件”组合实现的动态加载机制。</p>
-<p>系统设计的各个抽象，往往有很多不同的实现方案，在面向的对象的设计里，一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码。一旦代码里涉及具体的实现类，就违反了可拔插的原则，如果需要替换一种实现，就需要修改代码。为了实现在模块装配的时候能不在程序里动态指明，这就需要一种服务发现机制。<br>Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的机制。有点类似IOC的思想，就是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要。所以SPI的核心思想就是解耦。</p>
-<h2 id="2-使用场景"><a href="#2-使用场景" class="headerlink" title="2 使用场景"></a>2 使用场景</h2><p>概括地说，适用于：调用者根据实际使用需要，启用、扩展、或者替换框架的实现策略</p>
-<p>比较常见的例子：</p>
-<p>数据库驱动加载接口实现类的加载<br>JDBC加载不同类型数据库的驱动</p>
-<p>日志门面接口实现类加载<br>SLF4J加载不同提供商的日志实现类</p>
-<p>Spring<br>Spring中大量使用了SPI,比如：对servlet3.0规范对ServletContainerInitializer的实现、自动类型转换Type Conversion SPI(Converter SPI、Formatter SPI)等</p>
-<p>Dubbo<br>Dubbo中也大量使用SPI的方式实现框架的扩展, 不过它对Java提供的原生SPI做了封装，允许用户扩展实现Filter接口</p>
-<h2 id="3-使用介绍"><a href="#3-使用介绍" class="headerlink" title="3 使用介绍"></a>3 使用介绍</h2><p>要使用Java SPI，需要遵循如下约定：</p>
-<p>1、当服务提供者提供了接口的一种具体实现后，在jar包的META-INF/services目录下创建一个以“接口全限定名”为命名的文件，内容为实现类的全限定名；</p>
-<p>2、接口实现类所在的jar包放在主程序的classpath中；</p>
-<p>3、主程序通过java.util.ServiceLoder动态装载实现模块，它通过扫描META-INF/services目录下的配置文件找到实现类的全限定名，把类加载到JVM；</p>
-<p>4、SPI的实现类必须携带一个不带参数的构造方法；</p>
-<p>示例代码<br>步骤1、定义一组接口 (假设是org.foo.demo.IShout)，并写出接口的一个或多个实现，(假设是org.foo.demo.animal.Dog、org.foo.demo.animal.Cat)。</p>
-<p>public interface IShout {<br>    void shout();<br>}<br>public class Cat implements IShout {<br>    @Override<br>    public void shout() {<br>        System.out.println(“miao miao”);<br>    }<br>}<br>public class Dog implements IShout {<br>    @Override<br>    public void shout() {<br>        System.out.println(“wang wang”);<br>    }<br>}<br>步骤2、在 src/main/resources/ 下建立 /META-INF/services 目录， 新增一个以接口命名的文件 (org.foo.demo.IShout文件)，内容是要应用的实现类（这里是org.foo.demo.animal.Dog和org.foo.demo.animal.Cat，每行一个类）。</p>
-<p>文件位置</p>
-<ul>
-<li>src<br>  -main        <pre><code>  -resources            
-      - META-INF                
-          - services                    
-              - org.foo.demo.IShout</code></pre>
-文件内容</li>
-</ul>
-<p>org.foo.demo.animal.Dogorg.foo.demo.animal.Cat<br>步骤3、使用 ServiceLoader 来加载配置文件中指定的实现。</p>
-<p>public class SPI Main {<br>    public static void main(String[] args) {<br>        ServiceLoader<IShout> shouts = ServiceLoader.load(IShout.class);<br>        for (IShout s : shouts) {<br>            s.shout();<br>        }<br>    }<br>}<br>代码输出：</p>
-<p>wang wang<br>miao miao</p>
-<h2 id="4-原理解析"><a href="#4-原理解析" class="headerlink" title="4 原理解析"></a>4 原理解析</h2><p>首先看ServiceLoader类的签名类的成员变量：</p>
-<p>public final class ServiceLoader<S> implements Iterable<S>{<br>    private static final String PREFIX = “META-INF/services/“;</p>
-<pre><code>// 代表被加载的类或者接口
-private final Class&lt;S&gt; service;
-
-// 用于定位，加载和实例化providers的类加载器
-private final ClassLoader loader;
-
-// 创建ServiceLoader时采用的访问控制上下文
-private final AccessControlContext acc;
-
-// 缓存providers，按实例化的顺序排列
-private LinkedHashMap&lt;String,S&gt; providers = new LinkedHashMap&lt;&gt;();
-
-// 懒查找迭代器
-private LazyIterator lookupIterator;
-
-......</code></pre>
-<p>}<br>参考具体ServiceLoader具体源码，代码量不多，加上注释一共587行，梳理了一下，实现的流程如下：</p>
-<h3 id="1-应用程序调用ServiceLoader-load方法"><a href="#1-应用程序调用ServiceLoader-load方法" class="headerlink" title="1 应用程序调用ServiceLoader.load方法"></a>1 应用程序调用ServiceLoader.load方法</h3><p>ServiceLoader.load方法内先创建一个新的ServiceLoader，并实例化该类中的成员变量，包括：</p>
-<p>loader(ClassLoader类型，类加载器)</p>
-<p>acc(AccessControlContext类型，访问控制器)</p>
-<p>providers(LinkedHashMap&lt;String,S&gt;类型，用于缓存加载成功的类)</p>
-<p>lookupIterator(实现迭代器功能)</p>
-<h3 id="2-应用程序通过迭代器接口获取对象实例"><a href="#2-应用程序通过迭代器接口获取对象实例" class="headerlink" title="2 应用程序通过迭代器接口获取对象实例"></a>2 应用程序通过迭代器接口获取对象实例</h3><p>ServiceLoader先判断成员变量providers对象中(LinkedHashMap&lt;String,S&gt;类型)是否有缓存实例对象，如果有缓存，直接返回。<br>如果没有缓存，执行类的装载，实现如下：</p>
-<p>(1) 读取META-INF/services/下的配置文件，获得所有能被实例化的类的名称，值得注意的是，ServiceLoader可以跨越jar包获取META-INF下的配置文件，具体加载配置的实现代码如下：</p>
-<pre><code>    try &#123;
-        String fullName = PREFIX + service.getName();
-        if (loader == null)
-            configs = ClassLoader.getSystemResources(fullName);
-        else
-            configs = loader.getResources(fullName);
-    &#125; catch (IOException x) &#123;
-        fail(service, &quot;Error locating configuration files&quot;, x);
-    &#125;</code></pre>
-<p>(2) 通过反射方法Class.forName()加载类对象，并用instance()方法将类实例化。</p>
-<p>(3) 把实例化后的类缓存到providers对象中，(LinkedHashMap&lt;String,S&gt;类型）<br>然后返回实例对象。</p>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5 总结"></a>5 总结</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>使用Java SPI机制的优势是实现解耦，使得第三方服务模块的装配控制的逻辑与调用者的业务代码分离，而不是耦合在一起。应用程序可以根据实际业务情况启用框架扩展或替换框架组件。</p>
-<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><p>虽然ServiceLoader也算是使用的延迟加载，但是基本只能通过遍历全部获取，也就是接口的实现类全部加载并实例化一遍。如果你并不想用某些实现类，它也被加载并实例化了，这就造成了浪费。获取某个实现类的方式不够灵活，只能通过Iterator形式获取，不能根据某个参数来获取对应的实现类。</p>
-<p>多个并发多线程使用ServiceLoader类的实例是不安全的。</p>
+                <p>代码库是开源生态系统的重要组成部分，一个开源库背后通常拥有一个优秀的开源社区，毕竟没有社区的努力和支持，这个开源库很难生存下去。</p>
+<p>有了开源库，我们不需要每次编码都重复造轮子，这样你可以节省很多时间去做其他事情，比如陪伴家人和朋友。所以，在数十万的库中寻找一个最好的，最受欢迎的，而且用起来最简单高效的就显得尤为重要</p>
+<p>下面，我将推荐给你们10个最高效的Java库，并且他们都是开源的</p>
+<h2 id="1-Java-标准库"><a href="#1-Java-标准库" class="headerlink" title="1. Java 标准库"></a>1. Java 标准库</h2><p>不用怀疑，我说的就是Java标准库，很多人都低估了或者没有完全了解Java标准库，并且不知道如何在编程的时候使用它，有些人甚至都不用它，下面说一些Java标准库的简要说明</p>
+<p> java.lang：总是默认被导入，因为它基本包含开发中需要的Java 类型：String，Double，Enum，Math，等</p>
+<p> java.util：包含Java中可用的所有集合和数据结构</p>
+<p> java.io：I/O流</p>
+<p> java.nio：它实际上是java.io的替代品，代表非阻塞I / O。</p>
+<p> java.math：提供了使用任意精度decimal（BigDecimal）和integer（BigInteger）值的功能</p>
+<p> java.net：被用于处理套接字，创建连接，或者创建网络应用程序</p>
+<p>在Java中，我们也会用到GUI库，我们甚至可以用java.sound播放音乐和创建MIDI文件</p>
+<h2 id="2-JHipster"><a href="#2-JHipster" class="headerlink" title="2. JHipster"></a>2. JHipster</h2><p>JHipster是一个开发平台，用来开发和部署 Maven + Spring + AngularJS 的项目，提供完全热加载的 Java 和 JavaScript 代码。从前端到后端生成整个应用程序，你唯一需要添加的是架构背后的业务逻辑。最后生成的项目中包含两个最重要的库：</p>
+<p>Spring Boot - 帮助您加速和促进应用程序开发</p>
+<p>Angular / AngularJS - JavaScript框架</p>
+<h2 id="3-Maven"><a href="#3-Maven" class="headerlink" title="3. Maven"></a>3. Maven</h2><p>Maven 是一个 Java 项目构建系统。老实说，Maven真的很好用，如果你以前从未使用过Maven，那真是太可惜了。Maven可以通过在一个pom.xml文件中指定它们来管理所有项目依赖项的jar包，配置和构建配置，甚至可以管理文档。</p>
+<h2 id="4-Apache-Commons"><a href="#4-Apache-Commons" class="headerlink" title="4. Apache Commons"></a>4. Apache Commons</h2><p>Apache Commons实际上是一个专注于创建Java库的整个项目。以下是该库中最好和最常用的类库：</p>
+<p> Commons Math：顾名思义，该库包含许多数学和统计组件</p>
+<p> Commons CLI：提供用于解析命令行参数的API。</p>
+<p> Commons CSV ：用于读写CSV文件的工具包,由两大核心对象组成 CSVParser（解析），CSVPrinter（写csv）。、</p>
+<p> Commons IO：它用于更容易执行输入/输出操作，是针对开发IO流功能的工具类库</p>
+<h2 id="5-Guava"><a href="#5-Guava" class="headerlink" title="5. Guava"></a>5. Guava</h2><p>Guava是Google的Java核心库。包含许多 Google 核心的 Java 常用库，这个库超级实用，里面我最喜欢的组件之一的就是：ComparisonChain用于为集合实现高级和复杂的比较排序。</p>
+<h2 id="6-google-gson"><a href="#6-google-gson" class="headerlink" title="6. google-gson"></a>6. google-gson</h2><p>gson 是 Google 提供的用来在 Java 对象和 JSON 数据之间进行映射的 Java 类库。此库在开发移动应用程序和创建/使用REST API时非常有用。</p>
+<h2 id="7-Hibernate-ORM"><a href="#7-Hibernate-ORM" class="headerlink" title="7. Hibernate-ORM"></a>7. Hibernate-ORM</h2><p>Hibernate是一种Java语言下的对象关系映射解决方案。它用于在关系数据库中保存数据，对JDBC进行了非常轻量级的对象封装，Hibernate也是JPA规范的一个实现。</p>
+<h2 id="8-Mockito"><a href="#8-Mockito" class="headerlink" title="8. Mockito"></a>8. Mockito</h2><p>Mockito不是无酒精混合饮料，而是一个针对Java的mocking框架，Mockito使你可以使用更简单，更简洁的代码创建模拟和编写测试。总而言之，Mockito可以极大地简化单元测试的书写过程</p>
+<h2 id="9-JUnit"><a href="#9-JUnit" class="headerlink" title="9. JUnit"></a>9. JUnit</h2><p>JUnit是一个Java语言的单元测试框架， JUnit有它自己的JUnit扩展生态圈，不过，不能单纯拿代码覆盖率来评估测试的好坏，有时候覆盖率越大并不代表你的软件质量越好。</p>
+<h2 id="10-Log4j-和-Slf4j"><a href="#10-Log4j-和-Slf4j" class="headerlink" title="10. Log4j 和 Slf4j"></a>10. Log4j 和 Slf4j</h2><p>这两个都是日志框架。Slf4j为各种loging APIs提供一个简单统一的接口。Log4j只是一个简单的日志框架，控制日志的生成过程。</p>
 
             </div>
             <hr/>
@@ -566,7 +523,7 @@ private LazyIterator lookupIterator;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lixinx11.github.io/2020/09/29/spi/">https://lixinx11.github.io/2020/09/29/spi/</a>
+                    <a href="https://lixinx11.github.io/2020/09/29/10%E5%A4%A7%E6%9C%80%E9%AB%98%E6%95%88%E7%9A%84Java%E5%BA%93%E7%9B%98%E7%82%B9/">https://lixinx11.github.io/2020/09/29/10%E5%A4%A7%E6%9C%80%E9%AB%98%E6%95%88%E7%9A%84Java%E5%BA%93%E7%9B%98%E7%82%B9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -604,8 +561,8 @@ private LazyIterator lookupIterator;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/spi/">
-                                    <span class="chip bg-color">spi</span>
+                                <a href="/tags/10%E5%A4%A7%E6%9C%80%E9%AB%98%E6%95%88%E7%9A%84Java%E5%BA%93%E7%9B%98%E7%82%B9/">
+                                    <span class="chip bg-color">10大最高效的Java库盘点</span>
                                 </a>
                             
                         </div>
@@ -776,7 +733,7 @@ private LazyIterator lookupIterator;
         repo: 'lixinx11.github.io',
         owner: 'lixinx11',
         admin: "lixinx11",
-        id: '2020-09-29T16-15-49',
+        id: '2020-09-29T16-49-20',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -800,9 +757,10 @@ private LazyIterator lookupIterator;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/09/29/10%E5%A4%A7%E6%9C%80%E9%AB%98%E6%95%88%E7%9A%84Java%E5%BA%93%E7%9B%98%E7%82%B9/">
                     <div class="card-image">
@@ -821,9 +779,9 @@ private LazyIterator lookupIterator;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -836,6 +794,7 @@ private LazyIterator lookupIterator;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -854,32 +813,32 @@ private LazyIterator lookupIterator;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/26/python%E7%BB%98%E5%9B%BE/">
+                <a href="/2020/09/29/spi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="python绘制科赫雪花">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="spi --探秘">
                         
-                        <span class="card-title">python绘制科赫雪花</span>
+                        <span class="card-title">spi --探秘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ##      python绘制科赫雪花
-脚本如下：import turtledef koch(size,n):  if n==1:    turtle.fd(size)  else:    for i in [0,60,-120,60]:
+                            本文通过探析JDK提供的，在开源项目中比较常用的Java SPI机制，希望给大家在实际开发实践、学习开源项目提供参考。
+1 SPI是什么SPI全称Service Provider Interface，是Java提供的一套用来被第三方实现或者
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/spi/" class="post-category">
+                                    spi
                                 </a>
                             
                             
@@ -889,8 +848,8 @@ private LazyIterator lookupIterator;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python%E7%BB%98%E5%88%B6%E7%A7%91%E8%B5%AB%E9%9B%AA%E8%8A%B1/">
-                        <span class="chip bg-color">python绘制科赫雪花</span>
+                    <a href="/tags/spi/">
+                        <span class="chip bg-color">spi</span>
                     </a>
                     
                 </div>
