@@ -1336,4 +1336,16 @@ private LazyIterator lookupIterator;
         <tag>10大最高效的Java库盘点</tag>
       </tags>
   </entry>
+  <entry>
+    <title>自反性</title>
+    <url>/2020/10/03/%E8%87%AA%E5%8F%8D%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="设A-1，2，3，4-，下列几个是A-上的二元关系。"><a href="#设A-1，2，3，4-，下列几个是A-上的二元关系。" class="headerlink" title="设A={1，2，3，4}，下列几个是A 上的二元关系。"></a>设A={1，2，3，4}，下列几个是A 上的二元关系。</h1><p>R1={&lt;1，1&gt;，&lt;1，2&gt;，&lt;2，1&gt;，&lt;2，2&gt;，&lt;3，4&gt;，&lt;4，1&gt;，&lt;4，4&gt;}；<br>R2={&lt;1，1&gt;，&lt;1，2&gt;，&lt;2，1&gt;}；<br>R3={&lt;1，1&gt;，&lt;1，2&gt;，&lt;1，4&gt;，&lt;2，1&gt;，&lt;2，2&gt;，&lt;3，3&gt;，&lt;4，1&gt;，&lt;4，4&gt;}；<br>R4={&lt;2，1&gt;，&lt;3，1&gt;，&lt;3，2&gt;，&lt;4，1&gt;，&lt;4，2&gt;，&lt;4，3&gt;}；<br>R5=(&lt;1，1&gt;，&lt;1，2&gt;，&lt;1，3&gt;，&lt;1，4&gt;，&lt;2，2&gt;，&lt;2，3&gt;，&lt;2，4&gt;，&lt;3，3&gt;，&lt;3，4&gt;，&lt;4，4&gt;}；<br>R6={&lt;3，4&gt;}。<br>其中，哪些是自反关系? 哪些是反自反关系?<br>解: 关系R3，R5是自反的，因为它包括所有形如&lt;a，a&gt;的序对。关系R4，R6是反自反的，因为它不包括任何形如&lt;a，a&gt;的序对。而关系R1，R2既不是自反的，也不是反自反的。<br>因为R1中包含&lt;1，1&gt;，&lt;2，2&gt;，&lt;4，4&gt;，但不包含&lt;3，3&gt;；R2中包含&lt;1，1&gt;.但不包含&lt;2，2&gt;，&lt;3，3&gt;，&lt;4，4&gt;。<br>自反性和反自反性可以在关系图和关系矩阵上非常直观地反映出来。</p>
+]]></content>
+      <categories>
+        <category>数学算法</category>
+      </categories>
+      <tags>
+        <tag>数学算法</tag>
+      </tags>
+  </entry>
 </search>
