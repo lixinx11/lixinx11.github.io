@@ -1348,4 +1348,16 @@ private LazyIterator lookupIterator;
         <tag>数学算法</tag>
       </tags>
   </entry>
+  <entry>
+    <title>tidb</title>
+    <url>/2020/11/03/tidb/</url>
+    <content><![CDATA[<h1 id="TiDB-4-0"><a href="#TiDB-4-0" class="headerlink" title="TiDB 4.0"></a>TiDB 4.0</h1><p>TiDB 4.0 兼容mysql5.7版本</p>
+]]></content>
+      <categories>
+        <category>tidb</category>
+      </categories>
+      <tags>
+        <tag>tidb</tag>
+      </tags>
+  </entry>
 </search>

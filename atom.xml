@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-10-03T09:42:21.853Z</updated>
+  <updated>2020-11-03T07:26:35.483Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tidb</title>
+    <link href="https://lixinx11.github.io/2020/11/03/tidb/"/>
+    <id>https://lixinx11.github.io/2020/11/03/tidb/</id>
+    <published>2020-11-03T07:24:47.000Z</published>
+    <updated>2020-11-03T07:26:35.483Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="tidb" scheme="https://lixinx11.github.io/categories/tidb/"/>
+    
+    
+    <category term="tidb" scheme="https://lixinx11.github.io/tags/tidb/"/>
+    
+  </entry>
   
   <entry>
     <title>自反性</title>
@@ -474,31 +499,6 @@
     
     
     <category term="面向对象" scheme="https://lixinx11.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LSTM</title>
-    <link href="https://lixinx11.github.io/2020/08/23/LSTM/"/>
-    <id>https://lixinx11.github.io/2020/08/23/LSTM/</id>
-    <published>2020-08-23T03:28:51.000Z</published>
-    <updated>2020-08-23T04:38:50.620Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Deep Learning" scheme="https://lixinx11.github.io/categories/Deep-Learning/"/>
-    
-    
-    <category term="LSTM" scheme="https://lixinx11.github.io/tags/LSTM/"/>
     
   </entry>
   
