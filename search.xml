@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>10大最高效的Java库盘点</title>
+    <url>/2020/09/29/10%E5%A4%A7%E6%9C%80%E9%AB%98%E6%95%88%E7%9A%84Java%E5%BA%93%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>代码库是开源生态系统的重要组成部分，一个开源库背后通常拥有一个优秀的开源社区，毕竟没有社区的努力和支持，这个开源库很难生存下去。</p>
+<p>有了开源库，我们不需要每次编码都重复造轮子，这样你可以节省很多时间去做其他事情，比如陪伴家人和朋友。所以，在数十万的库中寻找一个最好的，最受欢迎的，而且用起来最简单高效的就显得尤为重要</p>
+<p>下面，我将推荐给你们10个最高效的Java库，并且他们都是开源的</p>
+<h2 id="1-Java-标准库"><a href="#1-Java-标准库" class="headerlink" title="1. Java 标准库"></a>1. Java 标准库</h2><p>不用怀疑，我说的就是Java标准库，很多人都低估了或者没有完全了解Java标准库，并且不知道如何在编程的时候使用它，有些人甚至都不用它，下面说一些Java标准库的简要说明</p>
+<p> java.lang：总是默认被导入，因为它基本包含开发中需要的Java 类型：String，Double，Enum，Math，等</p>
+<p> java.util：包含Java中可用的所有集合和数据结构</p>
+<p> java.io：I/O流</p>
+<p> java.nio：它实际上是java.io的替代品，代表非阻塞I / O。</p>
+<p> java.math：提供了使用任意精度decimal（BigDecimal）和integer（BigInteger）值的功能</p>
+<p> java.net：被用于处理套接字，创建连接，或者创建网络应用程序</p>
+<p>在Java中，我们也会用到GUI库，我们甚至可以用java.sound播放音乐和创建MIDI文件</p>
+<h2 id="2-JHipster"><a href="#2-JHipster" class="headerlink" title="2. JHipster"></a>2. JHipster</h2><p>JHipster是一个开发平台，用来开发和部署 Maven + Spring + AngularJS 的项目，提供完全热加载的 Java 和 JavaScript 代码。从前端到后端生成整个应用程序，你唯一需要添加的是架构背后的业务逻辑。最后生成的项目中包含两个最重要的库：</p>
+<p>Spring Boot - 帮助您加速和促进应用程序开发</p>
+<p>Angular / AngularJS - JavaScript框架</p>
+<h2 id="3-Maven"><a href="#3-Maven" class="headerlink" title="3. Maven"></a>3. Maven</h2><p>Maven 是一个 Java 项目构建系统。老实说，Maven真的很好用，如果你以前从未使用过Maven，那真是太可惜了。Maven可以通过在一个pom.xml文件中指定它们来管理所有项目依赖项的jar包，配置和构建配置，甚至可以管理文档。</p>
+<h2 id="4-Apache-Commons"><a href="#4-Apache-Commons" class="headerlink" title="4. Apache Commons"></a>4. Apache Commons</h2><p>Apache Commons实际上是一个专注于创建Java库的整个项目。以下是该库中最好和最常用的类库：</p>
+<p> Commons Math：顾名思义，该库包含许多数学和统计组件</p>
+<p> Commons CLI：提供用于解析命令行参数的API。</p>
+<p> Commons CSV ：用于读写CSV文件的工具包,由两大核心对象组成 CSVParser（解析），CSVPrinter（写csv）。、</p>
+<p> Commons IO：它用于更容易执行输入/输出操作，是针对开发IO流功能的工具类库</p>
+<h2 id="5-Guava"><a href="#5-Guava" class="headerlink" title="5. Guava"></a>5. Guava</h2><p>Guava是Google的Java核心库。包含许多 Google 核心的 Java 常用库，这个库超级实用，里面我最喜欢的组件之一的就是：ComparisonChain用于为集合实现高级和复杂的比较排序。</p>
+<h2 id="6-google-gson"><a href="#6-google-gson" class="headerlink" title="6. google-gson"></a>6. google-gson</h2><p>gson 是 Google 提供的用来在 Java 对象和 JSON 数据之间进行映射的 Java 类库。此库在开发移动应用程序和创建/使用REST API时非常有用。</p>
+<h2 id="7-Hibernate-ORM"><a href="#7-Hibernate-ORM" class="headerlink" title="7. Hibernate-ORM"></a>7. Hibernate-ORM</h2><p>Hibernate是一种Java语言下的对象关系映射解决方案。它用于在关系数据库中保存数据，对JDBC进行了非常轻量级的对象封装，Hibernate也是JPA规范的一个实现。</p>
+<h2 id="8-Mockito"><a href="#8-Mockito" class="headerlink" title="8. Mockito"></a>8. Mockito</h2><p>Mockito不是无酒精混合饮料，而是一个针对Java的mocking框架，Mockito使你可以使用更简单，更简洁的代码创建模拟和编写测试。总而言之，Mockito可以极大地简化单元测试的书写过程</p>
+<h2 id="9-JUnit"><a href="#9-JUnit" class="headerlink" title="9. JUnit"></a>9. JUnit</h2><p>JUnit是一个Java语言的单元测试框架， JUnit有它自己的JUnit扩展生态圈，不过，不能单纯拿代码覆盖率来评估测试的好坏，有时候覆盖率越大并不代表你的软件质量越好。</p>
+<h2 id="10-Log4j-和-Slf4j"><a href="#10-Log4j-和-Slf4j" class="headerlink" title="10. Log4j 和 Slf4j"></a>10. Log4j 和 Slf4j</h2><p>这两个都是日志框架。Slf4j为各种loging APIs提供一个简单统一的接口。Log4j只是一个简单的日志框架，控制日志的生成过程。</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>10大最高效的Java库盘点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AI思考</title>
     <url>/2020/08/25/AI%E6%80%9D%E8%80%83/</url>
     <content><![CDATA[<p>图灵测试（The Turing test）由艾伦·麦席森·图灵发明，指测试者与被测试者（一个人和一台机器）隔开的情况下，<br>通过一些装置（如键盘）向被测试者随意提问。<br>进行多次测试后，如果有超过30%的测试者不能确定出被测试者是人还是机器，<br>那么这台机器就通过了测试，并被认为具有人类智能。</p>
@@ -16,18 +53,6 @@
       </categories>
       <tags>
         <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GUI</title>
-    <url>/2020/09/03/FUI/</url>
-    <content><![CDATA[<pre><code>   GUI开发,JavaFX/Swing/Qt等任意一种界面框架</code></pre>
-]]></content>
-      <categories>
-        <category>GUI</category>
-      </categories>
-      <tags>
-        <tag>GUI开发</tag>
       </tags>
   </entry>
   <entry>
@@ -101,6 +126,18 @@
       </tags>
   </entry>
   <entry>
+    <title>GUI</title>
+    <url>/2020/09/03/FUI/</url>
+    <content><![CDATA[<pre><code>   GUI开发,JavaFX/Swing/Qt等任意一种界面框架</code></pre>
+]]></content>
+      <categories>
+        <category>GUI</category>
+      </categories>
+      <tags>
+        <tag>GUI开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LSTM</title>
     <url>/2020/08/23/LSTM/</url>
     <content><![CDATA[<p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。简单来说，就是相比普通的RNN，LSTM能够在更长的序列中有更好的表现。</p>
@@ -137,6 +174,20 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </categories>
       <tags>
         <tag>RPA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>R语言学习</title>
+    <url>/2020/09/23/R/</url>
+    <content><![CDATA[<hr>
+<pre><code>        ##  R &amp; Python: A Love Story</code></pre>
+<p><a href="https://rstudio.com/products/rstudio/download/#download">https://rstudio.com/products/rstudio/download/#download</a></p>
+]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
       </tags>
   </entry>
   <entry>
@@ -181,92 +232,53 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </tags>
   </entry>
   <entry>
-    <title>ThreadLocal</title>
-    <url>/2019/09/21/ThreadLocal/</url>
-    <content><![CDATA[<h2 id="彻底理解ThreadLocal"><a href="#彻底理解ThreadLocal" class="headerlink" title="彻底理解ThreadLocal"></a>彻底理解ThreadLocal</h2><p>深挖过threadLocal之后，一句话概括：Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。所以ThreadLocal的应用场合，最适合的是按线程多实例（每个线程对应一个实例）的对象的访问，并且这个对象很多地方都要用到。</p>
-<p>数据隔离的秘诀其实是这样的，Thread有个TheadLocalMap类型的属性，叫做threadLocals，该属性用来保存该线程本地变量。这样每个线程都有自己的数据，就做到了不同线程间数据的隔离，保证了数据安全。</p>
-<p>接下来采用jdk1.8源码进行深挖一下TheadLocal和TheadLocalMap。</p>
-<h2 id="ThreadLocal是什么"><a href="#ThreadLocal是什么" class="headerlink" title="ThreadLocal是什么"></a>ThreadLocal是什么</h2><p>早在JDK 1.2的版本中就提供java.lang.ThreadLocal，ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。使用这个工具类可以很简洁地编写出优美的多线程程序。</p>
-<p>当使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
-<p>从线程的角度看，目标变量就象是线程的本地变量，这也是类名中“Local”所要表达的意思。</p>
-<p>所以，在Java中编写线程局部变量的代码相对来说要笨拙一些，因此造成线程局部变量没有在Java开发者中得到很好的普及。</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>ThreadLocal，连接ThreadLocalMap和Thread。来处理Thread的TheadLocalMap属性，包括init初始化属性赋值、get对应的变量，set设置变量等。通过当前线程，获取线程上的ThreadLocalMap属性，对数据进行get、set等操作。</p>
-<p>ThreadLocalMap，用来存储数据，采用类似hashmap机制，存储了以threadLocal为key，需要隔离的数据为value的Entry键值对数组结构。</p>
-<p>ThreadLocal，有个ThreadLocalMap类型的属性，存储的数据就放在这儿。</p>
-<h2 id="ThreadLocal、ThreadLocal、Thread之间的关系"><a href="#ThreadLocal、ThreadLocal、Thread之间的关系" class="headerlink" title="ThreadLocal、ThreadLocal、Thread之间的关系"></a>ThreadLocal、ThreadLocal、Thread之间的关系</h2><p>ThreadLocalMap是ThreadLocal内部类，由ThreadLocal创建，Thread有ThreadLocal.ThreadLocalMap类型的属性</p>
-<h2 id="ThreadLocalMap简介"><a href="#ThreadLocalMap简介" class="headerlink" title="ThreadLocalMap简介"></a>ThreadLocalMap简介</h2><p>看名字就知道是个map，没错，这就是个hashMap机制实现的map，用Entry数组来存储键值对，key是ThreadLocal对象，value则是具体的值。值得一提的是，为了方便GC，Entry继承了WeakReference，也就是弱引用。里面有一些具体关于如何清理过期的数据、扩容等机制，思路基本和hashmap差不多，有兴趣的可以自行阅读了解，这边只需知道大概的数据存储结构即可。</p>
-<h2 id="Thread同步机制的比较"><a href="#Thread同步机制的比较" class="headerlink" title="Thread同步机制的比较"></a>Thread同步机制的比较</h2><p>ThreadLocal和线程同步机制相比有什么优势呢？</p>
-<p>Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。</p>
-<p>在同步机制中，通过对象的锁机制保证同一时间只有一个线程访问变量。这时该变量是多个线程共享的，使用同步机制要求程序慎密地分析什么时候对变量进行读写，什么时候需要锁定某个对象，什么时候释放对象锁等繁杂的问题，程序设计和编写难度相对较大。</p>
-<p>而ThreadLocal则从另一个角度来解决多线程的并发访问。ThreadLocal会为每一个线程提供一个独立的变量副本，从而隔离了多个线程对数据的访问冲突。因为每一个线程都拥有自己的变量副本，从而也就没有必要对该变量进行同步了。ThreadLocal提供了线程安全的共享对象，在编写多线程代码时，可以把不安全的变量封装进ThreadLocal。</p>
-<p>概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。</p>
-<p>Spring使用ThreadLocal解决线程安全问题我们知道在一般情况下，只有无状态的Bean才可以在多线程环境下共享，在Spring中，绝大部分Bean都可以声明为singleton作用域。就是因为Spring对一些Bean（如RequestContextHolder、TransactionSynchronizationManager、LocaleContextHolder等）中非线程安全状态采用ThreadLocal进行处理，让它们也成为线程安全的状态，因为有状态的Bean就可以在多线程中共享了。</p>
-<p>一般的Web应用划分为展现层、服务层和持久层三个层次，在不同的层中编写对应的逻辑，下层通过接口向上层开放功能调用。在一般情况下，从接收请求到返回响应所经过的所有程序调用都同属于一个线程。</p>
-<p>同一线程贯通三层这样你就可以根据需要，将一些非线程安全的变量以ThreadLocal存放，在同一次请求响应的调用线程中，所有关联的对象引用到的都是同一个变量。</p>
-<p>下面的实例能够体现Spring对有状态Bean的改造思路：</p>
-<p>TestDao：非线程安全</p>
-<p>public class TestDao {<br>    private Connection conn;// ①一个非线程安全的变量</p>
-<pre><code>public void addTopic() throws SQLException &#123;
-    Statement stat = conn.createStatement();// ②引用非线程安全变量
-    // …
-&#125;</code></pre>
-<p>由于conn是成员变量，因为addTopic()方法是非线程安全的，必须在使用时创建一个新TopicDao实例（非singleton）。下面使用ThreadLocal对conn这个非线程安全的“状态”进行改造：</p>
-<p>TestDao：线程安全</p>
-<p>public class TestDaoNew {// ①使用ThreadLocal保存Connection变量<br>  private static ThreadLocal<Connection> connThreadLocal = ThreadLocal.withInitial(Test::createConnection);</p>
-<p>  // 具体创建数据库连接的方法<br>  private static Connection createConnection() {<br>    Connection result = null;<br>    /**<br>     * create a real connection…<br>     * such as :<br>     * result = DriverManager.getConnection(dbUrl, dbUser, dbPwd);<br>     */<br>    return result;<br>  }</p>
-<p>  // ③直接返回线程本地变量<br>  public static Connection getConnection() {<br>    return connThreadLocal.get();<br>  }</p>
-<p>  // 具体操作<br>  public void addTopic() throws SQLException {<br>    // ④从ThreadLocal中获取线程对应的Connection<br>    Statement stat = getConnection().createStatement();<br>    //….any other operation<br>  }<br>}</p>
-<p>不同的线程在使用TopicDao时，根据之前的深挖get具体操作，判断connThreadLocal.get()会去判断是有map，没有则根据initivalValue创建一个Connection对象并添加到本地线程变量中，initivalValue对应的值也就是上述的lamba表达式对应的创建connection的方法返回的结果，下次get则由于已经有了，则会直接获取已经创建好的Connection，这样，就保证了不同的线程使用线程相关的Connection，而不会使用其它线程的Connection。因此，这个TopicDao就可以做到singleton共享了。</p>
-<p>当然，这个例子本身很粗糙，将Connection的ThreadLocal直接放在DAO只能做到本DAO的多个方法共享Connection时不发生线程安全问题，但无法和其它DAO共用同一个Connection，要做到同一事务多DAO共享同一Connection，必须在一个共同的外部类使用ThreadLocal保存Connection。</p>
-<p>ConnectionManager.java</p>
-<p>public class ConnectionManager {</p>
-<pre><code>private static ThreadLocal&lt;Connection&gt; connectionHolder = ThreadLocal.withInitial(() -&gt; &#123;
-    Connection conn = null;
-    try &#123;
-        conn = DriverManager.getConnection(
-                &quot;jdbc:mysql://localhost:3306/test&quot;, &quot;username&quot;,
-                &quot;password&quot;);
-    &#125; catch (SQLException e) &#123;
-        e.printStackTrace();
-    &#125;
-    return conn;
-&#125;);
-
-public static Connection getConnection() &#123;
-    return connectionHolder.get();
-&#125;</code></pre>
-<p>}</p>
-<h2 id="线程隔离的秘密"><a href="#线程隔离的秘密" class="headerlink" title="线程隔离的秘密"></a>线程隔离的秘密</h2><p>秘密就就在于上述叙述的ThreadLocalMap这个类。ThreadLocalMap是ThreadLocal类的一个静态内部类，它实现了键值对的设置和获取（对比Map对象来理解），每个线程中都有一个独立的ThreadLocalMap副本，它所存储的值，只能被当前线程读取和修改。ThreadLocal类通过操作每一个线程特有的ThreadLocalMap副本，从而实现了变量访问在不同线程中的隔离。因为每个线程的变量都是自己特有的，完全不会有并发错误。还有一点就是，ThreadLocalMap存储的键值对中的键是this对象指向的ThreadLocal对象，而值就是你所设置的对象了。</p>
-<p>为了加深理解，我们接着看上面代码中出现的getMap和createMap方法的实现：</p>
-<pre><code>/**
- * Get the map associated with a ThreadLocal. Overridden in
- * InheritableThreadLocal.
- *
- * @param  t the current thread
- * @return the map
- */
-ThreadLocalMap getMap(Thread t) &#123;
-    return t.threadLocals;
-&#125;
-
-/**
- * Create the map associated with a ThreadLocal. Overridden in
- * InheritableThreadLocal.
- *
- * @param t the current thread
- * @param firstValue value for the initial entry of the map
- * @param map the map to store.
- */
-void createMap(Thread t, T firstValue) &#123;
-    t.threadLocals = new ThreadLocalMap(this, firstValue);
-&#125;</code></pre>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>ThreadLocal是解决线程安全问题一个很好的思路，它通过为每个线程提供一个独立的变量副本解决了变量并发访问的冲突问题。在很多情况下，ThreadLocal比直接使用synchronized同步机制解决线程安全问题更简单，更方便，且结果程序拥有更高的并发性。</p>
+    <title>时光角落</title>
+    <url>/2020/09/03/book/</url>
+    <content><![CDATA[<pre><code>思考是人类最大的乐趣之一 --布莱希特</code></pre>
+<h1 id="休闲时读的一本书："><a href="#休闲时读的一本书：" class="headerlink" title="休闲时读的一本书："></a>休闲时读的一本书：</h1><p>  软件创新之路：冲破高技术营造的牢笼</p>
 ]]></content>
       <categories>
-        <category>多线程</category>
+        <category>book</category>
       </categories>
       <tags>
-        <tag>彻底理解ThreadLocal</tag>
+        <tag>时光角落</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从嫦娥5号看第二宇宙速度</title>
+    <url>/2020/11/26/chang6/</url>
+    <content><![CDATA[<h2 id="1、第一宇宙速度"><a href="#1、第一宇宙速度" class="headerlink" title="1、第一宇宙速度"></a>1、第一宇宙速度</h2><pre><code>摆脱地球引力 就必须大于第一宇宙速度     按照力学理论可以计算出 v1=7.9 km/s
+小于第二宇宙速度，否则会超出太阳的引力，冲出太阳系。 当航天器超过第一宇宙速度V1达到一定值时，它就会脱离地球的引力场而成为围绕太阳运行的人造行星，这个速度就叫做第二宇宙速度，亦称脱离速度。</code></pre>
+<h2 id="2、-第二宇宙速度"><a href="#2、-第二宇宙速度" class="headerlink" title="2、 第二宇宙速度"></a>2、 第二宇宙速度</h2><p>按照力学理论可以计算出第二宇宙速度V2=11．2公里/秒</p>
+<h2 id="3、-从月球采样返回"><a href="#3、-从月球采样返回" class="headerlink" title="3、 从月球采样返回"></a>3、 从月球采样返回</h2><p>返回器以接近第二宇宙速度(第二宇宙速度为11.2公里/秒)再入返回相关技术<br>第二宇宙速度也叫脱离速度,是脱离地球飞行所需的速度,嫦娥以脱离速度再入地球大气层,再弹跳出大气层进入太空、再入大气层、再弹出大气层.一跳就是上千公里,最后能以设计所需的速度精确降落地面.</p>
+<h2 id="4、天问号-到达火星"><a href="#4、天问号-到达火星" class="headerlink" title="4、天问号 到达火星"></a>4、天问号 到达火星</h2><p> 到达火星 必须要 摆脱地球引力，达到甚至高于第二宇宙速度</p>
+]]></content>
+      <categories>
+        <category>从嫦娥5号看第二宇宙速度</category>
+      </categories>
+      <tags>
+        <tag>从嫦娥5号看第二宇宙速度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello world</title>
+    <url>/2010/04/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -318,27 +330,6 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>Dockerfile</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello world</title>
-    <url>/2010/04/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>Hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -403,19 +394,6 @@ docker save project:0.0.1&gt;~/xxx.tar
       </tags>
   </entry>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p>   第一章</p>
-<p>内容</p>
-<hr>
-<p> 第二章</p>
-<p>内容</p>
-<hr>
-<p>   参考文献</p>
-<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>mysql5.7安装使用指南</title>
     <url>/2020/08/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-1/</url>
     <content><![CDATA[<h2 id="1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini"><a href="#1、加压mysql文件包，并在D-mysql5-7-28-目录下创建my-ini" class="headerlink" title="1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini"></a>1、加压mysql文件包，并在D:\mysql5.7.28 目录下创建my.ini</h2><p>内容：</p>
@@ -448,6 +426,19 @@ docker save project:0.0.1&gt;~/xxx.tar
       </tags>
   </entry>
   <entry>
+    <title>我的第一篇博客</title>
+    <url>/2012/03/15/mysql%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>   第一章</p>
+<p>内容</p>
+<hr>
+<p> 第二章</p>
+<p>内容</p>
+<hr>
+<p>   参考文献</p>
+<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>npm</title>
     <url>/2020/08/29/npm/</url>
     <content><![CDATA[<h1 id="install-dependencies"><a href="#install-dependencies" class="headerlink" title="install dependencies"></a>install dependencies</h1><p>npm install</p>
@@ -473,6 +464,37 @@ docker save project:0.0.1&gt;~/xxx.tar
       <tags>
         <tag>数据迁移</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>pandas 函数</title>
+    <url>/2020/09/09/python1/</url>
+    <content><![CDATA[<p>df2= pd.DataFrame([[1,2,3],[4,5,6]],index=[‘r1’,’r2’],columns=[‘c1’,’c2’,’c3’])<br>dates=pd.date_range(‘2020-12-12’,periods=7)<br>df3 =pd.DataFrame(np.random.randn(7,4),index=dates,columns=list(‘abcd’))</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>pandas 函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python绘制科赫雪花</title>
+    <url>/2020/09/26/python%E7%BB%98%E5%9B%BE/</url>
+    <content><![CDATA[<pre><code>##      python绘制科赫雪花</code></pre>
+<h3 id="脚本如下："><a href="#脚本如下：" class="headerlink" title="脚本如下："></a>脚本如下：</h3><p>import turtle<br>def koch(size,n):<br>  if n==1:<br>    turtle.fd(size)<br>  else:<br>    for i in [0,60,-120,60]:<br>      turtle.left(i)<br>      koch(size/3,n-1)<br>def main():<br>  turtle.setup(600,600)<br>  turtle.penup()<br>  turtle.speed(10)<br>  turtle.hideturtle()<br>  turtle.pensize(2)<br>  turtle.goto(-200,100)<br>  turtle.pendown()<br>  level=4<br>  koch(400,level)<br>  turtle.right(120)<br>  koch(400, level)<br>  turtle.right(120)<br>  koch(400, level)<br>  turtle.penup()<br>  turtle.done()<br>main()</p>
+<h3 id="演示结果如图："><a href="#演示结果如图：" class="headerlink" title="演示结果如图："></a>演示结果如图：</h3><p>  <img src="https://lixinx11.github.io/medias/bigdata/23.png" alt="科赫雪花"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python绘制科赫雪花</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>redis</title>
+    <url>/2020/09/05/redis/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>redis使用指南</title>
@@ -565,6 +587,191 @@ docker save project:0.0.1&gt;~/xxx.tar
       </tags>
   </entry>
   <entry>
+    <title>spi --探秘</title>
+    <url>/2020/09/29/spi/</url>
+    <content><![CDATA[<p>本文通过探析JDK提供的，在开源项目中比较常用的Java SPI机制，希望给大家在实际开发实践、学习开源项目提供参考。</p>
+<h2 id="1-SPI是什么"><a href="#1-SPI是什么" class="headerlink" title="1 SPI是什么"></a>1 SPI是什么</h2><p>SPI全称Service Provider Interface，是Java提供的一套用来被第三方实现或者扩展的API，它可以用来启用框架扩展和替换组件。</p>
+<p>image.jpg</p>
+<p>Java SPI 实际上是“基于接口的编程＋策略模式＋配置文件”组合实现的动态加载机制。</p>
+<p>系统设计的各个抽象，往往有很多不同的实现方案，在面向的对象的设计里，一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码。一旦代码里涉及具体的实现类，就违反了可拔插的原则，如果需要替换一种实现，就需要修改代码。为了实现在模块装配的时候能不在程序里动态指明，这就需要一种服务发现机制。<br>Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的机制。有点类似IOC的思想，就是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要。所以SPI的核心思想就是解耦。</p>
+<h2 id="2-使用场景"><a href="#2-使用场景" class="headerlink" title="2 使用场景"></a>2 使用场景</h2><p>概括地说，适用于：调用者根据实际使用需要，启用、扩展、或者替换框架的实现策略</p>
+<p>比较常见的例子：</p>
+<p>数据库驱动加载接口实现类的加载<br>JDBC加载不同类型数据库的驱动</p>
+<p>日志门面接口实现类加载<br>SLF4J加载不同提供商的日志实现类</p>
+<p>Spring<br>Spring中大量使用了SPI,比如：对servlet3.0规范对ServletContainerInitializer的实现、自动类型转换Type Conversion SPI(Converter SPI、Formatter SPI)等</p>
+<p>Dubbo<br>Dubbo中也大量使用SPI的方式实现框架的扩展, 不过它对Java提供的原生SPI做了封装，允许用户扩展实现Filter接口</p>
+<h2 id="3-使用介绍"><a href="#3-使用介绍" class="headerlink" title="3 使用介绍"></a>3 使用介绍</h2><p>要使用Java SPI，需要遵循如下约定：</p>
+<p>1、当服务提供者提供了接口的一种具体实现后，在jar包的META-INF/services目录下创建一个以“接口全限定名”为命名的文件，内容为实现类的全限定名；</p>
+<p>2、接口实现类所在的jar包放在主程序的classpath中；</p>
+<p>3、主程序通过java.util.ServiceLoder动态装载实现模块，它通过扫描META-INF/services目录下的配置文件找到实现类的全限定名，把类加载到JVM；</p>
+<p>4、SPI的实现类必须携带一个不带参数的构造方法；</p>
+<p>示例代码<br>步骤1、定义一组接口 (假设是org.foo.demo.IShout)，并写出接口的一个或多个实现，(假设是org.foo.demo.animal.Dog、org.foo.demo.animal.Cat)。</p>
+<p>public interface IShout {<br>    void shout();<br>}<br>public class Cat implements IShout {<br>    @Override<br>    public void shout() {<br>        System.out.println(“miao miao”);<br>    }<br>}<br>public class Dog implements IShout {<br>    @Override<br>    public void shout() {<br>        System.out.println(“wang wang”);<br>    }<br>}<br>步骤2、在 src/main/resources/ 下建立 /META-INF/services 目录， 新增一个以接口命名的文件 (org.foo.demo.IShout文件)，内容是要应用的实现类（这里是org.foo.demo.animal.Dog和org.foo.demo.animal.Cat，每行一个类）。</p>
+<p>文件位置</p>
+<ul>
+<li>src<br>  -main        <pre><code>  -resources            
+      - META-INF                
+          - services                    
+              - org.foo.demo.IShout</code></pre>
+文件内容</li>
+</ul>
+<p>org.foo.demo.animal.Dogorg.foo.demo.animal.Cat<br>步骤3、使用 ServiceLoader 来加载配置文件中指定的实现。</p>
+<p>public class SPI Main {<br>    public static void main(String[] args) {<br>        ServiceLoader<IShout> shouts = ServiceLoader.load(IShout.class);<br>        for (IShout s : shouts) {<br>            s.shout();<br>        }<br>    }<br>}<br>代码输出：</p>
+<p>wang wang<br>miao miao</p>
+<h2 id="4-原理解析"><a href="#4-原理解析" class="headerlink" title="4 原理解析"></a>4 原理解析</h2><p>首先看ServiceLoader类的签名类的成员变量：</p>
+<p>public final class ServiceLoader<S> implements Iterable<S>{<br>    private static final String PREFIX = “META-INF/services/“;</p>
+<pre><code>// 代表被加载的类或者接口
+private final Class&lt;S&gt; service;
+
+// 用于定位，加载和实例化providers的类加载器
+private final ClassLoader loader;
+
+// 创建ServiceLoader时采用的访问控制上下文
+private final AccessControlContext acc;
+
+// 缓存providers，按实例化的顺序排列
+private LinkedHashMap&lt;String,S&gt; providers = new LinkedHashMap&lt;&gt;();
+
+// 懒查找迭代器
+private LazyIterator lookupIterator;
+
+......</code></pre>
+<p>}<br>参考具体ServiceLoader具体源码，代码量不多，加上注释一共587行，梳理了一下，实现的流程如下：</p>
+<h3 id="1-应用程序调用ServiceLoader-load方法"><a href="#1-应用程序调用ServiceLoader-load方法" class="headerlink" title="1 应用程序调用ServiceLoader.load方法"></a>1 应用程序调用ServiceLoader.load方法</h3><p>ServiceLoader.load方法内先创建一个新的ServiceLoader，并实例化该类中的成员变量，包括：</p>
+<p>loader(ClassLoader类型，类加载器)</p>
+<p>acc(AccessControlContext类型，访问控制器)</p>
+<p>providers(LinkedHashMap&lt;String,S&gt;类型，用于缓存加载成功的类)</p>
+<p>lookupIterator(实现迭代器功能)</p>
+<h3 id="2-应用程序通过迭代器接口获取对象实例"><a href="#2-应用程序通过迭代器接口获取对象实例" class="headerlink" title="2 应用程序通过迭代器接口获取对象实例"></a>2 应用程序通过迭代器接口获取对象实例</h3><p>ServiceLoader先判断成员变量providers对象中(LinkedHashMap&lt;String,S&gt;类型)是否有缓存实例对象，如果有缓存，直接返回。<br>如果没有缓存，执行类的装载，实现如下：</p>
+<p>(1) 读取META-INF/services/下的配置文件，获得所有能被实例化的类的名称，值得注意的是，ServiceLoader可以跨越jar包获取META-INF下的配置文件，具体加载配置的实现代码如下：</p>
+<pre><code>    try &#123;
+        String fullName = PREFIX + service.getName();
+        if (loader == null)
+            configs = ClassLoader.getSystemResources(fullName);
+        else
+            configs = loader.getResources(fullName);
+    &#125; catch (IOException x) &#123;
+        fail(service, &quot;Error locating configuration files&quot;, x);
+    &#125;</code></pre>
+<p>(2) 通过反射方法Class.forName()加载类对象，并用instance()方法将类实例化。</p>
+<p>(3) 把实例化后的类缓存到providers对象中，(LinkedHashMap&lt;String,S&gt;类型）<br>然后返回实例对象。</p>
+<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5 总结"></a>5 总结</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>使用Java SPI机制的优势是实现解耦，使得第三方服务模块的装配控制的逻辑与调用者的业务代码分离，而不是耦合在一起。应用程序可以根据实际业务情况启用框架扩展或替换框架组件。</p>
+<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><p>虽然ServiceLoader也算是使用的延迟加载，但是基本只能通过遍历全部获取，也就是接口的实现类全部加载并实例化一遍。如果你并不想用某些实现类，它也被加载并实例化了，这就造成了浪费。获取某个实现类的方式不够灵活，只能通过Iterator形式获取，不能根据某个参数来获取对应的实现类。</p>
+<p>多个并发多线程使用ServiceLoader类的实例是不安全的。</p>
+]]></content>
+      <categories>
+        <category>spi</category>
+      </categories>
+      <tags>
+        <tag>spi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>低代码开发</title>
+    <url>/2020/09/15/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<pre><code>                                #   低代码开发未来的趋势？</code></pre>
+<p>低代码开发平台是现在很火的话题，市场上的低代码开发平台，主要有两类。</p>
+<h2 id="第一类，"><a href="#第一类，" class="headerlink" title="第一类，"></a>第一类，</h2><p>通过拖拽方式开发App界面，数据来源于现有系统。这个领域有很多新的创业公司，比如被西门子收购的Mendix，获得大笔融资的Outsystems，<br>还有微软开发了很多年的PowerApps。这些可以帮助企业基于现有系统开发新的应用界面，尤其是延伸到手机端。</p>
+<h2 id="第二类，"><a href="#第二类，" class="headerlink" title="第二类，"></a>第二类，</h2><p>从零开始，创建业务系统，或是构建企业数据中台。这个领域需要很多年的技术积累，<br>需要通过成百上千个项目沉淀客户需求，才能做出好的开发工具。如何把基础功能标准化，如何把差异化的部分提炼出来做成可配置，这是一个非常难的课题。<br>在这方面比较领先的有以开发CRM并逐步进化的Salesforce， 开发ERP起家的Odoo 、BPM厂商华炎魔方。</p>
+<h2 id="总之"><a href="#总之" class="headerlink" title="总之"></a>总之</h2><pre><code>随着人工智能的发展，初级的程序员未来竟被机器替代。企业的技能要求向设计，算法等高级技能发展。</code></pre>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>低代码开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ThreadLocal</title>
+    <url>/2019/09/21/ThreadLocal/</url>
+    <content><![CDATA[<h2 id="彻底理解ThreadLocal"><a href="#彻底理解ThreadLocal" class="headerlink" title="彻底理解ThreadLocal"></a>彻底理解ThreadLocal</h2><p>深挖过threadLocal之后，一句话概括：Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。所以ThreadLocal的应用场合，最适合的是按线程多实例（每个线程对应一个实例）的对象的访问，并且这个对象很多地方都要用到。</p>
+<p>数据隔离的秘诀其实是这样的，Thread有个TheadLocalMap类型的属性，叫做threadLocals，该属性用来保存该线程本地变量。这样每个线程都有自己的数据，就做到了不同线程间数据的隔离，保证了数据安全。</p>
+<p>接下来采用jdk1.8源码进行深挖一下TheadLocal和TheadLocalMap。</p>
+<h2 id="ThreadLocal是什么"><a href="#ThreadLocal是什么" class="headerlink" title="ThreadLocal是什么"></a>ThreadLocal是什么</h2><p>早在JDK 1.2的版本中就提供java.lang.ThreadLocal，ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。使用这个工具类可以很简洁地编写出优美的多线程程序。</p>
+<p>当使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
+<p>从线程的角度看，目标变量就象是线程的本地变量，这也是类名中“Local”所要表达的意思。</p>
+<p>所以，在Java中编写线程局部变量的代码相对来说要笨拙一些，因此造成线程局部变量没有在Java开发者中得到很好的普及。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>ThreadLocal，连接ThreadLocalMap和Thread。来处理Thread的TheadLocalMap属性，包括init初始化属性赋值、get对应的变量，set设置变量等。通过当前线程，获取线程上的ThreadLocalMap属性，对数据进行get、set等操作。</p>
+<p>ThreadLocalMap，用来存储数据，采用类似hashmap机制，存储了以threadLocal为key，需要隔离的数据为value的Entry键值对数组结构。</p>
+<p>ThreadLocal，有个ThreadLocalMap类型的属性，存储的数据就放在这儿。</p>
+<h2 id="ThreadLocal、ThreadLocal、Thread之间的关系"><a href="#ThreadLocal、ThreadLocal、Thread之间的关系" class="headerlink" title="ThreadLocal、ThreadLocal、Thread之间的关系"></a>ThreadLocal、ThreadLocal、Thread之间的关系</h2><p>ThreadLocalMap是ThreadLocal内部类，由ThreadLocal创建，Thread有ThreadLocal.ThreadLocalMap类型的属性</p>
+<h2 id="ThreadLocalMap简介"><a href="#ThreadLocalMap简介" class="headerlink" title="ThreadLocalMap简介"></a>ThreadLocalMap简介</h2><p>看名字就知道是个map，没错，这就是个hashMap机制实现的map，用Entry数组来存储键值对，key是ThreadLocal对象，value则是具体的值。值得一提的是，为了方便GC，Entry继承了WeakReference，也就是弱引用。里面有一些具体关于如何清理过期的数据、扩容等机制，思路基本和hashmap差不多，有兴趣的可以自行阅读了解，这边只需知道大概的数据存储结构即可。</p>
+<h2 id="Thread同步机制的比较"><a href="#Thread同步机制的比较" class="headerlink" title="Thread同步机制的比较"></a>Thread同步机制的比较</h2><p>ThreadLocal和线程同步机制相比有什么优势呢？</p>
+<p>Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。</p>
+<p>在同步机制中，通过对象的锁机制保证同一时间只有一个线程访问变量。这时该变量是多个线程共享的，使用同步机制要求程序慎密地分析什么时候对变量进行读写，什么时候需要锁定某个对象，什么时候释放对象锁等繁杂的问题，程序设计和编写难度相对较大。</p>
+<p>而ThreadLocal则从另一个角度来解决多线程的并发访问。ThreadLocal会为每一个线程提供一个独立的变量副本，从而隔离了多个线程对数据的访问冲突。因为每一个线程都拥有自己的变量副本，从而也就没有必要对该变量进行同步了。ThreadLocal提供了线程安全的共享对象，在编写多线程代码时，可以把不安全的变量封装进ThreadLocal。</p>
+<p>概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。</p>
+<p>Spring使用ThreadLocal解决线程安全问题我们知道在一般情况下，只有无状态的Bean才可以在多线程环境下共享，在Spring中，绝大部分Bean都可以声明为singleton作用域。就是因为Spring对一些Bean（如RequestContextHolder、TransactionSynchronizationManager、LocaleContextHolder等）中非线程安全状态采用ThreadLocal进行处理，让它们也成为线程安全的状态，因为有状态的Bean就可以在多线程中共享了。</p>
+<p>一般的Web应用划分为展现层、服务层和持久层三个层次，在不同的层中编写对应的逻辑，下层通过接口向上层开放功能调用。在一般情况下，从接收请求到返回响应所经过的所有程序调用都同属于一个线程。</p>
+<p>同一线程贯通三层这样你就可以根据需要，将一些非线程安全的变量以ThreadLocal存放，在同一次请求响应的调用线程中，所有关联的对象引用到的都是同一个变量。</p>
+<p>下面的实例能够体现Spring对有状态Bean的改造思路：</p>
+<p>TestDao：非线程安全</p>
+<p>public class TestDao {<br>    private Connection conn;// ①一个非线程安全的变量</p>
+<pre><code>public void addTopic() throws SQLException &#123;
+    Statement stat = conn.createStatement();// ②引用非线程安全变量
+    // …
+&#125;</code></pre>
+<p>由于conn是成员变量，因为addTopic()方法是非线程安全的，必须在使用时创建一个新TopicDao实例（非singleton）。下面使用ThreadLocal对conn这个非线程安全的“状态”进行改造：</p>
+<p>TestDao：线程安全</p>
+<p>public class TestDaoNew {// ①使用ThreadLocal保存Connection变量<br>  private static ThreadLocal<Connection> connThreadLocal = ThreadLocal.withInitial(Test::createConnection);</p>
+<p>  // 具体创建数据库连接的方法<br>  private static Connection createConnection() {<br>    Connection result = null;<br>    /**<br>     * create a real connection…<br>     * such as :<br>     * result = DriverManager.getConnection(dbUrl, dbUser, dbPwd);<br>     */<br>    return result;<br>  }</p>
+<p>  // ③直接返回线程本地变量<br>  public static Connection getConnection() {<br>    return connThreadLocal.get();<br>  }</p>
+<p>  // 具体操作<br>  public void addTopic() throws SQLException {<br>    // ④从ThreadLocal中获取线程对应的Connection<br>    Statement stat = getConnection().createStatement();<br>    //….any other operation<br>  }<br>}</p>
+<p>不同的线程在使用TopicDao时，根据之前的深挖get具体操作，判断connThreadLocal.get()会去判断是有map，没有则根据initivalValue创建一个Connection对象并添加到本地线程变量中，initivalValue对应的值也就是上述的lamba表达式对应的创建connection的方法返回的结果，下次get则由于已经有了，则会直接获取已经创建好的Connection，这样，就保证了不同的线程使用线程相关的Connection，而不会使用其它线程的Connection。因此，这个TopicDao就可以做到singleton共享了。</p>
+<p>当然，这个例子本身很粗糙，将Connection的ThreadLocal直接放在DAO只能做到本DAO的多个方法共享Connection时不发生线程安全问题，但无法和其它DAO共用同一个Connection，要做到同一事务多DAO共享同一Connection，必须在一个共同的外部类使用ThreadLocal保存Connection。</p>
+<p>ConnectionManager.java</p>
+<p>public class ConnectionManager {</p>
+<pre><code>private static ThreadLocal&lt;Connection&gt; connectionHolder = ThreadLocal.withInitial(() -&gt; &#123;
+    Connection conn = null;
+    try &#123;
+        conn = DriverManager.getConnection(
+                &quot;jdbc:mysql://localhost:3306/test&quot;, &quot;username&quot;,
+                &quot;password&quot;);
+    &#125; catch (SQLException e) &#123;
+        e.printStackTrace();
+    &#125;
+    return conn;
+&#125;);
+
+public static Connection getConnection() &#123;
+    return connectionHolder.get();
+&#125;</code></pre>
+<p>}</p>
+<h2 id="线程隔离的秘密"><a href="#线程隔离的秘密" class="headerlink" title="线程隔离的秘密"></a>线程隔离的秘密</h2><p>秘密就就在于上述叙述的ThreadLocalMap这个类。ThreadLocalMap是ThreadLocal类的一个静态内部类，它实现了键值对的设置和获取（对比Map对象来理解），每个线程中都有一个独立的ThreadLocalMap副本，它所存储的值，只能被当前线程读取和修改。ThreadLocal类通过操作每一个线程特有的ThreadLocalMap副本，从而实现了变量访问在不同线程中的隔离。因为每个线程的变量都是自己特有的，完全不会有并发错误。还有一点就是，ThreadLocalMap存储的键值对中的键是this对象指向的ThreadLocal对象，而值就是你所设置的对象了。</p>
+<p>为了加深理解，我们接着看上面代码中出现的getMap和createMap方法的实现：</p>
+<pre><code>/**
+ * Get the map associated with a ThreadLocal. Overridden in
+ * InheritableThreadLocal.
+ *
+ * @param  t the current thread
+ * @return the map
+ */
+ThreadLocalMap getMap(Thread t) &#123;
+    return t.threadLocals;
+&#125;
+
+/**
+ * Create the map associated with a ThreadLocal. Overridden in
+ * InheritableThreadLocal.
+ *
+ * @param t the current thread
+ * @param firstValue value for the initial entry of the map
+ * @param map the map to store.
+ */
+void createMap(Thread t, T firstValue) &#123;
+    t.threadLocals = new ThreadLocalMap(this, firstValue);
+&#125;</code></pre>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>ThreadLocal是解决线程安全问题一个很好的思路，它通过为每个线程提供一个独立的变量副本解决了变量并发访问的冲突问题。在很多情况下，ThreadLocal比直接使用synchronized同步机制解决线程安全问题更简单，更方便，且结果程序拥有更高的并发性。</p>
+]]></content>
+      <categories>
+        <category>多线程</category>
+      </categories>
+      <tags>
+        <tag>彻底理解ThreadLocal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多路复用技术 epoll 分析</title>
     <url>/2020/08/20/%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<pre><code> ## 多路复用技术 epoll 分析  </code></pre>
@@ -616,17 +823,40 @@ docker save project:0.0.1&gt;~/xxx.tar
       </tags>
   </entry>
   <entry>
-    <title>常见开源产品epoll网络事件模型汇总</title>
-    <url>/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="常用模型总结："><a href="#常用模型总结：" class="headerlink" title="常用模型总结："></a>常用模型总结：</h2><p>1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis<br>2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知 + n线程(处理) 模型…………代表产品thrift-nonblocking-server<br>2）epoll 1线程(listen+accept+epoll_wait) + n队列通知 + n线程(处理) 模型…………代表产品memcached<br>4）epoll 1进程(listen) + n进程(accept+epoll_wait+处理) 模型………………………….代表产品nginx<br>5）epoll 1线程(listen) + n线程(accept+epoll_wait+处理) 模型<br>6)  epoll 1线程(listen+accept) + n线程(epoll_wait+处理) 模型</p>
-<h2 id="常用模型汇总："><a href="#常用模型汇总：" class="headerlink" title="常用模型汇总："></a>常用模型汇总：</h2><p><img src="https://lixinx11.github.io/medias/bigdata/10.png" alt="常用模型汇总"></p>
-<h2 id="常用模型对比："><a href="#常用模型对比：" class="headerlink" title="常用模型对比："></a>常用模型对比：</h2><p>  <img src="https://lixinx11.github.io/medias/bigdata/11.png" alt="常用模型对比"></p>
+    <title>sklearn函数汇总</title>
+    <url>/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p><strong>sklearn函数汇总</strong><br>9/6/2020 11:45:01 AM </p>
+<ol>
+<li>拆分数据集为训练集和测试集：</li>
+</ol>
+<p>from sklearn.model_selection import train_test_split<br>x_train, x_test, y_train, y_test =<br>train_test_split(x, y, test_size = 0.2,random_state=3,shuffle=False)</p>
+<h1 id="test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个"><a href="#test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个" class="headerlink" title="test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个"></a>test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个</h1><p>  random_state代表随即种子编号，默认为None<br>  shuffle代表是否进行有放回抽样</p>
+<h2 id="2-数据预处理"><a href="#2-数据预处理" class="headerlink" title="2. 数据预处理"></a>2. 数据预处理</h2><h3 id="2-1-标准化："><a href="#2-1-标准化：" class="headerlink" title="2.1 标准化："></a>2.1 标准化：</h3><p>from sklearn.preprocessing import StandardScaler<br>scaler = StandardScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-2-区间缩放："><a href="#2-2-区间缩放：" class="headerlink" title="2.2 区间缩放："></a>2.2 区间缩放：</h3><p>from sklearn.preprocessing import MinMaxScaler<br>scaler = MinMaxScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-3-归一化："><a href="#2-3-归一化：" class="headerlink" title="2.3 归一化："></a>2.3 归一化：</h3><p>from sklearn.preprocessing import Normalizer<br>scaler = Normalizer().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"><a href="#2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0" class="headerlink" title="2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"></a>2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0</h3><p>from sklearn.preprocessing import Binarizer<br>scaler = Binarizer(threshold=3).fit(x_train) # threshold为设定的阀值<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-5-哑编码处理："><a href="#2-5-哑编码处理：" class="headerlink" title="2.5 哑编码处理："></a>2.5 哑编码处理：</h3><p>from sklearn.preprocessing import OneHotEncoder<br>scaler = OneHotEncoder().fit(x_train.reshape((-1,1)))<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-6-自定义函数变换"><a href="#2-6-自定义函数变换" class="headerlink" title="2.6 自定义函数变换"></a>2.6 自定义函数变换</h3><p>from numpy import log1p  # 使用对数函数转换<br>from sklearn.preprocessing import FunctionTransformer<br>scaler = FunctionTransformer(log1p).fit(x_train)<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-7-PCA降维："><a href="#2-7-PCA降维：" class="headerlink" title="2.7 PCA降维："></a>2.7 PCA降维：</h3><p>from sklearn.decomposition import PCA<br>pca = PCA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainPca = pca.transform(x_train) # 将规则应用于训练集<br>x_testPca = pca.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-8-LDA降维："><a href="#2-8-LDA降维：" class="headerlink" title="2.8 LDA降维："></a>2.8 LDA降维：</h3><p>from sklearn.lda import LDA<br>lda = LDA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainLda = lda.transform(x_train) # 将规则应用于训练集<br>x_testLda = lda.transform(x_test)  # 将规则应用于测试集</p>
+<h2 id="3-特征筛选"><a href="#3-特征筛选" class="headerlink" title="3. 特征筛选"></a>3. 特征筛选</h2><h3 id="3-1-Filter法："><a href="#3-1-Filter法：" class="headerlink" title="3.1 Filter法："></a>3.1 Filter法：</h3><p>from sklearn.feature_selection import SelectKBest, f_classif<br>selector = SelectKBest(f_classif, k=4) – 用f_classif方法，设定数目为4<br>a=selector.fit(x,y)<br>print(np.array(a.scores_),’\n’,a.get_support())  –  输出得分及选择的结果</p>
+<h3 id="3-2-Wrapper法（递归法）："><a href="#3-2-Wrapper法（递归法）：" class="headerlink" title="3.2 Wrapper法（递归法）："></a>3.2 Wrapper法（递归法）：</h3><p>from sklearn.linear_model import LinearRegression –导入基模型<br>from sklearn.feature_selection import RFE  – 导入RFE模块<br>model1 = LinearRegression()   – 建立一个线性模型<br>rfe = RFE(model1,4)           – 进行多轮训练，设置筛选特征数目为4个<br>rfe = rfe.fit(x,y)            – 模型的拟合训练<br>print(rfe.support_)           – 输出特征的选择结果<br>print(rfe.ranking_)           – 特征的选择排名</p>
+<h2 id="4-构建模型"><a href="#4-构建模型" class="headerlink" title="4.构建模型"></a>4.构建模型</h2><h3 id="4-1决策树模型"><a href="#4-1决策树模型" class="headerlink" title="4.1决策树模型"></a>4.1决策树模型</h3><p>决策树优点：</p>
+<p>便于理解和解释。树的结构可以可视化出来。<br>训练需要的数据少，对异常值和缺失值不敏感。<br>能够处理数值型数据和分类数据。<br>决策树缺点：</p>
+<p>容易产生一个过于复杂的模型，使模型产生过拟合的问题。<br>决策树可能是不稳定的，因为数据中的微小变化可能会导致完全不同的树生成。<br>from sklearn.tree import DecisionTreeClassifier<br>clf = DecisionTreeClassifier(criterion=’gini’, –设置衡量的系数,有entropy和gini，默认gini<br>                               splitter=’best’, –选择分类的策略，best和random，默认best<br>                               max_depth=5, –设置树的最大深度<br>                               min_samples_split=10,– 区分一个内部节点需要的最少的样本数<br>                               min_samples_leaf=5 – 一个叶节点所需要的最小样本数<br>                               max_features=5 –最大特征数<br>                               max_leaf_nodes=3–最大样本节点个数<br>                               min_impurity_split –指定信息增益的阀值<br>                               )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
+<h3 id="4-2-逻辑回归模型"><a href="#4-2-逻辑回归模型" class="headerlink" title="4.2 逻辑回归模型"></a>4.2 逻辑回归模型</h3><p>优点：实现简单，易于理解和实现；计算代价不高，速度很快，存储资源低。</p>
+<p>缺点：容易欠拟合，分类精度可能不高。对异常值和缺失值敏感</p>
+<p>from sklearn.linear_model import LogisticRegression<br>clf = LogisticRegression(penalty=’l2’, –惩罚项（l1与l2），默认l2<br>                         dual=False, –对偶或原始方法，默认False，样本数量&gt;样本特征的时候，dual通常设置为False<br>                         tol=0.0001, –停止求解的标准，float类型，默认为1e-4。就是求解到多少的时候，停止，认为已经求出最优解<br>                         C=1.0, –正则化系数λ的倒数，float类型，默认为1.0，越小的数值表示越强的正则化。<br>                         fit_intercept=True, –是否存在截距或偏差，bool类型，默认为True。<br>                         intercept_scaling=1, –仅在正则化项为”liblinear”，且fit_intercept设置为True时有用。float类型，默认为1<br>                         class_weight=None, –用于标示分类模型中各种类型的权重，默认为不输入，也就是不考虑权重，即为None<br>                         random_state=None, –随机数种子，int类型，可选参数，默认为无<br>                         solver=’liblinear’, –优化算法选择参数，只有五个可选参数，即newton-cg,lbfgs,liblinear,sag,saga。默认为liblinear<br>                         max_iter=10, –算法收敛最大迭代次数，int类型，默认为10。<br>                         multi_class=’ovr’–分类方式选择参数，str类型，可选参数为ovr和multinomial，默认为ovr。<br>                                          如果是二元逻辑回归，ovr和multinomial并没有任何区别，区别主要在多元逻辑回归上。<br>                         verbose=0, –日志冗长度，int类型。默认为0。就是不输出训练过程<br>                         warm_start=False, –热启动参数，bool类型。默认为False。<br>                         n_jobs=1–并行数。int类型，默认为1。1的时候，用CPU的一个内核运行程序，2的时候，用CPU的2个内核运行程序。<br>                        )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
+<h3 id="4-3-线性回归模型"><a href="#4-3-线性回归模型" class="headerlink" title="4.3 线性回归模型"></a>4.3 线性回归模型</h3><p>优点：实现简单，可解释性强。</p>
+<p>缺点：容易出现欠拟合，对异常值和缺失值比较敏感。</p>
+<p>from sklearn.linear_model import LinearRegression()<br>clf = LinearRegression(copy_X=True,<br>                       fit_intercept=True,<br>                       n_jobs=1,<br>                       normalize=False)<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
+<h3 id="4-4-K-means聚类"><a href="#4-4-K-means聚类" class="headerlink" title="4.4 K-means聚类"></a>4.4 K-means聚类</h3><p>from sklearn.cluster import KMeans<br>clf = KMeans(n_clusters=4, –给定的类别数<br>             max_iter=100,–为迭代的次数，这里设置最大迭代次数为300<br>             n_init=10,–设为10意味着进行10次随机初始化，选择效果最好的一种来作为模型<br>             copy_x=True–布尔型，默认值=True,如果把此参数值设为True，则原始数据不会被改变。如果是False，则会直接在原始数据<br>                        上做修改并在函数返回值时将其还原。<br>             )<br>clf= clf.fit(x)  – 拟合训练</p>
 ]]></content>
       <categories>
-        <category>epoll</category>
+        <category>AI</category>
       </categories>
       <tags>
-        <tag>epoll网络事件模型分析</tag>
+        <tag>sklearn函数汇总</tag>
       </tags>
   </entry>
   <entry>
@@ -639,6 +869,25 @@ docker save project:0.0.1&gt;~/xxx.tar
       </categories>
       <tags>
         <tag>大数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微服务架构</title>
+    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>常见开源产品epoll网络事件模型汇总</title>
+    <url>/2020/08/21/%E5%B8%B8%E8%A7%81%E5%BC%80%E6%BA%90%E4%BA%A7%E5%93%81epoll%E7%BD%91%E7%BB%9C%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="常用模型总结："><a href="#常用模型总结：" class="headerlink" title="常用模型总结："></a>常用模型总结：</h2><p>1）epoll 1线程(listen+accept+epoll_wait+处理) 模型 …………………………………….代表产品redis<br>2）epoll 1线程(listen+accept+epoll_wait) + 1队列通知 + n线程(处理) 模型…………代表产品thrift-nonblocking-server<br>2）epoll 1线程(listen+accept+epoll_wait) + n队列通知 + n线程(处理) 模型…………代表产品memcached<br>4）epoll 1进程(listen) + n进程(accept+epoll_wait+处理) 模型………………………….代表产品nginx<br>5）epoll 1线程(listen) + n线程(accept+epoll_wait+处理) 模型<br>6)  epoll 1线程(listen+accept) + n线程(epoll_wait+处理) 模型</p>
+<h2 id="常用模型汇总："><a href="#常用模型汇总：" class="headerlink" title="常用模型汇总："></a>常用模型汇总：</h2><p><img src="https://lixinx11.github.io/medias/bigdata/10.png" alt="常用模型汇总"></p>
+<h2 id="常用模型对比："><a href="#常用模型对比：" class="headerlink" title="常用模型对比："></a>常用模型对比：</h2><p>  <img src="https://lixinx11.github.io/medias/bigdata/11.png" alt="常用模型对比"></p>
+]]></content>
+      <categories>
+        <category>epoll</category>
+      </categories>
+      <tags>
+        <tag>epoll网络事件模型分析</tag>
       </tags>
   </entry>
   <entry>
@@ -697,47 +946,17 @@ docker save project:0.0.1&gt;~/xxx.tar
       </tags>
   </entry>
   <entry>
-    <title>技术选型</title>
-    <url>/2020/09/01/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/</url>
-    <content><![CDATA[<p>categories:  #分类<br>    -  技术选型</p>
-<pre><code>命令行工具：iTerm2
-浏览器：Chrome
-虚拟机：VirtualBox
-MySQL 数据库查询工具：Sequel-Ace
-Redis 管理工具：RDM
-MongoDB 管理工具：MongoDB
-设计工具：Sketch 3
-视频播放：MPlayerX
-@todo zsh 的配置信息统一，Alias 等信息。</code></pre>
-]]></content>
-      <tags>
-        <tag>技术选型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微服务架构</title>
-    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>拼多多的晋升之道</title>
-    <url>/2019/11/22/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/</url>
-    <content><![CDATA[<p>成立于2015年的拼多多，在一切人都以为电商的格局曾经尘埃落定的时候，再次证实了增加的机遇首先来自看待增加的视角。那么它迸发性增加的势能在哪儿呢？它是如何完成为了迸发增加？<br>拼多多迸发式增加的三个势能</p>
-<h2 id="势能1：错位竞争，弯道超车"><a href="#势能1：错位竞争，弯道超车" class="headerlink" title="势能1：错位竞争，弯道超车"></a>势能1：错位竞争，弯道超车</h2><p>拼多多的第一个势能是捉住了三四线乃至五六线都会迸发增加的触网用户，并胜利引入了这些流量。</p>
-<p>近几年中国市场一直在提“花费进级”这一观点，原有互联网巨擘都在结构花费进级后的佳构电商，例如网易严选、盒马鲜生、天猫小店、生活选集等。花费进级的提出、佳构电商的结构，与拼多多成立和疾速发展的时间段高度重合。拼多多反其道行之，锁定了三线到六线都会，锁定了价钱敏感用户，它的电商价值定位就和阿里巴巴、京东形成为了巨大差异，进入当时的“战略无人区”。</p>
-<p>拼多多经由过程接手降级市场，错位竞争，完成为了弯道超车。</p>
-<h2 id="势能2：交际与电商的交融"><a href="#势能2：交际与电商的交融" class="headerlink" title="势能2：交际与电商的交融"></a>势能2：交际与电商的交融</h2><p>拼多多的第二个势能就在于交融了“交际”与“电商”的功能。这是阿里巴巴和腾讯两家超等巨擘都没有完成的交融。</p>
-<p>拼多多经由过程低价产物刺激用户在上分享和流传，想要超等优惠的价钱，用户就要主动发起拼团，只要激活一个用户，用户周边尤其是上的朋友、家人、邻居都有可能被覆盖。最终，成为拼多多的流量入口，拼多多将电子商务胜利融入交际平台。</p>
-<p>咱们能够看到，拼多多的增加迸发线是树立在用户干系的指数性激活和购买裂变上。传统期间的营业基本上是B2C营业，即企业面临花费者，进行推广流传、渠道构建与销售活动，而数字期间最大的特点是花费者自身便是互联体，假如能充分激活用户干系资产，这个算法模型就从B2C变成为了B2C2C，也便是企业到花费者到花费者，这样一个n次方形式，C的n次方便是用户的指数裂变。</p>
-<p>有了用户和定单，使得拼多多对上游具备更强的议价能力，拼多多直接与制造商、品牌商合作，为花费者带来低成本的商品，形成增加的良性循环。</p>
-<h2 id="势能3：告白轰炸"><a href="#势能3：告白轰炸" class="headerlink" title="势能3：告白轰炸"></a>势能3：告白轰炸</h2><p>第三个势能是利用告白的集中轰炸，敏捷晋升拼多多在目标市场上的知名度和被信任度。</p>
-<p>为巩固其流量优势和品牌知名度，拼多多自 2016年10月起在一线和二线都会推出了大批线下告白。经由过程赞助综艺节目，拼多多敏捷拓展了在三线到六线都会的知名度和被信任度，吸引了大批精准花费人群。</p>
+    <title>技术趋势</title>
+    <url>/2020/09/04/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</url>
+    <content><![CDATA[<pre><code>                           #  新冠肺炎后五大技术争夺战</code></pre>
+<p>   技术正在以惊人的速度发展，为现代企业、竞争对手和整个行业定义下一个前沿领域。普华永道(PWC)最近进行的一项题为“驾驭不确定性浪潮——第23届全球CEO年度调查”的调查显示，69%的CEO对科技变革的速度感到担忧，难以跟上科技变革的步伐。只有27%的受访者承认他们对2020年的收入增长前景非常有信心，这是自2009年经济衰退以来的最低水平。<br>　　技术将发挥决定性的作用，因为各国制定了在COVID-19之后的复苏计划。突破性的技术研发将形成创新的中坚力量。展望未来，以下是前5大技术，它们将争夺后COVID-19的霸主地位，并创造潜在的投资机会和快速的商业利益。</p>
+<h2 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h2><p>　　多年来，人工智能一直是最受争议和最受欢迎的技术，被吹捧为下一个重大技术。由COVID-19病毒引起的技术变革可能意味着人工智能的骄傲时刻终于到来了。<br>　　在寻求业务连续性规划的过程中，企业需要将更多数据集中在云上，从而推动人工智能的发展。从更精确的预测算法到RPA——人工智能的能力是不可思议的。人工智能优势的另一个机会来自远程工作的增加。在组织机构艰难应对招回员工的挑战之际，它们可能更愿意接受基于人工智能的过程自动化软件来处理日常和基于规则的任务。<br>##　　物联网<br>　　物联网(IoT)以及其他颠覆性技术，如云和人工智能，可能会在COVID-19恢复后成为游戏规则的改变者。根据麻省理工学院研究人员的一项研究，物联网技术及其连接的传感器有助于监测高危患者，从而减轻感染性传播的关键来源。<br>　　连接的传感器还可以帮助自动化某些过程，并将人类执行每项活动的需要降到最低，用例包括监视、监视和预测性维护。<br>##　　云计算<br>　　云计算是一项不容忽视的技术。随着企业数字化和员工在家工作，云服务器呈现服务器，与合作伙伴和客户协作。<br>　　许多企业正在借助云技术迅速扭转颓势，以极快的速度调整和改造其运营。想想基督教青年会(YMCA)、星球健身中心(PlanetFitness)和耐克(Nike)，它们提供的服务包括在线健身课程。学校和大学正在提供在线学习，而OTT内容的需求已经急剧上升，这要归功于云。在线杂货零售商也看到了新的业务增长，这一切都要归功于云基础设施。<br>　　每一个企业都在寻找云——公共的、私有的和混合的云——来重新设想其运营，并使协作达到前所未有的规模。<br>##　　区块链<br>　　COVID-19危机使全球供应链陷入混乱，制造业的未来也面临严重问题。区块链和透明账本对经济复苏和经济活动恢复至关重要。这种大范围的挑战为区块链的整合提供了机会，区块链有能力改变供应链的未来。<br>　　为了重建被破坏的网络，信任和验证信息的能力将是必不可少的。区块链技术提供了构建块，可为贸易合作伙伴和消费者提供受信任和受保护数据的透明性，并通过共同商定的规则集同步流程。对于那些因大流行而导致供应链中断的企业而言，这种潜力特别具有吸引力。<br>##　　机器人学<br>　　在COVID-19之后，机器人将成为企业的面孔，主要是为了减轻员工的危险任务;并实现快速的生产时间表和低成本。为了应对当前的危机，这些“机器助手”将加入执行董事会。<br>　　如果企业领袖积极投资于正确的技术，那么从宏观层面来看，这可能是他们产品和经济增长的关键时刻。<br>　　COVID-19对世界经济的影响虽然是暂时的，但稳定和长期改善的基本面受到了冲击和挑战。技术带来的机遇是巨大的，只有采取灵活和开放的方法，企业才能取得成功，而这样做的人从长远来看肯定会得到好处。</p>
 ]]></content>
       <categories>
-        <category>产品</category>
+        <category>技术趋势</category>
       </categories>
       <tags>
-        <tag>拼多多的晋升之道</tag>
+        <tag>技术趋势</tag>
       </tags>
   </entry>
   <entry>
@@ -785,18 +1004,6 @@ MongoDB 管理工具：MongoDB
       </tags>
   </entry>
   <entry>
-    <title>机器学习+深度学习+人工智能之间的关系</title>
-    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>最好用的自动化测试工具</title>
     <url>/2019/07/23/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<h2 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h2><p>WebUI自动化测试</p>
@@ -833,6 +1040,169 @@ MongoDB 管理工具：MongoDB
       </categories>
       <tags>
         <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习+深度学习+人工智能之间的关系</title>
+    <url>/2018/08/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<h2 id="机器学习-深度学习-人工智能之间的关系"><a href="#机器学习-深度学习-人工智能之间的关系" class="headerlink" title="机器学习+深度学习+人工智能之间的关系"></a>机器学习+深度学习+人工智能之间的关系</h2><p><img src="https://lixinx11.github.io/medias/bigdata/2.png" alt="机器学习+深度学习+人工智能之间的关系"></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习知识点</title>
+    <url>/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h2 id="Python——用于训练机器学习算法的编程语言。"><a href="#Python——用于训练机器学习算法的编程语言。" class="headerlink" title="Python——用于训练机器学习算法的编程语言。"></a>Python——用于训练机器学习算法的编程语言。</h2><p>确保你知道这门语言提供了哪些功能。除了 Python，我还建议你学习另外一门语言。如果要使用嵌入式平台，请选择 C++。如果要在企业环境中使用机器学习模型，请选择 Java。如果你想进行数据分析，请学习 R 语言。最后，如果你喜欢经典的 AI 算法和自然语言处理，请学习 Lisp。</p>
+<h2 id="TensorFlow-Pytorch——深度学习正在蓬勃发展。"><a href="#TensorFlow-Pytorch——深度学习正在蓬勃发展。" class="headerlink" title="TensorFlow/Pytorch——深度学习正在蓬勃发展。"></a>TensorFlow/Pytorch——深度学习正在蓬勃发展。</h2><p>市场上有两个深度学习框架，但哪些项目应该使用哪个框架，它们之前的区别是非常不一样的。首先，需要注意的是，TensorFlow 通常在部署环境中更易于使用，而 Pytorch 在实验环境中更易于使用。最近，TensorFlow 试图让实验变得更容易，而 Pytorch 则致力于实现更容易的部署（即使在嵌入式硬件上）。如果你想要担当更多研究角色，我会推荐 Pytorch。如果你想要在一家主要在生产环境中更新模型的公司工作，我会推荐学习 TensorFlow。总体上讲，全面学习一个框架要比半途学习两个框架要好，尤其要考虑它们演化的速度。</p>
+<h2 id="Scikit-learn——scikit-learn"><a href="#Scikit-learn——scikit-learn" class="headerlink" title="Scikit-learn——scikit-learn"></a>Scikit-learn——scikit-learn</h2><p>包含了大多数经典的机器学习算法。掌握它可以让你快速解决很多小的数据问题。如果你知道这个库的算法原理，那么在技术面试过程中就有领先优势。</p>
+<h2 id="NumPy-和-Pandas"><a href="#NumPy-和-Pandas" class="headerlink" title="NumPy 和 Pandas"></a>NumPy 和 Pandas</h2><p> ——在使用 Python 处理数据时，有效且准确地选择数据是非常重要的。大多数机器学习工程师每天都使用 NumPy 进行基本的数据处理。如果你有更高级的选择标准，可以考虑 Pandas！只需要用几行代码（并且没有那些令人讨厌的 for 慢循环）选择特定的数据样本就可以给未来的同事留下深刻的印象。</p>
+<h2 id="Apache-Spark"><a href="#Apache-Spark" class="headerlink" title="Apache Spark"></a>Apache Spark</h2><p>——拥有大量数据的公司将从机器学习中受益。处理大数据非常重要，Spark 将大大加快你的开发工作。请注意，在处理大数据时，了解 Hadoop 可能也很有帮助。</p>
+<h2 id="OpenCV"><a href="#OpenCV" class="headerlink" title="OpenCV"></a>OpenCV</h2><p>——如果你想要使用计算机视觉学习，掌握 OpenCV 就至关重要。它提供了很多图像处理功能，可用于快速组建原型，或以更好的方式预处理图像。它还提供了很多识别、检测或定位物体的功能。</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>机器学习知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拼多多的晋升之道</title>
+    <url>/2019/11/22/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/</url>
+    <content><![CDATA[<p>成立于2015年的拼多多，在一切人都以为电商的格局曾经尘埃落定的时候，再次证实了增加的机遇首先来自看待增加的视角。那么它迸发性增加的势能在哪儿呢？它是如何完成为了迸发增加？<br>拼多多迸发式增加的三个势能</p>
+<h2 id="势能1：错位竞争，弯道超车"><a href="#势能1：错位竞争，弯道超车" class="headerlink" title="势能1：错位竞争，弯道超车"></a>势能1：错位竞争，弯道超车</h2><p>拼多多的第一个势能是捉住了三四线乃至五六线都会迸发增加的触网用户，并胜利引入了这些流量。</p>
+<p>近几年中国市场一直在提“花费进级”这一观点，原有互联网巨擘都在结构花费进级后的佳构电商，例如网易严选、盒马鲜生、天猫小店、生活选集等。花费进级的提出、佳构电商的结构，与拼多多成立和疾速发展的时间段高度重合。拼多多反其道行之，锁定了三线到六线都会，锁定了价钱敏感用户，它的电商价值定位就和阿里巴巴、京东形成为了巨大差异，进入当时的“战略无人区”。</p>
+<p>拼多多经由过程接手降级市场，错位竞争，完成为了弯道超车。</p>
+<h2 id="势能2：交际与电商的交融"><a href="#势能2：交际与电商的交融" class="headerlink" title="势能2：交际与电商的交融"></a>势能2：交际与电商的交融</h2><p>拼多多的第二个势能就在于交融了“交际”与“电商”的功能。这是阿里巴巴和腾讯两家超等巨擘都没有完成的交融。</p>
+<p>拼多多经由过程低价产物刺激用户在上分享和流传，想要超等优惠的价钱，用户就要主动发起拼团，只要激活一个用户，用户周边尤其是上的朋友、家人、邻居都有可能被覆盖。最终，成为拼多多的流量入口，拼多多将电子商务胜利融入交际平台。</p>
+<p>咱们能够看到，拼多多的增加迸发线是树立在用户干系的指数性激活和购买裂变上。传统期间的营业基本上是B2C营业，即企业面临花费者，进行推广流传、渠道构建与销售活动，而数字期间最大的特点是花费者自身便是互联体，假如能充分激活用户干系资产，这个算法模型就从B2C变成为了B2C2C，也便是企业到花费者到花费者，这样一个n次方形式，C的n次方便是用户的指数裂变。</p>
+<p>有了用户和定单，使得拼多多对上游具备更强的议价能力，拼多多直接与制造商、品牌商合作，为花费者带来低成本的商品，形成增加的良性循环。</p>
+<h2 id="势能3：告白轰炸"><a href="#势能3：告白轰炸" class="headerlink" title="势能3：告白轰炸"></a>势能3：告白轰炸</h2><p>第三个势能是利用告白的集中轰炸，敏捷晋升拼多多在目标市场上的知名度和被信任度。</p>
+<p>为巩固其流量优势和品牌知名度，拼多多自 2016年10月起在一线和二线都会推出了大批线下告白。经由过程赞助综艺节目，拼多多敏捷拓展了在三线到六线都会的知名度和被信任度，吸引了大批精准花费人群。</p>
+]]></content>
+      <categories>
+        <category>产品</category>
+      </categories>
+      <tags>
+        <tag>拼多多的晋升之道</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自反性</title>
+    <url>/2020/10/03/%E8%87%AA%E5%8F%8D%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="设A-1，2，3，4-，下列几个是A-上的二元关系。"><a href="#设A-1，2，3，4-，下列几个是A-上的二元关系。" class="headerlink" title="设A={1，2，3，4}，下列几个是A 上的二元关系。"></a>设A={1，2，3，4}，下列几个是A 上的二元关系。</h1><p>R1={&lt;1，1&gt;，&lt;1，2&gt;，&lt;2，1&gt;，&lt;2，2&gt;，&lt;3，4&gt;，&lt;4，1&gt;，&lt;4，4&gt;}；<br>R2={&lt;1，1&gt;，&lt;1，2&gt;，&lt;2，1&gt;}；<br>R3={&lt;1，1&gt;，&lt;1，2&gt;，&lt;1，4&gt;，&lt;2，1&gt;，&lt;2，2&gt;，&lt;3，3&gt;，&lt;4，1&gt;，&lt;4，4&gt;}；<br>R4={&lt;2，1&gt;，&lt;3，1&gt;，&lt;3，2&gt;，&lt;4，1&gt;，&lt;4，2&gt;，&lt;4，3&gt;}；<br>R5=(&lt;1，1&gt;，&lt;1，2&gt;，&lt;1，3&gt;，&lt;1，4&gt;，&lt;2，2&gt;，&lt;2，3&gt;，&lt;2，4&gt;，&lt;3，3&gt;，&lt;3，4&gt;，&lt;4，4&gt;}；<br>R6={&lt;3，4&gt;}。<br>其中，哪些是自反关系? 哪些是反自反关系?<br>解: 关系R3，R5是自反的，因为它包括所有形如&lt;a，a&gt;的序对。关系R4，R6是反自反的，因为它不包括任何形如&lt;a，a&gt;的序对。而关系R1，R2既不是自反的，也不是反自反的。<br>因为R1中包含&lt;1，1&gt;，&lt;2，2&gt;，&lt;4，4&gt;，但不包含&lt;3，3&gt;；R2中包含&lt;1，1&gt;.但不包含&lt;2，2&gt;，&lt;3，3&gt;，&lt;4，4&gt;。<br>自反性和反自反性可以在关系图和关系矩阵上非常直观地反映出来。</p>
+]]></content>
+      <categories>
+        <category>数学算法</category>
+      </categories>
+      <tags>
+        <tag>数学算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>技术选型</title>
+    <url>/2020/09/01/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/</url>
+    <content><![CDATA[<p>categories:  #分类<br>    -  技术选型</p>
+<pre><code>命令行工具：iTerm2
+浏览器：Chrome
+虚拟机：VirtualBox
+MySQL 数据库查询工具：Sequel-Ace
+Redis 管理工具：RDM
+MongoDB 管理工具：MongoDB
+设计工具：Sketch 3
+视频播放：MPlayerX
+@todo zsh 的配置信息统一，Alias 等信息。</code></pre>
+]]></content>
+      <tags>
+        <tag>技术选型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>领域驱动设计</title>
+    <url>/2019/11/21/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第一步，统一语言：</p>
+<p>开发人员应该使用基于模型的语言来描述系统中的工件、任务和功能。</p>
+<p>领域专家应该抵制不合适或无法充分表达领域理解的术语或结构，开发人员应该密切关注那些将会妨碍设计的有歧义和不一致的地方。</p>
+<p>有些人天生是视觉动物，图可以帮助人们掌握某些类型的信息。</p>
+<h2 id="分层模式：-Layered-Architecture"><a href="#分层模式：-Layered-Architecture" class="headerlink" title="分层模式： Layered Architecture"></a>分层模式： Layered Architecture</h2><p> <img src="https://lixinx11.github.io/medias/bigdata/6.png" alt="图1"><br> <img src="https://lixinx11.github.io/medias/bigdata/7.png" alt="图2"><br>分层模式</p>
+<p>分层模式例子</p>
+<p>如果一个经验并不丰富的项目团队要完成一个简单的项目，却决定使用MODELDRIVENDESIGN以及LAYEREDARCHITECTURE，那么这个项目组将会经历一个艰难的学习过程。团队成员不得不去掌握复杂的新技术，艰难地学习对象建模。</p>
+<p>entity模式</p>
+<p>领域对象生命周期<br> <img src="https://lixinx11.github.io/medias/bigdata/8.png" alt="图3"><br> <img src="https://lixinx11.github.io/medias/bigdata/9.png" alt="图4"></p>
+]]></content>
+      <categories>
+        <category>领域驱动设计</category>
+      </categories>
+      <tags>
+        <tag>领域驱动设计：软件核心复杂性应对之道</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tidb</title>
+    <url>/2020/11/03/tidb/</url>
+    <content><![CDATA[<h1 id="TiDB-4-0"><a href="#TiDB-4-0" class="headerlink" title="TiDB 4.0"></a>TiDB 4.0</h1><p>TiDB 4.0 兼容mysql5.7版本</p>
+]]></content>
+      <categories>
+        <category>tidb</category>
+      </categories>
+      <tags>
+        <tag>tidb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高并发设计</title>
+    <url>/2017/03/12/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="系统性能两大核心点"><a href="#系统性能两大核心点" class="headerlink" title="系统性能两大核心点"></a>系统性能两大核心点</h2><p>吞吐量（Throughput）<br>响应延迟（Response Delay）<br>优化目标<br>缩短响应时间<br>提供并发数<br>让系统处于合理状态<br>Number of Concurrent Users<br>上图是高并发软件性能模型。图中三条曲线，分别表示：</p>
+<p>资源的利用情况（Utilization，包括硬件资源和软件资源）<br>吞吐量（Throughput，这里是指每秒事务数）<br>响应时间（Response Time）。<br>坐标轴的横轴从左到右表现了并发用户数（Number of Concurrent Users）的不断增长。</p>
+<p>随着并发用户数的增长，资源占用率和吞吐量会相应的增长，但是响应时间的变化不大；不过当并发用户数增长到一定程度后，资源占用达到饱和，吞吐量增长明显放缓甚至停止增长，而响应时间却进一步延长。如果并发用户数继续增长，你会发现软硬件资源占用继续维持在饱和状态，但是吞吐量开始下降，响应时间明显的超出了用户可接受的范围，并且最终导致用户放弃了这次请求甚至离开。</p>
+<p>根据这种性能表现，图中划分了三个区域，分别是</p>
+<p>Light Load（较轻的压力）<br>Heavy Load（较重的压力）<br>Buckle Zone（用户无法忍受并放弃请求）。<br>在Light Load和Heavy Load两个区域交界处的并发用户数，我们称为“最佳并发用户数（The Optimum Number of Concurrent Users）”，而Heavy Load和Buckle Zone两个区域交界处的并发用户数则称为“最大并发用户数（The Maximum Number of Concurrent Users）”。 当系统的负载等于最佳并发用户数时，系统的整体效率最高，没有资源被浪费，用户也不需要等待；当系统负载处于最佳并发用户数和最大并发用户数之间时，系统可以继续工作，但是用户的等待时间延长，满意度开始降低，并且如果负载一直持续，将最终会导致有些用户无法忍受而放弃；而当系统负载大于最大并发用户数时，将注定会导致某些用户无法忍受超长的响应时间而放弃。</p>
+<p>所以我们性能优化的目标就是让系统保持在Heavy Load（较重的压力） 区域。</p>
+<h2 id="优化手段"><a href="#优化手段" class="headerlink" title="优化手段"></a>优化手段</h2><h3 id="1-空间换时间"><a href="#1-空间换时间" class="headerlink" title="1. 空间换时间"></a>1. 空间换时间</h3><p>系统时间是瓶颈。</p>
+<p>这种情况是CPU处理时间很当，但是空间费用我们能接受，所以我们解决的问题的方法就是用空间来换时间。</p>
+<p>例如：缓存复用计算结果，降低时间开销，因为CPU时间较内存容量更昂贵</p>
+<h3 id="2-时间换空间"><a href="#2-时间换空间" class="headerlink" title="2. 时间换空间"></a>2. 时间换空间</h3><p>数据大小是瓶颈。</p>
+<p>这种情况是空间占用很大，处理时间能接受，所以我们解决问题的方法就是用时间换空间。</p>
+<p>例如1：网络传输是瓶颈，使用系统时间换取传输的空间，使用HTTP的gzip压缩算法。解压缩的时候会消耗CPU处理时间。<br>例如2：APP的请求分类接口，使用版本号判断哪些数据更新，只下载更新的数据。比如一些商品分类类目、城市列表等，一般很少会更新，可以缓存到本地，不能每次登录的时候都去拉取，所以针对这些数据我们可以做一个版本号，如果发现更新了就去拉取数据更新。再比如一些IM社交软件的用户列表，每次登录的时候都去拉一次，其实大家想想每次录的时候都是拉一次挺消耗网络流量的。而这个时候往往你的QQ好友列表变化并不是特别频繁，这个时候怎么办呢？我们会在这个QQ好友的列表有一个时间戳作为版本号，这个版本号在server端存一份，client端存一份，在每次登录的时候会先去判断一下这个版本号是否一致，如果不一致再做更新。</p>
+<h3 id="3-找到系统瓶颈"><a href="#3-找到系统瓶颈" class="headerlink" title="3. 找到系统瓶颈"></a>3. 找到系统瓶颈</h3><p>分析系统业务流程，找到关键路径并分解优化。</p>
+<p>一个服务集群4W的QPS，调用量前5的接口贡献了3.5W的QPS<br>对关键路径的代码优化收益最大，当然系统剩下的部分收益也不能忽视，比如剩下5k QPS接口若性能有问题也可能把整体服务性能拖垮。<br>所以我们需要抓主要矛盾。大概解决思路总结如下：</p>
+<p>整个请求服务调了多少RPC接口；<br>载入多少数据；<br>使用什么算法；<br>非核心流程能否异步化；<br>没有数据依赖的逻辑能否并行执行<br>优化层次<br>从整体到细节，从全局角度到局部视角</p>
+<h4 id="1-架构设计层次"><a href="#1-架构设计层次" class="headerlink" title="1. 架构设计层次"></a>1. 架构设计层次</h4><p>关注系统控制、数据流程<br>如何拆分系统，如何使各部分系统整体负载更加均衡，充分发挥硬件设施性能优势，减少系统内部开销等。<br>架构设计层次实现手段：</p>
+<p>分布式系统微服务化<br>分库分表，读写分离，数据分片<br>无状态化设计，动态水平弹性扩展<br>调用连路梳理，热点数据尽量靠近用户<br>分布式Cache、多级多类型缓存<br>容量规划<br>提前拒绝，保证柔性可用</p>
+<h4 id="2-算法逻辑层次"><a href="#2-算法逻辑层次" class="headerlink" title="2. 算法逻辑层次"></a>2. 算法逻辑层次</h4><p>算法选择是否高效，是否使时间优先级的还是空间优先级，算法逻辑优化，空间时间优化任务并行处理，使用无锁数据结构等。<br>空间换时间<br>ThreadLocal<br>时间换空间<br>采用压缩算法压缩数据，更复杂的逻辑减少数据传输</p>
+<h2 id="2-1-算法逻辑优化层次实现细节"><a href="#2-1-算法逻辑优化层次实现细节" class="headerlink" title="2.1 算法逻辑优化层次实现细节"></a>2.1 算法逻辑优化层次实现细节</h2><p>用更高效的算法替换现有算法，而不改变其接口</p>
+<p>增量式算法、复用之前的计算结果，比如一个报表服务，要从全量数据中生成报表数据量很大，但是每次增量的数据较少，则可以考虑只计算增量数据和之前计算结果合并。这样处理的数据量就小很多。</p>
+<p>并发和锁的优化，读多写少的业务场景下，基于CAS的LockFree比Mutex性能更好</p>
+<p>当系统时间是瓶颈，采取空间换时间逻辑算法，分配更多空间节省系统时间</p>
+<p>缓存复用计算结果，降低时间开销，CPU时间较内存容量更加昂贵</p>
+<p>当系统空间容量是瓶颈的时候，采用时间换空间算法策略</p>
+<p>网络传输是瓶颈，使用系统时间换取空间的压缩，HTTP的gzip的压缩算法</p>
+<p>APP的请求分类接口，使用版本号判断那些数据更新，只下载更新的数据，使用更多的代码逻辑处理更细颗粒度的数据</p>
+<p>并行执行，比如一段逻辑调用了多个RPC接口，而这些接口之间并没有数据依赖，则可以考虑并行调用，降低响应时间。</p>
+<p>异步执行，分析业务流程中的主次流程，把次要流程拆分出来异步执行，更进一步可以拆分到单独的模块去执行，比如使用消息队列，彻底和核心流程解耦，提高核心流程的稳定性以及降低响应是时间。</p>
+<ol start="3">
+<li>代码优化层次<br>关注代码细节优化，代码实现是否合理，是否创建了过多的对象，循环遍历是否高效，cache使用的是否合理，是否重用计算结果等。<h2 id="3-1-代码优化层次实现细节"><a href="#3-1-代码优化层次实现细节" class="headerlink" title="3.1 代码优化层次实现细节"></a>3.1 代码优化层次实现细节</h2>循环遍历是否合理高效，不要在循环里调用RPC接口、查询分布式缓存、执行SQL等<br>先调批量接口组装好数据、再循环处理<br>代码逻辑避免生成过多对象和无效对象<br>输出log时候的log级别判断，避免new无效对象<br>ArrayList、HashMap初始容量设置是否合理<br>扩容代价<br>对数据对象是否合理重用，比如通过RPC查到的数据能复用则必须复用<br>根据数据访问特性选择合适数据结构，比如读多写少，考虑CopyOnWriteArrayList(写时Copy副本)<br>拼接字符串的时候是使用String相加还是使用StringBuilder进行append(在StringBuilder的容量预分配的情况下StringBuilder的性能比String相加性能高15倍左右)<br>是否正确初始化数据。有些全局共享的数据，饿汉式模式，在用户访问之前先初始化好<h2 id="3-2-数据库代码优化层次实现细节"><a href="#3-2-数据库代码优化层次实现细节" class="headerlink" title="3.2 数据库代码优化层次实现细节"></a>3.2 数据库代码优化层次实现细节</h2>数据库建表语句使用尽量小的数据结构<br>表示状态的字段，如果状态值在255以内使用unsigned tinyint，IP使用int而非varchar<br>使用enum的场景使用tinyint替代，enum扩展需要该表<br>避免使用select * 查询语句，只查询需要的字段，避免浪费数据IO、内存、CPU、网络传输<br>分析查询场景经理合适的索引，分析字段的可选择性，索引长度，对长的varchar使用前缀索引<br>字段尽量为Not NULL类型，MySQL手册说吗允许NULL的字段需要额外的存储空间去处理NULL ，并且很难查询优化<br>以上优化的目的为了降低服务器CPU使用率、IO流量、内存占用、网络消耗、降低响应时间</li>
+</ol>
+<p>在做查询时，可以通过代码逻辑，加一下查询条件，利用索引来提升查询速度。</p>
+<h2 id="3-3-局部优化层次实现细节"><a href="#3-3-局部优化层次实现细节" class="headerlink" title="3.3 局部优化层次实现细节"></a>3.3 局部优化层次实现细节</h2><p>以下两段代码哪个执行速度快？</p>
+<p>long[][] a = new long[10000][10000];<br>    for(int i=0;i&lt;a.length;i++){<br>        for(int j =0;j&lt;a[i].length;j++){<br>            a[i][j]=j;<br>        }<br>    }<br>复制代码<br>long[][] a = new long[10000][10000];<br>    for(int i=0;i&lt;a.length;i++){<br>        for(int j =0;j&lt;a[i].length;j++){<br>            a[j][j]=j;<br>        }<br>    }<br>复制代码<br>这两段代码，唯一的区别在于填充方式，第一种方式是按行填充，第二种方式是按列进行填充。显然是第一种方式更快一些。 虽然是二维数组，但是在内存堆列中还一维数组进行存储的。大家可以在试一下，第一种运行速度比第二种方式快20倍。</p>
+<p>那深层次原因是什么呢？</p>
+<p>我们知道在计算机体系中，除了有内存来做缓存，在CPU层面也有cache结构。而越靠近CPU读取速度越快。如下图：</p>
+<p>缓存的结构大概时这样的，从1级到3级速度越来越慢，最后通过总线与内存连接。 本质上内存是一个大的一维数组，二维数组在内存中按行排列，现存放a[0]行，再存放a[1]行，第一种遍历方式，是行遍历，先遍历完一行再遍历第二行，符合局部性原理，Cache Hit(缓存命中率高)，第二行遍历方式，是列遍历，遍历完第一列遍历第二列，由于下一列和上一列的数组元素在内存中并不是连续的，很可能导致Cache Miss（缓存未命中），CPU需要去内存载入数据，速度较CPU L1 Cache的速度降低了很多（主存100ns,L1cache 0.5ns）</p>
+<p>扩大到一般场景，业务系统使用缓存降低响应时间提高性能，必须提高缓存命中率。很聚焦的高频访问，时效性要求不高很适合缓存提升性能，很聚焦的高频访问业务如banner，广告位，时效性要求不是特别高，比如更新了可以不用实时体现，很适合使用缓存提升性能。</p>
+<p>如果对数据实时性要求很高，比如严格的时效性，需要慎重考虑更新缓存带来一致性问题。</p>
+<p>时效性和缓存的冲突，比如商品服务对商品进行了缓存，由于更新缓存和更新商品不是同一个事务，则对数据时效性要求高的如交易，就只能直接从数据库查商品信息。</p>
+]]></content>
+      <categories>
+        <category>高并发</category>
+      </categories>
+      <tags>
+        <tag>java高并发</tag>
       </tags>
   </entry>
   <entry>
@@ -889,77 +1259,6 @@ MongoDB 管理工具：MongoDB
       </categories>
       <tags>
         <tag>分布式系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>领域驱动设计</title>
-    <url>/2019/11/21/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第一步，统一语言：</p>
-<p>开发人员应该使用基于模型的语言来描述系统中的工件、任务和功能。</p>
-<p>领域专家应该抵制不合适或无法充分表达领域理解的术语或结构，开发人员应该密切关注那些将会妨碍设计的有歧义和不一致的地方。</p>
-<p>有些人天生是视觉动物，图可以帮助人们掌握某些类型的信息。</p>
-<h2 id="分层模式：-Layered-Architecture"><a href="#分层模式：-Layered-Architecture" class="headerlink" title="分层模式： Layered Architecture"></a>分层模式： Layered Architecture</h2><p> <img src="https://lixinx11.github.io/medias/bigdata/6.png" alt="图1"><br> <img src="https://lixinx11.github.io/medias/bigdata/7.png" alt="图2"><br>分层模式</p>
-<p>分层模式例子</p>
-<p>如果一个经验并不丰富的项目团队要完成一个简单的项目，却决定使用MODELDRIVENDESIGN以及LAYEREDARCHITECTURE，那么这个项目组将会经历一个艰难的学习过程。团队成员不得不去掌握复杂的新技术，艰难地学习对象建模。</p>
-<p>entity模式</p>
-<p>领域对象生命周期<br> <img src="https://lixinx11.github.io/medias/bigdata/8.png" alt="图3"><br> <img src="https://lixinx11.github.io/medias/bigdata/9.png" alt="图4"></p>
-]]></content>
-      <categories>
-        <category>领域驱动设计</category>
-      </categories>
-      <tags>
-        <tag>领域驱动设计：软件核心复杂性应对之道</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>高并发设计</title>
-    <url>/2017/03/12/%E9%AB%98%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="系统性能两大核心点"><a href="#系统性能两大核心点" class="headerlink" title="系统性能两大核心点"></a>系统性能两大核心点</h2><p>吞吐量（Throughput）<br>响应延迟（Response Delay）<br>优化目标<br>缩短响应时间<br>提供并发数<br>让系统处于合理状态<br>Number of Concurrent Users<br>上图是高并发软件性能模型。图中三条曲线，分别表示：</p>
-<p>资源的利用情况（Utilization，包括硬件资源和软件资源）<br>吞吐量（Throughput，这里是指每秒事务数）<br>响应时间（Response Time）。<br>坐标轴的横轴从左到右表现了并发用户数（Number of Concurrent Users）的不断增长。</p>
-<p>随着并发用户数的增长，资源占用率和吞吐量会相应的增长，但是响应时间的变化不大；不过当并发用户数增长到一定程度后，资源占用达到饱和，吞吐量增长明显放缓甚至停止增长，而响应时间却进一步延长。如果并发用户数继续增长，你会发现软硬件资源占用继续维持在饱和状态，但是吞吐量开始下降，响应时间明显的超出了用户可接受的范围，并且最终导致用户放弃了这次请求甚至离开。</p>
-<p>根据这种性能表现，图中划分了三个区域，分别是</p>
-<p>Light Load（较轻的压力）<br>Heavy Load（较重的压力）<br>Buckle Zone（用户无法忍受并放弃请求）。<br>在Light Load和Heavy Load两个区域交界处的并发用户数，我们称为“最佳并发用户数（The Optimum Number of Concurrent Users）”，而Heavy Load和Buckle Zone两个区域交界处的并发用户数则称为“最大并发用户数（The Maximum Number of Concurrent Users）”。 当系统的负载等于最佳并发用户数时，系统的整体效率最高，没有资源被浪费，用户也不需要等待；当系统负载处于最佳并发用户数和最大并发用户数之间时，系统可以继续工作，但是用户的等待时间延长，满意度开始降低，并且如果负载一直持续，将最终会导致有些用户无法忍受而放弃；而当系统负载大于最大并发用户数时，将注定会导致某些用户无法忍受超长的响应时间而放弃。</p>
-<p>所以我们性能优化的目标就是让系统保持在Heavy Load（较重的压力） 区域。</p>
-<h2 id="优化手段"><a href="#优化手段" class="headerlink" title="优化手段"></a>优化手段</h2><h3 id="1-空间换时间"><a href="#1-空间换时间" class="headerlink" title="1. 空间换时间"></a>1. 空间换时间</h3><p>系统时间是瓶颈。</p>
-<p>这种情况是CPU处理时间很当，但是空间费用我们能接受，所以我们解决的问题的方法就是用空间来换时间。</p>
-<p>例如：缓存复用计算结果，降低时间开销，因为CPU时间较内存容量更昂贵</p>
-<h3 id="2-时间换空间"><a href="#2-时间换空间" class="headerlink" title="2. 时间换空间"></a>2. 时间换空间</h3><p>数据大小是瓶颈。</p>
-<p>这种情况是空间占用很大，处理时间能接受，所以我们解决问题的方法就是用时间换空间。</p>
-<p>例如1：网络传输是瓶颈，使用系统时间换取传输的空间，使用HTTP的gzip压缩算法。解压缩的时候会消耗CPU处理时间。<br>例如2：APP的请求分类接口，使用版本号判断哪些数据更新，只下载更新的数据。比如一些商品分类类目、城市列表等，一般很少会更新，可以缓存到本地，不能每次登录的时候都去拉取，所以针对这些数据我们可以做一个版本号，如果发现更新了就去拉取数据更新。再比如一些IM社交软件的用户列表，每次登录的时候都去拉一次，其实大家想想每次录的时候都是拉一次挺消耗网络流量的。而这个时候往往你的QQ好友列表变化并不是特别频繁，这个时候怎么办呢？我们会在这个QQ好友的列表有一个时间戳作为版本号，这个版本号在server端存一份，client端存一份，在每次登录的时候会先去判断一下这个版本号是否一致，如果不一致再做更新。</p>
-<h3 id="3-找到系统瓶颈"><a href="#3-找到系统瓶颈" class="headerlink" title="3. 找到系统瓶颈"></a>3. 找到系统瓶颈</h3><p>分析系统业务流程，找到关键路径并分解优化。</p>
-<p>一个服务集群4W的QPS，调用量前5的接口贡献了3.5W的QPS<br>对关键路径的代码优化收益最大，当然系统剩下的部分收益也不能忽视，比如剩下5k QPS接口若性能有问题也可能把整体服务性能拖垮。<br>所以我们需要抓主要矛盾。大概解决思路总结如下：</p>
-<p>整个请求服务调了多少RPC接口；<br>载入多少数据；<br>使用什么算法；<br>非核心流程能否异步化；<br>没有数据依赖的逻辑能否并行执行<br>优化层次<br>从整体到细节，从全局角度到局部视角</p>
-<h4 id="1-架构设计层次"><a href="#1-架构设计层次" class="headerlink" title="1. 架构设计层次"></a>1. 架构设计层次</h4><p>关注系统控制、数据流程<br>如何拆分系统，如何使各部分系统整体负载更加均衡，充分发挥硬件设施性能优势，减少系统内部开销等。<br>架构设计层次实现手段：</p>
-<p>分布式系统微服务化<br>分库分表，读写分离，数据分片<br>无状态化设计，动态水平弹性扩展<br>调用连路梳理，热点数据尽量靠近用户<br>分布式Cache、多级多类型缓存<br>容量规划<br>提前拒绝，保证柔性可用</p>
-<h4 id="2-算法逻辑层次"><a href="#2-算法逻辑层次" class="headerlink" title="2. 算法逻辑层次"></a>2. 算法逻辑层次</h4><p>算法选择是否高效，是否使时间优先级的还是空间优先级，算法逻辑优化，空间时间优化任务并行处理，使用无锁数据结构等。<br>空间换时间<br>ThreadLocal<br>时间换空间<br>采用压缩算法压缩数据，更复杂的逻辑减少数据传输</p>
-<h2 id="2-1-算法逻辑优化层次实现细节"><a href="#2-1-算法逻辑优化层次实现细节" class="headerlink" title="2.1 算法逻辑优化层次实现细节"></a>2.1 算法逻辑优化层次实现细节</h2><p>用更高效的算法替换现有算法，而不改变其接口</p>
-<p>增量式算法、复用之前的计算结果，比如一个报表服务，要从全量数据中生成报表数据量很大，但是每次增量的数据较少，则可以考虑只计算增量数据和之前计算结果合并。这样处理的数据量就小很多。</p>
-<p>并发和锁的优化，读多写少的业务场景下，基于CAS的LockFree比Mutex性能更好</p>
-<p>当系统时间是瓶颈，采取空间换时间逻辑算法，分配更多空间节省系统时间</p>
-<p>缓存复用计算结果，降低时间开销，CPU时间较内存容量更加昂贵</p>
-<p>当系统空间容量是瓶颈的时候，采用时间换空间算法策略</p>
-<p>网络传输是瓶颈，使用系统时间换取空间的压缩，HTTP的gzip的压缩算法</p>
-<p>APP的请求分类接口，使用版本号判断那些数据更新，只下载更新的数据，使用更多的代码逻辑处理更细颗粒度的数据</p>
-<p>并行执行，比如一段逻辑调用了多个RPC接口，而这些接口之间并没有数据依赖，则可以考虑并行调用，降低响应时间。</p>
-<p>异步执行，分析业务流程中的主次流程，把次要流程拆分出来异步执行，更进一步可以拆分到单独的模块去执行，比如使用消息队列，彻底和核心流程解耦，提高核心流程的稳定性以及降低响应是时间。</p>
-<ol start="3">
-<li>代码优化层次<br>关注代码细节优化，代码实现是否合理，是否创建了过多的对象，循环遍历是否高效，cache使用的是否合理，是否重用计算结果等。<h2 id="3-1-代码优化层次实现细节"><a href="#3-1-代码优化层次实现细节" class="headerlink" title="3.1 代码优化层次实现细节"></a>3.1 代码优化层次实现细节</h2>循环遍历是否合理高效，不要在循环里调用RPC接口、查询分布式缓存、执行SQL等<br>先调批量接口组装好数据、再循环处理<br>代码逻辑避免生成过多对象和无效对象<br>输出log时候的log级别判断，避免new无效对象<br>ArrayList、HashMap初始容量设置是否合理<br>扩容代价<br>对数据对象是否合理重用，比如通过RPC查到的数据能复用则必须复用<br>根据数据访问特性选择合适数据结构，比如读多写少，考虑CopyOnWriteArrayList(写时Copy副本)<br>拼接字符串的时候是使用String相加还是使用StringBuilder进行append(在StringBuilder的容量预分配的情况下StringBuilder的性能比String相加性能高15倍左右)<br>是否正确初始化数据。有些全局共享的数据，饿汉式模式，在用户访问之前先初始化好<h2 id="3-2-数据库代码优化层次实现细节"><a href="#3-2-数据库代码优化层次实现细节" class="headerlink" title="3.2 数据库代码优化层次实现细节"></a>3.2 数据库代码优化层次实现细节</h2>数据库建表语句使用尽量小的数据结构<br>表示状态的字段，如果状态值在255以内使用unsigned tinyint，IP使用int而非varchar<br>使用enum的场景使用tinyint替代，enum扩展需要该表<br>避免使用select * 查询语句，只查询需要的字段，避免浪费数据IO、内存、CPU、网络传输<br>分析查询场景经理合适的索引，分析字段的可选择性，索引长度，对长的varchar使用前缀索引<br>字段尽量为Not NULL类型，MySQL手册说吗允许NULL的字段需要额外的存储空间去处理NULL ，并且很难查询优化<br>以上优化的目的为了降低服务器CPU使用率、IO流量、内存占用、网络消耗、降低响应时间</li>
-</ol>
-<p>在做查询时，可以通过代码逻辑，加一下查询条件，利用索引来提升查询速度。</p>
-<h2 id="3-3-局部优化层次实现细节"><a href="#3-3-局部优化层次实现细节" class="headerlink" title="3.3 局部优化层次实现细节"></a>3.3 局部优化层次实现细节</h2><p>以下两段代码哪个执行速度快？</p>
-<p>long[][] a = new long[10000][10000];<br>    for(int i=0;i&lt;a.length;i++){<br>        for(int j =0;j&lt;a[i].length;j++){<br>            a[i][j]=j;<br>        }<br>    }<br>复制代码<br>long[][] a = new long[10000][10000];<br>    for(int i=0;i&lt;a.length;i++){<br>        for(int j =0;j&lt;a[i].length;j++){<br>            a[j][j]=j;<br>        }<br>    }<br>复制代码<br>这两段代码，唯一的区别在于填充方式，第一种方式是按行填充，第二种方式是按列进行填充。显然是第一种方式更快一些。 虽然是二维数组，但是在内存堆列中还一维数组进行存储的。大家可以在试一下，第一种运行速度比第二种方式快20倍。</p>
-<p>那深层次原因是什么呢？</p>
-<p>我们知道在计算机体系中，除了有内存来做缓存，在CPU层面也有cache结构。而越靠近CPU读取速度越快。如下图：</p>
-<p>缓存的结构大概时这样的，从1级到3级速度越来越慢，最后通过总线与内存连接。 本质上内存是一个大的一维数组，二维数组在内存中按行排列，现存放a[0]行，再存放a[1]行，第一种遍历方式，是行遍历，先遍历完一行再遍历第二行，符合局部性原理，Cache Hit(缓存命中率高)，第二行遍历方式，是列遍历，遍历完第一列遍历第二列，由于下一列和上一列的数组元素在内存中并不是连续的，很可能导致Cache Miss（缓存未命中），CPU需要去内存载入数据，速度较CPU L1 Cache的速度降低了很多（主存100ns,L1cache 0.5ns）</p>
-<p>扩大到一般场景，业务系统使用缓存降低响应时间提高性能，必须提高缓存命中率。很聚焦的高频访问，时效性要求不高很适合缓存提升性能，很聚焦的高频访问业务如banner，广告位，时效性要求不是特别高，比如更新了可以不用实时体现，很适合使用缓存提升性能。</p>
-<p>如果对数据实时性要求很高，比如严格的时效性，需要慎重考虑更新缓存带来一致性问题。</p>
-<p>时效性和缓存的冲突，比如商品服务对商品进行了缓存，由于更新缓存和更新商品不是同一个事务，则对数据时效性要求高的如交易，就只能直接从数据库查商品信息。</p>
-]]></content>
-      <categories>
-        <category>高并发</category>
-      </categories>
-      <tags>
-        <tag>java高并发</tag>
       </tags>
   </entry>
   <entry>
@@ -1075,289 +1374,6 @@ public void run()&#123;
       </categories>
       <tags>
         <tag>java多线程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>时光角落</title>
-    <url>/2020/09/03/book/</url>
-    <content><![CDATA[<pre><code>思考是人类最大的乐趣之一 --布莱希特</code></pre>
-<h1 id="休闲时读的一本书："><a href="#休闲时读的一本书：" class="headerlink" title="休闲时读的一本书："></a>休闲时读的一本书：</h1><p>  软件创新之路：冲破高技术营造的牢笼</p>
-]]></content>
-      <categories>
-        <category>book</category>
-      </categories>
-      <tags>
-        <tag>时光角落</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>技术趋势</title>
-    <url>/2020/09/04/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</url>
-    <content><![CDATA[<pre><code>                           #  新冠肺炎后五大技术争夺战</code></pre>
-<p>   技术正在以惊人的速度发展，为现代企业、竞争对手和整个行业定义下一个前沿领域。普华永道(PWC)最近进行的一项题为“驾驭不确定性浪潮——第23届全球CEO年度调查”的调查显示，69%的CEO对科技变革的速度感到担忧，难以跟上科技变革的步伐。只有27%的受访者承认他们对2020年的收入增长前景非常有信心，这是自2009年经济衰退以来的最低水平。<br>　　技术将发挥决定性的作用，因为各国制定了在COVID-19之后的复苏计划。突破性的技术研发将形成创新的中坚力量。展望未来，以下是前5大技术，它们将争夺后COVID-19的霸主地位，并创造潜在的投资机会和快速的商业利益。</p>
-<h2 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h2><p>　　多年来，人工智能一直是最受争议和最受欢迎的技术，被吹捧为下一个重大技术。由COVID-19病毒引起的技术变革可能意味着人工智能的骄傲时刻终于到来了。<br>　　在寻求业务连续性规划的过程中，企业需要将更多数据集中在云上，从而推动人工智能的发展。从更精确的预测算法到RPA——人工智能的能力是不可思议的。人工智能优势的另一个机会来自远程工作的增加。在组织机构艰难应对招回员工的挑战之际，它们可能更愿意接受基于人工智能的过程自动化软件来处理日常和基于规则的任务。<br>##　　物联网<br>　　物联网(IoT)以及其他颠覆性技术，如云和人工智能，可能会在COVID-19恢复后成为游戏规则的改变者。根据麻省理工学院研究人员的一项研究，物联网技术及其连接的传感器有助于监测高危患者，从而减轻感染性传播的关键来源。<br>　　连接的传感器还可以帮助自动化某些过程，并将人类执行每项活动的需要降到最低，用例包括监视、监视和预测性维护。<br>##　　云计算<br>　　云计算是一项不容忽视的技术。随着企业数字化和员工在家工作，云服务器呈现服务器，与合作伙伴和客户协作。<br>　　许多企业正在借助云技术迅速扭转颓势，以极快的速度调整和改造其运营。想想基督教青年会(YMCA)、星球健身中心(PlanetFitness)和耐克(Nike)，它们提供的服务包括在线健身课程。学校和大学正在提供在线学习，而OTT内容的需求已经急剧上升，这要归功于云。在线杂货零售商也看到了新的业务增长，这一切都要归功于云基础设施。<br>　　每一个企业都在寻找云——公共的、私有的和混合的云——来重新设想其运营，并使协作达到前所未有的规模。<br>##　　区块链<br>　　COVID-19危机使全球供应链陷入混乱，制造业的未来也面临严重问题。区块链和透明账本对经济复苏和经济活动恢复至关重要。这种大范围的挑战为区块链的整合提供了机会，区块链有能力改变供应链的未来。<br>　　为了重建被破坏的网络，信任和验证信息的能力将是必不可少的。区块链技术提供了构建块，可为贸易合作伙伴和消费者提供受信任和受保护数据的透明性，并通过共同商定的规则集同步流程。对于那些因大流行而导致供应链中断的企业而言，这种潜力特别具有吸引力。<br>##　　机器人学<br>　　在COVID-19之后，机器人将成为企业的面孔，主要是为了减轻员工的危险任务;并实现快速的生产时间表和低成本。为了应对当前的危机，这些“机器助手”将加入执行董事会。<br>　　如果企业领袖积极投资于正确的技术，那么从宏观层面来看，这可能是他们产品和经济增长的关键时刻。<br>　　COVID-19对世界经济的影响虽然是暂时的，但稳定和长期改善的基本面受到了冲击和挑战。技术带来的机遇是巨大的，只有采取灵活和开放的方法，企业才能取得成功，而这样做的人从长远来看肯定会得到好处。</p>
-]]></content>
-      <categories>
-        <category>技术趋势</category>
-      </categories>
-      <tags>
-        <tag>技术趋势</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>redis</title>
-    <url>/2020/09/05/redis/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>sklearn函数汇总</title>
-    <url>/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<p><strong>sklearn函数汇总</strong><br>9/6/2020 11:45:01 AM </p>
-<ol>
-<li>拆分数据集为训练集和测试集：</li>
-</ol>
-<p>from sklearn.model_selection import train_test_split<br>x_train, x_test, y_train, y_test =<br>train_test_split(x, y, test_size = 0.2,random_state=3,shuffle=False)</p>
-<h1 id="test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个"><a href="#test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个" class="headerlink" title="test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个"></a>test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个</h1><p>  random_state代表随即种子编号，默认为None<br>  shuffle代表是否进行有放回抽样</p>
-<h2 id="2-数据预处理"><a href="#2-数据预处理" class="headerlink" title="2. 数据预处理"></a>2. 数据预处理</h2><h3 id="2-1-标准化："><a href="#2-1-标准化：" class="headerlink" title="2.1 标准化："></a>2.1 标准化：</h3><p>from sklearn.preprocessing import StandardScaler<br>scaler = StandardScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-2-区间缩放："><a href="#2-2-区间缩放：" class="headerlink" title="2.2 区间缩放："></a>2.2 区间缩放：</h3><p>from sklearn.preprocessing import MinMaxScaler<br>scaler = MinMaxScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-3-归一化："><a href="#2-3-归一化：" class="headerlink" title="2.3 归一化："></a>2.3 归一化：</h3><p>from sklearn.preprocessing import Normalizer<br>scaler = Normalizer().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"><a href="#2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0" class="headerlink" title="2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"></a>2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0</h3><p>from sklearn.preprocessing import Binarizer<br>scaler = Binarizer(threshold=3).fit(x_train) # threshold为设定的阀值<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-5-哑编码处理："><a href="#2-5-哑编码处理：" class="headerlink" title="2.5 哑编码处理："></a>2.5 哑编码处理：</h3><p>from sklearn.preprocessing import OneHotEncoder<br>scaler = OneHotEncoder().fit(x_train.reshape((-1,1)))<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-6-自定义函数变换"><a href="#2-6-自定义函数变换" class="headerlink" title="2.6 自定义函数变换"></a>2.6 自定义函数变换</h3><p>from numpy import log1p  # 使用对数函数转换<br>from sklearn.preprocessing import FunctionTransformer<br>scaler = FunctionTransformer(log1p).fit(x_train)<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-7-PCA降维："><a href="#2-7-PCA降维：" class="headerlink" title="2.7 PCA降维："></a>2.7 PCA降维：</h3><p>from sklearn.decomposition import PCA<br>pca = PCA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainPca = pca.transform(x_train) # 将规则应用于训练集<br>x_testPca = pca.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-8-LDA降维："><a href="#2-8-LDA降维：" class="headerlink" title="2.8 LDA降维："></a>2.8 LDA降维：</h3><p>from sklearn.lda import LDA<br>lda = LDA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainLda = lda.transform(x_train) # 将规则应用于训练集<br>x_testLda = lda.transform(x_test)  # 将规则应用于测试集</p>
-<h2 id="3-特征筛选"><a href="#3-特征筛选" class="headerlink" title="3. 特征筛选"></a>3. 特征筛选</h2><h3 id="3-1-Filter法："><a href="#3-1-Filter法：" class="headerlink" title="3.1 Filter法："></a>3.1 Filter法：</h3><p>from sklearn.feature_selection import SelectKBest, f_classif<br>selector = SelectKBest(f_classif, k=4) – 用f_classif方法，设定数目为4<br>a=selector.fit(x,y)<br>print(np.array(a.scores_),’\n’,a.get_support())  –  输出得分及选择的结果</p>
-<h3 id="3-2-Wrapper法（递归法）："><a href="#3-2-Wrapper法（递归法）：" class="headerlink" title="3.2 Wrapper法（递归法）："></a>3.2 Wrapper法（递归法）：</h3><p>from sklearn.linear_model import LinearRegression –导入基模型<br>from sklearn.feature_selection import RFE  – 导入RFE模块<br>model1 = LinearRegression()   – 建立一个线性模型<br>rfe = RFE(model1,4)           – 进行多轮训练，设置筛选特征数目为4个<br>rfe = rfe.fit(x,y)            – 模型的拟合训练<br>print(rfe.support_)           – 输出特征的选择结果<br>print(rfe.ranking_)           – 特征的选择排名</p>
-<h2 id="4-构建模型"><a href="#4-构建模型" class="headerlink" title="4.构建模型"></a>4.构建模型</h2><h3 id="4-1决策树模型"><a href="#4-1决策树模型" class="headerlink" title="4.1决策树模型"></a>4.1决策树模型</h3><p>决策树优点：</p>
-<p>便于理解和解释。树的结构可以可视化出来。<br>训练需要的数据少，对异常值和缺失值不敏感。<br>能够处理数值型数据和分类数据。<br>决策树缺点：</p>
-<p>容易产生一个过于复杂的模型，使模型产生过拟合的问题。<br>决策树可能是不稳定的，因为数据中的微小变化可能会导致完全不同的树生成。<br>from sklearn.tree import DecisionTreeClassifier<br>clf = DecisionTreeClassifier(criterion=’gini’, –设置衡量的系数,有entropy和gini，默认gini<br>                               splitter=’best’, –选择分类的策略，best和random，默认best<br>                               max_depth=5, –设置树的最大深度<br>                               min_samples_split=10,– 区分一个内部节点需要的最少的样本数<br>                               min_samples_leaf=5 – 一个叶节点所需要的最小样本数<br>                               max_features=5 –最大特征数<br>                               max_leaf_nodes=3–最大样本节点个数<br>                               min_impurity_split –指定信息增益的阀值<br>                               )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-2-逻辑回归模型"><a href="#4-2-逻辑回归模型" class="headerlink" title="4.2 逻辑回归模型"></a>4.2 逻辑回归模型</h3><p>优点：实现简单，易于理解和实现；计算代价不高，速度很快，存储资源低。</p>
-<p>缺点：容易欠拟合，分类精度可能不高。对异常值和缺失值敏感</p>
-<p>from sklearn.linear_model import LogisticRegression<br>clf = LogisticRegression(penalty=’l2’, –惩罚项（l1与l2），默认l2<br>                         dual=False, –对偶或原始方法，默认False，样本数量&gt;样本特征的时候，dual通常设置为False<br>                         tol=0.0001, –停止求解的标准，float类型，默认为1e-4。就是求解到多少的时候，停止，认为已经求出最优解<br>                         C=1.0, –正则化系数λ的倒数，float类型，默认为1.0，越小的数值表示越强的正则化。<br>                         fit_intercept=True, –是否存在截距或偏差，bool类型，默认为True。<br>                         intercept_scaling=1, –仅在正则化项为”liblinear”，且fit_intercept设置为True时有用。float类型，默认为1<br>                         class_weight=None, –用于标示分类模型中各种类型的权重，默认为不输入，也就是不考虑权重，即为None<br>                         random_state=None, –随机数种子，int类型，可选参数，默认为无<br>                         solver=’liblinear’, –优化算法选择参数，只有五个可选参数，即newton-cg,lbfgs,liblinear,sag,saga。默认为liblinear<br>                         max_iter=10, –算法收敛最大迭代次数，int类型，默认为10。<br>                         multi_class=’ovr’–分类方式选择参数，str类型，可选参数为ovr和multinomial，默认为ovr。<br>                                          如果是二元逻辑回归，ovr和multinomial并没有任何区别，区别主要在多元逻辑回归上。<br>                         verbose=0, –日志冗长度，int类型。默认为0。就是不输出训练过程<br>                         warm_start=False, –热启动参数，bool类型。默认为False。<br>                         n_jobs=1–并行数。int类型，默认为1。1的时候，用CPU的一个内核运行程序，2的时候，用CPU的2个内核运行程序。<br>                        )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-3-线性回归模型"><a href="#4-3-线性回归模型" class="headerlink" title="4.3 线性回归模型"></a>4.3 线性回归模型</h3><p>优点：实现简单，可解释性强。</p>
-<p>缺点：容易出现欠拟合，对异常值和缺失值比较敏感。</p>
-<p>from sklearn.linear_model import LinearRegression()<br>clf = LinearRegression(copy_X=True,<br>                       fit_intercept=True,<br>                       n_jobs=1,<br>                       normalize=False)<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-4-K-means聚类"><a href="#4-4-K-means聚类" class="headerlink" title="4.4 K-means聚类"></a>4.4 K-means聚类</h3><p>from sklearn.cluster import KMeans<br>clf = KMeans(n_clusters=4, –给定的类别数<br>             max_iter=100,–为迭代的次数，这里设置最大迭代次数为300<br>             n_init=10,–设为10意味着进行10次随机初始化，选择效果最好的一种来作为模型<br>             copy_x=True–布尔型，默认值=True,如果把此参数值设为True，则原始数据不会被改变。如果是False，则会直接在原始数据<br>                        上做修改并在函数返回值时将其还原。<br>             )<br>clf= clf.fit(x)  – 拟合训练</p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>sklearn函数汇总</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习知识点</title>
-    <url>/2020/09/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<h2 id="Python——用于训练机器学习算法的编程语言。"><a href="#Python——用于训练机器学习算法的编程语言。" class="headerlink" title="Python——用于训练机器学习算法的编程语言。"></a>Python——用于训练机器学习算法的编程语言。</h2><p>确保你知道这门语言提供了哪些功能。除了 Python，我还建议你学习另外一门语言。如果要使用嵌入式平台，请选择 C++。如果要在企业环境中使用机器学习模型，请选择 Java。如果你想进行数据分析，请学习 R 语言。最后，如果你喜欢经典的 AI 算法和自然语言处理，请学习 Lisp。</p>
-<h2 id="TensorFlow-Pytorch——深度学习正在蓬勃发展。"><a href="#TensorFlow-Pytorch——深度学习正在蓬勃发展。" class="headerlink" title="TensorFlow/Pytorch——深度学习正在蓬勃发展。"></a>TensorFlow/Pytorch——深度学习正在蓬勃发展。</h2><p>市场上有两个深度学习框架，但哪些项目应该使用哪个框架，它们之前的区别是非常不一样的。首先，需要注意的是，TensorFlow 通常在部署环境中更易于使用，而 Pytorch 在实验环境中更易于使用。最近，TensorFlow 试图让实验变得更容易，而 Pytorch 则致力于实现更容易的部署（即使在嵌入式硬件上）。如果你想要担当更多研究角色，我会推荐 Pytorch。如果你想要在一家主要在生产环境中更新模型的公司工作，我会推荐学习 TensorFlow。总体上讲，全面学习一个框架要比半途学习两个框架要好，尤其要考虑它们演化的速度。</p>
-<h2 id="Scikit-learn——scikit-learn"><a href="#Scikit-learn——scikit-learn" class="headerlink" title="Scikit-learn——scikit-learn"></a>Scikit-learn——scikit-learn</h2><p>包含了大多数经典的机器学习算法。掌握它可以让你快速解决很多小的数据问题。如果你知道这个库的算法原理，那么在技术面试过程中就有领先优势。</p>
-<h2 id="NumPy-和-Pandas"><a href="#NumPy-和-Pandas" class="headerlink" title="NumPy 和 Pandas"></a>NumPy 和 Pandas</h2><p> ——在使用 Python 处理数据时，有效且准确地选择数据是非常重要的。大多数机器学习工程师每天都使用 NumPy 进行基本的数据处理。如果你有更高级的选择标准，可以考虑 Pandas！只需要用几行代码（并且没有那些令人讨厌的 for 慢循环）选择特定的数据样本就可以给未来的同事留下深刻的印象。</p>
-<h2 id="Apache-Spark"><a href="#Apache-Spark" class="headerlink" title="Apache Spark"></a>Apache Spark</h2><p>——拥有大量数据的公司将从机器学习中受益。处理大数据非常重要，Spark 将大大加快你的开发工作。请注意，在处理大数据时，了解 Hadoop 可能也很有帮助。</p>
-<h2 id="OpenCV"><a href="#OpenCV" class="headerlink" title="OpenCV"></a>OpenCV</h2><p>——如果你想要使用计算机视觉学习，掌握 OpenCV 就至关重要。它提供了很多图像处理功能，可用于快速组建原型，或以更好的方式预处理图像。它还提供了很多识别、检测或定位物体的功能。</p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>机器学习知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pandas 函数</title>
-    <url>/2020/09/09/python1/</url>
-    <content><![CDATA[<p>df2= pd.DataFrame([[1,2,3],[4,5,6]],index=[‘r1’,’r2’],columns=[‘c1’,’c2’,’c3’])<br>dates=pd.date_range(‘2020-12-12’,periods=7)<br>df3 =pd.DataFrame(np.random.randn(7,4),index=dates,columns=list(‘abcd’))</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>pandas 函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>低代码开发</title>
-    <url>/2020/09/15/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</url>
-    <content><![CDATA[<pre><code>                                #   低代码开发未来的趋势？</code></pre>
-<p>低代码开发平台是现在很火的话题，市场上的低代码开发平台，主要有两类。</p>
-<h2 id="第一类，"><a href="#第一类，" class="headerlink" title="第一类，"></a>第一类，</h2><p>通过拖拽方式开发App界面，数据来源于现有系统。这个领域有很多新的创业公司，比如被西门子收购的Mendix，获得大笔融资的Outsystems，<br>还有微软开发了很多年的PowerApps。这些可以帮助企业基于现有系统开发新的应用界面，尤其是延伸到手机端。</p>
-<h2 id="第二类，"><a href="#第二类，" class="headerlink" title="第二类，"></a>第二类，</h2><p>从零开始，创建业务系统，或是构建企业数据中台。这个领域需要很多年的技术积累，<br>需要通过成百上千个项目沉淀客户需求，才能做出好的开发工具。如何把基础功能标准化，如何把差异化的部分提炼出来做成可配置，这是一个非常难的课题。<br>在这方面比较领先的有以开发CRM并逐步进化的Salesforce， 开发ERP起家的Odoo 、BPM厂商华炎魔方。</p>
-<h2 id="总之"><a href="#总之" class="headerlink" title="总之"></a>总之</h2><pre><code>随着人工智能的发展，初级的程序员未来竟被机器替代。企业的技能要求向设计，算法等高级技能发展。</code></pre>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>低代码开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>R语言学习</title>
-    <url>/2020/09/23/R/</url>
-    <content><![CDATA[<hr>
-<pre><code>        ##  R &amp; Python: A Love Story</code></pre>
-<p><a href="https://rstudio.com/products/rstudio/download/#download">https://rstudio.com/products/rstudio/download/#download</a></p>
-]]></content>
-      <categories>
-        <category>R</category>
-      </categories>
-      <tags>
-        <tag>R</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python绘制科赫雪花</title>
-    <url>/2020/09/26/python%E7%BB%98%E5%9B%BE/</url>
-    <content><![CDATA[<pre><code>##      python绘制科赫雪花</code></pre>
-<h3 id="脚本如下："><a href="#脚本如下：" class="headerlink" title="脚本如下："></a>脚本如下：</h3><p>import turtle<br>def koch(size,n):<br>  if n==1:<br>    turtle.fd(size)<br>  else:<br>    for i in [0,60,-120,60]:<br>      turtle.left(i)<br>      koch(size/3,n-1)<br>def main():<br>  turtle.setup(600,600)<br>  turtle.penup()<br>  turtle.speed(10)<br>  turtle.hideturtle()<br>  turtle.pensize(2)<br>  turtle.goto(-200,100)<br>  turtle.pendown()<br>  level=4<br>  koch(400,level)<br>  turtle.right(120)<br>  koch(400, level)<br>  turtle.right(120)<br>  koch(400, level)<br>  turtle.penup()<br>  turtle.done()<br>main()</p>
-<h3 id="演示结果如图："><a href="#演示结果如图：" class="headerlink" title="演示结果如图："></a>演示结果如图：</h3><p>  <img src="https://lixinx11.github.io/medias/bigdata/23.png" alt="科赫雪花"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python绘制科赫雪花</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>spi --探秘</title>
-    <url>/2020/09/29/spi/</url>
-    <content><![CDATA[<p>本文通过探析JDK提供的，在开源项目中比较常用的Java SPI机制，希望给大家在实际开发实践、学习开源项目提供参考。</p>
-<h2 id="1-SPI是什么"><a href="#1-SPI是什么" class="headerlink" title="1 SPI是什么"></a>1 SPI是什么</h2><p>SPI全称Service Provider Interface，是Java提供的一套用来被第三方实现或者扩展的API，它可以用来启用框架扩展和替换组件。</p>
-<p>image.jpg</p>
-<p>Java SPI 实际上是“基于接口的编程＋策略模式＋配置文件”组合实现的动态加载机制。</p>
-<p>系统设计的各个抽象，往往有很多不同的实现方案，在面向的对象的设计里，一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码。一旦代码里涉及具体的实现类，就违反了可拔插的原则，如果需要替换一种实现，就需要修改代码。为了实现在模块装配的时候能不在程序里动态指明，这就需要一种服务发现机制。<br>Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的机制。有点类似IOC的思想，就是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要。所以SPI的核心思想就是解耦。</p>
-<h2 id="2-使用场景"><a href="#2-使用场景" class="headerlink" title="2 使用场景"></a>2 使用场景</h2><p>概括地说，适用于：调用者根据实际使用需要，启用、扩展、或者替换框架的实现策略</p>
-<p>比较常见的例子：</p>
-<p>数据库驱动加载接口实现类的加载<br>JDBC加载不同类型数据库的驱动</p>
-<p>日志门面接口实现类加载<br>SLF4J加载不同提供商的日志实现类</p>
-<p>Spring<br>Spring中大量使用了SPI,比如：对servlet3.0规范对ServletContainerInitializer的实现、自动类型转换Type Conversion SPI(Converter SPI、Formatter SPI)等</p>
-<p>Dubbo<br>Dubbo中也大量使用SPI的方式实现框架的扩展, 不过它对Java提供的原生SPI做了封装，允许用户扩展实现Filter接口</p>
-<h2 id="3-使用介绍"><a href="#3-使用介绍" class="headerlink" title="3 使用介绍"></a>3 使用介绍</h2><p>要使用Java SPI，需要遵循如下约定：</p>
-<p>1、当服务提供者提供了接口的一种具体实现后，在jar包的META-INF/services目录下创建一个以“接口全限定名”为命名的文件，内容为实现类的全限定名；</p>
-<p>2、接口实现类所在的jar包放在主程序的classpath中；</p>
-<p>3、主程序通过java.util.ServiceLoder动态装载实现模块，它通过扫描META-INF/services目录下的配置文件找到实现类的全限定名，把类加载到JVM；</p>
-<p>4、SPI的实现类必须携带一个不带参数的构造方法；</p>
-<p>示例代码<br>步骤1、定义一组接口 (假设是org.foo.demo.IShout)，并写出接口的一个或多个实现，(假设是org.foo.demo.animal.Dog、org.foo.demo.animal.Cat)。</p>
-<p>public interface IShout {<br>    void shout();<br>}<br>public class Cat implements IShout {<br>    @Override<br>    public void shout() {<br>        System.out.println(“miao miao”);<br>    }<br>}<br>public class Dog implements IShout {<br>    @Override<br>    public void shout() {<br>        System.out.println(“wang wang”);<br>    }<br>}<br>步骤2、在 src/main/resources/ 下建立 /META-INF/services 目录， 新增一个以接口命名的文件 (org.foo.demo.IShout文件)，内容是要应用的实现类（这里是org.foo.demo.animal.Dog和org.foo.demo.animal.Cat，每行一个类）。</p>
-<p>文件位置</p>
-<ul>
-<li>src<br>  -main        <pre><code>  -resources            
-      - META-INF                
-          - services                    
-              - org.foo.demo.IShout</code></pre>
-文件内容</li>
-</ul>
-<p>org.foo.demo.animal.Dogorg.foo.demo.animal.Cat<br>步骤3、使用 ServiceLoader 来加载配置文件中指定的实现。</p>
-<p>public class SPI Main {<br>    public static void main(String[] args) {<br>        ServiceLoader<IShout> shouts = ServiceLoader.load(IShout.class);<br>        for (IShout s : shouts) {<br>            s.shout();<br>        }<br>    }<br>}<br>代码输出：</p>
-<p>wang wang<br>miao miao</p>
-<h2 id="4-原理解析"><a href="#4-原理解析" class="headerlink" title="4 原理解析"></a>4 原理解析</h2><p>首先看ServiceLoader类的签名类的成员变量：</p>
-<p>public final class ServiceLoader<S> implements Iterable<S>{<br>    private static final String PREFIX = “META-INF/services/“;</p>
-<pre><code>// 代表被加载的类或者接口
-private final Class&lt;S&gt; service;
-
-// 用于定位，加载和实例化providers的类加载器
-private final ClassLoader loader;
-
-// 创建ServiceLoader时采用的访问控制上下文
-private final AccessControlContext acc;
-
-// 缓存providers，按实例化的顺序排列
-private LinkedHashMap&lt;String,S&gt; providers = new LinkedHashMap&lt;&gt;();
-
-// 懒查找迭代器
-private LazyIterator lookupIterator;
-
-......</code></pre>
-<p>}<br>参考具体ServiceLoader具体源码，代码量不多，加上注释一共587行，梳理了一下，实现的流程如下：</p>
-<h3 id="1-应用程序调用ServiceLoader-load方法"><a href="#1-应用程序调用ServiceLoader-load方法" class="headerlink" title="1 应用程序调用ServiceLoader.load方法"></a>1 应用程序调用ServiceLoader.load方法</h3><p>ServiceLoader.load方法内先创建一个新的ServiceLoader，并实例化该类中的成员变量，包括：</p>
-<p>loader(ClassLoader类型，类加载器)</p>
-<p>acc(AccessControlContext类型，访问控制器)</p>
-<p>providers(LinkedHashMap&lt;String,S&gt;类型，用于缓存加载成功的类)</p>
-<p>lookupIterator(实现迭代器功能)</p>
-<h3 id="2-应用程序通过迭代器接口获取对象实例"><a href="#2-应用程序通过迭代器接口获取对象实例" class="headerlink" title="2 应用程序通过迭代器接口获取对象实例"></a>2 应用程序通过迭代器接口获取对象实例</h3><p>ServiceLoader先判断成员变量providers对象中(LinkedHashMap&lt;String,S&gt;类型)是否有缓存实例对象，如果有缓存，直接返回。<br>如果没有缓存，执行类的装载，实现如下：</p>
-<p>(1) 读取META-INF/services/下的配置文件，获得所有能被实例化的类的名称，值得注意的是，ServiceLoader可以跨越jar包获取META-INF下的配置文件，具体加载配置的实现代码如下：</p>
-<pre><code>    try &#123;
-        String fullName = PREFIX + service.getName();
-        if (loader == null)
-            configs = ClassLoader.getSystemResources(fullName);
-        else
-            configs = loader.getResources(fullName);
-    &#125; catch (IOException x) &#123;
-        fail(service, &quot;Error locating configuration files&quot;, x);
-    &#125;</code></pre>
-<p>(2) 通过反射方法Class.forName()加载类对象，并用instance()方法将类实例化。</p>
-<p>(3) 把实例化后的类缓存到providers对象中，(LinkedHashMap&lt;String,S&gt;类型）<br>然后返回实例对象。</p>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5 总结"></a>5 总结</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>使用Java SPI机制的优势是实现解耦，使得第三方服务模块的装配控制的逻辑与调用者的业务代码分离，而不是耦合在一起。应用程序可以根据实际业务情况启用框架扩展或替换框架组件。</p>
-<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><p>虽然ServiceLoader也算是使用的延迟加载，但是基本只能通过遍历全部获取，也就是接口的实现类全部加载并实例化一遍。如果你并不想用某些实现类，它也被加载并实例化了，这就造成了浪费。获取某个实现类的方式不够灵活，只能通过Iterator形式获取，不能根据某个参数来获取对应的实现类。</p>
-<p>多个并发多线程使用ServiceLoader类的实例是不安全的。</p>
-]]></content>
-      <categories>
-        <category>spi</category>
-      </categories>
-      <tags>
-        <tag>spi</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>10大最高效的Java库盘点</title>
-    <url>/2020/09/29/10%E5%A4%A7%E6%9C%80%E9%AB%98%E6%95%88%E7%9A%84Java%E5%BA%93%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>代码库是开源生态系统的重要组成部分，一个开源库背后通常拥有一个优秀的开源社区，毕竟没有社区的努力和支持，这个开源库很难生存下去。</p>
-<p>有了开源库，我们不需要每次编码都重复造轮子，这样你可以节省很多时间去做其他事情，比如陪伴家人和朋友。所以，在数十万的库中寻找一个最好的，最受欢迎的，而且用起来最简单高效的就显得尤为重要</p>
-<p>下面，我将推荐给你们10个最高效的Java库，并且他们都是开源的</p>
-<h2 id="1-Java-标准库"><a href="#1-Java-标准库" class="headerlink" title="1. Java 标准库"></a>1. Java 标准库</h2><p>不用怀疑，我说的就是Java标准库，很多人都低估了或者没有完全了解Java标准库，并且不知道如何在编程的时候使用它，有些人甚至都不用它，下面说一些Java标准库的简要说明</p>
-<p> java.lang：总是默认被导入，因为它基本包含开发中需要的Java 类型：String，Double，Enum，Math，等</p>
-<p> java.util：包含Java中可用的所有集合和数据结构</p>
-<p> java.io：I/O流</p>
-<p> java.nio：它实际上是java.io的替代品，代表非阻塞I / O。</p>
-<p> java.math：提供了使用任意精度decimal（BigDecimal）和integer（BigInteger）值的功能</p>
-<p> java.net：被用于处理套接字，创建连接，或者创建网络应用程序</p>
-<p>在Java中，我们也会用到GUI库，我们甚至可以用java.sound播放音乐和创建MIDI文件</p>
-<h2 id="2-JHipster"><a href="#2-JHipster" class="headerlink" title="2. JHipster"></a>2. JHipster</h2><p>JHipster是一个开发平台，用来开发和部署 Maven + Spring + AngularJS 的项目，提供完全热加载的 Java 和 JavaScript 代码。从前端到后端生成整个应用程序，你唯一需要添加的是架构背后的业务逻辑。最后生成的项目中包含两个最重要的库：</p>
-<p>Spring Boot - 帮助您加速和促进应用程序开发</p>
-<p>Angular / AngularJS - JavaScript框架</p>
-<h2 id="3-Maven"><a href="#3-Maven" class="headerlink" title="3. Maven"></a>3. Maven</h2><p>Maven 是一个 Java 项目构建系统。老实说，Maven真的很好用，如果你以前从未使用过Maven，那真是太可惜了。Maven可以通过在一个pom.xml文件中指定它们来管理所有项目依赖项的jar包，配置和构建配置，甚至可以管理文档。</p>
-<h2 id="4-Apache-Commons"><a href="#4-Apache-Commons" class="headerlink" title="4. Apache Commons"></a>4. Apache Commons</h2><p>Apache Commons实际上是一个专注于创建Java库的整个项目。以下是该库中最好和最常用的类库：</p>
-<p> Commons Math：顾名思义，该库包含许多数学和统计组件</p>
-<p> Commons CLI：提供用于解析命令行参数的API。</p>
-<p> Commons CSV ：用于读写CSV文件的工具包,由两大核心对象组成 CSVParser（解析），CSVPrinter（写csv）。、</p>
-<p> Commons IO：它用于更容易执行输入/输出操作，是针对开发IO流功能的工具类库</p>
-<h2 id="5-Guava"><a href="#5-Guava" class="headerlink" title="5. Guava"></a>5. Guava</h2><p>Guava是Google的Java核心库。包含许多 Google 核心的 Java 常用库，这个库超级实用，里面我最喜欢的组件之一的就是：ComparisonChain用于为集合实现高级和复杂的比较排序。</p>
-<h2 id="6-google-gson"><a href="#6-google-gson" class="headerlink" title="6. google-gson"></a>6. google-gson</h2><p>gson 是 Google 提供的用来在 Java 对象和 JSON 数据之间进行映射的 Java 类库。此库在开发移动应用程序和创建/使用REST API时非常有用。</p>
-<h2 id="7-Hibernate-ORM"><a href="#7-Hibernate-ORM" class="headerlink" title="7. Hibernate-ORM"></a>7. Hibernate-ORM</h2><p>Hibernate是一种Java语言下的对象关系映射解决方案。它用于在关系数据库中保存数据，对JDBC进行了非常轻量级的对象封装，Hibernate也是JPA规范的一个实现。</p>
-<h2 id="8-Mockito"><a href="#8-Mockito" class="headerlink" title="8. Mockito"></a>8. Mockito</h2><p>Mockito不是无酒精混合饮料，而是一个针对Java的mocking框架，Mockito使你可以使用更简单，更简洁的代码创建模拟和编写测试。总而言之，Mockito可以极大地简化单元测试的书写过程</p>
-<h2 id="9-JUnit"><a href="#9-JUnit" class="headerlink" title="9. JUnit"></a>9. JUnit</h2><p>JUnit是一个Java语言的单元测试框架， JUnit有它自己的JUnit扩展生态圈，不过，不能单纯拿代码覆盖率来评估测试的好坏，有时候覆盖率越大并不代表你的软件质量越好。</p>
-<h2 id="10-Log4j-和-Slf4j"><a href="#10-Log4j-和-Slf4j" class="headerlink" title="10. Log4j 和 Slf4j"></a>10. Log4j 和 Slf4j</h2><p>这两个都是日志框架。Slf4j为各种loging APIs提供一个简单统一的接口。Log4j只是一个简单的日志框架，控制日志的生成过程。</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>10大最高效的Java库盘点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自反性</title>
-    <url>/2020/10/03/%E8%87%AA%E5%8F%8D%E6%80%A7/</url>
-    <content><![CDATA[<h1 id="设A-1，2，3，4-，下列几个是A-上的二元关系。"><a href="#设A-1，2，3，4-，下列几个是A-上的二元关系。" class="headerlink" title="设A={1，2，3，4}，下列几个是A 上的二元关系。"></a>设A={1，2，3，4}，下列几个是A 上的二元关系。</h1><p>R1={&lt;1，1&gt;，&lt;1，2&gt;，&lt;2，1&gt;，&lt;2，2&gt;，&lt;3，4&gt;，&lt;4，1&gt;，&lt;4，4&gt;}；<br>R2={&lt;1，1&gt;，&lt;1，2&gt;，&lt;2，1&gt;}；<br>R3={&lt;1，1&gt;，&lt;1，2&gt;，&lt;1，4&gt;，&lt;2，1&gt;，&lt;2，2&gt;，&lt;3，3&gt;，&lt;4，1&gt;，&lt;4，4&gt;}；<br>R4={&lt;2，1&gt;，&lt;3，1&gt;，&lt;3，2&gt;，&lt;4，1&gt;，&lt;4，2&gt;，&lt;4，3&gt;}；<br>R5=(&lt;1，1&gt;，&lt;1，2&gt;，&lt;1，3&gt;，&lt;1，4&gt;，&lt;2，2&gt;，&lt;2，3&gt;，&lt;2，4&gt;，&lt;3，3&gt;，&lt;3，4&gt;，&lt;4，4&gt;}；<br>R6={&lt;3，4&gt;}。<br>其中，哪些是自反关系? 哪些是反自反关系?<br>解: 关系R3，R5是自反的，因为它包括所有形如&lt;a，a&gt;的序对。关系R4，R6是反自反的，因为它不包括任何形如&lt;a，a&gt;的序对。而关系R1，R2既不是自反的，也不是反自反的。<br>因为R1中包含&lt;1，1&gt;，&lt;2，2&gt;，&lt;4，4&gt;，但不包含&lt;3，3&gt;；R2中包含&lt;1，1&gt;.但不包含&lt;2，2&gt;，&lt;3，3&gt;，&lt;4，4&gt;。<br>自反性和反自反性可以在关系图和关系矩阵上非常直观地反映出来。</p>
-]]></content>
-      <categories>
-        <category>数学算法</category>
-      </categories>
-      <tags>
-        <tag>数学算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>tidb</title>
-    <url>/2020/11/03/tidb/</url>
-    <content><![CDATA[<h1 id="TiDB-4-0"><a href="#TiDB-4-0" class="headerlink" title="TiDB 4.0"></a>TiDB 4.0</h1><p>TiDB 4.0 兼容mysql5.7版本</p>
-]]></content>
-      <categories>
-        <category>tidb</category>
-      </categories>
-      <tags>
-        <tag>tidb</tag>
       </tags>
   </entry>
 </search>
