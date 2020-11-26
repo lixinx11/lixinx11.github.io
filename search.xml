@@ -113,6 +113,18 @@
       </tags>
   </entry>
   <entry>
+    <title>GUI</title>
+    <url>/2020/09/03/FUI/</url>
+    <content><![CDATA[<pre><code>   GUI开发,JavaFX/Swing/Qt等任意一种界面框架</code></pre>
+]]></content>
+      <categories>
+        <category>GUI</category>
+      </categories>
+      <tags>
+        <tag>GUI开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DNN的反向传播算法</title>
     <url>/2019/07/21/DNN/</url>
     <content><![CDATA[<p>　我们首先回顾DNN的反向传播算法。在DNN中，我们是首先计算出输出层的δLδL:<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>δL=∂J(W,b)∂zL=∂J(W,b)∂aL⊙σ′(zL)<br>　　　　利用数学归纳法，用δl+1δl+1的值一步步的向前求出第l层的δlδl，表达式为：<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>δl=(∂zl+1∂zl)Tδl+1=(Wl+1)Tδl+1⊙σ′(zl)<br>　　　　有了δlδl的表达式，从而求出W,bW,b的梯度表达式：<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b)∂Wl=δl(al−1)T<br>∂J(W,b,x,y)∂bl==δl<br>∂J(W,b,x,y)∂bl==δl<br>　　　　有了W,bW,b梯度表达式，就可以用梯度下降法来优化W,bW,b,求出最终的所有W,bW,b的值。</p>
@@ -123,18 +135,6 @@
       </categories>
       <tags>
         <tag>DNN的反向传播算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GUI</title>
-    <url>/2020/09/03/FUI/</url>
-    <content><![CDATA[<pre><code>   GUI开发,JavaFX/Swing/Qt等任意一种界面框架</code></pre>
-]]></content>
-      <categories>
-        <category>GUI</category>
-      </categories>
-      <tags>
-        <tag>GUI开发</tag>
       </tags>
   </entry>
   <entry>
@@ -232,6 +232,95 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </tags>
   </entry>
   <entry>
+    <title>ThreadLocal</title>
+    <url>/2019/09/21/ThreadLocal/</url>
+    <content><![CDATA[<h2 id="彻底理解ThreadLocal"><a href="#彻底理解ThreadLocal" class="headerlink" title="彻底理解ThreadLocal"></a>彻底理解ThreadLocal</h2><p>深挖过threadLocal之后，一句话概括：Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。所以ThreadLocal的应用场合，最适合的是按线程多实例（每个线程对应一个实例）的对象的访问，并且这个对象很多地方都要用到。</p>
+<p>数据隔离的秘诀其实是这样的，Thread有个TheadLocalMap类型的属性，叫做threadLocals，该属性用来保存该线程本地变量。这样每个线程都有自己的数据，就做到了不同线程间数据的隔离，保证了数据安全。</p>
+<p>接下来采用jdk1.8源码进行深挖一下TheadLocal和TheadLocalMap。</p>
+<h2 id="ThreadLocal是什么"><a href="#ThreadLocal是什么" class="headerlink" title="ThreadLocal是什么"></a>ThreadLocal是什么</h2><p>早在JDK 1.2的版本中就提供java.lang.ThreadLocal，ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。使用这个工具类可以很简洁地编写出优美的多线程程序。</p>
+<p>当使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
+<p>从线程的角度看，目标变量就象是线程的本地变量，这也是类名中“Local”所要表达的意思。</p>
+<p>所以，在Java中编写线程局部变量的代码相对来说要笨拙一些，因此造成线程局部变量没有在Java开发者中得到很好的普及。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>ThreadLocal，连接ThreadLocalMap和Thread。来处理Thread的TheadLocalMap属性，包括init初始化属性赋值、get对应的变量，set设置变量等。通过当前线程，获取线程上的ThreadLocalMap属性，对数据进行get、set等操作。</p>
+<p>ThreadLocalMap，用来存储数据，采用类似hashmap机制，存储了以threadLocal为key，需要隔离的数据为value的Entry键值对数组结构。</p>
+<p>ThreadLocal，有个ThreadLocalMap类型的属性，存储的数据就放在这儿。</p>
+<h2 id="ThreadLocal、ThreadLocal、Thread之间的关系"><a href="#ThreadLocal、ThreadLocal、Thread之间的关系" class="headerlink" title="ThreadLocal、ThreadLocal、Thread之间的关系"></a>ThreadLocal、ThreadLocal、Thread之间的关系</h2><p>ThreadLocalMap是ThreadLocal内部类，由ThreadLocal创建，Thread有ThreadLocal.ThreadLocalMap类型的属性</p>
+<h2 id="ThreadLocalMap简介"><a href="#ThreadLocalMap简介" class="headerlink" title="ThreadLocalMap简介"></a>ThreadLocalMap简介</h2><p>看名字就知道是个map，没错，这就是个hashMap机制实现的map，用Entry数组来存储键值对，key是ThreadLocal对象，value则是具体的值。值得一提的是，为了方便GC，Entry继承了WeakReference，也就是弱引用。里面有一些具体关于如何清理过期的数据、扩容等机制，思路基本和hashmap差不多，有兴趣的可以自行阅读了解，这边只需知道大概的数据存储结构即可。</p>
+<h2 id="Thread同步机制的比较"><a href="#Thread同步机制的比较" class="headerlink" title="Thread同步机制的比较"></a>Thread同步机制的比较</h2><p>ThreadLocal和线程同步机制相比有什么优势呢？</p>
+<p>Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。</p>
+<p>在同步机制中，通过对象的锁机制保证同一时间只有一个线程访问变量。这时该变量是多个线程共享的，使用同步机制要求程序慎密地分析什么时候对变量进行读写，什么时候需要锁定某个对象，什么时候释放对象锁等繁杂的问题，程序设计和编写难度相对较大。</p>
+<p>而ThreadLocal则从另一个角度来解决多线程的并发访问。ThreadLocal会为每一个线程提供一个独立的变量副本，从而隔离了多个线程对数据的访问冲突。因为每一个线程都拥有自己的变量副本，从而也就没有必要对该变量进行同步了。ThreadLocal提供了线程安全的共享对象，在编写多线程代码时，可以把不安全的变量封装进ThreadLocal。</p>
+<p>概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。</p>
+<p>Spring使用ThreadLocal解决线程安全问题我们知道在一般情况下，只有无状态的Bean才可以在多线程环境下共享，在Spring中，绝大部分Bean都可以声明为singleton作用域。就是因为Spring对一些Bean（如RequestContextHolder、TransactionSynchronizationManager、LocaleContextHolder等）中非线程安全状态采用ThreadLocal进行处理，让它们也成为线程安全的状态，因为有状态的Bean就可以在多线程中共享了。</p>
+<p>一般的Web应用划分为展现层、服务层和持久层三个层次，在不同的层中编写对应的逻辑，下层通过接口向上层开放功能调用。在一般情况下，从接收请求到返回响应所经过的所有程序调用都同属于一个线程。</p>
+<p>同一线程贯通三层这样你就可以根据需要，将一些非线程安全的变量以ThreadLocal存放，在同一次请求响应的调用线程中，所有关联的对象引用到的都是同一个变量。</p>
+<p>下面的实例能够体现Spring对有状态Bean的改造思路：</p>
+<p>TestDao：非线程安全</p>
+<p>public class TestDao {<br>    private Connection conn;// ①一个非线程安全的变量</p>
+<pre><code>public void addTopic() throws SQLException &#123;
+    Statement stat = conn.createStatement();// ②引用非线程安全变量
+    // …
+&#125;</code></pre>
+<p>由于conn是成员变量，因为addTopic()方法是非线程安全的，必须在使用时创建一个新TopicDao实例（非singleton）。下面使用ThreadLocal对conn这个非线程安全的“状态”进行改造：</p>
+<p>TestDao：线程安全</p>
+<p>public class TestDaoNew {// ①使用ThreadLocal保存Connection变量<br>  private static ThreadLocal<Connection> connThreadLocal = ThreadLocal.withInitial(Test::createConnection);</p>
+<p>  // 具体创建数据库连接的方法<br>  private static Connection createConnection() {<br>    Connection result = null;<br>    /**<br>     * create a real connection…<br>     * such as :<br>     * result = DriverManager.getConnection(dbUrl, dbUser, dbPwd);<br>     */<br>    return result;<br>  }</p>
+<p>  // ③直接返回线程本地变量<br>  public static Connection getConnection() {<br>    return connThreadLocal.get();<br>  }</p>
+<p>  // 具体操作<br>  public void addTopic() throws SQLException {<br>    // ④从ThreadLocal中获取线程对应的Connection<br>    Statement stat = getConnection().createStatement();<br>    //….any other operation<br>  }<br>}</p>
+<p>不同的线程在使用TopicDao时，根据之前的深挖get具体操作，判断connThreadLocal.get()会去判断是有map，没有则根据initivalValue创建一个Connection对象并添加到本地线程变量中，initivalValue对应的值也就是上述的lamba表达式对应的创建connection的方法返回的结果，下次get则由于已经有了，则会直接获取已经创建好的Connection，这样，就保证了不同的线程使用线程相关的Connection，而不会使用其它线程的Connection。因此，这个TopicDao就可以做到singleton共享了。</p>
+<p>当然，这个例子本身很粗糙，将Connection的ThreadLocal直接放在DAO只能做到本DAO的多个方法共享Connection时不发生线程安全问题，但无法和其它DAO共用同一个Connection，要做到同一事务多DAO共享同一Connection，必须在一个共同的外部类使用ThreadLocal保存Connection。</p>
+<p>ConnectionManager.java</p>
+<p>public class ConnectionManager {</p>
+<pre><code>private static ThreadLocal&lt;Connection&gt; connectionHolder = ThreadLocal.withInitial(() -&gt; &#123;
+    Connection conn = null;
+    try &#123;
+        conn = DriverManager.getConnection(
+                &quot;jdbc:mysql://localhost:3306/test&quot;, &quot;username&quot;,
+                &quot;password&quot;);
+    &#125; catch (SQLException e) &#123;
+        e.printStackTrace();
+    &#125;
+    return conn;
+&#125;);
+
+public static Connection getConnection() &#123;
+    return connectionHolder.get();
+&#125;</code></pre>
+<p>}</p>
+<h2 id="线程隔离的秘密"><a href="#线程隔离的秘密" class="headerlink" title="线程隔离的秘密"></a>线程隔离的秘密</h2><p>秘密就就在于上述叙述的ThreadLocalMap这个类。ThreadLocalMap是ThreadLocal类的一个静态内部类，它实现了键值对的设置和获取（对比Map对象来理解），每个线程中都有一个独立的ThreadLocalMap副本，它所存储的值，只能被当前线程读取和修改。ThreadLocal类通过操作每一个线程特有的ThreadLocalMap副本，从而实现了变量访问在不同线程中的隔离。因为每个线程的变量都是自己特有的，完全不会有并发错误。还有一点就是，ThreadLocalMap存储的键值对中的键是this对象指向的ThreadLocal对象，而值就是你所设置的对象了。</p>
+<p>为了加深理解，我们接着看上面代码中出现的getMap和createMap方法的实现：</p>
+<pre><code>/**
+ * Get the map associated with a ThreadLocal. Overridden in
+ * InheritableThreadLocal.
+ *
+ * @param  t the current thread
+ * @return the map
+ */
+ThreadLocalMap getMap(Thread t) &#123;
+    return t.threadLocals;
+&#125;
+
+/**
+ * Create the map associated with a ThreadLocal. Overridden in
+ * InheritableThreadLocal.
+ *
+ * @param t the current thread
+ * @param firstValue value for the initial entry of the map
+ * @param map the map to store.
+ */
+void createMap(Thread t, T firstValue) &#123;
+    t.threadLocals = new ThreadLocalMap(this, firstValue);
+&#125;</code></pre>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>ThreadLocal是解决线程安全问题一个很好的思路，它通过为每个线程提供一个独立的变量副本解决了变量并发访问的冲突问题。在很多情况下，ThreadLocal比直接使用synchronized同步机制解决线程安全问题更简单，更方便，且结果程序拥有更高的并发性。</p>
+]]></content>
+      <categories>
+        <category>多线程</category>
+      </categories>
+      <tags>
+        <tag>彻底理解ThreadLocal</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>时光角落</title>
     <url>/2020/09/03/book/</url>
     <content><![CDATA[<pre><code>思考是人类最大的乐趣之一 --布莱希特</code></pre>
@@ -242,43 +331,6 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </categories>
       <tags>
         <tag>时光角落</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从嫦娥5号看第二宇宙速度</title>
-    <url>/2020/11/26/chang6/</url>
-    <content><![CDATA[<h2 id="1、第一宇宙速度"><a href="#1、第一宇宙速度" class="headerlink" title="1、第一宇宙速度"></a>1、第一宇宙速度</h2><pre><code>摆脱地球引力 就必须大于第一宇宙速度     按照力学理论可以计算出 v1=7.9 km/s
-小于第二宇宙速度，否则会超出太阳的引力，冲出太阳系。 当航天器超过第一宇宙速度V1达到一定值时，它就会脱离地球的引力场而成为围绕太阳运行的人造行星，这个速度就叫做第二宇宙速度，亦称脱离速度。</code></pre>
-<h2 id="2、-第二宇宙速度"><a href="#2、-第二宇宙速度" class="headerlink" title="2、 第二宇宙速度"></a>2、 第二宇宙速度</h2><p>按照力学理论可以计算出第二宇宙速度V2=11．2公里/秒</p>
-<h2 id="3、-从月球采样返回"><a href="#3、-从月球采样返回" class="headerlink" title="3、 从月球采样返回"></a>3、 从月球采样返回</h2><p>返回器以接近第二宇宙速度(第二宇宙速度为11.2公里/秒)再入返回相关技术<br>第二宇宙速度也叫脱离速度,是脱离地球飞行所需的速度,嫦娥以脱离速度再入地球大气层,再弹跳出大气层进入太空、再入大气层、再弹出大气层.一跳就是上千公里,最后能以设计所需的速度精确降落地面.</p>
-<h2 id="4、天问号-到达火星"><a href="#4、天问号-到达火星" class="headerlink" title="4、天问号 到达火星"></a>4、天问号 到达火星</h2><p> 到达火星 必须要 摆脱地球引力，达到甚至高于第二宇宙速度</p>
-]]></content>
-      <categories>
-        <category>从嫦娥5号看第二宇宙速度</category>
-      </categories>
-      <tags>
-        <tag>从嫦娥5号看第二宇宙速度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello world</title>
-    <url>/2010/04/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>Hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -330,6 +382,43 @@ RPA 是既簡單又強大的業務流程自動化軟體。機器人流程自動�
       </categories>
       <tags>
         <tag>Dockerfile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从嫦娥5号看第二宇宙速度</title>
+    <url>/2020/11/26/chang6/</url>
+    <content><![CDATA[<h2 id="1、第一宇宙速度"><a href="#1、第一宇宙速度" class="headerlink" title="1、第一宇宙速度"></a>1、第一宇宙速度</h2><pre><code>摆脱地球引力 就必须大于第一宇宙速度     按照力学理论可以计算出 v1=7.9 km/s
+小于第二宇宙速度，否则会超出太阳的引力，冲出太阳系。 当航天器超过第一宇宙速度V1达到一定值时，它就会脱离地球的引力场而成为围绕太阳运行的人造行星，这个速度就叫做第二宇宙速度，亦称脱离速度。</code></pre>
+<h2 id="2、-第二宇宙速度"><a href="#2、-第二宇宙速度" class="headerlink" title="2、 第二宇宙速度"></a>2、 第二宇宙速度</h2><p>按照力学理论可以计算出第二宇宙速度V2=11．2公里/秒</p>
+<h2 id="3、-从月球采样返回"><a href="#3、-从月球采样返回" class="headerlink" title="3、 从月球采样返回"></a>3、 从月球采样返回</h2><p>返回器以接近第二宇宙速度(第二宇宙速度为11.2公里/秒)再入返回相关技术<br>第二宇宙速度也叫脱离速度,是脱离地球飞行所需的速度,嫦娥以脱离速度再入地球大气层,再弹跳出大气层进入太空、再入大气层、再弹出大气层.一跳就是上千公里,最后能以设计所需的速度精确降落地面.</p>
+<h2 id="4、天问号-到达火星"><a href="#4、天问号-到达火星" class="headerlink" title="4、天问号 到达火星"></a>4、天问号 到达火星</h2><p> 到达火星 必须要 摆脱地球引力，达到甚至高于第二宇宙速度</p>
+]]></content>
+      <categories>
+        <category>从嫦娥5号看第二宇宙速度</category>
+      </categories>
+      <tags>
+        <tag>从嫦娥5号看第二宇宙速度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello world</title>
+    <url>/2010/04/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Hello world</tag>
       </tags>
   </entry>
   <entry>
@@ -492,11 +581,6 @@ docker save project:0.0.1&gt;~/xxx.tar
       </tags>
   </entry>
   <entry>
-    <title>redis</title>
-    <url>/2020/09/05/redis/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>redis使用指南</title>
     <url>/2018/06/13/redis%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>redis与redis部署服务的安装<br>下载文件redis-3.0.0.tar.gz</p>
@@ -587,6 +671,48 @@ docker save project:0.0.1&gt;~/xxx.tar
       </tags>
   </entry>
   <entry>
+    <title>redis</title>
+    <url>/2020/09/05/redis/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>sklearn函数汇总</title>
+    <url>/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p><strong>sklearn函数汇总</strong><br>9/6/2020 11:45:01 AM </p>
+<ol>
+<li>拆分数据集为训练集和测试集：</li>
+</ol>
+<p>from sklearn.model_selection import train_test_split<br>x_train, x_test, y_train, y_test =<br>train_test_split(x, y, test_size = 0.2,random_state=3,shuffle=False)</p>
+<h1 id="test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个"><a href="#test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个" class="headerlink" title="test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个"></a>test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个</h1><p>  random_state代表随即种子编号，默认为None<br>  shuffle代表是否进行有放回抽样</p>
+<h2 id="2-数据预处理"><a href="#2-数据预处理" class="headerlink" title="2. 数据预处理"></a>2. 数据预处理</h2><h3 id="2-1-标准化："><a href="#2-1-标准化：" class="headerlink" title="2.1 标准化："></a>2.1 标准化：</h3><p>from sklearn.preprocessing import StandardScaler<br>scaler = StandardScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-2-区间缩放："><a href="#2-2-区间缩放：" class="headerlink" title="2.2 区间缩放："></a>2.2 区间缩放：</h3><p>from sklearn.preprocessing import MinMaxScaler<br>scaler = MinMaxScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-3-归一化："><a href="#2-3-归一化：" class="headerlink" title="2.3 归一化："></a>2.3 归一化：</h3><p>from sklearn.preprocessing import Normalizer<br>scaler = Normalizer().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"><a href="#2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0" class="headerlink" title="2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"></a>2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0</h3><p>from sklearn.preprocessing import Binarizer<br>scaler = Binarizer(threshold=3).fit(x_train) # threshold为设定的阀值<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-5-哑编码处理："><a href="#2-5-哑编码处理：" class="headerlink" title="2.5 哑编码处理："></a>2.5 哑编码处理：</h3><p>from sklearn.preprocessing import OneHotEncoder<br>scaler = OneHotEncoder().fit(x_train.reshape((-1,1)))<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-6-自定义函数变换"><a href="#2-6-自定义函数变换" class="headerlink" title="2.6 自定义函数变换"></a>2.6 自定义函数变换</h3><p>from numpy import log1p  # 使用对数函数转换<br>from sklearn.preprocessing import FunctionTransformer<br>scaler = FunctionTransformer(log1p).fit(x_train)<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-7-PCA降维："><a href="#2-7-PCA降维：" class="headerlink" title="2.7 PCA降维："></a>2.7 PCA降维：</h3><p>from sklearn.decomposition import PCA<br>pca = PCA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainPca = pca.transform(x_train) # 将规则应用于训练集<br>x_testPca = pca.transform(x_test)  # 将规则应用于测试集</p>
+<h3 id="2-8-LDA降维："><a href="#2-8-LDA降维：" class="headerlink" title="2.8 LDA降维："></a>2.8 LDA降维：</h3><p>from sklearn.lda import LDA<br>lda = LDA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainLda = lda.transform(x_train) # 将规则应用于训练集<br>x_testLda = lda.transform(x_test)  # 将规则应用于测试集</p>
+<h2 id="3-特征筛选"><a href="#3-特征筛选" class="headerlink" title="3. 特征筛选"></a>3. 特征筛选</h2><h3 id="3-1-Filter法："><a href="#3-1-Filter法：" class="headerlink" title="3.1 Filter法："></a>3.1 Filter法：</h3><p>from sklearn.feature_selection import SelectKBest, f_classif<br>selector = SelectKBest(f_classif, k=4) – 用f_classif方法，设定数目为4<br>a=selector.fit(x,y)<br>print(np.array(a.scores_),’\n’,a.get_support())  –  输出得分及选择的结果</p>
+<h3 id="3-2-Wrapper法（递归法）："><a href="#3-2-Wrapper法（递归法）：" class="headerlink" title="3.2 Wrapper法（递归法）："></a>3.2 Wrapper法（递归法）：</h3><p>from sklearn.linear_model import LinearRegression –导入基模型<br>from sklearn.feature_selection import RFE  – 导入RFE模块<br>model1 = LinearRegression()   – 建立一个线性模型<br>rfe = RFE(model1,4)           – 进行多轮训练，设置筛选特征数目为4个<br>rfe = rfe.fit(x,y)            – 模型的拟合训练<br>print(rfe.support_)           – 输出特征的选择结果<br>print(rfe.ranking_)           – 特征的选择排名</p>
+<h2 id="4-构建模型"><a href="#4-构建模型" class="headerlink" title="4.构建模型"></a>4.构建模型</h2><h3 id="4-1决策树模型"><a href="#4-1决策树模型" class="headerlink" title="4.1决策树模型"></a>4.1决策树模型</h3><p>决策树优点：</p>
+<p>便于理解和解释。树的结构可以可视化出来。<br>训练需要的数据少，对异常值和缺失值不敏感。<br>能够处理数值型数据和分类数据。<br>决策树缺点：</p>
+<p>容易产生一个过于复杂的模型，使模型产生过拟合的问题。<br>决策树可能是不稳定的，因为数据中的微小变化可能会导致完全不同的树生成。<br>from sklearn.tree import DecisionTreeClassifier<br>clf = DecisionTreeClassifier(criterion=’gini’, –设置衡量的系数,有entropy和gini，默认gini<br>                               splitter=’best’, –选择分类的策略，best和random，默认best<br>                               max_depth=5, –设置树的最大深度<br>                               min_samples_split=10,– 区分一个内部节点需要的最少的样本数<br>                               min_samples_leaf=5 – 一个叶节点所需要的最小样本数<br>                               max_features=5 –最大特征数<br>                               max_leaf_nodes=3–最大样本节点个数<br>                               min_impurity_split –指定信息增益的阀值<br>                               )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
+<h3 id="4-2-逻辑回归模型"><a href="#4-2-逻辑回归模型" class="headerlink" title="4.2 逻辑回归模型"></a>4.2 逻辑回归模型</h3><p>优点：实现简单，易于理解和实现；计算代价不高，速度很快，存储资源低。</p>
+<p>缺点：容易欠拟合，分类精度可能不高。对异常值和缺失值敏感</p>
+<p>from sklearn.linear_model import LogisticRegression<br>clf = LogisticRegression(penalty=’l2’, –惩罚项（l1与l2），默认l2<br>                         dual=False, –对偶或原始方法，默认False，样本数量&gt;样本特征的时候，dual通常设置为False<br>                         tol=0.0001, –停止求解的标准，float类型，默认为1e-4。就是求解到多少的时候，停止，认为已经求出最优解<br>                         C=1.0, –正则化系数λ的倒数，float类型，默认为1.0，越小的数值表示越强的正则化。<br>                         fit_intercept=True, –是否存在截距或偏差，bool类型，默认为True。<br>                         intercept_scaling=1, –仅在正则化项为”liblinear”，且fit_intercept设置为True时有用。float类型，默认为1<br>                         class_weight=None, –用于标示分类模型中各种类型的权重，默认为不输入，也就是不考虑权重，即为None<br>                         random_state=None, –随机数种子，int类型，可选参数，默认为无<br>                         solver=’liblinear’, –优化算法选择参数，只有五个可选参数，即newton-cg,lbfgs,liblinear,sag,saga。默认为liblinear<br>                         max_iter=10, –算法收敛最大迭代次数，int类型，默认为10。<br>                         multi_class=’ovr’–分类方式选择参数，str类型，可选参数为ovr和multinomial，默认为ovr。<br>                                          如果是二元逻辑回归，ovr和multinomial并没有任何区别，区别主要在多元逻辑回归上。<br>                         verbose=0, –日志冗长度，int类型。默认为0。就是不输出训练过程<br>                         warm_start=False, –热启动参数，bool类型。默认为False。<br>                         n_jobs=1–并行数。int类型，默认为1。1的时候，用CPU的一个内核运行程序，2的时候，用CPU的2个内核运行程序。<br>                        )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
+<h3 id="4-3-线性回归模型"><a href="#4-3-线性回归模型" class="headerlink" title="4.3 线性回归模型"></a>4.3 线性回归模型</h3><p>优点：实现简单，可解释性强。</p>
+<p>缺点：容易出现欠拟合，对异常值和缺失值比较敏感。</p>
+<p>from sklearn.linear_model import LinearRegression()<br>clf = LinearRegression(copy_X=True,<br>                       fit_intercept=True,<br>                       n_jobs=1,<br>                       normalize=False)<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
+<h3 id="4-4-K-means聚类"><a href="#4-4-K-means聚类" class="headerlink" title="4.4 K-means聚类"></a>4.4 K-means聚类</h3><p>from sklearn.cluster import KMeans<br>clf = KMeans(n_clusters=4, –给定的类别数<br>             max_iter=100,–为迭代的次数，这里设置最大迭代次数为300<br>             n_init=10,–设为10意味着进行10次随机初始化，选择效果最好的一种来作为模型<br>             copy_x=True–布尔型，默认值=True,如果把此参数值设为True，则原始数据不会被改变。如果是False，则会直接在原始数据<br>                        上做修改并在函数返回值时将其还原。<br>             )<br>clf= clf.fit(x)  – 拟合训练</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>sklearn函数汇总</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>spi --探秘</title>
     <url>/2020/09/29/spi/</url>
     <content><![CDATA[<p>本文通过探析JDK提供的，在开源项目中比较常用的Java SPI机制，希望给大家在实际开发实践、学习开源项目提供参考。</p>
@@ -667,108 +793,15 @@ private LazyIterator lookupIterator;
       </tags>
   </entry>
   <entry>
-    <title>低代码开发</title>
-    <url>/2020/09/15/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</url>
-    <content><![CDATA[<pre><code>                                #   低代码开发未来的趋势？</code></pre>
-<p>低代码开发平台是现在很火的话题，市场上的低代码开发平台，主要有两类。</p>
-<h2 id="第一类，"><a href="#第一类，" class="headerlink" title="第一类，"></a>第一类，</h2><p>通过拖拽方式开发App界面，数据来源于现有系统。这个领域有很多新的创业公司，比如被西门子收购的Mendix，获得大笔融资的Outsystems，<br>还有微软开发了很多年的PowerApps。这些可以帮助企业基于现有系统开发新的应用界面，尤其是延伸到手机端。</p>
-<h2 id="第二类，"><a href="#第二类，" class="headerlink" title="第二类，"></a>第二类，</h2><p>从零开始，创建业务系统，或是构建企业数据中台。这个领域需要很多年的技术积累，<br>需要通过成百上千个项目沉淀客户需求，才能做出好的开发工具。如何把基础功能标准化，如何把差异化的部分提炼出来做成可配置，这是一个非常难的课题。<br>在这方面比较领先的有以开发CRM并逐步进化的Salesforce， 开发ERP起家的Odoo 、BPM厂商华炎魔方。</p>
-<h2 id="总之"><a href="#总之" class="headerlink" title="总之"></a>总之</h2><pre><code>随着人工智能的发展，初级的程序员未来竟被机器替代。企业的技能要求向设计，算法等高级技能发展。</code></pre>
+    <title>tidb</title>
+    <url>/2020/11/03/tidb/</url>
+    <content><![CDATA[<h1 id="TiDB-4-0"><a href="#TiDB-4-0" class="headerlink" title="TiDB 4.0"></a>TiDB 4.0</h1><p>TiDB 4.0 兼容mysql5.7版本</p>
 ]]></content>
       <categories>
-        <category>java</category>
+        <category>tidb</category>
       </categories>
       <tags>
-        <tag>低代码开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ThreadLocal</title>
-    <url>/2019/09/21/ThreadLocal/</url>
-    <content><![CDATA[<h2 id="彻底理解ThreadLocal"><a href="#彻底理解ThreadLocal" class="headerlink" title="彻底理解ThreadLocal"></a>彻底理解ThreadLocal</h2><p>深挖过threadLocal之后，一句话概括：Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。所以ThreadLocal的应用场合，最适合的是按线程多实例（每个线程对应一个实例）的对象的访问，并且这个对象很多地方都要用到。</p>
-<p>数据隔离的秘诀其实是这样的，Thread有个TheadLocalMap类型的属性，叫做threadLocals，该属性用来保存该线程本地变量。这样每个线程都有自己的数据，就做到了不同线程间数据的隔离，保证了数据安全。</p>
-<p>接下来采用jdk1.8源码进行深挖一下TheadLocal和TheadLocalMap。</p>
-<h2 id="ThreadLocal是什么"><a href="#ThreadLocal是什么" class="headerlink" title="ThreadLocal是什么"></a>ThreadLocal是什么</h2><p>早在JDK 1.2的版本中就提供java.lang.ThreadLocal，ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。使用这个工具类可以很简洁地编写出优美的多线程程序。</p>
-<p>当使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
-<p>从线程的角度看，目标变量就象是线程的本地变量，这也是类名中“Local”所要表达的意思。</p>
-<p>所以，在Java中编写线程局部变量的代码相对来说要笨拙一些，因此造成线程局部变量没有在Java开发者中得到很好的普及。</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>ThreadLocal，连接ThreadLocalMap和Thread。来处理Thread的TheadLocalMap属性，包括init初始化属性赋值、get对应的变量，set设置变量等。通过当前线程，获取线程上的ThreadLocalMap属性，对数据进行get、set等操作。</p>
-<p>ThreadLocalMap，用来存储数据，采用类似hashmap机制，存储了以threadLocal为key，需要隔离的数据为value的Entry键值对数组结构。</p>
-<p>ThreadLocal，有个ThreadLocalMap类型的属性，存储的数据就放在这儿。</p>
-<h2 id="ThreadLocal、ThreadLocal、Thread之间的关系"><a href="#ThreadLocal、ThreadLocal、Thread之间的关系" class="headerlink" title="ThreadLocal、ThreadLocal、Thread之间的关系"></a>ThreadLocal、ThreadLocal、Thread之间的关系</h2><p>ThreadLocalMap是ThreadLocal内部类，由ThreadLocal创建，Thread有ThreadLocal.ThreadLocalMap类型的属性</p>
-<h2 id="ThreadLocalMap简介"><a href="#ThreadLocalMap简介" class="headerlink" title="ThreadLocalMap简介"></a>ThreadLocalMap简介</h2><p>看名字就知道是个map，没错，这就是个hashMap机制实现的map，用Entry数组来存储键值对，key是ThreadLocal对象，value则是具体的值。值得一提的是，为了方便GC，Entry继承了WeakReference，也就是弱引用。里面有一些具体关于如何清理过期的数据、扩容等机制，思路基本和hashmap差不多，有兴趣的可以自行阅读了解，这边只需知道大概的数据存储结构即可。</p>
-<h2 id="Thread同步机制的比较"><a href="#Thread同步机制的比较" class="headerlink" title="Thread同步机制的比较"></a>Thread同步机制的比较</h2><p>ThreadLocal和线程同步机制相比有什么优势呢？</p>
-<p>Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。</p>
-<p>在同步机制中，通过对象的锁机制保证同一时间只有一个线程访问变量。这时该变量是多个线程共享的，使用同步机制要求程序慎密地分析什么时候对变量进行读写，什么时候需要锁定某个对象，什么时候释放对象锁等繁杂的问题，程序设计和编写难度相对较大。</p>
-<p>而ThreadLocal则从另一个角度来解决多线程的并发访问。ThreadLocal会为每一个线程提供一个独立的变量副本，从而隔离了多个线程对数据的访问冲突。因为每一个线程都拥有自己的变量副本，从而也就没有必要对该变量进行同步了。ThreadLocal提供了线程安全的共享对象，在编写多线程代码时，可以把不安全的变量封装进ThreadLocal。</p>
-<p>概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。</p>
-<p>Spring使用ThreadLocal解决线程安全问题我们知道在一般情况下，只有无状态的Bean才可以在多线程环境下共享，在Spring中，绝大部分Bean都可以声明为singleton作用域。就是因为Spring对一些Bean（如RequestContextHolder、TransactionSynchronizationManager、LocaleContextHolder等）中非线程安全状态采用ThreadLocal进行处理，让它们也成为线程安全的状态，因为有状态的Bean就可以在多线程中共享了。</p>
-<p>一般的Web应用划分为展现层、服务层和持久层三个层次，在不同的层中编写对应的逻辑，下层通过接口向上层开放功能调用。在一般情况下，从接收请求到返回响应所经过的所有程序调用都同属于一个线程。</p>
-<p>同一线程贯通三层这样你就可以根据需要，将一些非线程安全的变量以ThreadLocal存放，在同一次请求响应的调用线程中，所有关联的对象引用到的都是同一个变量。</p>
-<p>下面的实例能够体现Spring对有状态Bean的改造思路：</p>
-<p>TestDao：非线程安全</p>
-<p>public class TestDao {<br>    private Connection conn;// ①一个非线程安全的变量</p>
-<pre><code>public void addTopic() throws SQLException &#123;
-    Statement stat = conn.createStatement();// ②引用非线程安全变量
-    // …
-&#125;</code></pre>
-<p>由于conn是成员变量，因为addTopic()方法是非线程安全的，必须在使用时创建一个新TopicDao实例（非singleton）。下面使用ThreadLocal对conn这个非线程安全的“状态”进行改造：</p>
-<p>TestDao：线程安全</p>
-<p>public class TestDaoNew {// ①使用ThreadLocal保存Connection变量<br>  private static ThreadLocal<Connection> connThreadLocal = ThreadLocal.withInitial(Test::createConnection);</p>
-<p>  // 具体创建数据库连接的方法<br>  private static Connection createConnection() {<br>    Connection result = null;<br>    /**<br>     * create a real connection…<br>     * such as :<br>     * result = DriverManager.getConnection(dbUrl, dbUser, dbPwd);<br>     */<br>    return result;<br>  }</p>
-<p>  // ③直接返回线程本地变量<br>  public static Connection getConnection() {<br>    return connThreadLocal.get();<br>  }</p>
-<p>  // 具体操作<br>  public void addTopic() throws SQLException {<br>    // ④从ThreadLocal中获取线程对应的Connection<br>    Statement stat = getConnection().createStatement();<br>    //….any other operation<br>  }<br>}</p>
-<p>不同的线程在使用TopicDao时，根据之前的深挖get具体操作，判断connThreadLocal.get()会去判断是有map，没有则根据initivalValue创建一个Connection对象并添加到本地线程变量中，initivalValue对应的值也就是上述的lamba表达式对应的创建connection的方法返回的结果，下次get则由于已经有了，则会直接获取已经创建好的Connection，这样，就保证了不同的线程使用线程相关的Connection，而不会使用其它线程的Connection。因此，这个TopicDao就可以做到singleton共享了。</p>
-<p>当然，这个例子本身很粗糙，将Connection的ThreadLocal直接放在DAO只能做到本DAO的多个方法共享Connection时不发生线程安全问题，但无法和其它DAO共用同一个Connection，要做到同一事务多DAO共享同一Connection，必须在一个共同的外部类使用ThreadLocal保存Connection。</p>
-<p>ConnectionManager.java</p>
-<p>public class ConnectionManager {</p>
-<pre><code>private static ThreadLocal&lt;Connection&gt; connectionHolder = ThreadLocal.withInitial(() -&gt; &#123;
-    Connection conn = null;
-    try &#123;
-        conn = DriverManager.getConnection(
-                &quot;jdbc:mysql://localhost:3306/test&quot;, &quot;username&quot;,
-                &quot;password&quot;);
-    &#125; catch (SQLException e) &#123;
-        e.printStackTrace();
-    &#125;
-    return conn;
-&#125;);
-
-public static Connection getConnection() &#123;
-    return connectionHolder.get();
-&#125;</code></pre>
-<p>}</p>
-<h2 id="线程隔离的秘密"><a href="#线程隔离的秘密" class="headerlink" title="线程隔离的秘密"></a>线程隔离的秘密</h2><p>秘密就就在于上述叙述的ThreadLocalMap这个类。ThreadLocalMap是ThreadLocal类的一个静态内部类，它实现了键值对的设置和获取（对比Map对象来理解），每个线程中都有一个独立的ThreadLocalMap副本，它所存储的值，只能被当前线程读取和修改。ThreadLocal类通过操作每一个线程特有的ThreadLocalMap副本，从而实现了变量访问在不同线程中的隔离。因为每个线程的变量都是自己特有的，完全不会有并发错误。还有一点就是，ThreadLocalMap存储的键值对中的键是this对象指向的ThreadLocal对象，而值就是你所设置的对象了。</p>
-<p>为了加深理解，我们接着看上面代码中出现的getMap和createMap方法的实现：</p>
-<pre><code>/**
- * Get the map associated with a ThreadLocal. Overridden in
- * InheritableThreadLocal.
- *
- * @param  t the current thread
- * @return the map
- */
-ThreadLocalMap getMap(Thread t) &#123;
-    return t.threadLocals;
-&#125;
-
-/**
- * Create the map associated with a ThreadLocal. Overridden in
- * InheritableThreadLocal.
- *
- * @param t the current thread
- * @param firstValue value for the initial entry of the map
- * @param map the map to store.
- */
-void createMap(Thread t, T firstValue) &#123;
-    t.threadLocals = new ThreadLocalMap(this, firstValue);
-&#125;</code></pre>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>ThreadLocal是解决线程安全问题一个很好的思路，它通过为每个线程提供一个独立的变量副本解决了变量并发访问的冲突问题。在很多情况下，ThreadLocal比直接使用synchronized同步机制解决线程安全问题更简单，更方便，且结果程序拥有更高的并发性。</p>
-]]></content>
-      <categories>
-        <category>多线程</category>
-      </categories>
-      <tags>
-        <tag>彻底理解ThreadLocal</tag>
+        <tag>tidb</tag>
       </tags>
   </entry>
   <entry>
@@ -786,6 +819,22 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>epoll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>低代码开发</title>
+    <url>/2020/09/15/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<pre><code>                                #   低代码开发未来的趋势？</code></pre>
+<p>低代码开发平台是现在很火的话题，市场上的低代码开发平台，主要有两类。</p>
+<h2 id="第一类，"><a href="#第一类，" class="headerlink" title="第一类，"></a>第一类，</h2><p>通过拖拽方式开发App界面，数据来源于现有系统。这个领域有很多新的创业公司，比如被西门子收购的Mendix，获得大笔融资的Outsystems，<br>还有微软开发了很多年的PowerApps。这些可以帮助企业基于现有系统开发新的应用界面，尤其是延伸到手机端。</p>
+<h2 id="第二类，"><a href="#第二类，" class="headerlink" title="第二类，"></a>第二类，</h2><p>从零开始，创建业务系统，或是构建企业数据中台。这个领域需要很多年的技术积累，<br>需要通过成百上千个项目沉淀客户需求，才能做出好的开发工具。如何把基础功能标准化，如何把差异化的部分提炼出来做成可配置，这是一个非常难的课题。<br>在这方面比较领先的有以开发CRM并逐步进化的Salesforce， 开发ERP起家的Odoo 、BPM厂商华炎魔方。</p>
+<h2 id="总之"><a href="#总之" class="headerlink" title="总之"></a>总之</h2><pre><code>随着人工智能的发展，初级的程序员未来竟被机器替代。企业的技能要求向设计，算法等高级技能发展。</code></pre>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>低代码开发</tag>
       </tags>
   </entry>
   <entry>
@@ -823,43 +872,6 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
-    <title>sklearn函数汇总</title>
-    <url>/2020/09/06/sklearn%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<p><strong>sklearn函数汇总</strong><br>9/6/2020 11:45:01 AM </p>
-<ol>
-<li>拆分数据集为训练集和测试集：</li>
-</ol>
-<p>from sklearn.model_selection import train_test_split<br>x_train, x_test, y_train, y_test =<br>train_test_split(x, y, test_size = 0.2,random_state=3,shuffle=False)</p>
-<h1 id="test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个"><a href="#test-size代表测试集的大小，train-size代表训练集的大小，两者只能存在一个" class="headerlink" title="test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个"></a>test_size代表测试集的大小，train_size代表训练集的大小，两者只能存在一个</h1><p>  random_state代表随即种子编号，默认为None<br>  shuffle代表是否进行有放回抽样</p>
-<h2 id="2-数据预处理"><a href="#2-数据预处理" class="headerlink" title="2. 数据预处理"></a>2. 数据预处理</h2><h3 id="2-1-标准化："><a href="#2-1-标准化：" class="headerlink" title="2.1 标准化："></a>2.1 标准化：</h3><p>from sklearn.preprocessing import StandardScaler<br>scaler = StandardScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-2-区间缩放："><a href="#2-2-区间缩放：" class="headerlink" title="2.2 区间缩放："></a>2.2 区间缩放：</h3><p>from sklearn.preprocessing import MinMaxScaler<br>scaler = MinMaxScaler().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-3-归一化："><a href="#2-3-归一化：" class="headerlink" title="2.3 归一化："></a>2.3 归一化：</h3><p>from sklearn.preprocessing import Normalizer<br>scaler = Normalizer().fit(x_train) # fit生成规则<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"><a href="#2-4-二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0" class="headerlink" title="2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0"></a>2.4 二值化：设定一个阈值，大于阈值的赋值为1，小于等于阈值的赋值为0</h3><p>from sklearn.preprocessing import Binarizer<br>scaler = Binarizer(threshold=3).fit(x_train) # threshold为设定的阀值<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-5-哑编码处理："><a href="#2-5-哑编码处理：" class="headerlink" title="2.5 哑编码处理："></a>2.5 哑编码处理：</h3><p>from sklearn.preprocessing import OneHotEncoder<br>scaler = OneHotEncoder().fit(x_train.reshape((-1,1)))<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-6-自定义函数变换"><a href="#2-6-自定义函数变换" class="headerlink" title="2.6 自定义函数变换"></a>2.6 自定义函数变换</h3><p>from numpy import log1p  # 使用对数函数转换<br>from sklearn.preprocessing import FunctionTransformer<br>scaler = FunctionTransformer(log1p).fit(x_train)<br>x_trainScaler = scaler.transform(x_train) # 将规则应用于训练集<br>x_testScaler = scaler.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-7-PCA降维："><a href="#2-7-PCA降维：" class="headerlink" title="2.7 PCA降维："></a>2.7 PCA降维：</h3><p>from sklearn.decomposition import PCA<br>pca = PCA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainPca = pca.transform(x_train) # 将规则应用于训练集<br>x_testPca = pca.transform(x_test)  # 将规则应用于测试集</p>
-<h3 id="2-8-LDA降维："><a href="#2-8-LDA降维：" class="headerlink" title="2.8 LDA降维："></a>2.8 LDA降维：</h3><p>from sklearn.lda import LDA<br>lda = LDA(n_components=3).fit(x_train)  # n_components设置降维到n维度<br>x_trainLda = lda.transform(x_train) # 将规则应用于训练集<br>x_testLda = lda.transform(x_test)  # 将规则应用于测试集</p>
-<h2 id="3-特征筛选"><a href="#3-特征筛选" class="headerlink" title="3. 特征筛选"></a>3. 特征筛选</h2><h3 id="3-1-Filter法："><a href="#3-1-Filter法：" class="headerlink" title="3.1 Filter法："></a>3.1 Filter法：</h3><p>from sklearn.feature_selection import SelectKBest, f_classif<br>selector = SelectKBest(f_classif, k=4) – 用f_classif方法，设定数目为4<br>a=selector.fit(x,y)<br>print(np.array(a.scores_),’\n’,a.get_support())  –  输出得分及选择的结果</p>
-<h3 id="3-2-Wrapper法（递归法）："><a href="#3-2-Wrapper法（递归法）：" class="headerlink" title="3.2 Wrapper法（递归法）："></a>3.2 Wrapper法（递归法）：</h3><p>from sklearn.linear_model import LinearRegression –导入基模型<br>from sklearn.feature_selection import RFE  – 导入RFE模块<br>model1 = LinearRegression()   – 建立一个线性模型<br>rfe = RFE(model1,4)           – 进行多轮训练，设置筛选特征数目为4个<br>rfe = rfe.fit(x,y)            – 模型的拟合训练<br>print(rfe.support_)           – 输出特征的选择结果<br>print(rfe.ranking_)           – 特征的选择排名</p>
-<h2 id="4-构建模型"><a href="#4-构建模型" class="headerlink" title="4.构建模型"></a>4.构建模型</h2><h3 id="4-1决策树模型"><a href="#4-1决策树模型" class="headerlink" title="4.1决策树模型"></a>4.1决策树模型</h3><p>决策树优点：</p>
-<p>便于理解和解释。树的结构可以可视化出来。<br>训练需要的数据少，对异常值和缺失值不敏感。<br>能够处理数值型数据和分类数据。<br>决策树缺点：</p>
-<p>容易产生一个过于复杂的模型，使模型产生过拟合的问题。<br>决策树可能是不稳定的，因为数据中的微小变化可能会导致完全不同的树生成。<br>from sklearn.tree import DecisionTreeClassifier<br>clf = DecisionTreeClassifier(criterion=’gini’, –设置衡量的系数,有entropy和gini，默认gini<br>                               splitter=’best’, –选择分类的策略，best和random，默认best<br>                               max_depth=5, –设置树的最大深度<br>                               min_samples_split=10,– 区分一个内部节点需要的最少的样本数<br>                               min_samples_leaf=5 – 一个叶节点所需要的最小样本数<br>                               max_features=5 –最大特征数<br>                               max_leaf_nodes=3–最大样本节点个数<br>                               min_impurity_split –指定信息增益的阀值<br>                               )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-2-逻辑回归模型"><a href="#4-2-逻辑回归模型" class="headerlink" title="4.2 逻辑回归模型"></a>4.2 逻辑回归模型</h3><p>优点：实现简单，易于理解和实现；计算代价不高，速度很快，存储资源低。</p>
-<p>缺点：容易欠拟合，分类精度可能不高。对异常值和缺失值敏感</p>
-<p>from sklearn.linear_model import LogisticRegression<br>clf = LogisticRegression(penalty=’l2’, –惩罚项（l1与l2），默认l2<br>                         dual=False, –对偶或原始方法，默认False，样本数量&gt;样本特征的时候，dual通常设置为False<br>                         tol=0.0001, –停止求解的标准，float类型，默认为1e-4。就是求解到多少的时候，停止，认为已经求出最优解<br>                         C=1.0, –正则化系数λ的倒数，float类型，默认为1.0，越小的数值表示越强的正则化。<br>                         fit_intercept=True, –是否存在截距或偏差，bool类型，默认为True。<br>                         intercept_scaling=1, –仅在正则化项为”liblinear”，且fit_intercept设置为True时有用。float类型，默认为1<br>                         class_weight=None, –用于标示分类模型中各种类型的权重，默认为不输入，也就是不考虑权重，即为None<br>                         random_state=None, –随机数种子，int类型，可选参数，默认为无<br>                         solver=’liblinear’, –优化算法选择参数，只有五个可选参数，即newton-cg,lbfgs,liblinear,sag,saga。默认为liblinear<br>                         max_iter=10, –算法收敛最大迭代次数，int类型，默认为10。<br>                         multi_class=’ovr’–分类方式选择参数，str类型，可选参数为ovr和multinomial，默认为ovr。<br>                                          如果是二元逻辑回归，ovr和multinomial并没有任何区别，区别主要在多元逻辑回归上。<br>                         verbose=0, –日志冗长度，int类型。默认为0。就是不输出训练过程<br>                         warm_start=False, –热启动参数，bool类型。默认为False。<br>                         n_jobs=1–并行数。int类型，默认为1。1的时候，用CPU的一个内核运行程序，2的时候，用CPU的2个内核运行程序。<br>                        )<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-3-线性回归模型"><a href="#4-3-线性回归模型" class="headerlink" title="4.3 线性回归模型"></a>4.3 线性回归模型</h3><p>优点：实现简单，可解释性强。</p>
-<p>缺点：容易出现欠拟合，对异常值和缺失值比较敏感。</p>
-<p>from sklearn.linear_model import LinearRegression()<br>clf = LinearRegression(copy_X=True,<br>                       fit_intercept=True,<br>                       n_jobs=1,<br>                       normalize=False)<br>clf= clf.fit(x_train,y_train)  – 拟合训练</p>
-<h3 id="4-4-K-means聚类"><a href="#4-4-K-means聚类" class="headerlink" title="4.4 K-means聚类"></a>4.4 K-means聚类</h3><p>from sklearn.cluster import KMeans<br>clf = KMeans(n_clusters=4, –给定的类别数<br>             max_iter=100,–为迭代的次数，这里设置最大迭代次数为300<br>             n_init=10,–设为10意味着进行10次随机初始化，选择效果最好的一种来作为模型<br>             copy_x=True–布尔型，默认值=True,如果把此参数值设为True，则原始数据不会被改变。如果是False，则会直接在原始数据<br>                        上做修改并在函数返回值时将其还原。<br>             )<br>clf= clf.fit(x)  – 拟合训练</p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>sklearn函数汇总</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大数据框架设计</title>
     <url>/2020/08/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<h2 id="大数据技术栈"><a href="#大数据技术栈" class="headerlink" title="大数据技术栈"></a>大数据技术栈</h2><p><img src="https://lixinx11.github.io/medias/bigdata/3.png" alt="大数据技术栈"></p>
@@ -870,11 +882,6 @@ void createMap(Thread t, T firstValue) &#123;
       <tags>
         <tag>大数据</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>微服务架构</title>
-    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>常见开源产品epoll网络事件模型汇总</title>
@@ -889,6 +896,11 @@ void createMap(Thread t, T firstValue) &#123;
       <tags>
         <tag>epoll网络事件模型分析</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>微服务架构</title>
+    <url>/2014/02/10/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>微服务-不是免费的午餐！</title>
@@ -957,6 +969,45 @@ void createMap(Thread t, T firstValue) &#123;
       </categories>
       <tags>
         <tag>技术趋势</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>技术选型</title>
+    <url>/2020/09/01/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/</url>
+    <content><![CDATA[<p>categories:  #分类<br>    -  技术选型</p>
+<pre><code>命令行工具：iTerm2
+浏览器：Chrome
+虚拟机：VirtualBox
+MySQL 数据库查询工具：Sequel-Ace
+Redis 管理工具：RDM
+MongoDB 管理工具：MongoDB
+设计工具：Sketch 3
+视频播放：MPlayerX
+@todo zsh 的配置信息统一，Alias 等信息。</code></pre>
+]]></content>
+      <tags>
+        <tag>技术选型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拼多多的晋升之道</title>
+    <url>/2019/11/22/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/</url>
+    <content><![CDATA[<p>成立于2015年的拼多多，在一切人都以为电商的格局曾经尘埃落定的时候，再次证实了增加的机遇首先来自看待增加的视角。那么它迸发性增加的势能在哪儿呢？它是如何完成为了迸发增加？<br>拼多多迸发式增加的三个势能</p>
+<h2 id="势能1：错位竞争，弯道超车"><a href="#势能1：错位竞争，弯道超车" class="headerlink" title="势能1：错位竞争，弯道超车"></a>势能1：错位竞争，弯道超车</h2><p>拼多多的第一个势能是捉住了三四线乃至五六线都会迸发增加的触网用户，并胜利引入了这些流量。</p>
+<p>近几年中国市场一直在提“花费进级”这一观点，原有互联网巨擘都在结构花费进级后的佳构电商，例如网易严选、盒马鲜生、天猫小店、生活选集等。花费进级的提出、佳构电商的结构，与拼多多成立和疾速发展的时间段高度重合。拼多多反其道行之，锁定了三线到六线都会，锁定了价钱敏感用户，它的电商价值定位就和阿里巴巴、京东形成为了巨大差异，进入当时的“战略无人区”。</p>
+<p>拼多多经由过程接手降级市场，错位竞争，完成为了弯道超车。</p>
+<h2 id="势能2：交际与电商的交融"><a href="#势能2：交际与电商的交融" class="headerlink" title="势能2：交际与电商的交融"></a>势能2：交际与电商的交融</h2><p>拼多多的第二个势能就在于交融了“交际”与“电商”的功能。这是阿里巴巴和腾讯两家超等巨擘都没有完成的交融。</p>
+<p>拼多多经由过程低价产物刺激用户在上分享和流传，想要超等优惠的价钱，用户就要主动发起拼团，只要激活一个用户，用户周边尤其是上的朋友、家人、邻居都有可能被覆盖。最终，成为拼多多的流量入口，拼多多将电子商务胜利融入交际平台。</p>
+<p>咱们能够看到，拼多多的增加迸发线是树立在用户干系的指数性激活和购买裂变上。传统期间的营业基本上是B2C营业，即企业面临花费者，进行推广流传、渠道构建与销售活动，而数字期间最大的特点是花费者自身便是互联体，假如能充分激活用户干系资产，这个算法模型就从B2C变成为了B2C2C，也便是企业到花费者到花费者，这样一个n次方形式，C的n次方便是用户的指数裂变。</p>
+<p>有了用户和定单，使得拼多多对上游具备更强的议价能力，拼多多直接与制造商、品牌商合作，为花费者带来低成本的商品，形成增加的良性循环。</p>
+<h2 id="势能3：告白轰炸"><a href="#势能3：告白轰炸" class="headerlink" title="势能3：告白轰炸"></a>势能3：告白轰炸</h2><p>第三个势能是利用告白的集中轰炸，敏捷晋升拼多多在目标市场上的知名度和被信任度。</p>
+<p>为巩固其流量优势和品牌知名度，拼多多自 2016年10月起在一线和二线都会推出了大批线下告白。经由过程赞助综艺节目，拼多多敏捷拓展了在三线到六线都会的知名度和被信任度，吸引了大批精准花费人群。</p>
+]]></content>
+      <categories>
+        <category>产品</category>
+      </categories>
+      <tags>
+        <tag>拼多多的晋升之道</tag>
       </tags>
   </entry>
   <entry>
@@ -1072,24 +1123,19 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
-    <title>拼多多的晋升之道</title>
-    <url>/2019/11/22/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E7%9A%84%E6%99%8B%E5%8D%87%E4%B9%8B%E9%81%93/</url>
-    <content><![CDATA[<p>成立于2015年的拼多多，在一切人都以为电商的格局曾经尘埃落定的时候，再次证实了增加的机遇首先来自看待增加的视角。那么它迸发性增加的势能在哪儿呢？它是如何完成为了迸发增加？<br>拼多多迸发式增加的三个势能</p>
-<h2 id="势能1：错位竞争，弯道超车"><a href="#势能1：错位竞争，弯道超车" class="headerlink" title="势能1：错位竞争，弯道超车"></a>势能1：错位竞争，弯道超车</h2><p>拼多多的第一个势能是捉住了三四线乃至五六线都会迸发增加的触网用户，并胜利引入了这些流量。</p>
-<p>近几年中国市场一直在提“花费进级”这一观点，原有互联网巨擘都在结构花费进级后的佳构电商，例如网易严选、盒马鲜生、天猫小店、生活选集等。花费进级的提出、佳构电商的结构，与拼多多成立和疾速发展的时间段高度重合。拼多多反其道行之，锁定了三线到六线都会，锁定了价钱敏感用户，它的电商价值定位就和阿里巴巴、京东形成为了巨大差异，进入当时的“战略无人区”。</p>
-<p>拼多多经由过程接手降级市场，错位竞争，完成为了弯道超车。</p>
-<h2 id="势能2：交际与电商的交融"><a href="#势能2：交际与电商的交融" class="headerlink" title="势能2：交际与电商的交融"></a>势能2：交际与电商的交融</h2><p>拼多多的第二个势能就在于交融了“交际”与“电商”的功能。这是阿里巴巴和腾讯两家超等巨擘都没有完成的交融。</p>
-<p>拼多多经由过程低价产物刺激用户在上分享和流传，想要超等优惠的价钱，用户就要主动发起拼团，只要激活一个用户，用户周边尤其是上的朋友、家人、邻居都有可能被覆盖。最终，成为拼多多的流量入口，拼多多将电子商务胜利融入交际平台。</p>
-<p>咱们能够看到，拼多多的增加迸发线是树立在用户干系的指数性激活和购买裂变上。传统期间的营业基本上是B2C营业，即企业面临花费者，进行推广流传、渠道构建与销售活动，而数字期间最大的特点是花费者自身便是互联体，假如能充分激活用户干系资产，这个算法模型就从B2C变成为了B2C2C，也便是企业到花费者到花费者，这样一个n次方形式，C的n次方便是用户的指数裂变。</p>
-<p>有了用户和定单，使得拼多多对上游具备更强的议价能力，拼多多直接与制造商、品牌商合作，为花费者带来低成本的商品，形成增加的良性循环。</p>
-<h2 id="势能3：告白轰炸"><a href="#势能3：告白轰炸" class="headerlink" title="势能3：告白轰炸"></a>势能3：告白轰炸</h2><p>第三个势能是利用告白的集中轰炸，敏捷晋升拼多多在目标市场上的知名度和被信任度。</p>
-<p>为巩固其流量优势和品牌知名度，拼多多自 2016年10月起在一线和二线都会推出了大批线下告白。经由过程赞助综艺节目，拼多多敏捷拓展了在三线到六线都会的知名度和被信任度，吸引了大批精准花费人群。</p>
+    <title>算法</title>
+    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
+<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
+<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
+<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
+<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
 ]]></content>
       <categories>
-        <category>产品</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>拼多多的晋升之道</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1105,21 +1151,43 @@ void createMap(Thread t, T firstValue) &#123;
       </tags>
   </entry>
   <entry>
-    <title>技术选型</title>
-    <url>/2020/09/01/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/</url>
-    <content><![CDATA[<p>categories:  #分类<br>    -  技术选型</p>
-<pre><code>命令行工具：iTerm2
-浏览器：Chrome
-虚拟机：VirtualBox
-MySQL 数据库查询工具：Sequel-Ace
-Redis 管理工具：RDM
-MongoDB 管理工具：MongoDB
-设计工具：Sketch 3
-视频播放：MPlayerX
-@todo zsh 的配置信息统一，Alias 等信息。</code></pre>
+    <title>如何设计一个分布式系统</title>
+    <url>/2020/08/24/%E8%AE%BE%E8%AE%A1%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<pre><code> ##  分布式系统
+ 　分布式系统从当初的CORBA 到EJB，Web和SOA，从集群到现在的NoSQL 云计算和大数据Hadoop等分布式系统，横向水平扩展Scala out/in是分布式系统设计的一个特点，可靠性 容错性是两个质量指标。</code></pre>
+<h3 id="什么是分布式系统？"><a href="#什么是分布式系统？" class="headerlink" title="　　    什么是分布式系统？"></a>　　    什么是分布式系统？</h3><p>　　一大批服务器组成一个集合，对于用户来说仍然是一个整体连贯系统。</p>
+<p>　　A. Tanenbaum定义：分布式网络的计算机中的组件之间协调动作是通过消息进行通讯。</p>
+<p>　　G. Coulouris定义：当你知道有一台电脑崩溃，但是你的软件运行从来不会停止。</p>
+<p>　　Leslie Lamport定义：分布式系统是这样系统：旨在支持应用程序和服务的开发，可以利用物理架构 由多个自治的处理元素，不共享主内存，但通过网络发送异步消息合作。</p>
+<p>　　与分层应用区别：分层的应用程序（例如，3层）是 划分应用程序逻辑，是一种逻辑分层，而不是物理，而分布式系统DS是物理分层，和实际部署有关。</p>
+<h3 id="与传统集中式系统相比："><a href="#与传统集中式系统相比：" class="headerlink" title="与传统集中式系统相比："></a>与传统集中式系统相比：</h3><p>　　集中式系统是一种Scale out/in，纵向扩展，要么向上升级服务器到中大型机，要么升级多核，增加CPU核数，集中式纵向扩展适合计算聚合度比较高的数据，而分布式适合计算松散数据，非结构化或半结构化数据。无论采取哪种扩展伸缩方案，需要根据业务数据特点而定。</p>
+<p>　　任何分布式系统总是需要完成两个任务：计算和存储。计算和存储分离是分布式系统的重要特征。而通常在集中式或单机系统中，这两者是可能结合在一起，比如通过一个SQL语句实现查询后排序，查询是从存储中获得数据，排序是属于计算，因此这个SQL语句实际是将计算和存储耦合在一起。在应对大数据或大并发的情况下，这种方便的捆绑带来性能问题，而分布式计算和分布式存储虽然带来复杂性，但是也为系统的处理能力打开了上升拓展的空间。<br>###　分布式系统特点：<br>并发性：共享资源，采取ACID或Base原则，见：CAP定理。<br>分布式系统设计遵循CAP定理， CAP是：Consistency(一致性), Availability(可用性), 和 Partition tolerance(分区容错性) 可靠性 简称，CAP定理认为，CAP三种之中，只能同时满足其中两种。</p>
+<p>可扩展性Scalable是重要特点，通过扩展能够获得高性能 高吞吐量 低延迟Latency。</p>
+<p>可靠性/可用性:故障发现和处理以及恢复 容错处理。在一个正常运作系统中存在一个时间比例的条件。 如果一个用户不能访问系统比例增大，它被认为是不可用。可用性公式：<br>Availability = uptime / (uptime + downtime)<br>容错failover是指一个系统在错误发生的情况下，仍然一切运行正常。表示这个系统是宽容错误的。</p>
+<p>消息处理: 具体产品有：RabbitMQ ZeroMQ Netty等等。</p>
+<p>异构性： 不同操作系统 硬件 程序语言 开发者，中间件是一种解决方案。</p>
+<p>.安全性：授权认证 SSO单点登录 Oauth等等。</p>
+<p>定位命令：<br>标识资源 URLs<br>命名服务Naming services<br>定位寻找Lookup<br>主要见SOA中的服务查找。如Zookeeper实现服务查找。</p>
+<p>.透明性：<br>访问透明度： 使用相同的操作本地和远程资源<br>位置透明：访问资源无需知道其物理或网络位置<br>并发透明度：多个流程可以同时运行访问使用共享资源，当不能干扰堵塞 它们的处理流程<br>复制透明性： 资源的多个实例可以被用来复制以提高可靠性和性能，但无需由用户编制专门的应用程序来实现。<br>故障透明度：出现软件硬件故障时，使用户和应用方案能继续完成他们的任务不受影响。<br>移动透明度：允许在 系统存在移动的资源和客户。<br>性能透明度：允许系统重新配置以 提高性能负荷变化<br>缩放透明度：在应用程序结构没有变化的情况下能够在规模上扩展或伸缩系统，以提高吞吐量处理能力。　　</p>
+<h3 id="分布式系统的挑战"><a href="#分布式系统的挑战" class="headerlink" title="分布式系统的挑战"></a>分布式系统的挑战</h3><p>　　分布式系统是难于理解、设计、构建 和管理的，他们将比单个机器成倍还要多的变量引入到设计中，使应用程序的根源问题更难发现。SLA(服务水平协议)是衡量停机和/或性能下降的标准，大多数现代应用程序有一个期望的弹性SLA水平，通常按”9”的数量增加(如,每月99.9或99.99%可用性)。每个额外的9变得越来越难实现。</p>
+<p>　　让事情更加复杂的是，我们越来越常见地看到：分布式系统的故障表现为间歇性错误或性能下降(俗称的限电)。这些失败模式耗费更多时间来诊断。例如，Joyent经营一些分布式系统作为其云计算基础设施的一部分。在这样一个系统中，包括高可用性、分布式的键/值存储，Joyent最近经历了瞬态应用程序超时。对于大多数用户系统运行正常，其反应延迟也是在SLA范围内。然而，有百分之5 - 10的请求超出了一个预定义的程序超时。这样的失败问题并没有重现在开发或测试环境中，他们经常会”消失”几分钟到几小时。排除这个故障的根本是需要大量数据存储的系统分析。</p>
+<p>　　这些系统包括：数据存储API(node . js)，RDBMS(关系数据库管理系统)和由系统内部使用(PostgreSQL)以及操作系统和终端用户应用程序依赖于的键/值系统。最终，导致过度的根本问题是在应用程序语义锁定，但确定之前需要相当大的数据收集和相关性工作，包括工程师耗费大量工作时间以及学习不同领域的专业知识。</p>
+<p>　　分布式系统由两个物理因素的限制：</p>
+<p>节点的数量（能够增加所需的存储和计算能力）<br>节点之间的距离（信息的传送距离，最好以光速）<br>　　这两个约束导致下面值得挑战的情况发生：</p>
+<p>独立节点随着数目的增加发生故障的概率增加（减少可用的和管理成本增加）<br>独立节点随着数目增加可能会增加节点之间的通信的消耗（随着规模的增大性能降低）<br>地理距离的增加提高遥远的节点之间的通信延迟（减少某些操作的性能）</p>
+<h3 id="如何架构分布式系统"><a href="#如何架构分布式系统" class="headerlink" title="如何架构分布式系统"></a>如何架构分布式系统</h3><p>　　适用于分布式系统架构的最常见的一个术语是SOA(面向服务架构)。SOA可以避免不愉快的CORBA(公共对象请求代理体系结构)，通过WS - *标准，一套松散耦合的Web服务完成独立的小功能，并且彼此独立，他们是一个有弹性的分布式系统的基础。对比上一代，服务是新流程，他们是正确的抽象层次系统中的离散功能。</p>
+<p>　　构建面向服务架构的第一步是确定每个函数功能如何构成整体业务目标，将这些业务映射到离散的服务，且具有独立的断层边界、扩展性和数据负载量。确定为每个服务时，您必须考虑下列事项：</p>
+<p>地理. 系统是全球还是地区单独运行？<br>数据隔离. 这个系统提供一个单个或多租户模型？<br>SLAs. 可用性 延迟 吞吐量 一致性和冗余性都必须定义。<br>安全. IAAA (身份identity, 验证authentication, 授权authorization, 和 审核audit), 数据的保密性和隐私性都必须考虑<br>可用性跟踪. 了解系统的使用是每天系统的日常运作，如容量规划。也可能用于执行计费系统的使用和/或治理(配额/速度限制)。<br>部署和配置管理. 系统是如何部署更新?</p>
+<p>分布式系统的模型抽象<br>系统模型（异步/同步）<br>失效模型（崩溃故障，分区）<br>一致性模型（强，最终）<br>　　通常，我们最熟悉的模式（例如，一个分布式系统上实现共享内存抽象）是太昂贵了。一个分布式系统越弱势越能保证其中元素有更大的行动自由，从而焕发潜在的更大的性能- 但它也可能导致很难管理。这就需要我们有极大智慧，不能以牺牲性能换来管理的方便性。因此，试图将分布式系统看成一个统一的单一系统的思维会阻碍分布式系统的扩展。</p>
+<p>　　分布式系统遵循CAP定律，在高一致性 高可用性和分区容错性之间三选二<br>CA (consistency高一致性 + availability高可用性). 使用2pc 两阶段事务提交来保证。其缺点无法实现分区容错性，一旦某个操作失败，整个系统就出错，无法容忍(水至清则无鱼)。<br>CP (consistency高一致性 + partition tolerance分区容错性). 使用Paxos来保证，可用性降低。<br>AP (availability高可用性 + partition tolerance分区容错性). 使用Gossip等实现最终一致性，如Dynamo.<br>　###  如何正确理解CAP理论？</p>
+<h3 id="分布式系统的设计技巧：分区和复制"><a href="#分布式系统的设计技巧：分区和复制" class="headerlink" title="分布式系统的设计技巧：分区和复制"></a>分布式系统的设计技巧：分区和复制</h3><p>　　对于一个数据集有两种设计方式：</p>
+<p>分区：它可以被分割在多个节点，以允许更多的并行处理。有更好的性能，但是容错能力低。<br>复制：它也可以被复制或缓存在不同的节点上，以减少在客户端和服务器之间的距离，更强的容错能力，但是复制消耗性能。关键是复制数据之间的一致性。弱一致性提供更低的延迟和更高的可用性。<br>分布式系统的设计技巧：时钟和顺序<br>　　分布式系统针对计算和存储的策略是不同的，对于数据的存储主要是分区和复制，而对于计算主要是保证事件的顺序，因为分布式计算任务是由事件驱动的，比如Storm等等。那么事件的顺序代表了业务逻辑的顺序，事件有时是树形嵌套事件，可靠性就是必须保证一个树形集合所有事件都得到网站执行是一个事务原子的。参考流式大数据处理模式。</p>
 ]]></content>
+      <categories>
+        <category>分布式系统</category>
+      </categories>
       <tags>
-        <tag>技术选型</tag>
+        <tag>分布式系统</tag>
       </tags>
   </entry>
   <entry>
@@ -1140,18 +1208,6 @@ MongoDB 管理工具：MongoDB
       </categories>
       <tags>
         <tag>领域驱动设计：软件核心复杂性应对之道</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>tidb</title>
-    <url>/2020/11/03/tidb/</url>
-    <content><![CDATA[<h1 id="TiDB-4-0"><a href="#TiDB-4-0" class="headerlink" title="TiDB 4.0"></a>TiDB 4.0</h1><p>TiDB 4.0 兼容mysql5.7版本</p>
-]]></content>
-      <categories>
-        <category>tidb</category>
-      </categories>
-      <tags>
-        <tag>tidb</tag>
       </tags>
   </entry>
   <entry>
@@ -1203,62 +1259,6 @@ MongoDB 管理工具：MongoDB
       </categories>
       <tags>
         <tag>java高并发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法</title>
-    <url>/2020/08/17/%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="一亿数据获取前1000个最大值"><a href="#一亿数据获取前1000个最大值" class="headerlink" title="一亿数据获取前1000个最大值"></a>一亿数据获取前1000个最大值</h2><p> ###算法原理：</p>
-<p>把一亿个数字的前100个 首先放入数组。 然后把最小值放在ary[0]。</p>
-<p>然后再循环100到一亿之间的。 每次循环判断当前数字是否大于ary[0]</p>
-<p>当大于时，当前数字放入ary[0] 并再次重构数组最小值进入ary[0]  以此类推 。</p>
-<p>当循环完这一亿个数字后。 最大的前100个数字就出来了。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何设计一个分布式系统</title>
-    <url>/2020/08/24/%E8%AE%BE%E8%AE%A1%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<pre><code> ##  分布式系统
- 　分布式系统从当初的CORBA 到EJB，Web和SOA，从集群到现在的NoSQL 云计算和大数据Hadoop等分布式系统，横向水平扩展Scala out/in是分布式系统设计的一个特点，可靠性 容错性是两个质量指标。</code></pre>
-<h3 id="什么是分布式系统？"><a href="#什么是分布式系统？" class="headerlink" title="　　    什么是分布式系统？"></a>　　    什么是分布式系统？</h3><p>　　一大批服务器组成一个集合，对于用户来说仍然是一个整体连贯系统。</p>
-<p>　　A. Tanenbaum定义：分布式网络的计算机中的组件之间协调动作是通过消息进行通讯。</p>
-<p>　　G. Coulouris定义：当你知道有一台电脑崩溃，但是你的软件运行从来不会停止。</p>
-<p>　　Leslie Lamport定义：分布式系统是这样系统：旨在支持应用程序和服务的开发，可以利用物理架构 由多个自治的处理元素，不共享主内存，但通过网络发送异步消息合作。</p>
-<p>　　与分层应用区别：分层的应用程序（例如，3层）是 划分应用程序逻辑，是一种逻辑分层，而不是物理，而分布式系统DS是物理分层，和实际部署有关。</p>
-<h3 id="与传统集中式系统相比："><a href="#与传统集中式系统相比：" class="headerlink" title="与传统集中式系统相比："></a>与传统集中式系统相比：</h3><p>　　集中式系统是一种Scale out/in，纵向扩展，要么向上升级服务器到中大型机，要么升级多核，增加CPU核数，集中式纵向扩展适合计算聚合度比较高的数据，而分布式适合计算松散数据，非结构化或半结构化数据。无论采取哪种扩展伸缩方案，需要根据业务数据特点而定。</p>
-<p>　　任何分布式系统总是需要完成两个任务：计算和存储。计算和存储分离是分布式系统的重要特征。而通常在集中式或单机系统中，这两者是可能结合在一起，比如通过一个SQL语句实现查询后排序，查询是从存储中获得数据，排序是属于计算，因此这个SQL语句实际是将计算和存储耦合在一起。在应对大数据或大并发的情况下，这种方便的捆绑带来性能问题，而分布式计算和分布式存储虽然带来复杂性，但是也为系统的处理能力打开了上升拓展的空间。<br>###　分布式系统特点：<br>并发性：共享资源，采取ACID或Base原则，见：CAP定理。<br>分布式系统设计遵循CAP定理， CAP是：Consistency(一致性), Availability(可用性), 和 Partition tolerance(分区容错性) 可靠性 简称，CAP定理认为，CAP三种之中，只能同时满足其中两种。</p>
-<p>可扩展性Scalable是重要特点，通过扩展能够获得高性能 高吞吐量 低延迟Latency。</p>
-<p>可靠性/可用性:故障发现和处理以及恢复 容错处理。在一个正常运作系统中存在一个时间比例的条件。 如果一个用户不能访问系统比例增大，它被认为是不可用。可用性公式：<br>Availability = uptime / (uptime + downtime)<br>容错failover是指一个系统在错误发生的情况下，仍然一切运行正常。表示这个系统是宽容错误的。</p>
-<p>消息处理: 具体产品有：RabbitMQ ZeroMQ Netty等等。</p>
-<p>异构性： 不同操作系统 硬件 程序语言 开发者，中间件是一种解决方案。</p>
-<p>.安全性：授权认证 SSO单点登录 Oauth等等。</p>
-<p>定位命令：<br>标识资源 URLs<br>命名服务Naming services<br>定位寻找Lookup<br>主要见SOA中的服务查找。如Zookeeper实现服务查找。</p>
-<p>.透明性：<br>访问透明度： 使用相同的操作本地和远程资源<br>位置透明：访问资源无需知道其物理或网络位置<br>并发透明度：多个流程可以同时运行访问使用共享资源，当不能干扰堵塞 它们的处理流程<br>复制透明性： 资源的多个实例可以被用来复制以提高可靠性和性能，但无需由用户编制专门的应用程序来实现。<br>故障透明度：出现软件硬件故障时，使用户和应用方案能继续完成他们的任务不受影响。<br>移动透明度：允许在 系统存在移动的资源和客户。<br>性能透明度：允许系统重新配置以 提高性能负荷变化<br>缩放透明度：在应用程序结构没有变化的情况下能够在规模上扩展或伸缩系统，以提高吞吐量处理能力。　　</p>
-<h3 id="分布式系统的挑战"><a href="#分布式系统的挑战" class="headerlink" title="分布式系统的挑战"></a>分布式系统的挑战</h3><p>　　分布式系统是难于理解、设计、构建 和管理的，他们将比单个机器成倍还要多的变量引入到设计中，使应用程序的根源问题更难发现。SLA(服务水平协议)是衡量停机和/或性能下降的标准，大多数现代应用程序有一个期望的弹性SLA水平，通常按”9”的数量增加(如,每月99.9或99.99%可用性)。每个额外的9变得越来越难实现。</p>
-<p>　　让事情更加复杂的是，我们越来越常见地看到：分布式系统的故障表现为间歇性错误或性能下降(俗称的限电)。这些失败模式耗费更多时间来诊断。例如，Joyent经营一些分布式系统作为其云计算基础设施的一部分。在这样一个系统中，包括高可用性、分布式的键/值存储，Joyent最近经历了瞬态应用程序超时。对于大多数用户系统运行正常，其反应延迟也是在SLA范围内。然而，有百分之5 - 10的请求超出了一个预定义的程序超时。这样的失败问题并没有重现在开发或测试环境中，他们经常会”消失”几分钟到几小时。排除这个故障的根本是需要大量数据存储的系统分析。</p>
-<p>　　这些系统包括：数据存储API(node . js)，RDBMS(关系数据库管理系统)和由系统内部使用(PostgreSQL)以及操作系统和终端用户应用程序依赖于的键/值系统。最终，导致过度的根本问题是在应用程序语义锁定，但确定之前需要相当大的数据收集和相关性工作，包括工程师耗费大量工作时间以及学习不同领域的专业知识。</p>
-<p>　　分布式系统由两个物理因素的限制：</p>
-<p>节点的数量（能够增加所需的存储和计算能力）<br>节点之间的距离（信息的传送距离，最好以光速）<br>　　这两个约束导致下面值得挑战的情况发生：</p>
-<p>独立节点随着数目的增加发生故障的概率增加（减少可用的和管理成本增加）<br>独立节点随着数目增加可能会增加节点之间的通信的消耗（随着规模的增大性能降低）<br>地理距离的增加提高遥远的节点之间的通信延迟（减少某些操作的性能）</p>
-<h3 id="如何架构分布式系统"><a href="#如何架构分布式系统" class="headerlink" title="如何架构分布式系统"></a>如何架构分布式系统</h3><p>　　适用于分布式系统架构的最常见的一个术语是SOA(面向服务架构)。SOA可以避免不愉快的CORBA(公共对象请求代理体系结构)，通过WS - *标准，一套松散耦合的Web服务完成独立的小功能，并且彼此独立，他们是一个有弹性的分布式系统的基础。对比上一代，服务是新流程，他们是正确的抽象层次系统中的离散功能。</p>
-<p>　　构建面向服务架构的第一步是确定每个函数功能如何构成整体业务目标，将这些业务映射到离散的服务，且具有独立的断层边界、扩展性和数据负载量。确定为每个服务时，您必须考虑下列事项：</p>
-<p>地理. 系统是全球还是地区单独运行？<br>数据隔离. 这个系统提供一个单个或多租户模型？<br>SLAs. 可用性 延迟 吞吐量 一致性和冗余性都必须定义。<br>安全. IAAA (身份identity, 验证authentication, 授权authorization, 和 审核audit), 数据的保密性和隐私性都必须考虑<br>可用性跟踪. 了解系统的使用是每天系统的日常运作，如容量规划。也可能用于执行计费系统的使用和/或治理(配额/速度限制)。<br>部署和配置管理. 系统是如何部署更新?</p>
-<p>分布式系统的模型抽象<br>系统模型（异步/同步）<br>失效模型（崩溃故障，分区）<br>一致性模型（强，最终）<br>　　通常，我们最熟悉的模式（例如，一个分布式系统上实现共享内存抽象）是太昂贵了。一个分布式系统越弱势越能保证其中元素有更大的行动自由，从而焕发潜在的更大的性能- 但它也可能导致很难管理。这就需要我们有极大智慧，不能以牺牲性能换来管理的方便性。因此，试图将分布式系统看成一个统一的单一系统的思维会阻碍分布式系统的扩展。</p>
-<p>　　分布式系统遵循CAP定律，在高一致性 高可用性和分区容错性之间三选二<br>CA (consistency高一致性 + availability高可用性). 使用2pc 两阶段事务提交来保证。其缺点无法实现分区容错性，一旦某个操作失败，整个系统就出错，无法容忍(水至清则无鱼)。<br>CP (consistency高一致性 + partition tolerance分区容错性). 使用Paxos来保证，可用性降低。<br>AP (availability高可用性 + partition tolerance分区容错性). 使用Gossip等实现最终一致性，如Dynamo.<br>　###  如何正确理解CAP理论？</p>
-<h3 id="分布式系统的设计技巧：分区和复制"><a href="#分布式系统的设计技巧：分区和复制" class="headerlink" title="分布式系统的设计技巧：分区和复制"></a>分布式系统的设计技巧：分区和复制</h3><p>　　对于一个数据集有两种设计方式：</p>
-<p>分区：它可以被分割在多个节点，以允许更多的并行处理。有更好的性能，但是容错能力低。<br>复制：它也可以被复制或缓存在不同的节点上，以减少在客户端和服务器之间的距离，更强的容错能力，但是复制消耗性能。关键是复制数据之间的一致性。弱一致性提供更低的延迟和更高的可用性。<br>分布式系统的设计技巧：时钟和顺序<br>　　分布式系统针对计算和存储的策略是不同的，对于数据的存储主要是分区和复制，而对于计算主要是保证事件的顺序，因为分布式计算任务是由事件驱动的，比如Storm等等。那么事件的顺序代表了业务逻辑的顺序，事件有时是树形嵌套事件，可靠性就是必须保证一个树形集合所有事件都得到网站执行是一个事务原子的。参考流式大数据处理模式。</p>
-]]></content>
-      <categories>
-        <category>分布式系统</category>
-      </categories>
-      <tags>
-        <tag>分布式系统</tag>
       </tags>
   </entry>
   <entry>
