@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="架构设计原则, 麦芽maiya">
+    <meta name="keywords" content="为什么Redis选择使用跳表而不是红黑树来实现有序集合？, 麦芽maiya">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>架构设计原则 | 麦芽maiya</title>
+    <title>为什么Redis选择使用跳表而不是红黑树来实现有序集合？ | 麦芽maiya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">架构设计原则</h1>
+                    <h1 class="description center-align post-title">为什么Redis选择使用跳表而不是红黑树来实现有序集合？</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
-                                <span class="chip bg-color">架构设计原则</span>
+                            <a href="/tags/%E4%B8%BA%E4%BB%80%E4%B9%88Redis%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8%E8%B7%B3%E8%A1%A8%E8%80%8C%E4%B8%8D%E6%98%AF%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9D%A5%E5%AE%9E%E7%8E%B0%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%EF%BC%9F/">
+                                <span class="chip bg-color">为什么Redis选择使用跳表而不是红黑树来实现有序集合？</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" class="post-category">
-                                架构设计原则
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -472,7 +472,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://lixinx11.github.io/medias/bigdata/6%E5%A4%A7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.png" alt="6大架构设计原则"></p>
+                <h2 id="为什么Redis选择使用跳表而不是红黑树来实现有序集合？"><a href="#为什么Redis选择使用跳表而不是红黑树来实现有序集合？" class="headerlink" title="为什么Redis选择使用跳表而不是红黑树来实现有序集合？"></a>为什么Redis选择使用跳表而不是红黑树来实现有序集合？</h2><h3 id="Redis-中的有序集合-zset-支持的操作："><a href="#Redis-中的有序集合-zset-支持的操作：" class="headerlink" title="Redis 中的有序集合(zset) 支持的操作："></a>Redis 中的有序集合(zset) 支持的操作：</h3><p>插入一个元素<br>删除一个元素<br>查找一个元素<br>有序输出所有元素<br>按照范围区间查找元素（比如查找值在 [100, 356] 之间的数据）</p>
+<p>其中，前四个操作红黑树也可以完成，且时间复杂度跟跳表是一样的。但是，按照区间来查找数据这个操作，红黑树的效率没有跳表高。<br>按照区间查找数据时，跳表可以做到 O(logn) 的时间复杂度定位区间的起点，然后在原始链表中顺序往后遍历就可以了，非常高效。</p>
 
             </div>
             <hr/>
@@ -498,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lixinx11.github.io/2020/12/06/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">https://lixinx11.github.io/2020/12/06/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</a>
+                    <a href="https://lixinx11.github.io/2020/12/06/%E4%B8%BA%E4%BB%80%E4%B9%88Redis%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8%E8%B7%B3%E8%A1%A8%E8%80%8C%E4%B8%8D%E6%98%AF%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9D%A5%E5%AE%9E%E7%8E%B0%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%EF%BC%9F/">https://lixinx11.github.io/2020/12/06/%E4%B8%BA%E4%BB%80%E4%B9%88Redis%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8%E8%B7%B3%E8%A1%A8%E8%80%8C%E4%B8%8D%E6%98%AF%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9D%A5%E5%AE%9E%E7%8E%B0%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%EF%BC%9F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -536,8 +537,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
-                                    <span class="chip bg-color">架构设计原则</span>
+                                <a href="/tags/%E4%B8%BA%E4%BB%80%E4%B9%88Redis%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8%E8%B7%B3%E8%A1%A8%E8%80%8C%E4%B8%8D%E6%98%AF%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9D%A5%E5%AE%9E%E7%8E%B0%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%EF%BC%9F/">
+                                    <span class="chip bg-color">为什么Redis选择使用跳表而不是红黑树来实现有序集合？</span>
                                 </a>
                             
                         </div>
@@ -708,7 +709,7 @@
         repo: 'lixinx11.github.io',
         owner: 'lixinx11',
         admin: "lixinx11",
-        id: '2020-12-06T22-17-28',
+        id: '2020-12-06T23-03-13',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -732,9 +733,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/12/06/%E4%B8%BA%E4%BB%80%E4%B9%88Redis%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8%E8%B7%B3%E8%A1%A8%E8%80%8C%E4%B8%8D%E6%98%AF%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9D%A5%E5%AE%9E%E7%8E%B0%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%EF%BC%9F/">
                     <div class="card-image">
@@ -753,9 +755,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -768,6 +770,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -786,22 +789,20 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/06/%E9%A2%86%E5%9F%9FBIZ/">
+                <a href="/2020/12/06/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="领域层/模型层Biz">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="架构设计原则">
                         
-                        <span class="card-title">领域层/模型层Biz</span>
+                        <span class="card-title">架构设计原则</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            领域层主要负责表达业务概念，业务状态信息和业务规则。Domain层是整个系统的核心层，几乎全部的业务逻辑会在该层实现。
-领域模型层主要包含以下的内容：
-实体(Entities):具有唯一标识的对象
-值对象(Value Objects): 无
+                            
+
                         
                     </div>
                     <div class="publish-info">
@@ -812,8 +813,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/" class="post-category">
-                                    领域层/模型层Biz
+                            <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" class="post-category">
+                                    架构设计原则
                                 </a>
                             
                             
@@ -823,8 +824,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/">
-                        <span class="chip bg-color">领域层/模型层Biz</span>
+                    <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                        <span class="chip bg-color">架构设计原则</span>
                     </a>
                     
                 </div>
