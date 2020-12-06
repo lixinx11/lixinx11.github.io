@@ -483,8 +483,7 @@
 <p>领域层biz目录：</p>
 <h2 id="（1）domain"><a href="#（1）domain" class="headerlink" title="（1）domain"></a>（1）domain</h2><p>存放Domain类，Domain负责业务逻辑，调用Repository对象来执行数据库操作。Domain没有直接访问数据库的代码，具体的数据库操作是通过调用Repository对象完成的。</p>
 <p>注意，除了CQRS模式外，Repository都应该是由Domain调用的，而不是由Service调用。</p>
-<p>##（2）repository</p>
-<p>存放Repository类，调用Dao或者Mapper对象类执行数据库操作。</p>
+<h2 id="（2）repository"><a href="#（2）repository" class="headerlink" title="（2）repository"></a>（2）repository</h2><p>存放Repository类，调用Dao或者Mapper对象类执行数据库操作。</p>
 <h2 id="（3）factory"><a href="#（3）factory" class="headerlink" title="（3）factory"></a>（3）factory</h2><p>存放Factory类，负责Domain和实体Entity的转换。</p>
 
             </div>
