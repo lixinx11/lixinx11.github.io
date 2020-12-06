@@ -1516,4 +1516,29 @@ public void run()&#123;
         <category>领域驱动设计中的一些基本概念</category>
       </categories>
   </entry>
+  <entry>
+    <title>领域层/模型层Biz</title>
+    <url>/2020/12/06/%E9%A2%86%E5%9F%9FBIZ/</url>
+    <content><![CDATA[<h2 id="领域层主要负责表达业务概念，业务状态信息和业务规则。"><a href="#领域层主要负责表达业务概念，业务状态信息和业务规则。" class="headerlink" title="领域层主要负责表达业务概念，业务状态信息和业务规则。"></a>领域层主要负责表达业务概念，业务状态信息和业务规则。</h2><p>Domain层是整个系统的核心层，几乎全部的业务逻辑会在该层实现。</p>
+<p>领域模型层主要包含以下的内容：</p>
+<p>实体(Entities):具有唯一标识的对象</p>
+<p>值对象(Value Objects): 无需唯一标识。</p>
+<p>领域服务(Domain): 与业务逻辑相关的，具有属性和行为的对象。</p>
+<p>聚合/聚合根(Aggregates &amp; Aggregate Roots): 聚合是指一组具有内聚关系的相关对象的集合。</p>
+<p>工厂(Factories): 创建复杂对象，隐藏创建细节。</p>
+<p>仓储(Repository): 提供查找和持久化对象的方法。</p>
+<p>领域层biz目录：</p>
+<h2 id="（1）domain"><a href="#（1）domain" class="headerlink" title="（1）domain"></a>（1）domain</h2><p>存放Domain类，Domain负责业务逻辑，调用Repository对象来执行数据库操作。Domain没有直接访问数据库的代码，具体的数据库操作是通过调用Repository对象完成的。</p>
+<p>注意，除了CQRS模式外，Repository都应该是由Domain调用的，而不是由Service调用。</p>
+<p>##（2）repository</p>
+<p>存放Repository类，调用Dao或者Mapper对象类执行数据库操作。</p>
+<h2 id="（3）factory"><a href="#（3）factory" class="headerlink" title="（3）factory"></a>（3）factory</h2><p>存放Factory类，负责Domain和实体Entity的转换。</p>
+]]></content>
+      <categories>
+        <category>领域层/模型层Biz</category>
+      </categories>
+      <tags>
+        <tag>领域层/模型层Biz</tag>
+      </tags>
+  </entry>
 </search>

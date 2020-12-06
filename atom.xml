@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-12-06T13:23:50.229Z</updated>
+  <updated>2020-12-06T13:34:56.026Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>领域层/模型层Biz</title>
+    <link href="https://lixinx11.github.io/2020/12/06/%E9%A2%86%E5%9F%9FBIZ/"/>
+    <id>https://lixinx11.github.io/2020/12/06/%E9%A2%86%E5%9F%9FBIZ/</id>
+    <published>2020-12-06T13:33:34.000Z</published>
+    <updated>2020-12-06T13:34:56.026Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="领域层/模型层Biz" scheme="https://lixinx11.github.io/categories/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/"/>
+    
+    
+    <category term="领域层/模型层Biz" scheme="https://lixinx11.github.io/tags/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/"/>
+    
+  </entry>
   
   <entry>
     <title>领域驱动设计中的一些基本概念</title>
@@ -472,31 +497,6 @@
     
     
     <category term="docker" scheme="https://lixinx11.github.io/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI思考</title>
-    <link href="https://lixinx11.github.io/2020/08/25/AI%E6%80%9D%E8%80%83/"/>
-    <id>https://lixinx11.github.io/2020/08/25/AI%E6%80%9D%E8%80%83/</id>
-    <published>2020-08-25T08:05:32.000Z</published>
-    <updated>2020-08-25T08:55:22.692Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="AI" scheme="https://lixinx11.github.io/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://lixinx11.github.io/tags/AI/"/>
     
   </entry>
   
