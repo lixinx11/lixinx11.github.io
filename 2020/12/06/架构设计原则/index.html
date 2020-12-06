@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="领域层/模型层Biz, 麦芽maiya">
+    <meta name="keywords" content="架构设计原则, 麦芽maiya">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>领域层/模型层Biz | 麦芽maiya</title>
+    <title>架构设计原则 | 麦芽maiya</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">领域层/模型层Biz</h1>
+                    <h1 class="description center-align post-title">架构设计原则</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/">
-                                <span class="chip bg-color">领域层/模型层Biz</span>
+                            <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                                <span class="chip bg-color">架构设计原则</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/" class="post-category">
-                                领域层/模型层Biz
+                            <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" class="post-category">
+                                架构设计原则
                             </a>
                         
                     </div>
@@ -472,19 +472,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="领域层主要负责表达业务概念，业务状态信息和业务规则。"><a href="#领域层主要负责表达业务概念，业务状态信息和业务规则。" class="headerlink" title="领域层主要负责表达业务概念，业务状态信息和业务规则。"></a>领域层主要负责表达业务概念，业务状态信息和业务规则。</h2><p>Domain层是整个系统的核心层，几乎全部的业务逻辑会在该层实现。</p>
-<p>领域模型层主要包含以下的内容：</p>
-<p>实体(Entities):具有唯一标识的对象</p>
-<p>值对象(Value Objects): 无需唯一标识。</p>
-<p>领域服务(Domain): 与业务逻辑相关的，具有属性和行为的对象。</p>
-<p>聚合/聚合根(Aggregates &amp; Aggregate Roots): 聚合是指一组具有内聚关系的相关对象的集合。</p>
-<p>工厂(Factories): 创建复杂对象，隐藏创建细节。</p>
-<p>仓储(Repository): 提供查找和持久化对象的方法。</p>
-<p>领域层biz目录：</p>
-<h2 id="（1）domain"><a href="#（1）domain" class="headerlink" title="（1）domain"></a>（1）domain</h2><p>存放Domain类，Domain负责业务逻辑，调用Repository对象来执行数据库操作。Domain没有直接访问数据库的代码，具体的数据库操作是通过调用Repository对象完成的。</p>
-<p>注意，除了CQRS模式外，Repository都应该是由Domain调用的，而不是由Service调用。</p>
-<h2 id="（2）repository"><a href="#（2）repository" class="headerlink" title="（2）repository"></a>（2）repository</h2><p>存放Repository类，调用Dao或者Mapper对象类执行数据库操作。</p>
-<h2 id="（3）factory"><a href="#（3）factory" class="headerlink" title="（3）factory"></a>（3）factory</h2><p>存放Factory类，负责Domain和实体Entity的转换。</p>
+                <p><img src="https://lixinx11.github.io/medias/bigdata/6%E5%A4%A7%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.png" alt="大数据技术栈"></p>
 
             </div>
             <hr/>
@@ -510,7 +498,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lixinx11.github.io/2020/12/06/%E9%A2%86%E5%9F%9FBIZ/">https://lixinx11.github.io/2020/12/06/%E9%A2%86%E5%9F%9FBIZ/</a>
+                    <a href="https://lixinx11.github.io/2020/12/06/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">https://lixinx11.github.io/2020/12/06/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,8 +536,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/">
-                                    <span class="chip bg-color">领域层/模型层Biz</span>
+                                <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                                    <span class="chip bg-color">架构设计原则</span>
                                 </a>
                             
                         </div>
@@ -720,7 +708,7 @@
         repo: 'lixinx11.github.io',
         owner: 'lixinx11',
         admin: "lixinx11",
-        id: '2020-12-06T21-33-34',
+        id: '2020-12-06T22-17-28',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -744,9 +732,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/12/06/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
                     <div class="card-image">
@@ -765,9 +754,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -780,6 +769,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -798,21 +788,22 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/06/%E9%A2%86%E5%9F%9F%E8%AE%BE%E8%AE%A1/">
+                <a href="/2020/12/06/%E9%A2%86%E5%9F%9FBIZ/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="领域驱动设计中的一些基本概念">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="领域层/模型层Biz">
                         
-                        <span class="card-title">领域驱动设计中的一些基本概念</span>
+                        <span class="card-title">领域层/模型层Biz</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1．实体(entity)：    根据eric evans的定义，”一个由它的标识定义的对象叫做实体”。通常实体具备唯一id，能够被持久化，具有业务逻辑，对应现实世界业务对象。
-
-     实体一般和主要的业务/领域对象有一个直接的关系。一
+                            领域层主要负责表达业务概念，业务状态信息和业务规则。Domain层是整个系统的核心层，几乎全部的业务逻辑会在该层实现。
+领域模型层主要包含以下的内容：
+实体(Entities):具有唯一标识的对象
+值对象(Value Objects): 无
                         
                     </div>
                     <div class="publish-info">
@@ -823,13 +814,21 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-category">
-                                    领域驱动设计中的一些基本概念
+                            <a href="/categories/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/" class="post-category">
+                                    领域层/模型层Biz
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%A2%86%E5%9F%9F%E5%B1%82-%E6%A8%A1%E5%9E%8B%E5%B1%82Biz/">
+                        <span class="chip bg-color">领域层/模型层Biz</span>
+                    </a>
+                    
                 </div>
                 
             </div>
