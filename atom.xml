@@ -6,7 +6,7 @@
   <link href="https://lixinx11.github.io/atom.xml" rel="self"/>
   
   <link href="https://lixinx11.github.io/"/>
-  <updated>2020-12-09T03:31:29.090Z</updated>
+  <updated>2020-12-16T11:33:45.143Z</updated>
   <id>https://lixinx11.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大数据框架对比</title>
+    <link href="https://lixinx11.github.io/2020/12/16/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94/"/>
+    <id>https://lixinx11.github.io/2020/12/16/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94/</id>
+    <published>2020-12-16T11:27:49.000Z</published>
+    <updated>2020-12-16T11:33:45.143Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="大数据" scheme="https://lixinx11.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+    <category term="大数据框架对比" scheme="https://lixinx11.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里巴巴中台战略的起源</title>
@@ -474,31 +499,6 @@
     
     
     <category term="时光角落" scheme="https://lixinx11.github.io/tags/%E6%97%B6%E5%85%89%E8%A7%92%E8%90%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GUI</title>
-    <link href="https://lixinx11.github.io/2020/09/03/FUI/"/>
-    <id>https://lixinx11.github.io/2020/09/03/FUI/</id>
-    <published>2020-09-03T13:22:49.000Z</published>
-    <updated>2020-09-03T15:31:29.753Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="GUI" scheme="https://lixinx11.github.io/categories/GUI/"/>
-    
-    
-    <category term="GUI开发" scheme="https://lixinx11.github.io/tags/GUI%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
